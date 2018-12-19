@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="55" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="gamepad" targetName="gamepad" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ceb19502-9197-4063-8d0c-1de451251d07" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="-718931044">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="4" />
+          <entry key="txt" value="96" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="96" />
+          <entry key="ObjectiveC" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GAMEPAD_DEVICE</find>
+      <find>GamepadResetState</find>
+      <find>serial_port</find>
+      <find>p</find>
+      <find>&quot;p&quot;</find>
+      <find>lastPing</find>
+      <find>arduinoRe</find>
+      <find>threadWin</find>
+      <find>yoda</find>
+      <find>arduino.</find>
+      <find>arduinoConnected =</find>
+      <find>arduinorea</find>
+      <find>ping</find>
+      <find>arduinoReady</find>
+      <find>INTERVAL_ARDUINO_PING</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>serialPort</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/gamepad.cpp" />
+        <option value="$USER_HOME$/arduino/drone_transmitter/drone_transmitter/A7105.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="4" />
+    <option name="width" value="953" />
+    <option name="height" value="997" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gamepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gamepad" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/arduino/drone_transmitter/drone_transmitter/A7105.h" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.gamepad">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Release" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gamepad" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gamepad" TARGET_NAME="gamepad" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="gamepad" RUN_TARGET_NAME="gamepad">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.gamepad" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ceb19502-9197-4063-8d0c-1de451251d07" name="Default" comment="" />
+      <created>1514309231171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514309231171</updated>
+      <workItem from="1514309232498" duration="380000" />
+      <workItem from="1514513046377" duration="1011000" />
+      <workItem from="1514522695289" duration="1907000" />
+      <workItem from="1514524616977" duration="1796000" />
+      <workItem from="1514526427782" duration="770000" />
+      <workItem from="1514527435766" duration="1797000" />
+      <workItem from="1514529298008" duration="1779000" />
+      <workItem from="1514531102964" duration="1482000" />
+      <workItem from="1514533676864" duration="1466000" />
+      <workItem from="1514535487649" duration="899000" />
+      <workItem from="1514570975557" duration="1796000" />
+      <workItem from="1514572783666" duration="1958000" />
+      <workItem from="1514574871670" duration="1799000" />
+      <workItem from="1514576685317" duration="1483000" />
+      <workItem from="1514578735519" duration="599000" />
+      <workItem from="1514580556254" duration="599000" />
+      <workItem from="1514582362668" duration="599000" />
+      <workItem from="1514642733190" duration="1495000" />
+      <workItem from="1514645204575" duration="613000" />
+      <workItem from="1514684640136" duration="1344000" />
+      <workItem from="1514690019084" duration="1796000" />
+      <workItem from="1514691828093" duration="1840000" />
+      <workItem from="1514693681975" duration="1345000" />
+      <workItem from="1514695516254" duration="599000" />
+      <workItem from="1514781452472" duration="599000" />
+      <workItem from="1514807981954" duration="1770000" />
+      <workItem from="1514809877795" duration="1717000" />
+      <workItem from="1514811687779" duration="1805000" />
+      <workItem from="1514813516615" duration="1818000" />
+      <workItem from="1514815348021" duration="1205000" />
+      <workItem from="1514825413411" duration="1509000" />
+      <workItem from="1514827426502" duration="1803000" />
+      <workItem from="1514829338444" duration="1086000" />
+      <workItem from="1514831162282" duration="1819000" />
+      <workItem from="1514832995403" duration="1796000" />
+      <workItem from="1514834806201" duration="1580000" />
+      <workItem from="1514893861970" duration="1299000" />
+      <workItem from="1514917327678" duration="1853000" />
+      <workItem from="1514919221643" duration="599000" />
+      <workItem from="1514953417255" duration="1264000" />
+      <workItem from="1514957996024" duration="1108000" />
+      <workItem from="1514959918947" duration="854000" />
+      <workItem from="1522094881078" duration="1781000" />
+      <workItem from="1522905003910" duration="73000" />
+      <workItem from="1523261807099" duration="16000" />
+      <workItem from="1525975886167" duration="592000" />
+      <workItem from="1525976648915" duration="4847000" />
+      <workItem from="1525985930652" duration="11000" />
+      <workItem from="1526038600858" duration="757000" />
+      <workItem from="1526221416816" duration="8490000" />
+      <workItem from="1526426468172" duration="317000" />
+      <workItem from="1526426797262" duration="3000" />
+      <workItem from="1526437173630" duration="6579000" />
+      <workItem from="1526446175998" duration="649000" />
+      <workItem from="1526595727786" duration="2941000" />
+      <workItem from="1528418976382" duration="85000" />
+      <workItem from="1528921392619" duration="235000" />
+      <workItem from="1539095696906" duration="2324000" />
+      <workItem from="1539146228578" duration="723000" />
+      <workItem from="1539148882833" duration="1608000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="88667000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11912393" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39905214" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32822758" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32932165" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/arduino/drone_transmitter/drone_transmitter/A7105.c" />
+    <entry file="file://$USER_HOME$/arduino/drone_transmitter/drone_transmitter/A7105.h" />
+    <entry file="file:///usr/include/unistd.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="462" column="11" selection-start-line="462" selection-start-column="11" selection-end-line="462" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/thread" />
+    <entry file="file://$PROJECT_DIR$/gamepad.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-830">
+          <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/6/bits/istream.tcc" />
+    <entry file="file:///usr/include/c++/6/chrono" />
+    <entry file="file:///usr/include/SerialStream.h" />
+    <entry file="file:///usr/include/c++/7/thread">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="133" column="21" lean-forward="true" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/ncurses.h" />
+    <entry file="file://$PROJECT_DIR$/gamepad.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-560">
+          <caret line="2" column="41" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
