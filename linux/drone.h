@@ -43,17 +43,17 @@ private slots:
     void setGamePadIsConnected(bool value);
     void setButtons(ButtonsPressed buttons);
     void setArduinoMode(int value);
-    void setArduinoIsConnected(QString value, SerialPort * arduino);
+    void setArduinoIsConnected(bool value, SerialPort * arduino);
     void setArduinoDeviceString(QString value);
-    void setRadioSending(QString value);
+    void setRadioSending(bool value);
     void arduinoReset();
     void setRadioValues(int, int, int, int);
-    void setMotorsArmed(QString value);
-    void setThrottleMode(QString value);
-    void setRecordingMode(QString value);
+    void setMotorsArmed(bool value);
+    void setThrottleMode(bool value);
+    void setRecordingMode(bool value);
     void setRecordFiles(RecordsList list);
     void setCanStartRecording(QString active);
-    void setPlayingMode(QString active);
+    void setPlayingMode(bool isActive);
     void setCameraFrame(MyMat);
 signals:
     void gamePadIsConnectedChanged(bool value);
@@ -77,7 +77,7 @@ private:
 
     bool gamePadIsConnected = false;
     bool arduinoMode = MODE_ARDUINO_DISCONNECTED;
-    QString arduinoIsConnected = "false";
+    bool arduinoIsConnected = false;
     QString arduinoDeviceStr = "";
 
     SerialPort *arduino = NULL;
@@ -87,7 +87,7 @@ private:
 
     Database * database = NULL;
 
-    QString canStartRecording = "false";
+    bool canStartRecording = false;
 };
 
 #endif // DRONE_H

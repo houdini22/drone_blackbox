@@ -108,7 +108,7 @@ void ThreadArduinoSend::run() {
                 if (buttons.a) { // toggle Throttle mode
                     sendingThrottle = 13;
                     throttleMode = !throttleMode;
-                    this->setThrottleMode(throttleMode ? "true" : "false");
+                    this->setThrottleMode(throttleMode);
 
                     continue;
                 }
@@ -124,12 +124,12 @@ void ThreadArduinoSend::run() {
                         sendingStart = 26; // 26 * 40 ms
 
                         this->send("f"); // off
-                        this->setRadioSending("false");
+                        this->setRadioSending(false);
                     } else {
                         sendingStart = 26; // 26 * 40 ms
 
                         this->send("n"); // on
-                        this->setRadioSending("true");
+                        this->setRadioSending(true);
                     }
 
                     continue;
@@ -140,12 +140,12 @@ void ThreadArduinoSend::run() {
                         if (!armingMode) {
                             sendingArm = 28; // 28 * 40 ms
 
-                            emit motorsArmedChanged("arming...");
+                            emit motorsArmedChanged(true);
                         } else {
                             if (startMode) {
                                 sendingArm = 28; // 28 * 40 ms
 
-                                emit motorsArmedChanged("unarming...");
+                                emit motorsArmedChanged(false);
                             }
                         }
 
@@ -201,9 +201,9 @@ void ThreadArduinoSend::run() {
                 sendingArm--;
                 if (sendingArm == 0) {
                     if (!armingMode) {
-                        emit motorsArmedChanged("armed");
+                        emit motorsArmedChanged(true);
                     } else {
-                        emit motorsArmedChanged("not armed");
+                        emit motorsArmedChanged(false);
                     }
                     armingMode = !armingMode;
                 }
@@ -229,7 +229,7 @@ void ThreadArduinoSend::run() {
                 if (sendingRecording == 0) {
                     recordingMode = !recordingMode;
 
-                    emit recordingModeChanged(recordingMode ? "true" : "false");
+                    emit recordingModeChanged(recordingMode);
 
                 }
 
@@ -244,9 +244,9 @@ void ThreadArduinoSend::run() {
 
                     if (modePlaying) {
                         this->drone->getDatabase()->openPlay();
-                        emit playingModeChanged("true");
+                        emit playingModeChanged(true);
                     } else {
-                        emit playingModeChanged("false");
+                        emit playingModeChanged(false);
                     }
                 }
 
@@ -257,22 +257,22 @@ void ThreadArduinoSend::run() {
 }
 
 
-void ThreadArduinoSend::setRadioSending(QString value) {
-    if (this->radioSending.compare(value) != 0) {
+void ThreadArduinoSend::setRadioSending(bool value) {
+    if (this->radioSending != value) {
         this->radioSending = value;
         emit radioSendingChanged(value);
     }
 }
 
-void ThreadArduinoSend::setMotorsArmed(QString value) {
-    if (this->motorsArmed.compare(value) != 0) {
+void ThreadArduinoSend::setMotorsArmed(bool value) {
+    if (this->motorsArmed != value) {
         this->motorsArmed = value;
         emit motorsArmedChanged(value);
     }
 }
 
-void ThreadArduinoSend::setThrottleMode(QString value) {
-    if (this->throttleModeActive.compare(value) != 0) {
+void ThreadArduinoSend::setThrottleMode(bool value) {
+    if (this->throttleModeActive != value) {
         this->throttleModeActive = value;
         emit throttleModeChanged(value);
     }

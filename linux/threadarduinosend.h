@@ -15,9 +15,9 @@ private:
     QString name;
     Drone * drone;
 
-    QString radioSending = "false";
-    QString motorsArmed = "false";
-    QString throttleModeActive = "false";
+    bool radioSending = false;
+    bool motorsArmed = false;
+    bool throttleModeActive = false;
 
     int leftX = 1500;
     int leftY = 1100;
@@ -30,18 +30,18 @@ private:
     QString createAxisBuffer(int leftX, int leftY, int rightX, int rightY);
 
     int axisValueFromDouble(double value);
-public slots:
-    void setRadioSending(QString value);
-    void setMotorsArmed(QString value);
-    void setThrottleMode(QString value);
+
+    void setRadioSending(bool value);
+    void setMotorsArmed(bool value);
+    void setThrottleMode(bool value);
     void setRadioValues(double leftX, double leftY, double rightX, double rightY);
 signals:
-    void radioSendingChanged(QString value);
-    void motorsArmedChanged(QString status);
+    void radioSendingChanged(bool value);
+    void motorsArmedChanged(bool status);
     void radioValuesChanged(int leftX, int leftY, int rightX, int rightY);
-    void throttleModeChanged(QString value);
-    void recordingModeChanged(QString value);
-    void playingModeChanged(QString value);
+    void throttleModeChanged(bool value);
+    void recordingModeChanged(bool value);
+    void playingModeChanged(bool value);
     void recordItemDown();
     void recordItemUp();
 };

@@ -4,11 +4,11 @@
 #include "include.h"
 
 struct Modes {
-    QString radioSending = "false";
-    QString motorsArmed = "not armed";
-    QString throttleModeActive = "false";
-    QString recordingActive = "false";
-    QString playingActive = "false";
+    bool radioSending = false;
+    bool motorsArmed = false;
+    bool throttleModeActive = false;
+    bool recordingActive = false;
+    bool playingActive = false;
 };
 
 const int MODE_ARDUINO_DISCONNECTED = 0;

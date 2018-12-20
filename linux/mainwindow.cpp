@@ -45,7 +45,7 @@ void MainWindow::setRadioValues(int leftX, int leftY, int rightX, int rightY) {
     QLabel * labelRightX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightX"));
     QLabel * labelRightY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightY"));
 
-    if (this->radioSending.compare("true") == 0) {
+    if (this->radioSending) {
         labelLeftX->setText(QString::number(leftX));
         labelLeftY->setText(QString::number(leftY));
         labelRightX->setText(QString::number(rightX));
@@ -77,30 +77,30 @@ void MainWindow::setModes(Modes modes) {
     QLabel * labelSending = this->centralWidget()->findChild<QLabel *>(QString("labelSending"));
     QLabel * labelRecordingActive = this->centralWidget()->findChild<QLabel *>(QString("labelRecordingActive"));
 
-    if (modes.radioSending.compare("false") == 0) {
+    if (!modes.radioSending) {
         labelLeftX->setText("-");
         labelLeftY->setText("-");
         labelRightX->setText("-");
         labelRightY->setText("-");
     }
 
-    labelArmedValue->setText(modes.motorsArmed);
+    labelArmedValue->setText(modes.motorsArmed ? QString("armed") : QString("not armed"));
 
-    if (modes.throttleModeActive.compare("true") == 0) {
+    if (modes.throttleModeActive) {
         labelThrottleMode->setText("active");
     } else {
         labelThrottleMode->setText("not active");
     }
 
-    if (modes.radioSending.compare("true") == 0) {
+    if (modes.radioSending) {
         labelSending->setText("sending");
     } else {
         labelSending->setText("not sending");
     }
 
-    if (modes.recordingActive.compare("true") == 0) {
+    if (modes.recordingActive) {
         labelRecordingActive->setText("recording");
-    } else if (modes.playingActive.compare("true") == 0) {
+    } else if (modes.playingActive) {
         labelRecordingActive->setText("playing");
     } else {
         labelRecordingActive->setText("none");

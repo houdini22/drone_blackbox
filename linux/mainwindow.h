@@ -22,7 +22,7 @@ public:
 private:
     Ui::MainWindow *ui;
     Drone * drone;
-    QString radioSending = "false";
+    bool radioSending = false;
     QListWidgetItem * currentItem;
 public slots:
     void setGamePadIsConnected(bool value);

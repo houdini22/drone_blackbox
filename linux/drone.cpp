@@ -18,18 +18,18 @@ Drone::Drone(MainWindow * window)
     connect(this->threadArduinoDetect, SIGNAL(arduinoDeviceStringChanged(QString)), this, SLOT(setArduinoDeviceString(QString)));
 
     this->threadArduinoConnect = new ThreadArduinoConnect(this);
-    connect(this->threadArduinoConnect, SIGNAL(arduinoIsConnectedChanged(QString, SerialPort *)), this, SLOT(setArduinoIsConnected(QString, SerialPort *)));
+    connect(this->threadArduinoConnect, SIGNAL(arduinoIsConnectedChanged(bool, SerialPort *)), this, SLOT(setArduinoIsConnected(bool, SerialPort *)));
 
     this->threadArduinoPing = new ThreadArduinoPing(this);
     connect(this->threadArduinoPing, SIGNAL(arduinoReset()), this, SLOT(arduinoReset()));
 
     this->threadArduinoSend = new ThreadArduinoSend(this);
-    connect(this->threadArduinoSend, SIGNAL(radioSendingChanged(QString)), this, SLOT(setRadioSending(QString)));
-    connect(this->threadArduinoSend, SIGNAL(motorsArmedChanged(QString)), this, SLOT(setMotorsArmed(QString)));
-    connect(this->threadArduinoSend, SIGNAL(throttleModeChanged(QString)), this, SLOT(setThrottleMode(QString)));
+    connect(this->threadArduinoSend, SIGNAL(radioSendingChanged(bool)), this, SLOT(setRadioSending(bool)));
+    connect(this->threadArduinoSend, SIGNAL(motorsArmedChanged(bool)), this, SLOT(setMotorsArmed(bool)));
+    connect(this->threadArduinoSend, SIGNAL(throttleModeChanged(bool)), this, SLOT(setThrottleMode(bool)));
     connect(this->threadArduinoSend, SIGNAL(radioValuesChanged(int,int,int,int)), this, SLOT(setRadioValues(int,int,int,int)));
-    connect(this->threadArduinoSend, SIGNAL(recordingModeChanged(QString)), this, SLOT(setRecordingMode(QString)));
-    connect(this->threadArduinoSend, SIGNAL(playingModeChanged(QString)), this, SLOT(setPlayingMode(QString)));
+    connect(this->threadArduinoSend, SIGNAL(recordingModeChanged(bool)), this, SLOT(setRecordingMode(bool)));
+    connect(this->threadArduinoSend, SIGNAL(playingModeChanged(bool)), this, SLOT(setPlayingMode(bool)));
 
     this->threadGamepadUpdate = new ThreadGamepadUpdate(this);
     connect(this->threadGamepadUpdate, SIGNAL(buttonsChanged(ButtonsPressed)), this, SLOT(setButtons(ButtonsPressed)));
@@ -51,7 +51,7 @@ void Drone::start() {
 }
 
 bool Drone::isArduinoConnected() {
-    return this->arduinoIsConnected.compare("true") == 0;
+    return this->arduinoIsConnected;
 }
 
 bool Drone::isArduinoDetected() {
@@ -90,7 +90,7 @@ void Drone::setArduinoMode(int value) {
     }
 }
 
-void Drone::setArduinoIsConnected(QString value, SerialPort * arduino) {
+void Drone::setArduinoIsConnected(bool value, SerialPort * arduino) {
     if (this->arduino != NULL) {
         this->arduino->Close();
         delete this->arduino;
@@ -99,9 +99,9 @@ void Drone::setArduinoIsConnected(QString value, SerialPort * arduino) {
 
     this->arduino = arduino;
 
-    if (this->arduinoIsConnected.compare(value) != 0) {
+    if (this->arduinoIsConnected != value) {
         this->arduinoIsConnected = value;
-        if (value.compare("true") == 0) {
+        if (value) {
             emit arduinoStatusChanged("connected");
         } else {
             emit arduinoStatusChanged("connect");
@@ -122,42 +122,42 @@ void Drone::setButtons(ButtonsPressed buttons) {
 void Drone::arduinoReset() {
     this->setArduinoDeviceString("");
     this->setArduinoMode(MODE_ARDUINO_DISCONNECTED);
-    this->setArduinoIsConnected("false", NULL);
+    this->setArduinoIsConnected(false, NULL);
 }
 
 void Drone::setRadioValues(int leftX, int leftY, int rightX, int rightY) {
     emit radioValuesChanged(leftX, leftY, rightX, rightY);
 }
 
-void Drone::setMotorsArmed(QString value) {
-    if (this->modes.motorsArmed.compare(value) != 0) {
+void Drone::setMotorsArmed(bool value) {
+    if (this->modes.motorsArmed != value) {
         this->modes.motorsArmed = value;
         emit modeChanged(this->modes);
     }
 }
 
-void Drone::setRadioSending(QString value) {
-    if (this->modes.radioSending.compare(value) != 0) {
+void Drone::setRadioSending(bool value) {
+    if (this->modes.radioSending != value) {
         this->modes.radioSending = value;
         emit modeChanged(this->modes);
     }
 }
 
-void Drone::setThrottleMode(QString value) {
-    if (this->modes.throttleModeActive.compare(value) != 0) {
+void Drone::setThrottleMode(bool value) {
+    if (this->modes.throttleModeActive != value) {
         this->modes.throttleModeActive = value;
         emit modeChanged(this->modes);
     }
 }
 
-void Drone::setRecordingMode(QString value) {
-    if (this->modes.recordingActive.compare(value) != 0) {
+void Drone::setRecordingMode(bool value) {
+    if (this->modes.recordingActive != value) {
         this->modes.recordingActive = value;
 
-        if (value.compare("false") == 0) {
-            this->canStartRecording = "false";
+        if (!value) {
+            this->canStartRecording = false;
             this->getDatabase()->closeRecord();
-        } else if (value.compare("true") == 0) {
+        } else {
             this->getDatabase()->create();
         }
 
@@ -165,8 +165,8 @@ void Drone::setRecordingMode(QString value) {
     }
 }
 
-void Drone::setPlayingMode(QString value) {
-    if (this->modes.playingActive.compare(value) != 0) {
+void Drone::setPlayingMode(bool value) {
+    if (this->modes.playingActive != value) {
         this->modes.playingActive = value;
 
         emit modeChanged(this->modes);
@@ -186,13 +186,13 @@ Database * Drone::getDatabase() {
 }
 
 void Drone::setCanStartRecording(QString active) {
-    this->canStartRecording = "true";
+    this->canStartRecording = true;
 
     emit startRecording(active);
 }
 
 bool Drone::getCanStartRecording() {
-    return this->canStartRecording.compare("true") == 0;
+    return this->canStartRecording;
 }
 
 void Drone::setCameraFrame(MyMat frame) {

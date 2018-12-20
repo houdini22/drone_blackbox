@@ -14,9 +14,9 @@ public:
 private:
     QString name;
     Drone * drone;
-    QString arduinoIsConnected = "false";
+    bool arduinoIsConnected = false;
 signals:
-    void arduinoIsConnectedChanged(QString value, SerialPort * arduino);
+    void arduinoIsConnectedChanged(bool value, SerialPort * arduino);
 };
 
 #endif // THREADARDUINOCONNECT_H

@@ -30,7 +30,7 @@ void ThreadArduinoConnect::run() {
                 }
             }
 
-            emit arduinoIsConnectedChanged("true", arduino);
+            emit arduinoIsConnectedChanged(true, arduino);
         }
         QThread::msleep(1000);
     }
