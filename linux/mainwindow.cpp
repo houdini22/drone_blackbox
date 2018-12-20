@@ -10,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->drone = new Drone(this);
 
-    connect(this->drone, SIGNAL(gamePadIsConnectedChanged(QString)), this, SLOT(setGamePadIsConnected(QString)));
-    connect(this->drone, SIGNAL(radioValuesChanged(QString,QString,QString,QString)), this, SLOT(setRadioValues(QString,QString,QString,QString)));
+    connect(this->drone, SIGNAL(gamePadIsConnectedChanged(bool)), this, SLOT(setGamePadIsConnected(bool)));
+    connect(this->drone, SIGNAL(radioValuesChanged(int,int,int,int)), this, SLOT(setRadioValues(int,int,int,int)));
     connect(this->drone, SIGNAL(arduinoStatusChanged(QString)), this, SLOT(setArduinoStatus(QString)));
     connect(this->drone, SIGNAL(modeChanged(Modes)), this, SLOT(setModes(Modes)));
     connect(this->drone, SIGNAL(recordFilesChanged(RecordsList)), this, SLOT(setListItems(RecordsList)));
@@ -27,29 +27,29 @@ MainWindow::MainWindow(QWidget *parent) :
     this->drone->start();
 }
 
-void MainWindow::setGamePadIsConnected(QString value) {
+void MainWindow::setGamePadIsConnected(bool value) {
     QLabel * label = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadValue"));
 
-    if (value.compare("true") == 0) {
+    if (value) {
         label->setText("connected");
         label->setDisabled(false);
-    } else if (value.compare("false") == 0) {
+    } else {
         label->setText("connect...");
         label->setDisabled(true);
     }
 }
 
-void MainWindow::setRadioValues(QString leftX, QString leftY, QString rightX, QString rightY) {
+void MainWindow::setRadioValues(int leftX, int leftY, int rightX, int rightY) {
     QLabel * labelLeftX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftX"));
     QLabel * labelLeftY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftY"));
     QLabel * labelRightX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightX"));
     QLabel * labelRightY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightY"));
 
     if (this->radioSending.compare("true") == 0) {
-        labelLeftX->setText(leftX);
-        labelLeftY->setText(leftY);
-        labelRightX->setText(rightX);
-        labelRightY->setText(rightY);
+        labelLeftX->setText(QString::number(leftX));
+        labelLeftY->setText(QString::number(leftY));
+        labelRightX->setText(QString::number(rightX));
+        labelRightY->setText(QString::number(rightY));
     }
 }
 

@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/linux.dir/build/moc_drone.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_mainwindow.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_threadarduinoconnect.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_threadarduinodetect.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_threadarduinoping.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_threadarduinosend.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_threadgamepad.cpp.o"
+  "CMakeFiles/linux.dir/build/moc_threadgamepadupdate.cpp.o"
+  "CMakeFiles/linux.dir/common.cpp.o"
+  "CMakeFiles/linux.dir/database.cpp.o"
+  "CMakeFiles/linux.dir/drone.cpp.o"
+  "CMakeFiles/linux.dir/gamepad.cpp.o"
+  "CMakeFiles/linux.dir/main.cpp.o"
+  "CMakeFiles/linux.dir/mainwindow.cpp.o"
+  "CMakeFiles/linux.dir/moc_database.cpp.o"
+  "CMakeFiles/linux.dir/moc_drone.cpp.o"
+  "CMakeFiles/linux.dir/moc_mainwindow.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadarduinoconnect.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadarduinodetect.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadarduinoping.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadarduinosend.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadcamera.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadgamepad.cpp.o"
+  "CMakeFiles/linux.dir/moc_threadgamepadupdate.cpp.o"
+  "CMakeFiles/linux.dir/threadarduinoconnect.cpp.o"
+  "CMakeFiles/linux.dir/threadarduinodetect.cpp.o"
+  "CMakeFiles/linux.dir/threadarduinoping.cpp.o"
+  "CMakeFiles/linux.dir/threadarduinosend.cpp.o"
+  "CMakeFiles/linux.dir/threadcamera.cpp.o"
+  "CMakeFiles/linux.dir/threadgamepad.cpp.o"
+  "CMakeFiles/linux.dir/threadgamepadupdate.cpp.o"
+  "linux.pdb"
+  "linux"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/linux.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

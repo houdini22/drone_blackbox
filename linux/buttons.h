@@ -4,19 +4,19 @@
 #include "include.h"
 
 struct ButtonsPressed {
-    QString leftX = "";
-    QString leftY = "";
-    QString rightX = "";
-    QString rightY = "";
-    QString start = "";
-    QString arming = "";
-    QString a = "";
-    QString b = "";
-    QString y = "";
-    QString leftShoulder = "";
-    QString rightShoulder = "";
-    QString dPadUp = "";
-    QString dPadDown = "";
+    int leftX = 1100;
+    int leftY = 1500;
+    int rightX = 1500;
+    int rightY = 1500;
+    bool start = false;
+    bool arming = false;
+    bool a = false;
+    bool b = false;
+    bool y = false;
+    bool leftShoulder = false;
+    bool rightShoulder = false;
+    bool dPadUp = false;
+    bool dPadDown = false;
 };
 
 Q_DECLARE_METATYPE(ButtonsPressed)

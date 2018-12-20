@@ -14,11 +14,11 @@ public:
 private:
     QString name;
     Drone * drone;
-    QString gamepadIsConnected = "false";
+    bool gamepadIsConnected = false;
 public slots:
-    void setGamePadIsConnected(QString value);
+    void setGamePadIsConnected(bool value);
 signals:
-    void gamePadIsConnectedChanged(QString value);
+    void gamePadIsConnectedChanged(bool value);
 };
 
 #endif // THREADGAMEPAD_H

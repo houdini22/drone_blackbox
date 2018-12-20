@@ -12,8 +12,8 @@ void ThreadArduinoSend::send(QString buffer) {
     } catch(std::runtime_error ex) {}
 }
 
-QString ThreadArduinoSend::axisValueFromDouble(double value) {
-    return QString::number((((double) MAX_SEND_VALUE_FORCE + (double) MIN_SEND_VALUE_FORCE) / 2.0) +
+int ThreadArduinoSend::axisValueFromDouble(double value) {
+    return (int) ((((double) MAX_SEND_VALUE_FORCE + (double) MIN_SEND_VALUE_FORCE) / 2.0) +
                            (value * ((double) MAX_SEND_VALUE_FORCE - (double) MIN_SEND_VALUE_FORCE) / 2.0));
 }
 
@@ -25,17 +25,17 @@ QString ThreadArduinoSend::createAxisBuffer(double leftX, double leftY, double r
                 this->axisValueFromDouble(rightY));
 }
 
-QString ThreadArduinoSend::createAxisBuffer(QString leftX, QString leftY, QString rightX, QString rightY) {
+QString ThreadArduinoSend::createAxisBuffer(int leftX, int leftY, int rightX, int rightY) {
     QString buffer = "";
 
     buffer.append("^");
-    buffer.append(leftX);
+    buffer.append(QString::number(leftX));
     buffer.append(" ");
-    buffer.append(leftY);
+    buffer.append(QString::number(leftY));
     buffer.append(" ");
-    buffer.append(rightX);
+    buffer.append(QString::number(rightX));
     buffer.append(" ");
-    buffer.append(rightY);
+    buffer.append(QString::number(rightY));
     buffer.append("$");
 
     return buffer;
@@ -78,15 +78,15 @@ void ThreadArduinoSend::run() {
 
                     PlayFrame frame = this->drone->getDatabase()->getFrame(currentPlay);
 
-                    this->setRadioValues(frame["leftX"], frame["leftY"], frame["rightX"], frame["rightY"]);
-                    this->send(this->createAxisBuffer(frame["leftX"], frame["leftY"], frame["rightX"], frame["rightY"]));
+                    this->setRadioValues(frame["leftX"].toInt(), frame["leftY"].toInt(), frame["rightX"].toInt(), frame["rightY"].toInt());
+                    this->send(this->createAxisBuffer(frame["leftX"].toInt(), frame["leftY"].toInt(), frame["rightX"].toInt(), frame["rightY"].toInt()));
                 } else {
                     if (throttleMode) {
                         if (this->drone->getCanStartRecording()) {
-                            this->drone->getDatabase()->record(buttons.leftX, QString::number(MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY);
+                            this->drone->getDatabase()->record(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
                         }
-                        this->setRadioValues(buttons.leftX, QString::number(MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY);
-                        this->send(this->createAxisBuffer(buttons.leftX, QString::number(MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
+                        this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
+                        this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
                     } else {
                         if (this->drone->getCanStartRecording()) {
                             this->drone->getDatabase()->record(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
@@ -98,14 +98,14 @@ void ThreadArduinoSend::run() {
             }
 
             /* LISTEN */
-            if (buttons.y.compare("true") == 0) {
+            if (buttons.y) {
                 sendingRecording = 6;
 
                 continue;
             }
 
             if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
-                if (buttons.a.compare("true") == 0) { // toggle Throttle mode
+                if (buttons.a) { // toggle Throttle mode
                     sendingThrottle = 13;
                     throttleMode = !throttleMode;
                     this->setThrottleMode(throttleMode ? "true" : "false");
@@ -113,13 +113,13 @@ void ThreadArduinoSend::run() {
                     continue;
                 }
 
-                if (buttons.b.compare("true") == 0) {
+                if (buttons.b) {
                     sendingB = 13;
 
                     continue;
                 }
 
-                if (buttons.start.compare("true") == 0 && !armingMode) { // toggle sending
+                if (buttons.start && !armingMode) { // toggle sending
                     if (startMode) {
                         sendingStart = 26; // 26 * 40 ms
 
@@ -136,7 +136,7 @@ void ThreadArduinoSend::run() {
                 }
 
                 if (startMode) { // if toggled sendinf true
-                    if (buttons.arming.compare("true") == 0) { // if arming
+                    if (buttons.arming) { // if arming
                         if (!armingMode) {
                             sendingArm = 28; // 28 * 40 ms
 
@@ -154,14 +154,14 @@ void ThreadArduinoSend::run() {
                 }
 
                 if (throttleMode) { // a on
-                    if (buttons.leftShoulder.compare("true") == 0) {
+                    if (buttons.leftShoulder) {
                         sendingLeftY = 6;
 
                         leftY -= 0.025;
                         if (leftY < 0.0) {
                             leftY = 0.0;
                         }
-                    } else if (buttons.rightShoulder.compare("true") == 0) {
+                    } else if (buttons.rightShoulder) {
                         sendingLeftY = 6;
 
                         leftY += 0.025;
@@ -187,14 +187,15 @@ void ThreadArduinoSend::run() {
                     if (this->drone->getCanStartRecording()) {
                         this->drone->getDatabase()->record(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
                     }
-                    this->setRadioValues(1, -1, 0, 0);
-                    this->send(this->createAxisBuffer(1, -1, 0, 0));
+                    this->setRadioValues(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                    this->send(this->createAxisBuffer(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
                 } else {
                     if (this->drone->getCanStartRecording()) {
                         this->drone->getDatabase()->record(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
                     }
-                    this->setRadioValues(-1, -1, 0, 0);
-                    this->send(this->createAxisBuffer(-1, -1, 0, 0));
+                    this->setRadioValues(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                    this->send(this->createAxisBuffer(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
+
                 }
 
                 sendingArm--;
@@ -278,28 +279,24 @@ void ThreadArduinoSend::setThrottleMode(QString value) {
 }
 
 void ThreadArduinoSend::setRadioValues(double leftX, double leftY, double rightX, double rightY) {
-    this->setRadioValues(this->axisValueFromDouble(leftX), this->axisValueFromDouble(leftY), this->axisValueFromDouble(rightX), this->axisValueFromDouble(rightY));
-}
-
-void ThreadArduinoSend::setRadioValues(QString leftX, QString leftY, QString rightX, QString rightY) {
     bool update = false;
 
-    if (this->leftX.compare(leftX) != 0) {
+    if (this->leftX != leftX) {
         this->leftX = leftX;
         update = true;
     }
 
-    if (this->leftY.compare(leftY) != 0) {
+    if (this->leftY != leftY) {
         this->leftY = leftY;
         update = true;
     }
 
-    if (this->rightX.compare(rightX) != 0) {
+    if (this->rightX != rightX) {
         this->rightX = rightX;
         update = true;
     }
 
-    if (this->rightY.compare(rightY) != 0) {
+    if (this->rightY != rightY) {
         this->rightY = rightY;
         update = true;
     }

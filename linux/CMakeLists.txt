@@ -1,0 +1,60 @@
+cmake_minimum_required(VERSION 3.12)
+project(linux)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+include_directories(build)
+
+add_executable(linux
+        build/moc_drone.cpp
+        build/moc_mainwindow.cpp
+        build/moc_predefs.h
+        build/moc_threadarduinoconnect.cpp
+        build/moc_threadarduinodetect.cpp
+        build/moc_threadarduinoping.cpp
+        build/moc_threadarduinosend.cpp
+        build/moc_threadgamepad.cpp
+        build/moc_threadgamepadupdate.cpp
+        build/ui_mainwindow.h
+        buttons.h
+        common.cpp
+        common.h
+        database.cpp
+        database.h
+        drone.cpp
+        drone.h
+        dronemanager.h
+        dronemodes.h
+        gamepad.cpp
+        gamepad.h
+        include.h
+        main.cpp
+        mainwindow.cpp
+        mainwindow.h
+        moc_database.cpp
+        moc_drone.cpp
+        moc_mainwindow.cpp
+        moc_predefs.h
+        moc_threadarduinoconnect.cpp
+        moc_threadarduinodetect.cpp
+        moc_threadarduinoping.cpp
+        moc_threadarduinosend.cpp
+        moc_threadcamera.cpp
+        moc_threadgamepad.cpp
+        moc_threadgamepadupdate.cpp
+        threadarduinoconnect.cpp
+        threadarduinoconnect.h
+        threadarduinodetect.cpp
+        threadarduinodetect.h
+        threadarduinoping.cpp
+        threadarduinoping.h
+        threadarduinosend.cpp
+        threadarduinosend.h
+        threadcamera.cpp
+        threadcamera.h
+        threadgamepad.cpp
+        threadgamepad.h
+        threadgamepadupdate.cpp
+        threadgamepadupdate.h
+        ui_mainwindow.h)

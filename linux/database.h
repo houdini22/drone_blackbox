@@ -19,7 +19,7 @@ public:
     void remove(QString name);
     QString create();
     void move(QString oldName, QString newName);
-    void record(QString leftX, QString leftY, QString rightX, QString rightY);
+    void record(int leftX, int leftY, int rightX, int rightY);
     void closeRecord();
     void setActivePlay(QString name);
     void openPlay();

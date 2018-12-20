@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="linux"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/anonymous/DRONE_REPO/linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/anonymous/DRONE_REPO/linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/anonymous/DRONE_REPO/linux/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="linux">
+				<Option output="/home/anonymous/DRONE_REPO/linux/cmake-build-debug/linux" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anonymous/DRONE_REPO/linux/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/anonymous/DRONE_REPO/linux/."/>
+					<Add directory="/home/anonymous/DRONE_REPO/linux/build"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 linux"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="linux/fast">
+				<Option output="/home/anonymous/DRONE_REPO/linux/cmake-build-debug/linux" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anonymous/DRONE_REPO/linux/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/anonymous/DRONE_REPO/linux/."/>
+					<Add directory="/home/anonymous/DRONE_REPO/linux/build"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 linux/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/anonymous/DRONE_REPO/linux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_drone.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_mainwindow.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_predefs.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_threadarduinoconnect.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_threadarduinodetect.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_threadarduinoping.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_threadarduinosend.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_threadgamepad.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/moc_threadgamepadupdate.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/build/ui_mainwindow.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/buttons.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/common.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/common.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/database.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/database.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/drone.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/drone.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/dronemanager.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/dronemodes.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/gamepad.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/gamepad.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/include.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/main.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/mainwindow.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/mainwindow.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_database.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_drone.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_mainwindow.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_predefs.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadarduinoconnect.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadarduinodetect.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadarduinoping.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadarduinosend.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadcamera.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadgamepad.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/moc_threadgamepadupdate.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinoconnect.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinoconnect.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinodetect.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinodetect.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinoping.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinoping.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinosend.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadarduinosend.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadcamera.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadcamera.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadgamepad.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadgamepad.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadgamepadupdate.cpp">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/threadgamepadupdate.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/ui_mainwindow.h">
+			<Option target="linux"/>
+		</Unit>
+		<Unit filename="/home/anonymous/DRONE_REPO/linux/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -94,8 +94,8 @@ void Database::setActivePlay(QString name) {
     }
 }
 
-void Database::record(QString leftX, QString leftY, QString rightX, QString rightY) {
-    this->activeHandle << leftX.toStdString() << ' ' << leftY.toStdString() << ' ' << rightX.toStdString() << ' ' << rightY.toStdString() << '\n';
+void Database::record(int leftX, int leftY, int rightX, int rightY) {
+    this->activeHandle << QString::number(leftX).toStdString() << ' ' << QString::number(leftY).toStdString() << ' ' << QString::number(rightX).toStdString() << ' ' << QString::number(rightY).toStdString() << '\n';
 }
 
 void Database::closeRecord() {

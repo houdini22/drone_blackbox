@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="linux" targetName="linux" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc67f1bd-14c1-492c-bb90-1c9f500eeb2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buttons.h" beforeDir="false" afterPath="$PROJECT_DIR$/buttons.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/database.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.h" beforeDir="false" afterPath="$PROJECT_DIR$/database.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/drone.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drone.h" beforeDir="false" afterPath="$PROJECT_DIR$/drone.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drone.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dronemodes.h" beforeDir="false" afterPath="$PROJECT_DIR$/dronemodes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamepad.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_database.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_drone.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_mainwindow.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadarduinoconnect.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadarduinodetect.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadarduinoping.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadarduinosend.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadcamera.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadgamepad.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moc_threadgamepadupdate.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/observer.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinoconnect.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinodetect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/threadarduinodetect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinodetect.h" beforeDir="false" afterPath="$PROJECT_DIR$/threadarduinodetect.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinodetect.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinoping.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinosend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/threadarduinosend.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinosend.h" beforeDir="false" afterPath="$PROJECT_DIR$/threadarduinosend.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadarduinosend.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadcamera.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadgamepad.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/threadgamepad.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadgamepad.h" beforeDir="false" afterPath="$PROJECT_DIR$/threadgamepad.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadgamepad.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadgamepadupdate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/threadgamepadupdate.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadgamepadupdate.o" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="128063818">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.5" value="5" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cpp" value="9" />
+          <entry key="h" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ObjectiveC" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="279" />
+          <entry key="h" value="346" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ObjectiveC" value="625" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threadgamepadupdate.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/threadarduinosend.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threadgamepad.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>std::string</find>
+      <find>d(</find>
+      <find>arduinoIsDetected</find>
+      <find>arduinoMode</find>
+      <find>gamePadIsConnectedChanged</find>
+      <find>setGamePadIsConnected</find>
+      <find>Modes</find>
+      <find>this-&gt;setRadioValues</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>T_SS</replace>
+      <replace>arduinoMode</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/threadarduinodetect.cpp" />
+        <option value="$PROJECT_DIR$/threadarduinodetect.h" />
+        <option value="$PROJECT_DIR$/dronemodes.h" />
+        <option value="$PROJECT_DIR$/threadgamepad.cpp" />
+        <option value="$PROJECT_DIR$/threadgamepad.h" />
+        <option value="$PROJECT_DIR$/drone.h" />
+        <option value="$PROJECT_DIR$/drone.cpp" />
+        <option value="$PROJECT_DIR$/mainwindow.cpp" />
+        <option value="$PROJECT_DIR$/mainwindow.h" />
+        <option value="$PROJECT_DIR$/buttons.h" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="126" />
+    <option name="y" value="49" />
+    <option name="width" value="1382" />
+    <option name="height" value="995" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="linux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="linux" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.linux">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="linux" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="linux" TARGET_NAME="linux" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="linux" RUN_TARGET_NAME="linux">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.linux" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc67f1bd-14c1-492c-bb90-1c9f500eeb2e" name="Default Changelist" comment="" />
+      <created>1545254071848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545254071848</updated>
+      <workItem from="1545254073290" duration="719000" />
+      <workItem from="1545283784163" duration="621000" />
+      <workItem from="1545285629874" duration="128000" />
+      <workItem from="1545285922555" duration="1776000" />
+      <workItem from="1545287805660" duration="1368000" />
+      <workItem from="1545290291171" duration="741000" />
+      <workItem from="1545294397745" duration="1253000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6606000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18996799" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/moc_threadarduinoconnect.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moc_threadgamepad.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buttons.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainwindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainwindow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drone.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadarduinodetect.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dronemodes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadarduinodetect.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadgamepad.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drone.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="79" column="38" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadgamepadupdate.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadgamepad.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadarduinosend.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

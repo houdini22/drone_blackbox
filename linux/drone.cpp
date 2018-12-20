@@ -11,10 +11,10 @@ Drone::Drone(MainWindow * window)
     connect(this->database, SIGNAL(recordingStart(QString)), this, SLOT(setCanStartRecording(QString)));
 
     this->threadGamepad = new ThreadGamepad(this);
-    connect(this->threadGamepad, SIGNAL(gamePadIsConnectedChanged(QString)), this, SLOT(setGamePadIsConnected(QString)));
+    connect(this->threadGamepad, SIGNAL(gamePadIsConnectedChanged(bool)), this, SLOT(setGamePadIsConnected(bool)));
 
     this->threadArduinoDetect = new ThreadArduinoDetect(this);
-    connect(this->threadArduinoDetect, SIGNAL(isArduinoDetectedChanged(QString)), this, SLOT(setArduinoIsDetected(QString)));
+    connect(this->threadArduinoDetect, SIGNAL(arduinoModeChanged(int)), this, SLOT(setArduinoMode(int)));
     connect(this->threadArduinoDetect, SIGNAL(arduinoDeviceStringChanged(QString)), this, SLOT(setArduinoDeviceString(QString)));
 
     this->threadArduinoConnect = new ThreadArduinoConnect(this);
@@ -27,7 +27,7 @@ Drone::Drone(MainWindow * window)
     connect(this->threadArduinoSend, SIGNAL(radioSendingChanged(QString)), this, SLOT(setRadioSending(QString)));
     connect(this->threadArduinoSend, SIGNAL(motorsArmedChanged(QString)), this, SLOT(setMotorsArmed(QString)));
     connect(this->threadArduinoSend, SIGNAL(throttleModeChanged(QString)), this, SLOT(setThrottleMode(QString)));
-    connect(this->threadArduinoSend, SIGNAL(radioValuesChanged(QString,QString,QString,QString)), this, SLOT(setRadioValues(QString,QString,QString,QString)));
+    connect(this->threadArduinoSend, SIGNAL(radioValuesChanged(int,int,int,int)), this, SLOT(setRadioValues(int,int,int,int)));
     connect(this->threadArduinoSend, SIGNAL(recordingModeChanged(QString)), this, SLOT(setRecordingMode(QString)));
     connect(this->threadArduinoSend, SIGNAL(playingModeChanged(QString)), this, SLOT(setPlayingMode(QString)));
 
@@ -55,11 +55,11 @@ bool Drone::isArduinoConnected() {
 }
 
 bool Drone::isArduinoDetected() {
-    return this->arduinoIsDetected.compare("true") == 0;
+    return this->arduinoMode == MODE_ARDUINO_DETECTED;
 }
 
 bool Drone::isGamePadConnected() {
-    return this->gamePadIsConnected.compare("true") == 0;
+    return this->gamePadIsConnected;
 }
 
 SerialPort * Drone::getArduino() {
@@ -74,17 +74,17 @@ QString Drone::getArduinoDeviceStr() {
     return this->arduinoDeviceStr;
 }
 
-void Drone::setGamePadIsConnected(QString value) {
-    if (this->gamePadIsConnected.compare(value) != 0) {
+void Drone::setGamePadIsConnected(bool value) {
+    if (this->gamePadIsConnected != value) {
         this->gamePadIsConnected = value;
-        emit this->gamePadIsConnectedChanged(value);
+        emit gamePadIsConnectedChanged(value);
     }
 }
 
-void Drone::setArduinoIsDetected(QString value) {
-    if (this->arduinoIsDetected.compare(value) != 0) {
-        this->arduinoIsDetected = value;
-        if (value.compare("true") == 0) {
+void Drone::setArduinoMode(int value) {
+    if (this->arduinoMode != value) {
+        this->arduinoMode = value;
+        if (value == MODE_ARDUINO_DETECTED) {
             emit arduinoStatusChanged("connecting...");
         }
     }
@@ -121,11 +121,11 @@ void Drone::setButtons(ButtonsPressed buttons) {
 
 void Drone::arduinoReset() {
     this->setArduinoDeviceString("");
-    this->setArduinoIsDetected("false");
+    this->setArduinoMode(MODE_ARDUINO_DISCONNECTED);
     this->setArduinoIsConnected("false", NULL);
 }
 
-void Drone::setRadioValues(QString leftX, QString leftY, QString rightX, QString rightY) {
+void Drone::setRadioValues(int leftX, int leftY, int rightX, int rightY) {
     emit radioValuesChanged(leftX, leftY, rightX, rightY);
 }
 

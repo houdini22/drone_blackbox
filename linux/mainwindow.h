@@ -25,8 +25,8 @@ private:
     QString radioSending = "false";
     QListWidgetItem * currentItem;
 public slots:
-    void setGamePadIsConnected(QString value);
-    void setRadioValues(QString leftX, QString leftY, QString rightX, QString rightY);
+    void setGamePadIsConnected(bool value);
+    void setRadioValues(int leftX, int leftY, int rightX, int rightY);
     void setArduinoStatus(QString value);
     void setModes(Modes modes);
     void cameraFrameChanged(MyMat);

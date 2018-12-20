@@ -33,10 +33,10 @@ void ThreadArduinoDetect::run() {
 
             if (arduinoDeviceStr.length() > 0) {
                 this->setArduinoDeviceString(arduinoDeviceStr);
-                this->setIsArduinoDetected("true");
+                this->setArduinoMode(MODE_ARDUINO_DETECTED);
             } else {
                 this->setArduinoDeviceString("");
-                this->setIsArduinoDetected("false");
+                this->setArduinoMode(MODE_ARDUINO_DISCONNECTED);
             }
         }
         QThread::msleep(1000);
@@ -50,9 +50,9 @@ void ThreadArduinoDetect::setArduinoDeviceString(QString value) {
     }
 }
 
-void ThreadArduinoDetect::setIsArduinoDetected(QString value) {
-    if (this->arduinoDetected.compare(value) != 0) {
-        this->arduinoDetected = value;
-        emit isArduinoDetectedChanged(value);
+void ThreadArduinoDetect::setArduinoMode(int value) {
+    if (this->arduinoMode != value) {
+        this->arduinoMode = value;
+        emit arduinoModeChanged(value);
     }
 }

@@ -11,4 +11,8 @@ struct Modes {
     QString playingActive = "false";
 };
 
+const int MODE_ARDUINO_DISCONNECTED = 0;
+const int MODE_ARDUINO_DETECTED = 1;
+const int MODE_ARDUINO_CONNECTED = 2;
+
 #endif // DRONEMODES_H

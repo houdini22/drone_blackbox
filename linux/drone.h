@@ -40,14 +40,14 @@ public:
 
     bool getCanStartRecording();
 private slots:
-    void setGamePadIsConnected(QString value);
+    void setGamePadIsConnected(bool value);
     void setButtons(ButtonsPressed buttons);
-    void setArduinoIsDetected(QString value);
+    void setArduinoMode(int value);
     void setArduinoIsConnected(QString value, SerialPort * arduino);
     void setArduinoDeviceString(QString value);
     void setRadioSending(QString value);
     void arduinoReset();
-    void setRadioValues(QString, QString, QString, QString);
+    void setRadioValues(int, int, int, int);
     void setMotorsArmed(QString value);
     void setThrottleMode(QString value);
     void setRecordingMode(QString value);
@@ -56,11 +56,11 @@ private slots:
     void setPlayingMode(QString active);
     void setCameraFrame(MyMat);
 signals:
-    void gamePadIsConnectedChanged(QString value);
+    void gamePadIsConnectedChanged(bool value);
     void gamePadValuesChanged(ButtonsPressed buttons);
     void arduinoStatusChanged(QString value);
     void modeChanged(Modes modes);
-    void radioValuesChanged(QString leftX, QString leftY, QString rightX, QString rightY);
+    void radioValuesChanged(int leftX, int leftY, int rightX, int rightY);
     void recordFilesChanged(RecordsList list);
     void startRecording(QString name);
     void cameraFrameChanged(MyMat);
@@ -75,8 +75,8 @@ private:
     ThreadGamepadUpdate * threadGamepadUpdate;
     ThreadCamera * threadCamera;
 
-    QString gamePadIsConnected = "false";
-    QString arduinoIsDetected = "false";
+    bool gamePadIsConnected = false;
+    bool arduinoMode = MODE_ARDUINO_DISCONNECTED;
     QString arduinoIsConnected = "false";
     QString arduinoDeviceStr = "";
 

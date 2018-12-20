@@ -16,14 +16,14 @@ public:
 private:
     QString name;
     Drone * drone;
-    QString arduinoDetected = "false";
+    int arduinoMode = MODE_ARDUINO_DISCONNECTED;
     QString arduinoDeviceString = "";
 public slots:
-    void setIsArduinoDetected(QString value);
+    void setArduinoMode(int value);
     void setArduinoDeviceString(QString value);
 signals:
-    void isArduinoDetectedChanged(QString value);
     void arduinoDeviceStringChanged(QString value);
+    void arduinoModeChanged(int value);
 };
 
 #endif // THREADARDUINODETECT_H

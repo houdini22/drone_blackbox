@@ -19,27 +19,26 @@ private:
     QString motorsArmed = "false";
     QString throttleModeActive = "false";
 
-    QString leftX = "";
-    QString leftY = "";
-    QString rightX = "";
-    QString rightY = "";
+    int leftX = 1500;
+    int leftY = 1100;
+    int rightX = 1100;
+    int rightY = 1100;
 
     void send(QString buffer);
 
-    QString createAxisBuffer(QString leftX, QString leftY, QString rightX, QString rightY);
     QString createAxisBuffer(double leftX, double leftY, double rightX, double rightY);
+    QString createAxisBuffer(int leftX, int leftY, int rightX, int rightY);
 
-    QString axisValueFromDouble(double value);
+    int axisValueFromDouble(double value);
 public slots:
     void setRadioSending(QString value);
     void setMotorsArmed(QString value);
     void setThrottleMode(QString value);
-    void setRadioValues(QString leftX, QString leftY, QString rightX, QString rightY);
     void setRadioValues(double leftX, double leftY, double rightX, double rightY);
 signals:
     void radioSendingChanged(QString value);
     void motorsArmedChanged(QString status);
-    void radioValuesChanged(QString leftX, QString leftY, QString rightX, QString rightY);
+    void radioValuesChanged(int leftX, int leftY, int rightX, int rightY);
     void throttleModeChanged(QString value);
     void recordingModeChanged(QString value);
     void playingModeChanged(QString value);
