@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'threadarduinodetect.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.5)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.11.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'threadarduinodetect.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.5. It"
+#error "This file was generated using the moc from 5.11.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ThreadArduinoDetect_t {
     QByteArrayData data[7];
-    char stringdata0[123];
+    char stringdata0[111];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,17 +32,17 @@ struct qt_meta_stringdata_ThreadArduinoDetect_t {
 static const qt_meta_stringdata_ThreadArduinoDetect_t qt_meta_stringdata_ThreadArduinoDetect = {
     {
 QT_MOC_LITERAL(0, 0, 19), // "ThreadArduinoDetect"
-QT_MOC_LITERAL(1, 20, 24), // "isArduinoDetectedChanged"
-QT_MOC_LITERAL(2, 45, 0), // ""
-QT_MOC_LITERAL(3, 46, 5), // "value"
-QT_MOC_LITERAL(4, 52, 26), // "arduinoDeviceStringChanged"
-QT_MOC_LITERAL(5, 79, 20), // "setIsArduinoDetected"
-QT_MOC_LITERAL(6, 100, 22) // "setArduinoDeviceString"
+QT_MOC_LITERAL(1, 20, 26), // "arduinoDeviceStringChanged"
+QT_MOC_LITERAL(2, 47, 0), // ""
+QT_MOC_LITERAL(3, 48, 5), // "value"
+QT_MOC_LITERAL(4, 54, 18), // "arduinoModeChanged"
+QT_MOC_LITERAL(5, 73, 14), // "setArduinoMode"
+QT_MOC_LITERAL(6, 88, 22) // "setArduinoDeviceString"
 
     },
-    "ThreadArduinoDetect\0isArduinoDetectedChanged\0"
-    "\0value\0arduinoDeviceStringChanged\0"
-    "setIsArduinoDetected\0setArduinoDeviceString"
+    "ThreadArduinoDetect\0arduinoDeviceStringChanged\0"
+    "\0value\0arduinoModeChanged\0setArduinoMode\0"
+    "setArduinoDeviceString"
 };
 #undef QT_MOC_LITERAL
 
@@ -69,10 +69,10 @@ static const uint qt_meta_data_ThreadArduinoDetect[] = {
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::Int,    3,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void, QMetaType::QString,    3,
 
        0        // eod
@@ -84,24 +84,24 @@ void ThreadArduinoDetect::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         ThreadArduinoDetect *_t = static_cast<ThreadArduinoDetect *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->isArduinoDetectedChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 1: _t->arduinoDeviceStringChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 2: _t->setIsArduinoDetected((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 0: _t->arduinoDeviceStringChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 1: _t->arduinoModeChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: _t->setArduinoMode((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->setArduinoDeviceString((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            typedef void (ThreadArduinoDetect::*_t)(QString );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ThreadArduinoDetect::isArduinoDetectedChanged)) {
+            using _t = void (ThreadArduinoDetect::*)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ThreadArduinoDetect::arduinoDeviceStringChanged)) {
                 *result = 0;
                 return;
             }
         }
         {
-            typedef void (ThreadArduinoDetect::*_t)(QString );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ThreadArduinoDetect::arduinoDeviceStringChanged)) {
+            using _t = void (ThreadArduinoDetect::*)(int );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ThreadArduinoDetect::arduinoModeChanged)) {
                 *result = 1;
                 return;
             }
@@ -109,7 +109,7 @@ void ThreadArduinoDetect::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
     }
 }
 
-const QMetaObject ThreadArduinoDetect::staticMetaObject = {
+QT_INIT_METAOBJECT const QMetaObject ThreadArduinoDetect::staticMetaObject = {
     { &QThread::staticMetaObject, qt_meta_stringdata_ThreadArduinoDetect.data,
       qt_meta_data_ThreadArduinoDetect,  qt_static_metacall, nullptr, nullptr}
 };
@@ -146,14 +146,14 @@ int ThreadArduinoDetect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ThreadArduinoDetect::isArduinoDetectedChanged(QString _t1)
+void ThreadArduinoDetect::arduinoDeviceStringChanged(QString _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
-void ThreadArduinoDetect::arduinoDeviceStringChanged(QString _t1)
+void ThreadArduinoDetect::arduinoModeChanged(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);

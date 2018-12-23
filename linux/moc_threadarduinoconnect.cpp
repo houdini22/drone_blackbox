@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'threadarduinoconnect.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.5)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.11.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'threadarduinoconnect.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.5. It"
+#error "This file was generated using the moc from 5.11.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -61,7 +61,7 @@ static const uint qt_meta_data_ThreadArduinoConnect[] = {
        1,    2,   19,    2, 0x06 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString, 0x80000000 | 4,    3,    5,
+    QMetaType::Void, QMetaType::Bool, 0x80000000 | 4,    3,    5,
 
        0        // eod
 };
@@ -72,13 +72,13 @@ void ThreadArduinoConnect::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
         ThreadArduinoConnect *_t = static_cast<ThreadArduinoConnect *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->arduinoIsConnectedChanged((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< SerialPort*(*)>(_a[2]))); break;
+        case 0: _t->arduinoIsConnectedChanged((*reinterpret_cast< bool(*)>(_a[1])),(*reinterpret_cast< SerialPort*(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            typedef void (ThreadArduinoConnect::*_t)(QString , SerialPort * );
+            using _t = void (ThreadArduinoConnect::*)(bool , SerialPort * );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ThreadArduinoConnect::arduinoIsConnectedChanged)) {
                 *result = 0;
                 return;
@@ -87,7 +87,7 @@ void ThreadArduinoConnect::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
     }
 }
 
-const QMetaObject ThreadArduinoConnect::staticMetaObject = {
+QT_INIT_METAOBJECT const QMetaObject ThreadArduinoConnect::staticMetaObject = {
     { &QThread::staticMetaObject, qt_meta_stringdata_ThreadArduinoConnect.data,
       qt_meta_data_ThreadArduinoConnect,  qt_static_metacall, nullptr, nullptr}
 };
@@ -124,7 +124,7 @@ int ThreadArduinoConnect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ThreadArduinoConnect::arduinoIsConnectedChanged(QString _t1, SerialPort * _t2)
+void ThreadArduinoConnect::arduinoIsConnectedChanged(bool _t1, SerialPort * _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
