@@ -11,6 +11,12 @@ struct Modes {
     bool playingActive = false;
 };
 
+struct HandPosition {
+    float pitch = 0.0;
+    float yaw = 0.0;
+    float roll = 0.0;
+};
+
 const int MODE_ARDUINO_DISCONNECTED = 0;
 const int MODE_ARDUINO_DETECTED = 1;
 const int MODE_ARDUINO_CONNECTED = 2;

@@ -54,7 +54,6 @@ SOURCES += \
     threadcamera.cpp \
     threadgamepad.cpp \
     threadgamepadupdate.cpp \
-    threadleapmotion.cpp \
     QtLeapMotion/Leap/util/LeapScene.cpp \
     QtLeapMotion/Leap/util/LeapUtil.cpp \
     QtLeapMotion/Leap/util/LeapUtilGL.cpp \
@@ -86,7 +85,7 @@ SOURCES += \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp \
     QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp \
-    HandsListener.cpp
+    leapeventlistener.cpp
 
 HEADERS += \
     buttons.h \
@@ -105,7 +104,6 @@ HEADERS += \
     threadcamera.h \
     threadgamepad.h \
     threadgamepadupdate.h \
-    threadleapmotion.h \
     ui_mainwindow.h \
     QtLeapMotion/Leap/include/Leap.h \
     QtLeapMotion/Leap/include/LeapMath.h \
@@ -150,7 +148,7 @@ HEADERS += \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h \
     QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h \
-    HandsListener.h
+    leapeventlistener.h
 
 FORMS += \
     mainwindow.ui

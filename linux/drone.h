@@ -14,7 +14,6 @@ class ThreadArduinoPing;
 class ThreadArduinoSend;
 class ThreadGamepadUpdate;
 class ThreadCamera;
-class ThreadLeapMotion;
 class Database;
 
 class Drone : public QObject
@@ -75,7 +74,6 @@ private:
     ThreadArduinoSend * threadArduinoSend;
     ThreadGamepadUpdate * threadGamepadUpdate;
     ThreadCamera * threadCamera;
-    ThreadLeapMotion * threadLeapMotion;
 
     bool gamePadIsConnected = false;
     bool arduinoMode = MODE_ARDUINO_DISCONNECTED;
@@ -90,6 +88,9 @@ private:
     Database * database = NULL;
 
     bool canStartRecording = false;
+
+    Leap::Controller leapController;
+    LeapEventListener leapEventListener;
 };
 
 #endif // DRONE_H
