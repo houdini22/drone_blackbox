@@ -32,6 +32,7 @@ public:
     Database * getDatabase();
     bool getCanStartRecording();
     void setHandPosition(HandPosition);
+    bool isHandAvailable();
 private slots:
     void setGamePadIsConnected(bool value);
     void setButtons(ButtonsPressed buttons);
@@ -78,6 +79,7 @@ private:
     bool canStartRecording = false;
     Leap::Controller leapController;
     LeapEventListener leapEventListener;
+    HandPosition handPosition;
 };
 
 #endif // DRONE_H

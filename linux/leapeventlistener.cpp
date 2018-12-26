@@ -1,12 +1,10 @@
 #include "include.h"
 
 void LeapEventListener::onConnect(const Controller& controller) {
-
 }
 
 //Not dispatched when running in a debugger
 void LeapEventListener::onDisconnect(const Controller& controller) {
-
 }
 
 void LeapEventListener::onFrame(const Controller& controller) {

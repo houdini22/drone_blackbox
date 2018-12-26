@@ -7,6 +7,8 @@ ThreadCamera::ThreadCamera(Drone * drone): QThread()
 }
 
 void ThreadCamera::run() {
+    return;
+
     VideoCapture cap;
     bool isOpened = false;
 

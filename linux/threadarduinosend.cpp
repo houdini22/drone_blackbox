@@ -60,7 +60,7 @@ void ThreadArduinoSend::run() {
     while (1) {
         QThread::msleep(40);
 
-        if (this->drone->isGamePadConnected() && this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
+        if (this->drone->isGamePadConnected() && this->drone->isArduinoDetected() && this->drone->isArduinoConnected() && !this->drone->isHandAvailable()) {
             ButtonsPressed buttons = this->drone->getButtons();
 
             /* SEND */
