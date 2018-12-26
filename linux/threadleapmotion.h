@@ -14,6 +14,8 @@ public:
 private:
     QString name;
     Drone * drone;
+private slots:
+    void handUpdated(QtLeapMotion::QtLeapHand *hand);
 };
 
 #endif // THREADLEAPMOTION_H

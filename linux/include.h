@@ -32,11 +32,15 @@
 #include <dirent.h>
 #include "opencv2/opencv.hpp"
 #include "QtLeapMotion/QtLeapDevice/QtLeapMotionController.h"
+#include "QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h"
+#include "QtLeapMotion/QtLeapGlobal/QtLeapHand.h"
+
 using namespace cv;
 
 typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
+#include "HandsListener.h"
 #include "common.h"
 #include "buttons.h"
 #include "dronemodes.h"

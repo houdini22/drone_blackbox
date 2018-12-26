@@ -85,7 +85,8 @@ SOURCES += \
     QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp \
-    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
+    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp \
+    HandsListener.cpp
 
 HEADERS += \
     buttons.h \
@@ -148,7 +149,8 @@ HEADERS += \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h \
-    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h
+    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h \
+    HandsListener.h
 
 FORMS += \
     mainwindow.ui
