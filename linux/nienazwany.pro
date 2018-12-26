@@ -24,17 +24,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 QMAKE_CXXFLAGS += -std=c++11
 
-CONFIG += c++14
+CONFIG += c++14 static dll
+
+OBJECTS_DIR = tmp
+
+MOC_DIR = tmp
 
 LIBS += -ludev
 LIBS += -lserial
 LIBS += -lpthread
 LIBS += -lstdc++fs
 LIBS += -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_videoio
+LIBS += -L$$PWD/QtLeapMotion/Leap/lib/x64/ -lLeap
+LIBS += -lGLU
 
 INCLUDEPATH += /usr/include/boost/compute/interop/opencv/
 
 SOURCES += \
+    common.cpp \
+    database.cpp \
+    drone.cpp \
+    gamepad.cpp \
     main.cpp \
     mainwindow.cpp \
     threadarduinoconnect.cpp \
@@ -45,10 +55,6 @@ SOURCES += \
     threadgamepad.cpp \
     threadgamepadupdate.cpp \
     threadleapmotion.cpp \
-    drone.cpp \
-    database.cpp \
-    gamepad.cpp \
-    QtLeapMotion/Leap/samples/Sample.cpp \
     QtLeapMotion/Leap/util/LeapScene.cpp \
     QtLeapMotion/Leap/util/LeapUtil.cpp \
     QtLeapMotion/Leap/util/LeapUtilGL.cpp \
@@ -79,26 +85,12 @@ SOURCES += \
     QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp \
-    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp \
+    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
 
 HEADERS += \
-        mainwindow.h \
-    drone.h \
-    threadgamepad.h \
-    include.h \
-    gamepad.h \
-    threadarduinodetect.h \
-    threadarduinoconnect.h \
-    threadarduinoping.h \
-    threadarduinosend.h \
-    threadgamepadupdate.h \
-    common.h \
     buttons.h \
-    dronemodes.h \
+    common.h \
     database.h \
-    threadcamera.h \
-    buttons.h \
-    common.h \
     drone.h \
     dronemanager.h \
     dronemodes.h \
@@ -112,8 +104,8 @@ HEADERS += \
     threadcamera.h \
     threadgamepad.h \
     threadgamepadupdate.h \
-    ui_mainwindow.h \
     threadleapmotion.h \
+    ui_mainwindow.h \
     QtLeapMotion/Leap/include/Leap.h \
     QtLeapMotion/Leap/include/LeapMath.h \
     QtLeapMotion/Leap/util/LeapScene.h \
@@ -156,7 +148,10 @@ HEADERS += \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h \
-    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h \
+    QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h
 
 FORMS += \
-        mainwindow.ui
+    mainwindow.ui
+
+SUBDIRS += \
+    QtLeapMotion/QtLeapMotion.pro
