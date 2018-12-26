@@ -36,6 +36,8 @@ Drone::Drone(MainWindow * window)
 
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
+
+    this->threadLeapMotion = new ThreadLeapMotion(this);
 }
 
 void Drone::start() {
@@ -46,6 +48,7 @@ void Drone::start() {
     this->threadArduinoSend->start();
     this->threadGamepadUpdate->start();
     this->threadCamera->start();
+    this->threadLeapMotion->start();
 
     this->setRecordFiles(this->database->getAll());
 }

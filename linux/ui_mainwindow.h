@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.5
+** Created by: Qt User Interface Compiler version 5.11.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -12,10 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -245,37 +243,37 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        actionExit->setText(QApplication::translate("MainWindow", "&Exit", Q_NULLPTR));
-        groupBoxStatus->setTitle(QApplication::translate("MainWindow", "Devices", Q_NULLPTR));
-        labelGamePad->setText(QApplication::translate("MainWindow", "GamePad", Q_NULLPTR));
-        labelGamePadValue->setText(QApplication::translate("MainWindow", "connect", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "Arduino", Q_NULLPTR));
-        labelArduinoValue->setText(QApplication::translate("MainWindow", "connect", Q_NULLPTR));
-        groupBoxTitle->setTitle(QApplication::translate("MainWindow", "Radio", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
-        label_3->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "RIGHT", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "LEFT", Q_NULLPTR));
-        labelGamePadLeftX->setText(QApplication::translate("MainWindow", "---", Q_NULLPTR));
-        labelGamePadLeftY->setText(QApplication::translate("MainWindow", "---", Q_NULLPTR));
-        labelGamePadRightX->setText(QApplication::translate("MainWindow", "---", Q_NULLPTR));
-        labelGamePadRightY->setText(QApplication::translate("MainWindow", "---", Q_NULLPTR));
-        label_6->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
-        label_7->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Drone", Q_NULLPTR));
-        labelArmedValue->setText(QApplication::translate("MainWindow", "not armed", Q_NULLPTR));
-        label_8->setText(QApplication::translate("MainWindow", "Motors", Q_NULLPTR));
-        label_9->setText(QApplication::translate("MainWindow", "Throttle mode", Q_NULLPTR));
-        labelThrottleMode->setText(QApplication::translate("MainWindow", "not active", Q_NULLPTR));
-        label_10->setText(QApplication::translate("MainWindow", "Sending", Q_NULLPTR));
-        labelSending->setText(QApplication::translate("MainWindow", "not sending", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "Record / Play", Q_NULLPTR));
-        label_11->setText(QApplication::translate("MainWindow", "Mode", Q_NULLPTR));
-        labelRecordingActive->setText(QApplication::translate("MainWindow", "none", Q_NULLPTR));
-        recordingDeleteButton->setText(QApplication::translate("MainWindow", "Delete", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionExit->setText(QApplication::translate("MainWindow", "&Exit", nullptr));
+        groupBoxStatus->setTitle(QApplication::translate("MainWindow", "Devices", nullptr));
+        labelGamePad->setText(QApplication::translate("MainWindow", "GamePad", nullptr));
+        labelGamePadValue->setText(QApplication::translate("MainWindow", "connect", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Arduino", nullptr));
+        labelArduinoValue->setText(QApplication::translate("MainWindow", "connect", nullptr));
+        groupBoxTitle->setTitle(QApplication::translate("MainWindow", "Radio", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "X", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Y", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "RIGHT", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "LEFT", nullptr));
+        labelGamePadLeftX->setText(QApplication::translate("MainWindow", "---", nullptr));
+        labelGamePadLeftY->setText(QApplication::translate("MainWindow", "---", nullptr));
+        labelGamePadRightX->setText(QApplication::translate("MainWindow", "---", nullptr));
+        labelGamePadRightY->setText(QApplication::translate("MainWindow", "---", nullptr));
+        label_6->setText(QApplication::translate("MainWindow", "Y", nullptr));
+        label_7->setText(QApplication::translate("MainWindow", "X", nullptr));
+        groupBox->setTitle(QApplication::translate("MainWindow", "Drone", nullptr));
+        labelArmedValue->setText(QApplication::translate("MainWindow", "not armed", nullptr));
+        label_8->setText(QApplication::translate("MainWindow", "Motors", nullptr));
+        label_9->setText(QApplication::translate("MainWindow", "Throttle mode", nullptr));
+        labelThrottleMode->setText(QApplication::translate("MainWindow", "not active", nullptr));
+        label_10->setText(QApplication::translate("MainWindow", "Sending", nullptr));
+        labelSending->setText(QApplication::translate("MainWindow", "not sending", nullptr));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "Record / Play", nullptr));
+        label_11->setText(QApplication::translate("MainWindow", "Mode", nullptr));
+        labelRecordingActive->setText(QApplication::translate("MainWindow", "none", nullptr));
+        recordingDeleteButton->setText(QApplication::translate("MainWindow", "Delete", nullptr));
         imageLabel->setText(QString());
-        menuDron->setTitle(QApplication::translate("MainWindow", "Pro&gram", Q_NULLPTR));
+        menuDron->setTitle(QApplication::translate("MainWindow", "Pro&gram", nullptr));
     } // retranslateUi
 
 };

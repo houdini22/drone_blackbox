@@ -31,7 +31,7 @@
 #include <experimental/filesystem>
 #include <dirent.h>
 #include "opencv2/opencv.hpp"
-
+#include "QtLeapMotion/QtLeapDevice/QtLeapMotionController.h"
 using namespace cv;
 
 typedef Mat MyMat;
@@ -50,5 +50,6 @@ Q_DECLARE_METATYPE(MyMat)
 #include "threadarduinosend.h"
 #include "threadgamepadupdate.h"
 #include "threadcamera.h"
+#include "threadleapmotion.h"
 
 #endif // INCLUDE_H

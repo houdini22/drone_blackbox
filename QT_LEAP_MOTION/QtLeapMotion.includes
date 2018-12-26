@@ -1,0 +1,13 @@
+QtLeapMotion/Leap/include
+QtLeapMotion/Leap/util
+QtLeapMotion/QtLeapDevice
+QtLeapMotion/QtLeapGestures
+QtLeapMotion/QtLeapGestures/Handlers
+QtLeapMotion/QtLeapGestures/Listeners
+QtLeapMotion/QtLeapGestures/Qml
+QtLeapMotion/QtLeapGlobal
+QtLeapMotion/QtLeapGlobal/Handlers
+QtLeapMotion/QtLeapGlobal/Listeners
+QtLeapMotion/QtLeapGlobal/Qml
+QtLeapMotion/QtLeapTouch
+QtLeapMotion/QtLeapTouch/Handlers
