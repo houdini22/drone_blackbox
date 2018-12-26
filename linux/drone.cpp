@@ -37,6 +37,7 @@ Drone::Drone(MainWindow * window)
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
 
+    this->leapEventListener.setDrone(this);
     this->leapController.addListener(this->leapEventListener);
 }
 
@@ -201,3 +202,6 @@ void Drone::setCameraFrame(MyMat frame) {
     emit cameraFrameChanged(frame);
 }
 
+void Drone::setHandPosition(HandPosition handPosition) {
+    emit handPositionChanged(handPosition);
+}

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[27];
-    char stringdata0[342];
+    QByteArrayData data[29];
+    char stringdata0[371];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,24 +46,27 @@ QT_MOC_LITERAL(11, 107, 5), // "Modes"
 QT_MOC_LITERAL(12, 113, 5), // "modes"
 QT_MOC_LITERAL(13, 119, 18), // "cameraFrameChanged"
 QT_MOC_LITERAL(14, 138, 5), // "MyMat"
-QT_MOC_LITERAL(15, 144, 29), // "on_recordingAddButton_clicked"
-QT_MOC_LITERAL(16, 174, 32), // "on_recordingDeleteButton_clicked"
-QT_MOC_LITERAL(17, 207, 27), // "recordingCurrentItemChanged"
-QT_MOC_LITERAL(18, 235, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(19, 252, 4), // "item"
-QT_MOC_LITERAL(20, 257, 4), // "prev"
-QT_MOC_LITERAL(21, 262, 23), // "onRecordingValueChanged"
-QT_MOC_LITERAL(22, 286, 12), // "setListItems"
-QT_MOC_LITERAL(23, 299, 11), // "RecordsList"
-QT_MOC_LITERAL(24, 311, 7), // "records"
-QT_MOC_LITERAL(25, 319, 17), // "setStartRecording"
-QT_MOC_LITERAL(26, 337, 4) // "name"
+QT_MOC_LITERAL(15, 144, 15), // "setHandPosition"
+QT_MOC_LITERAL(16, 160, 12), // "HandPosition"
+QT_MOC_LITERAL(17, 173, 29), // "on_recordingAddButton_clicked"
+QT_MOC_LITERAL(18, 203, 32), // "on_recordingDeleteButton_clicked"
+QT_MOC_LITERAL(19, 236, 27), // "recordingCurrentItemChanged"
+QT_MOC_LITERAL(20, 264, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(21, 281, 4), // "item"
+QT_MOC_LITERAL(22, 286, 4), // "prev"
+QT_MOC_LITERAL(23, 291, 23), // "onRecordingValueChanged"
+QT_MOC_LITERAL(24, 315, 12), // "setListItems"
+QT_MOC_LITERAL(25, 328, 11), // "RecordsList"
+QT_MOC_LITERAL(26, 340, 7), // "records"
+QT_MOC_LITERAL(27, 348, 17), // "setStartRecording"
+QT_MOC_LITERAL(28, 366, 4) // "name"
 
     },
     "MainWindow\0setGamePadIsConnected\0\0"
     "value\0setRadioValues\0leftX\0leftY\0"
     "rightX\0rightY\0setArduinoStatus\0setModes\0"
     "Modes\0modes\0cameraFrameChanged\0MyMat\0"
+    "setHandPosition\0HandPosition\0"
     "on_recordingAddButton_clicked\0"
     "on_recordingDeleteButton_clicked\0"
     "recordingCurrentItemChanged\0"
@@ -80,7 +83,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -88,17 +91,18 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   69,    2, 0x0a /* Public */,
-       4,    4,   72,    2, 0x0a /* Public */,
-       9,    1,   81,    2, 0x0a /* Public */,
-      10,    1,   84,    2, 0x0a /* Public */,
-      13,    1,   87,    2, 0x0a /* Public */,
-      15,    0,   90,    2, 0x08 /* Private */,
-      16,    0,   91,    2, 0x08 /* Private */,
-      17,    2,   92,    2, 0x08 /* Private */,
-      21,    1,   97,    2, 0x08 /* Private */,
-      22,    1,  100,    2, 0x08 /* Private */,
-      25,    1,  103,    2, 0x08 /* Private */,
+       1,    1,   74,    2, 0x0a /* Public */,
+       4,    4,   77,    2, 0x0a /* Public */,
+       9,    1,   86,    2, 0x0a /* Public */,
+      10,    1,   89,    2, 0x0a /* Public */,
+      13,    1,   92,    2, 0x0a /* Public */,
+      15,    1,   95,    2, 0x0a /* Public */,
+      17,    0,   98,    2, 0x08 /* Private */,
+      18,    0,   99,    2, 0x08 /* Private */,
+      19,    2,  100,    2, 0x08 /* Private */,
+      23,    1,  105,    2, 0x08 /* Private */,
+      24,    1,  108,    2, 0x08 /* Private */,
+      27,    1,  111,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -106,12 +110,13 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void, 0x80000000 | 11,   12,
     QMetaType::Void, 0x80000000 | 14,    2,
+    QMetaType::Void, 0x80000000 | 16,    2,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 18, 0x80000000 | 18,   19,   20,
+    QMetaType::Void, 0x80000000 | 20, 0x80000000 | 20,   21,   22,
     QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, 0x80000000 | 23,   24,
-    QMetaType::Void, QMetaType::QString,   26,
+    QMetaType::Void, 0x80000000 | 25,   26,
+    QMetaType::Void, QMetaType::QString,   28,
 
        0        // eod
 };
@@ -127,12 +132,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->setArduinoStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 3: _t->setModes((*reinterpret_cast< Modes(*)>(_a[1]))); break;
         case 4: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
-        case 5: _t->on_recordingAddButton_clicked(); break;
-        case 6: _t->on_recordingDeleteButton_clicked(); break;
-        case 7: _t->recordingCurrentItemChanged((*reinterpret_cast< QListWidgetItem*(*)>(_a[1])),(*reinterpret_cast< QListWidgetItem*(*)>(_a[2]))); break;
-        case 8: _t->onRecordingValueChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 9: _t->setListItems((*reinterpret_cast< RecordsList(*)>(_a[1]))); break;
-        case 10: _t->setStartRecording((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 5: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
+        case 6: _t->on_recordingAddButton_clicked(); break;
+        case 7: _t->on_recordingDeleteButton_clicked(); break;
+        case 8: _t->recordingCurrentItemChanged((*reinterpret_cast< QListWidgetItem*(*)>(_a[1])),(*reinterpret_cast< QListWidgetItem*(*)>(_a[2]))); break;
+        case 9: _t->onRecordingValueChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 10: _t->setListItems((*reinterpret_cast< RecordsList(*)>(_a[1]))); break;
+        case 11: _t->setStartRecording((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -174,13 +180,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

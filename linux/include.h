@@ -38,12 +38,12 @@ typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
 #include "QtLeapMotion/Leap/include/Leap.h"
-#include "leapeventlistener.h"
 #include "common.h"
 #include "buttons.h"
 #include "dronemodes.h"
 #include "gamepad.h"
 #include "database.h"
+#include "leapeventlistener.h"
 #include "drone.h"
 #include "threadgamepad.h"
 #include "threadarduinodetect.h"

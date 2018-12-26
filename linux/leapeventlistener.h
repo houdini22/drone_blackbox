@@ -6,13 +6,16 @@
 
 using namespace Leap;
 
+class Drone;
+
 class LeapEventListener : public Listener {
 public:
     virtual void onConnect(const Controller&);
     virtual void onDisconnect(const Controller&);
     virtual void onFrame(const Controller&);
-signals:
-    handPositionChanged(HandPosition);
+    void setDrone(Drone * drone);
+private:
+    Drone * drone;
 };
 
 #endif // LEAPEVENTLISTENER_H

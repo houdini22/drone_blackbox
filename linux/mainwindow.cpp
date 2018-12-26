@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->drone, SIGNAL(recordFilesChanged(RecordsList)), this, SLOT(setListItems(RecordsList)));
     connect(this->drone, SIGNAL(startRecording(QString)), this, SLOT(setStartRecording(QString)));
     connect(this->drone, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(cameraFrameChanged(MyMat)));
+    connect(this->drone, SIGNAL(handPositionChanged(HandPosition)), this, SLOT(setHandPosition(HandPosition)));
 
     QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
     connect(listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(recordingCurrentItemChanged(QListWidgetItem*, QListWidgetItem*)));
@@ -179,4 +180,14 @@ void MainWindow::cameraFrameChanged(MyMat mat) {
     QImage image(buffer, mat.cols, mat.rows, mat.step, QImage::Format_RGB888);
     QLabel * label = this->centralWidget()->findChild<QLabel *>(QString("imageLabel"));
     label->setPixmap(QPixmap::fromImage(image));
+}
+
+void MainWindow::setHandPosition(HandPosition handPosition) {
+    QLabel * labelPitch = this->centralWidget()->findChild<QLabel *>(QString("labelPitch"));
+    QLabel * labelYaw = this->centralWidget()->findChild<QLabel *>(QString("labelYaw"));
+    QLabel * labelRoll = this->centralWidget()->findChild<QLabel *>(QString("labelRoll"));
+
+    labelPitch->setText(QString::number(handPosition.pitch));
+    labelYaw->setText(QString::number(handPosition.yaw));
+    labelRoll->setText(QString::number(handPosition.roll));
 }

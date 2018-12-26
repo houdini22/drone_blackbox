@@ -20,9 +20,13 @@ void LeapEventListener::onFrame(const Controller& controller) {
 
     HandPosition handPosition;
 
-    handPosition.pitch = pitch;
-    handPosition.yaw = yaw;
-    handPosition.roll = roll;
+    handPosition.pitch = floor(pitch * 100) / 100;
+    handPosition.yaw = floor(yaw * 100) / 100;
+    handPosition.roll = floor(roll * 100) / 100;
 
-    emit handPositionChanged(handPosition);
+    this->drone->setHandPosition(handPosition);
+}
+
+void LeapEventListener::setDrone(Drone *drone) {
+    this->drone = drone;
 }

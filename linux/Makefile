@@ -635,7 +635,6 @@ compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mai
 compiler_moc_header_clean:
 	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp
 tmp/moc_database.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -643,6 +642,7 @@ tmp/moc_database.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -658,7 +658,6 @@ tmp/moc_database.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include database.h -o tmp/moc_database.cpp
 
 tmp/moc_drone.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -666,6 +665,7 @@ tmp/moc_drone.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -681,7 +681,6 @@ tmp/moc_drone.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include drone.h -o tmp/moc_drone.cpp
 
 tmp/moc_mainwindow.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -689,6 +688,7 @@ tmp/moc_mainwindow.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -704,7 +704,6 @@ tmp/moc_mainwindow.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o tmp/moc_mainwindow.cpp
 
 tmp/moc_threadarduinoconnect.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -712,6 +711,7 @@ tmp/moc_threadarduinoconnect.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -727,7 +727,6 @@ tmp/moc_threadarduinoconnect.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoconnect.h -o tmp/moc_threadarduinoconnect.cpp
 
 tmp/moc_threadarduinodetect.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -735,6 +734,7 @@ tmp/moc_threadarduinodetect.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -750,7 +750,6 @@ tmp/moc_threadarduinodetect.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinodetect.h -o tmp/moc_threadarduinodetect.cpp
 
 tmp/moc_threadarduinoping.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -758,6 +757,7 @@ tmp/moc_threadarduinoping.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -773,7 +773,6 @@ tmp/moc_threadarduinoping.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoping.h -o tmp/moc_threadarduinoping.cpp
 
 tmp/moc_threadarduinosend.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -781,6 +780,7 @@ tmp/moc_threadarduinosend.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -796,7 +796,6 @@ tmp/moc_threadarduinosend.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinosend.h -o tmp/moc_threadarduinosend.cpp
 
 tmp/moc_threadcamera.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -804,6 +803,7 @@ tmp/moc_threadcamera.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -819,7 +819,6 @@ tmp/moc_threadcamera.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadcamera.h -o tmp/moc_threadcamera.cpp
 
 tmp/moc_threadgamepad.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -827,6 +826,7 @@ tmp/moc_threadgamepad.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -842,7 +842,6 @@ tmp/moc_threadgamepad.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadgamepad.h -o tmp/moc_threadgamepad.cpp
 
 tmp/moc_threadgamepadupdate.cpp: include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -850,6 +849,7 @@ tmp/moc_threadgamepadupdate.cpp: include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1126,7 +1126,6 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 ####### Compile
 
 tmp/common.o: common.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1134,6 +1133,7 @@ tmp/common.o: common.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1146,7 +1146,6 @@ tmp/common.o: common.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/common.o common.cpp
 
 tmp/database.o: database.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1154,6 +1153,7 @@ tmp/database.o: database.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1166,7 +1166,6 @@ tmp/database.o: database.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/database.o database.cpp
 
 tmp/drone.o: drone.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1174,6 +1173,7 @@ tmp/drone.o: drone.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1187,13 +1187,13 @@ tmp/drone.o: drone.cpp include.h \
 
 tmp/gamepad.o: gamepad.cpp gamepad.h \
 		include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
 		buttons.h \
 		dronemodes.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1207,7 +1207,6 @@ tmp/gamepad.o: gamepad.cpp gamepad.h \
 
 tmp/main.o: main.cpp mainwindow.h \
 		include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1215,6 +1214,7 @@ tmp/main.o: main.cpp mainwindow.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		threadgamepad.h \
 		threadarduinodetect.h \
@@ -1227,7 +1227,6 @@ tmp/main.o: main.cpp mainwindow.h \
 
 tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 		include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1235,6 +1234,7 @@ tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		threadgamepad.h \
 		threadarduinodetect.h \
@@ -1247,7 +1247,6 @@ tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/mainwindow.o mainwindow.cpp
 
 tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1255,6 +1254,7 @@ tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1267,7 +1267,6 @@ tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinoconnect.o threadarduinoconnect.cpp
 
 tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1275,6 +1274,7 @@ tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1287,7 +1287,6 @@ tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinodetect.o threadarduinodetect.cpp
 
 tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1295,6 +1294,7 @@ tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1307,7 +1307,6 @@ tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinoping.o threadarduinoping.cpp
 
 tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1315,6 +1314,7 @@ tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1327,7 +1327,6 @@ tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinosend.o threadarduinosend.cpp
 
 tmp/threadcamera.o: threadcamera.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1335,6 +1334,7 @@ tmp/threadcamera.o: threadcamera.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1347,7 +1347,6 @@ tmp/threadcamera.o: threadcamera.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadcamera.o threadcamera.cpp
 
 tmp/threadgamepad.o: threadgamepad.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1355,6 +1354,7 @@ tmp/threadgamepad.o: threadgamepad.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1367,7 +1367,6 @@ tmp/threadgamepad.o: threadgamepad.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadgamepad.o threadgamepad.cpp
 
 tmp/threadgamepadupdate.o: threadgamepadupdate.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1375,6 +1374,7 @@ tmp/threadgamepadupdate.o: threadgamepadupdate.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \
@@ -1685,7 +1685,6 @@ tmp/QtLeapMotionTouchDevice.o: QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/QtLeapMotionTouchDevice.o QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
 
 tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
-		leapeventlistener.h \
 		QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		common.h \
@@ -1693,6 +1692,7 @@ tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
 		dronemodes.h \
 		gamepad.h \
 		database.h \
+		leapeventlistener.h \
 		drone.h \
 		mainwindow.h \
 		threadgamepad.h \

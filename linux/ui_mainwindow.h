@@ -15,12 +15,9 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -58,10 +55,11 @@ public:
     QLabel *labelSending;
     QGroupBox *groupBox_2;
     QLabel *label_11;
-    QLabel *labelRecordingActive;
-    QPushButton *recordingDeleteButton;
-    QListWidget *listWidgetRecording;
-    QLineEdit *lineRecordingName;
+    QLabel *label_12;
+    QLabel *labelYaw;
+    QLabel *labelPitch;
+    QLabel *label_13;
+    QLabel *labelRoll;
     QLabel *imageLabel;
     QMenuBar *menuBar;
     QMenu *menuDron;
@@ -79,7 +77,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         kdialog = new QDialog(centralWidget);
         kdialog->setObjectName(QStringLiteral("kdialog"));
-        kdialog->setGeometry(QRect(942, 488, 16, 16));
+        kdialog->setGeometry(QRect(942, 548, 16, 16));
         groupBoxStatus = new QGroupBox(centralWidget);
         groupBoxStatus->setObjectName(QStringLiteral("groupBoxStatus"));
         groupBoxStatus->setGeometry(QRect(10, 10, 491, 191));
@@ -193,29 +191,28 @@ public:
         groupBox_2->setFont(font);
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(20, 60, 201, 31));
+        label_11->setGeometry(QRect(10, 60, 61, 31));
         label_11->setFont(font1);
-        labelRecordingActive = new QLabel(groupBox_2);
-        labelRecordingActive->setObjectName(QStringLiteral("labelRecordingActive"));
-        labelRecordingActive->setGeometry(QRect(260, 60, 211, 31));
-        labelRecordingActive->setFont(font1);
-        labelRecordingActive->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        recordingDeleteButton = new QPushButton(groupBox_2);
-        recordingDeleteButton->setObjectName(QStringLiteral("recordingDeleteButton"));
-        recordingDeleteButton->setGeometry(QRect(380, 260, 94, 36));
-        QFont font2;
-        font2.setPointSize(12);
-        recordingDeleteButton->setFont(font2);
-        listWidgetRecording = new QListWidget(groupBox_2);
-        listWidgetRecording->setObjectName(QStringLiteral("listWidgetRecording"));
-        listWidgetRecording->setGeometry(QRect(20, 100, 451, 151));
-        QFont font3;
-        font3.setPointSize(10);
-        listWidgetRecording->setFont(font3);
-        lineRecordingName = new QLineEdit(groupBox_2);
-        lineRecordingName->setObjectName(QStringLiteral("lineRecordingName"));
-        lineRecordingName->setGeometry(QRect(20, 310, 451, 34));
-        lineRecordingName->setFont(font3);
+        label_12 = new QLabel(groupBox_2);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setGeometry(QRect(10, 100, 61, 31));
+        label_12->setFont(font1);
+        labelYaw = new QLabel(groupBox_2);
+        labelYaw->setObjectName(QStringLiteral("labelYaw"));
+        labelYaw->setGeometry(QRect(110, 100, 121, 31));
+        labelYaw->setFont(font1);
+        labelPitch = new QLabel(groupBox_2);
+        labelPitch->setObjectName(QStringLiteral("labelPitch"));
+        labelPitch->setGeometry(QRect(110, 60, 121, 31));
+        labelPitch->setFont(font1);
+        label_13 = new QLabel(groupBox_2);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(10, 140, 61, 31));
+        label_13->setFont(font1);
+        labelRoll = new QLabel(groupBox_2);
+        labelRoll->setObjectName(QStringLiteral("labelRoll"));
+        labelRoll->setGeometry(QRect(110, 140, 121, 31));
+        labelRoll->setFont(font1);
         imageLabel = new QLabel(centralWidget);
         imageLabel->setObjectName(QStringLiteral("imageLabel"));
         imageLabel->setGeometry(QRect(1050, 50, 640, 480));
@@ -268,10 +265,13 @@ public:
         labelThrottleMode->setText(QApplication::translate("MainWindow", "not active", nullptr));
         label_10->setText(QApplication::translate("MainWindow", "Sending", nullptr));
         labelSending->setText(QApplication::translate("MainWindow", "not sending", nullptr));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "Record / Play", nullptr));
-        label_11->setText(QApplication::translate("MainWindow", "Mode", nullptr));
-        labelRecordingActive->setText(QApplication::translate("MainWindow", "none", nullptr));
-        recordingDeleteButton->setText(QApplication::translate("MainWindow", "Delete", nullptr));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "Leap Motion", nullptr));
+        label_11->setText(QApplication::translate("MainWindow", "Pitch", nullptr));
+        label_12->setText(QApplication::translate("MainWindow", "Yaw", nullptr));
+        labelYaw->setText(QApplication::translate("MainWindow", "---", nullptr));
+        labelPitch->setText(QApplication::translate("MainWindow", "---", nullptr));
+        label_13->setText(QApplication::translate("MainWindow", "Roll", nullptr));
+        labelRoll->setText(QApplication::translate("MainWindow", "---", nullptr));
         imageLabel->setText(QString());
         menuDron->setTitle(QApplication::translate("MainWindow", "Pro&gram", nullptr));
     } // retranslateUi
