@@ -2,8 +2,7 @@
 #include <QApplication>
 #include "include.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     qRegisterMetaType<MyMat>("MyMat");
     qRegisterMetaType<ButtonsPressed>("Button");
     qRegisterMetaType<HandPosition>("HandPosition");

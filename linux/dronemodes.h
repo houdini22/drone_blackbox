@@ -15,6 +15,9 @@ struct HandPosition {
     float pitch = 0.0;
     float yaw = 0.0;
     float roll = 0.0;
+    float x = 0.0;
+    float y = 0.0;
+    float z = 0.0;
     bool isAvailable = false;
     bool fist = false;
 };

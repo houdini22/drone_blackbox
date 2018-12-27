@@ -57,7 +57,7 @@ public:
     QLabel *label_11;
     QLabel *label_12;
     QLabel *labelYaw;
-    QLabel *labelPitch;
+    QLabel *labelThrottle;
     QLabel *label_13;
     QLabel *labelRoll;
     QLabel *label_14;
@@ -193,7 +193,7 @@ public:
         groupBox_2->setFont(font);
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(10, 60, 61, 31));
+        label_11->setGeometry(QRect(10, 60, 131, 31));
         label_11->setFont(font1);
         label_12 = new QLabel(groupBox_2);
         label_12->setObjectName(QStringLiteral("label_12"));
@@ -203,10 +203,10 @@ public:
         labelYaw->setObjectName(QStringLiteral("labelYaw"));
         labelYaw->setGeometry(QRect(170, 100, 61, 31));
         labelYaw->setFont(font1);
-        labelPitch = new QLabel(groupBox_2);
-        labelPitch->setObjectName(QStringLiteral("labelPitch"));
-        labelPitch->setGeometry(QRect(170, 60, 61, 31));
-        labelPitch->setFont(font1);
+        labelThrottle = new QLabel(groupBox_2);
+        labelThrottle->setObjectName(QStringLiteral("labelThrottle"));
+        labelThrottle->setGeometry(QRect(170, 60, 61, 31));
+        labelThrottle->setFont(font1);
         label_13 = new QLabel(groupBox_2);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(10, 140, 61, 31));
@@ -276,11 +276,11 @@ public:
         label_10->setText(QApplication::translate("MainWindow", "Sending", nullptr));
         labelSending->setText(QApplication::translate("MainWindow", "not sending", nullptr));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Leap Motion", nullptr));
-        label_11->setText(QApplication::translate("MainWindow", "Pitch", nullptr));
-        label_12->setText(QApplication::translate("MainWindow", "Yaw", nullptr));
+        label_11->setText(QApplication::translate("MainWindow", "Throttle", nullptr));
+        label_12->setText(QApplication::translate("MainWindow", "Y", nullptr));
         labelYaw->setText(QApplication::translate("MainWindow", "---", nullptr));
-        labelPitch->setText(QApplication::translate("MainWindow", "---", nullptr));
-        label_13->setText(QApplication::translate("MainWindow", "Roll", nullptr));
+        labelThrottle->setText(QApplication::translate("MainWindow", "---", nullptr));
+        label_13->setText(QApplication::translate("MainWindow", "Z", nullptr));
         labelRoll->setText(QApplication::translate("MainWindow", "---", nullptr));
         label_14->setText(QApplication::translate("MainWindow", "Is available", nullptr));
         labelIsAvailable->setText(QApplication::translate("MainWindow", "false", nullptr));

@@ -278,12 +278,10 @@ void ThreadArduinoSend::run() {
                         sendingArm = 28; // 28 * 40 ms
 
                         emit motorsArmedChanged(true);
-                    } else {
-                        if (startMode) {
-                            sendingArm = 28; // 28 * 40 ms
+                    } else if (startMode) {
+                        sendingArm = 28; // 28 * 40 ms
 
-                            emit motorsArmedChanged(false);
-                        }
+                        emit motorsArmedChanged(false);
                     }
 
                     continue;
@@ -319,8 +317,8 @@ void ThreadArduinoSend::run() {
                 continue;
             }
 
-            this->setRadioValues(this->axisValueFromDouble(0), this->axisValueFromDouble(handPosition.pitch * 0.83), this->axisValueFromDouble(handPosition.roll * 0.83), this->axisValueFromDouble(handPosition.yaw * 0.83));
-            this->send(this->createAxisBuffer(this->axisValueFromDouble(0.0), this->axisValueFromDouble(handPosition.pitch * 0.83), this->axisValueFromDouble(handPosition.roll * 0.83), this->axisValueFromDouble(handPosition.yaw * 0.83)));
+            this->setRadioValues(this->axisValueFromDouble(0), this->axisValueFromDouble(handPosition.y), this->axisValueFromDouble(handPosition.x), this->axisValueFromDouble(handPosition.z));
+            this->send(this->createAxisBuffer(this->axisValueFromDouble(0.0), this->axisValueFromDouble(handPosition.y), this->axisValueFromDouble(handPosition.x), this->axisValueFromDouble(handPosition.z)));
         }
     }
 }

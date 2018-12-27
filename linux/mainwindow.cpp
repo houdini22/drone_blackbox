@@ -185,13 +185,13 @@ void MainWindow::cameraFrameChanged(MyMat mat) {
 }
 
 void MainWindow::setHandPosition(HandPosition handPosition) {
-    QLabel * labelPitch = this->centralWidget()->findChild<QLabel *>(QString("labelPitch"));
+    QLabel * labelThrottle = this->centralWidget()->findChild<QLabel *>(QString("labelThrottle"));
     QLabel * labelYaw = this->centralWidget()->findChild<QLabel *>(QString("labelYaw"));
     QLabel * labelRoll = this->centralWidget()->findChild<QLabel *>(QString("labelRoll"));
     QLabel * labelIsAvailable = this->centralWidget()->findChild<QLabel *>(QString("labelIsAvailable"));
 
-    labelPitch->setText(QString::number(handPosition.pitch));
-    labelYaw->setText(QString::number(handPosition.yaw));
-    labelRoll->setText(QString::number(handPosition.roll));
+    labelThrottle->setText(QString::number(handPosition.y));
+    labelYaw->setText(QString::number(handPosition.roll));
+    labelRoll->setText(QString::number(handPosition.z));
     labelIsAvailable->setText(handPosition.isAvailable ? "true" : "false");
 }
