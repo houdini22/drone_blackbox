@@ -32,7 +32,7 @@ public:
     Database * getDatabase();
     bool getCanStartRecording();
     void setHandPosition(HandPosition);
-    bool isHandAvailable();
+    HandPosition getHandPosition();
 private slots:
     void setGamePadIsConnected(bool value);
     void setButtons(ButtonsPressed buttons);

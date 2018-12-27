@@ -60,6 +60,8 @@ public:
     QLabel *labelPitch;
     QLabel *label_13;
     QLabel *labelRoll;
+    QLabel *label_14;
+    QLabel *labelIsAvailable;
     QLabel *imageLabel;
     QMenuBar *menuBar;
     QMenu *menuDron;
@@ -199,11 +201,11 @@ public:
         label_12->setFont(font1);
         labelYaw = new QLabel(groupBox_2);
         labelYaw->setObjectName(QStringLiteral("labelYaw"));
-        labelYaw->setGeometry(QRect(110, 100, 121, 31));
+        labelYaw->setGeometry(QRect(170, 100, 61, 31));
         labelYaw->setFont(font1);
         labelPitch = new QLabel(groupBox_2);
         labelPitch->setObjectName(QStringLiteral("labelPitch"));
-        labelPitch->setGeometry(QRect(110, 60, 121, 31));
+        labelPitch->setGeometry(QRect(170, 60, 61, 31));
         labelPitch->setFont(font1);
         label_13 = new QLabel(groupBox_2);
         label_13->setObjectName(QStringLiteral("label_13"));
@@ -211,8 +213,16 @@ public:
         label_13->setFont(font1);
         labelRoll = new QLabel(groupBox_2);
         labelRoll->setObjectName(QStringLiteral("labelRoll"));
-        labelRoll->setGeometry(QRect(110, 140, 121, 31));
+        labelRoll->setGeometry(QRect(170, 140, 61, 31));
         labelRoll->setFont(font1);
+        label_14 = new QLabel(groupBox_2);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(10, 180, 111, 31));
+        label_14->setFont(font1);
+        labelIsAvailable = new QLabel(groupBox_2);
+        labelIsAvailable->setObjectName(QStringLiteral("labelIsAvailable"));
+        labelIsAvailable->setGeometry(QRect(170, 180, 61, 31));
+        labelIsAvailable->setFont(font1);
         imageLabel = new QLabel(centralWidget);
         imageLabel->setObjectName(QStringLiteral("imageLabel"));
         imageLabel->setGeometry(QRect(1050, 50, 640, 480));
@@ -272,6 +282,8 @@ public:
         labelPitch->setText(QApplication::translate("MainWindow", "---", nullptr));
         label_13->setText(QApplication::translate("MainWindow", "Roll", nullptr));
         labelRoll->setText(QApplication::translate("MainWindow", "---", nullptr));
+        label_14->setText(QApplication::translate("MainWindow", "Is available", nullptr));
+        labelIsAvailable->setText(QApplication::translate("MainWindow", "false", nullptr));
         imageLabel->setText(QString());
         menuDron->setTitle(QApplication::translate("MainWindow", "Pro&gram", nullptr));
     } // retranslateUi

@@ -15,12 +15,16 @@ void LeapEventListener::onFrame(const Controller& controller) {
     float pitch = firstHand.direction().pitch();
     float yaw = firstHand.direction().yaw();
     float roll = firstHand.palmNormal().roll();
+    bool isAvailable = firstHand.id() != -1;
+    bool fist = firstHand.sphereRadius() <= 50.0f;
 
     HandPosition handPosition;
 
     handPosition.pitch = floor(pitch * 100) / 100;
     handPosition.yaw = floor(yaw * 100) / 100;
     handPosition.roll = floor(roll * 100) / 100;
+    handPosition.isAvailable = isAvailable;
+    handPosition.fist = fist;
 
     this->drone->setHandPosition(handPosition);
 }

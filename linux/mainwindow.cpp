@@ -99,6 +99,7 @@ void MainWindow::setModes(Modes modes) {
         labelSending->setText("not sending");
     }
 
+    /*
     if (modes.recordingActive) {
         labelRecordingActive->setText("recording");
     } else if (modes.playingActive) {
@@ -106,6 +107,7 @@ void MainWindow::setModes(Modes modes) {
     } else {
         labelRecordingActive->setText("none");
     }
+    */
 }
 
 void MainWindow::on_recordingAddButton_clicked() {
@@ -186,8 +188,10 @@ void MainWindow::setHandPosition(HandPosition handPosition) {
     QLabel * labelPitch = this->centralWidget()->findChild<QLabel *>(QString("labelPitch"));
     QLabel * labelYaw = this->centralWidget()->findChild<QLabel *>(QString("labelYaw"));
     QLabel * labelRoll = this->centralWidget()->findChild<QLabel *>(QString("labelRoll"));
+    QLabel * labelIsAvailable = this->centralWidget()->findChild<QLabel *>(QString("labelIsAvailable"));
 
     labelPitch->setText(QString::number(handPosition.pitch));
     labelYaw->setText(QString::number(handPosition.yaw));
     labelRoll->setText(QString::number(handPosition.roll));
+    labelIsAvailable->setText(handPosition.isAvailable ? "true" : "false");
 }

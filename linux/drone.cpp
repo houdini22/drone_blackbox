@@ -171,7 +171,6 @@ void Drone::setRecordingMode(bool value) {
 void Drone::setPlayingMode(bool value) {
     if (this->modes.playingActive != value) {
         this->modes.playingActive = value;
-
         emit modeChanged(this->modes);
     }
 }
@@ -204,12 +203,12 @@ void Drone::setCameraFrame(MyMat frame) {
 
 void Drone::setHandPosition(HandPosition handPosition) {
     handPosition.pitch = std::min(std::max(handPosition.pitch, (float) -0.6), (float) 0.6);
-    handPosition.roll = - std::min(std::max(handPosition.roll, (float) -0.6), (float) 0.6);
     handPosition.yaw = std::min(std::max(handPosition.yaw + (float) 0.2, (float) -0.6), (float) 0.6);
+    handPosition.roll = - std::min(std::max(handPosition.roll, (float) -0.6), (float) 0.6);
     this->handPosition = handPosition;
     emit handPositionChanged(handPosition);
 }
 
-bool Drone::isHandAvailable() {
-    this->handPosition.roll != 3.14 && this->handPosition.pitch != 3.14 && this->handPosition.yaw != 3.14;
+HandPosition Drone::getHandPosition() {
+    return this->handPosition;
 }

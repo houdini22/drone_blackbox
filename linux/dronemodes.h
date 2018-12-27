@@ -15,6 +15,8 @@ struct HandPosition {
     float pitch = 0.0;
     float yaw = 0.0;
     float roll = 0.0;
+    bool isAvailable = false;
+    bool fist = false;
 };
 
 const int MODE_ARDUINO_DISCONNECTED = 0;

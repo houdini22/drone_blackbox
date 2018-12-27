@@ -60,66 +60,206 @@ void ThreadArduinoSend::run() {
     while (1) {
         QThread::msleep(40);
 
-        if (this->drone->isGamePadConnected() && this->drone->isArduinoDetected() && this->drone->isArduinoConnected() && !this->drone->isHandAvailable()) {
-            ButtonsPressed buttons = this->drone->getButtons();
+        HandPosition handPosition = this->drone->getHandPosition();
 
-            /* SEND */
-            if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
-                if (modePlaying) {
-                    size_t currentPlay = this->drone->getDatabase()->getCurrentPlay();
-                    bool canPlay = currentPlay != -1;
+        if (!handPosition.isAvailable) {
+            if (this->drone->isGamePadConnected() && this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
+                ButtonsPressed buttons = this->drone->getButtons();
 
-                    if (!canPlay) {
-                        modePlaying = !modePlaying;
-                        emit playingModeChanged("false");
+                /* SEND */
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
+                    if (modePlaying) {
+                        size_t currentPlay = this->drone->getDatabase()->getCurrentPlay();
+                        bool canPlay = currentPlay != -1;
+
+                        if (!canPlay) {
+                            modePlaying = !modePlaying;
+                            emit playingModeChanged("false");
+
+                            continue;
+                        }
+
+                        PlayFrame frame = this->drone->getDatabase()->getFrame(currentPlay);
+
+                        this->setRadioValues(frame["leftX"].toInt(), frame["leftY"].toInt(), frame["rightX"].toInt(), frame["rightY"].toInt());
+                        this->send(this->createAxisBuffer(frame["leftX"].toInt(), frame["leftY"].toInt(), frame["rightX"].toInt(), frame["rightY"].toInt()));
+                    } else {
+                        if (throttleMode) {
+                            if (this->drone->getCanStartRecording()) {
+                                this->drone->getDatabase()->record(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
+                            }
+                            this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
+                            this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
+                        } else {
+                            if (this->drone->getCanStartRecording()) {
+                                this->drone->getDatabase()->record(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
+                            }
+                            this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
+                            this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
+                        }
+                    }
+                }
+
+                /* LISTEN */
+                if (buttons.y) {
+                    sendingRecording = 6;
+
+                    continue;
+                }
+
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
+                    if (buttons.a) { // toggle Throttle mode
+                        sendingThrottle = 13;
+                        throttleMode = !throttleMode;
+                        this->setThrottleMode(throttleMode);
 
                         continue;
                     }
 
-                    PlayFrame frame = this->drone->getDatabase()->getFrame(currentPlay);
+                    if (buttons.b) {
+                        sendingB = 13;
 
-                    this->setRadioValues(frame["leftX"].toInt(), frame["leftY"].toInt(), frame["rightX"].toInt(), frame["rightY"].toInt());
-                    this->send(this->createAxisBuffer(frame["leftX"].toInt(), frame["leftY"].toInt(), frame["rightX"].toInt(), frame["rightY"].toInt()));
-                } else {
-                    if (throttleMode) {
-                        if (this->drone->getCanStartRecording()) {
-                            this->drone->getDatabase()->record(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
+                        continue;
+                    }
+
+                    if (buttons.start && !armingMode) { // toggle sending
+                        if (startMode) {
+                            sendingStart = 26; // 26 * 40 ms
+
+                            this->send("f"); // off
+                            this->setRadioSending(false);
+                        } else {
+                            sendingStart = 26; // 26 * 40 ms
+
+                            this->send("n"); // on
+                            this->setRadioSending(true);
                         }
-                        this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
-                        this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
-                    } else {
-                        if (this->drone->getCanStartRecording()) {
-                            this->drone->getDatabase()->record(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
+
+                        continue;
+                    }
+
+                    if (startMode) { // if toggled sendinf true
+                        if (buttons.arming) { // if arming
+                            if (!armingMode) {
+                                sendingArm = 28; // 28 * 40 ms
+
+                                emit motorsArmedChanged(true);
+                            } else {
+                                if (startMode) {
+                                    sendingArm = 28; // 28 * 40 ms
+
+                                    emit motorsArmedChanged(false);
+                                }
+                            }
+
+                            continue;
                         }
-                        this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
-                        this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
+                    }
+
+                    if (throttleMode) { // a on
+                        if (buttons.leftShoulder) {
+                            sendingLeftY = 6;
+
+                            leftY -= 0.025;
+                            if (leftY < 0.0) {
+                                leftY = 0.0;
+                            }
+                        } else if (buttons.rightShoulder) {
+                            sendingLeftY = 6;
+
+                            leftY += 0.025;
+                            if (leftY > 1.0) {
+                                leftY = 1.0;
+                            }
+                        }
+                        continue;
                     }
                 }
-            }
 
-            /* LISTEN */
-            if (buttons.y) {
-                sendingRecording = 6;
-
-                continue;
-            }
-
-            if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
-                if (buttons.a) { // toggle Throttle mode
-                    sendingThrottle = 13;
-                    throttleMode = !throttleMode;
-                    this->setThrottleMode(throttleMode);
+                if (sendingStart > 0) {
+                    sendingStart--;
+                    if (sendingStart == 0) {
+                        startMode = !startMode;
+                    }
 
                     continue;
                 }
 
-                if (buttons.b) {
-                    sendingB = 13;
+                if (sendingArm > 0) {
+                    if (!armingMode) {
+                        if (this->drone->getCanStartRecording()) {
+                            this->drone->getDatabase()->record(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                        }
+                        this->setRadioValues(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                        this->send(this->createAxisBuffer(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
+                    } else {
+                        if (this->drone->getCanStartRecording()) {
+                            this->drone->getDatabase()->record(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                        }
+                        this->setRadioValues(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                        this->send(this->createAxisBuffer(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
+
+                    }
+
+                    sendingArm--;
+                    if (sendingArm == 0) {
+                        if (!armingMode) {
+                            emit motorsArmedChanged(true);
+                        } else {
+                            emit motorsArmedChanged(false);
+                        }
+                        armingMode = !armingMode;
+                    }
 
                     continue;
                 }
 
-                if (buttons.start && !armingMode) { // toggle sending
+                if (sendingThrottle > 0) {
+                    sendingThrottle--;
+
+                    continue;
+                }
+
+                if (sendingLeftY > 0) {
+                    sendingLeftY--;
+
+                    continue;
+                }
+
+                if (sendingRecording > 0) {
+                    sendingRecording--;
+
+                    if (sendingRecording == 0) {
+                        recordingMode = !recordingMode;
+
+                        emit recordingModeChanged(recordingMode);
+
+                    }
+
+                    continue;
+                }
+
+                if (sendingB > 0) {
+                    sendingB--;
+
+                    if (sendingB == 0) {
+                        modePlaying = !modePlaying;
+
+                        if (modePlaying) {
+                            this->drone->getDatabase()->openPlay();
+                            emit playingModeChanged(true);
+                        } else {
+                            emit playingModeChanged(false);
+                        }
+                    }
+
+                    continue;
+                }
+            }
+        }
+        else if (this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
+            if (sendingArm == 0 && sendingStart == 0) {
+                if (handPosition.fist && !startMode) { // toggle sending
                     if (startMode) {
                         sendingStart = 26; // 26 * 40 ms
 
@@ -133,69 +273,29 @@ void ThreadArduinoSend::run() {
                     }
 
                     continue;
-                }
+                } else if (handPosition.fist && startMode) {
+                    if (!armingMode) {
+                        sendingArm = 28; // 28 * 40 ms
 
-                if (startMode) { // if toggled sendinf true
-                    if (buttons.arming) { // if arming
-                        if (!armingMode) {
+                        emit motorsArmedChanged(true);
+                    } else {
+                        if (startMode) {
                             sendingArm = 28; // 28 * 40 ms
 
-                            emit motorsArmedChanged(true);
-                        } else {
-                            if (startMode) {
-                                sendingArm = 28; // 28 * 40 ms
-
-                                emit motorsArmedChanged(false);
-                            }
-                        }
-
-                        continue;
-                    }
-                }
-
-                if (throttleMode) { // a on
-                    if (buttons.leftShoulder) {
-                        sendingLeftY = 6;
-
-                        leftY -= 0.025;
-                        if (leftY < 0.0) {
-                            leftY = 0.0;
-                        }
-                    } else if (buttons.rightShoulder) {
-                        sendingLeftY = 6;
-
-                        leftY += 0.025;
-                        if (leftY > 1.0) {
-                            leftY = 1.0;
+                            emit motorsArmedChanged(false);
                         }
                     }
+
                     continue;
                 }
             }
-
-            if (sendingStart > 0) {
-                sendingStart--;
-                if (sendingStart == 0) {
-                    startMode = !startMode;
-                }
-
-                continue;
-            }
-
             if (sendingArm > 0) {
                 if (!armingMode) {
-                    if (this->drone->getCanStartRecording()) {
-                        this->drone->getDatabase()->record(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
-                    }
                     this->setRadioValues(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
                     this->send(this->createAxisBuffer(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
                 } else {
-                    if (this->drone->getCanStartRecording()) {
-                        this->drone->getDatabase()->record(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
-                    }
                     this->setRadioValues(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
                     this->send(this->createAxisBuffer(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
-
                 }
 
                 sendingArm--;
@@ -210,48 +310,17 @@ void ThreadArduinoSend::run() {
 
                 continue;
             }
-
-            if (sendingThrottle > 0) {
-                sendingThrottle--;
-
-                continue;
-            }
-
-            if (sendingLeftY > 0) {
-                sendingLeftY--;
-
-                continue;
-            }
-
-            if (sendingRecording > 0) {
-                sendingRecording--;
-
-                if (sendingRecording == 0) {
-                    recordingMode = !recordingMode;
-
-                    emit recordingModeChanged(recordingMode);
-
+            if (sendingStart > 0) {
+                sendingStart--;
+                if (sendingStart == 0) {
+                    startMode = !startMode;
                 }
 
                 continue;
             }
 
-            if (sendingB > 0) {
-                sendingB--;
-
-                if (sendingB == 0) {
-                    modePlaying = !modePlaying;
-
-                    if (modePlaying) {
-                        this->drone->getDatabase()->openPlay();
-                        emit playingModeChanged(true);
-                    } else {
-                        emit playingModeChanged(false);
-                    }
-                }
-
-                continue;
-            }
+            this->setRadioValues(this->axisValueFromDouble(0), this->axisValueFromDouble(handPosition.pitch * 0.83), this->axisValueFromDouble(handPosition.roll * 0.83), this->axisValueFromDouble(handPosition.yaw * 0.83));
+            this->send(this->createAxisBuffer(this->axisValueFromDouble(0.0), this->axisValueFromDouble(handPosition.pitch * 0.83), this->axisValueFromDouble(handPosition.roll * 0.83), this->axisValueFromDouble(handPosition.yaw * 0.83)));
         }
     }
 }
