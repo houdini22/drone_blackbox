@@ -8,6 +8,7 @@ ThreadArduinoConnect::ThreadArduinoConnect(Drone * drone): QThread()
 
 void ThreadArduinoConnect::run() {
     while (1) {
+        /*
         if (this->drone->isArduinoDetected() && !this->drone->isArduinoConnected()) {
 
             SerialPort * arduino = new SerialPort(this->drone->getArduinoDeviceStr().toStdString());
@@ -32,6 +33,8 @@ void ThreadArduinoConnect::run() {
 
             emit arduinoIsConnectedChanged(true, arduino);
         }
+
+        */
         QThread::msleep(1000);
     }
 }

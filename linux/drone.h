@@ -22,7 +22,6 @@ class Drone : public QObject
 public:
     Drone(MainWindow * window);
     void start();
-    bool isArduinoDetected();
     bool isArduinoConnected();
     QString getArduinoDeviceStr();
     void setArduino(SerialPort * arduino);
@@ -48,7 +47,8 @@ private slots:
     void setCanStartRecording(QString active);
     void setPlayingMode(bool isActive);
     void setCameraFrame(MyMat);
-    void slotSteeringsDataChanged(QHash<QString,SteeringData*>*);
+    void slotSteeringsDataChanged(QHash<QString,SteeringData*> *);
+    void slotSendingsDataChanged(QHash<QString,SendingData*> *);
 signals:
     void signalGamepadIsConnected(bool value);
     void gamePadValuesChanged(ButtonsPressed buttons);
@@ -60,12 +60,9 @@ signals:
     void cameraFrameChanged(MyMat);
     void handPositionChanged(HandPosition);
     void signalSteeringsDataChanged(QHash<QString,SteeringData*>*);
+    void signalSendingsDataChanged(QHash<QString,SendingData*>*);
 private:
     MainWindow * window;
-    ThreadArduinoDetect * threadArduinoDetect;
-    ThreadArduinoConnect * threadArduinoConnect;
-    ThreadArduinoPing * threadArduinoPing;
-    ThreadArduinoSend * threadArduinoSend;
     ThreadCamera * threadCamera;
     bool arduinoMode = MODE_ARDUINO_DISCONNECTED;
     bool arduinoIsConnected = false;
@@ -79,6 +76,7 @@ private:
     LeapEventListener leapEventListener;
     HandPosition handPosition;
     SteeringRegistry * steeringRegistry;
+    SendingRegistry * sendingRegistry;
 };
 
 #endif // DRONE_H

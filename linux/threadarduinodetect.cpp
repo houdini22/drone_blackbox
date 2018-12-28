@@ -21,38 +21,30 @@ QString detectDevice()  {
     return deviceStr;
 }
 
-ThreadArduinoDetect::ThreadArduinoDetect(Drone * drone): QThread()
-{
-    this->drone = drone;
+ThreadArduinoDetect::ThreadArduinoDetect(SendingRegistry * registry): QThread() {
+    this->registry = registry;
+
+    connect(this->registry, SIGNAL(signalSendingDataChanged(SendingData *)), this, SLOT(slotSendingDataChanged(SendingData *)));
 }
 
 void ThreadArduinoDetect::run() {
     while (1) {
-        if (!this->drone->isArduinoDetected()) {
+        if (this->sendingData->mode != MODE_ARDUINO_CONNECTED) {
             QString arduinoDeviceStr = detectDevice();
 
             if (arduinoDeviceStr.length() > 0) {
-                this->setArduinoDeviceString(arduinoDeviceStr);
-                this->setArduinoMode(MODE_ARDUINO_DETECTED);
+                emit signalArduinoStatusChanged(MODE_ARDUINO_DETECTED, arduinoDeviceStr);
             } else {
-                this->setArduinoDeviceString("");
-                this->setArduinoMode(MODE_ARDUINO_DISCONNECTED);
+                emit signalArduinoStatusChanged(MODE_ARDUINO_DISCONNECTED, arduinoDeviceStr);
             }
         }
+
         QThread::msleep(1000);
     }
 }
 
-void ThreadArduinoDetect::setArduinoDeviceString(QString value) {
-    if (this->arduinoDeviceString.compare(value) != 0) {
-        this->arduinoDeviceString = value;
-        emit arduinoDeviceStringChanged(value);
-    }
-}
-
-void ThreadArduinoDetect::setArduinoMode(int value) {
-    if (this->arduinoMode != value) {
-        this->arduinoMode = value;
-        emit arduinoModeChanged(value);
+void ThreadArduinoDetect::slotSendingDataChanged(SendingData * sendingData) {
+    if (sendingData->name.compare("arduino0") == 0) {
+        this->sendingData = sendingData;
     }
 }

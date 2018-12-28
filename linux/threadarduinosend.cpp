@@ -60,13 +60,14 @@ void ThreadArduinoSend::run() {
     while (1) {
         QThread::msleep(40);
 
+        /*
         HandPosition handPosition = this->drone->getHandPosition();
 
         if (!handPosition.isAvailable) {
-            if (/*this->drone->isGamePadConnected() && */this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
+            if (this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
                 ButtonsPressed buttons = this->drone->getButtons();
 
-                /* SEND */
+                // send
                 if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
                     if (modePlaying) {
                         size_t currentPlay = this->drone->getDatabase()->getCurrentPlay();
@@ -100,7 +101,7 @@ void ThreadArduinoSend::run() {
                     }
                 }
 
-                /* LISTEN */
+                // listen
                 if (buttons.y) {
                     sendingRecording = 6;
 
@@ -320,6 +321,7 @@ void ThreadArduinoSend::run() {
             this->setRadioValues(this->axisValueFromDouble(0), this->axisValueFromDouble(handPosition.y), this->axisValueFromDouble(handPosition.x), this->axisValueFromDouble(handPosition.z));
             this->send(this->createAxisBuffer(this->axisValueFromDouble(0.0), this->axisValueFromDouble(handPosition.y), this->axisValueFromDouble(handPosition.x), this->axisValueFromDouble(handPosition.z)));
         }
+        */
     }
 }
 

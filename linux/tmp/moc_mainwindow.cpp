@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[25];
-    char stringdata0[363];
+    QByteArrayData data[26];
+    char stringdata0[399];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,44 +32,46 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 16), // "setArduinoStatus"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 5), // "value"
-QT_MOC_LITERAL(4, 35, 8), // "setModes"
-QT_MOC_LITERAL(5, 44, 5), // "Modes"
-QT_MOC_LITERAL(6, 50, 5), // "modes"
-QT_MOC_LITERAL(7, 56, 18), // "cameraFrameChanged"
-QT_MOC_LITERAL(8, 75, 5), // "MyMat"
-QT_MOC_LITERAL(9, 81, 15), // "setHandPosition"
-QT_MOC_LITERAL(10, 97, 12), // "HandPosition"
-QT_MOC_LITERAL(11, 110, 24), // "slotSteeringsDataChanged"
-QT_MOC_LITERAL(12, 135, 29), // "QHash<QString,SteeringData*>*"
-QT_MOC_LITERAL(13, 165, 29), // "on_recordingAddButton_clicked"
-QT_MOC_LITERAL(14, 195, 32), // "on_recordingDeleteButton_clicked"
-QT_MOC_LITERAL(15, 228, 27), // "recordingCurrentItemChanged"
-QT_MOC_LITERAL(16, 256, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(17, 273, 4), // "item"
-QT_MOC_LITERAL(18, 278, 4), // "prev"
-QT_MOC_LITERAL(19, 283, 23), // "onRecordingValueChanged"
-QT_MOC_LITERAL(20, 307, 12), // "setListItems"
-QT_MOC_LITERAL(21, 320, 11), // "RecordsList"
-QT_MOC_LITERAL(22, 332, 7), // "records"
-QT_MOC_LITERAL(23, 340, 17), // "setStartRecording"
-QT_MOC_LITERAL(24, 358, 4) // "name"
+QT_MOC_LITERAL(1, 11, 8), // "setModes"
+QT_MOC_LITERAL(2, 20, 0), // ""
+QT_MOC_LITERAL(3, 21, 5), // "Modes"
+QT_MOC_LITERAL(4, 27, 5), // "modes"
+QT_MOC_LITERAL(5, 33, 18), // "cameraFrameChanged"
+QT_MOC_LITERAL(6, 52, 5), // "MyMat"
+QT_MOC_LITERAL(7, 58, 15), // "setHandPosition"
+QT_MOC_LITERAL(8, 74, 12), // "HandPosition"
+QT_MOC_LITERAL(9, 87, 24), // "slotSteeringsDataChanged"
+QT_MOC_LITERAL(10, 112, 29), // "QHash<QString,SteeringData*>*"
+QT_MOC_LITERAL(11, 142, 23), // "slotSendingsDataChanged"
+QT_MOC_LITERAL(12, 166, 28), // "QHash<QString,SendingData*>*"
+QT_MOC_LITERAL(13, 195, 29), // "on_recordingAddButton_clicked"
+QT_MOC_LITERAL(14, 225, 32), // "on_recordingDeleteButton_clicked"
+QT_MOC_LITERAL(15, 258, 27), // "recordingCurrentItemChanged"
+QT_MOC_LITERAL(16, 286, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(17, 303, 4), // "item"
+QT_MOC_LITERAL(18, 308, 4), // "prev"
+QT_MOC_LITERAL(19, 313, 23), // "onRecordingValueChanged"
+QT_MOC_LITERAL(20, 337, 5), // "value"
+QT_MOC_LITERAL(21, 343, 12), // "setListItems"
+QT_MOC_LITERAL(22, 356, 11), // "RecordsList"
+QT_MOC_LITERAL(23, 368, 7), // "records"
+QT_MOC_LITERAL(24, 376, 17), // "setStartRecording"
+QT_MOC_LITERAL(25, 394, 4) // "name"
 
     },
-    "MainWindow\0setArduinoStatus\0\0value\0"
-    "setModes\0Modes\0modes\0cameraFrameChanged\0"
-    "MyMat\0setHandPosition\0HandPosition\0"
-    "slotSteeringsDataChanged\0"
+    "MainWindow\0setModes\0\0Modes\0modes\0"
+    "cameraFrameChanged\0MyMat\0setHandPosition\0"
+    "HandPosition\0slotSteeringsDataChanged\0"
     "QHash<QString,SteeringData*>*\0"
+    "slotSendingsDataChanged\0"
+    "QHash<QString,SendingData*>*\0"
     "on_recordingAddButton_clicked\0"
     "on_recordingDeleteButton_clicked\0"
     "recordingCurrentItemChanged\0"
     "QListWidgetItem*\0item\0prev\0"
-    "onRecordingValueChanged\0setListItems\0"
-    "RecordsList\0records\0setStartRecording\0"
-    "name"
+    "onRecordingValueChanged\0value\0"
+    "setListItems\0RecordsList\0records\0"
+    "setStartRecording\0name"
 };
 #undef QT_MOC_LITERAL
 
@@ -88,7 +90,7 @@ static const uint qt_meta_data_MainWindow[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    1,   69,    2, 0x0a /* Public */,
-       4,    1,   72,    2, 0x0a /* Public */,
+       5,    1,   72,    2, 0x0a /* Public */,
        7,    1,   75,    2, 0x0a /* Public */,
        9,    1,   78,    2, 0x0a /* Public */,
       11,    1,   81,    2, 0x0a /* Public */,
@@ -96,21 +98,21 @@ static const uint qt_meta_data_MainWindow[] = {
       14,    0,   85,    2, 0x08 /* Private */,
       15,    2,   86,    2, 0x08 /* Private */,
       19,    1,   91,    2, 0x08 /* Private */,
-      20,    1,   94,    2, 0x08 /* Private */,
-      23,    1,   97,    2, 0x08 /* Private */,
+      21,    1,   94,    2, 0x08 /* Private */,
+      24,    1,   97,    2, 0x08 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, 0x80000000 | 5,    6,
+    QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void, 0x80000000 | 6,    2,
     QMetaType::Void, 0x80000000 | 8,    2,
     QMetaType::Void, 0x80000000 | 10,    2,
     QMetaType::Void, 0x80000000 | 12,    2,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 16, 0x80000000 | 16,   17,   18,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, 0x80000000 | 21,   22,
-    QMetaType::Void, QMetaType::QString,   24,
+    QMetaType::Void, QMetaType::QString,   20,
+    QMetaType::Void, 0x80000000 | 22,   23,
+    QMetaType::Void, QMetaType::QString,   25,
 
        0        // eod
 };
@@ -121,11 +123,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->setArduinoStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 1: _t->setModes((*reinterpret_cast< Modes(*)>(_a[1]))); break;
-        case 2: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
-        case 3: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
-        case 4: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
+        case 0: _t->setModes((*reinterpret_cast< Modes(*)>(_a[1]))); break;
+        case 1: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
+        case 2: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
+        case 3: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
+        case 4: _t->slotSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
         case 5: _t->on_recordingAddButton_clicked(); break;
         case 6: _t->on_recordingDeleteButton_clicked(); break;
         case 7: _t->recordingCurrentItemChanged((*reinterpret_cast< QListWidgetItem*(*)>(_a[1])),(*reinterpret_cast< QListWidgetItem*(*)>(_a[2]))); break;
@@ -137,7 +139,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 2:
+        case 1:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:

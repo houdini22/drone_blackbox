@@ -11,19 +11,17 @@ class ThreadArduinoDetect : public QThread
 {
     Q_OBJECT
 public:
-    explicit ThreadArduinoDetect(Drone * drone);
+    explicit ThreadArduinoDetect(SendingRegistry * registry);
     void run();
 private:
     QString name;
     Drone * drone;
-    int arduinoMode = MODE_ARDUINO_DISCONNECTED;
-    QString arduinoDeviceString = "";
+    SendingData * sendingData;
+    SendingRegistry * registry;
 public slots:
-    void setArduinoMode(int value);
-    void setArduinoDeviceString(QString value);
+    void slotSendingDataChanged(SendingData *);
 signals:
-    void arduinoDeviceStringChanged(QString value);
-    void arduinoModeChanged(int value);
+    void signalArduinoStatusChanged(int value, QString deviceString);
 };
 
 #endif // THREADARDUINODETECT_H

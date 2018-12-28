@@ -88,7 +88,10 @@ SOURCES += \
     leapeventlistener.cpp \
     steeringregistry.cpp \
     steeringgamepad.cpp \
-    steeringinterface.cpp
+    steeringinterface.cpp \
+    sendingregistry.cpp \
+    sendingarduino.cpp \
+    sendinginterface.cpp
 
 HEADERS += \
     buttons.h \
@@ -154,7 +157,10 @@ HEADERS += \
     leapeventlistener.h \
     steeringregistry.h \
     steeringgamepad.h \
-    steeringinterface.h
+    steeringinterface.h \
+    sendingregistry.h \
+    sendinginterface.h \
+    sendingarduino.h
 
 FORMS += \
     mainwindow.ui

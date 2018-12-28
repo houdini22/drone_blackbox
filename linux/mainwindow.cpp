@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->drone = new Drone(this);
 
-    connect(this->drone, SIGNAL(arduinoStatusChanged(QString)), this, SLOT(setArduinoStatus(QString)));
     connect(this->drone, SIGNAL(modeChanged(Modes)), this, SLOT(setModes(Modes)));
     connect(this->drone, SIGNAL(recordFilesChanged(RecordsList)), this, SLOT(setListItems(RecordsList)));
     connect(this->drone, SIGNAL(startRecording(QString)), this, SLOT(setStartRecording(QString)));
@@ -18,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->drone, SIGNAL(handPositionChanged(HandPosition)), this, SLOT(setHandPosition(HandPosition)));
 
     connect(this->drone, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
+    connect(this->drone, SIGNAL(signalSendingsDataChanged(QHash<QString,SendingData*>*)), this, SLOT(slotSendingsDataChanged(QHash<QString,SendingData*>*)));
 
     QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
     connect(listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(recordingCurrentItemChanged(QListWidgetItem*, QListWidgetItem*)));
@@ -52,16 +52,16 @@ void MainWindow::slotSteeringsDataChanged(QHash<QString, SteeringData *> * data)
     labelRightY->setText(QString::number(data2->rightY));
 }
 
-void MainWindow::setArduinoStatus(QString value) {
+
+void MainWindow::slotSendingsDataChanged(QHash<QString, SendingData *> * data) {
+    SendingData * data2 = data->take("arduino0");
+
     QLabel * label = this->centralWidget()->findChild<QLabel *>(QString("labelArduinoValue"));
 
-    if (value.compare("connect") == 0) {
+    if (data2->mode == MODE_ARDUINO_DETECTED) {
         label->setDisabled(true);
-    } else {
-        label->setDisabled(false);
+        label->setText("connecting...");
     }
-
-    label->setText(value);
 }
 
 void MainWindow::setModes(Modes modes) {

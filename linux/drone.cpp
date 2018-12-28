@@ -10,6 +10,7 @@ Drone::Drone(MainWindow * window)
     this->database = new Database();
     connect(this->database, SIGNAL(recordingStart(QString)), this, SLOT(setCanStartRecording(QString)));
 
+    /*
     this->threadArduinoDetect = new ThreadArduinoDetect(this);
     connect(this->threadArduinoDetect, SIGNAL(arduinoModeChanged(int)), this, SLOT(setArduinoMode(int)));
     connect(this->threadArduinoDetect, SIGNAL(arduinoDeviceStringChanged(QString)), this, SLOT(setArduinoDeviceString(QString)));
@@ -27,6 +28,7 @@ Drone::Drone(MainWindow * window)
     connect(this->threadArduinoSend, SIGNAL(radioValuesChanged(int,int,int,int)), this, SLOT(setRadioValues(int,int,int,int)));
     connect(this->threadArduinoSend, SIGNAL(recordingModeChanged(bool)), this, SLOT(setRecordingMode(bool)));
     connect(this->threadArduinoSend, SIGNAL(playingModeChanged(bool)), this, SLOT(setPlayingMode(bool)));
+    */
 
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
@@ -36,17 +38,16 @@ Drone::Drone(MainWindow * window)
 
     this->steeringRegistry = new SteeringRegistry(this);
     this->steeringRegistry->add(new SteeringGamepad(this, this->steeringRegistry));
-
     connect(this->steeringRegistry, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
-
     this->steeringRegistry->start();
+
+    this->sendingRegistry = new SendingRegistry(this);
+    this->sendingRegistry->add(new SendingArduino(this, this->sendingRegistry));
+    connect(this->sendingRegistry, SIGNAL(signalSendingsDataChanged(QHash<QString,SendingData*>*)), this, SLOT(slotSendingsDataChanged(QHash<QString,SendingData*>*)));
+    this->sendingRegistry->start();
 }
 
 void Drone::start() {
-    this->threadArduinoDetect->start();
-    this->threadArduinoConnect->start();
-    this->threadArduinoPing->start();
-    this->threadArduinoSend->start();
     this->threadCamera->start();
 
     this->setRecordFiles(this->database->getAll());
@@ -54,10 +55,6 @@ void Drone::start() {
 
 bool Drone::isArduinoConnected() {
     return this->arduinoIsConnected;
-}
-
-bool Drone::isArduinoDetected() {
-    return this->arduinoMode == MODE_ARDUINO_DETECTED;
 }
 
 SerialPort * Drone::getArduino() {
@@ -204,4 +201,8 @@ HandPosition Drone::getHandPosition() {
 
 void Drone::slotSteeringsDataChanged(QHash<QString,SteeringData*> * data) {
     emit signalSteeringsDataChanged(data);
+}
+
+void Drone::slotSendingsDataChanged(QHash<QString,SendingData*> * data) {
+    emit signalSendingsDataChanged(data);
 }
