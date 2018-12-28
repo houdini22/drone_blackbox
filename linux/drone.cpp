@@ -28,9 +28,6 @@ Drone::Drone(MainWindow * window)
     connect(this->threadArduinoSend, SIGNAL(recordingModeChanged(bool)), this, SLOT(setRecordingMode(bool)));
     connect(this->threadArduinoSend, SIGNAL(playingModeChanged(bool)), this, SLOT(setPlayingMode(bool)));
 
-    this->threadGamepadUpdate = new ThreadGamepadUpdate(this);
-    connect(this->threadGamepadUpdate, SIGNAL(buttonsChanged(ButtonsPressed)), this, SLOT(setButtons(ButtonsPressed)));
-
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
 
@@ -50,7 +47,6 @@ void Drone::start() {
     this->threadArduinoConnect->start();
     this->threadArduinoPing->start();
     this->threadArduinoSend->start();
-    this->threadGamepadUpdate->start();
     this->threadCamera->start();
 
     this->setRecordFiles(this->database->getAll());

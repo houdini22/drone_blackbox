@@ -25,7 +25,6 @@ private:
     bool radioSending = false;
     QListWidgetItem * currentItem;
 public slots:
-    void setRadioValues(int leftX, int leftY, int rightX, int rightY);
     void setArduinoStatus(QString value);
     void setModes(Modes modes);
     void cameraFrameChanged(MyMat);

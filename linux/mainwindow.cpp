@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->drone = new Drone(this);
 
-    connect(this->drone, SIGNAL(radioValuesChanged(int,int,int,int)), this, SLOT(setRadioValues(int,int,int,int)));
     connect(this->drone, SIGNAL(arduinoStatusChanged(QString)), this, SLOT(setArduinoStatus(QString)));
     connect(this->drone, SIGNAL(modeChanged(Modes)), this, SLOT(setModes(Modes)));
     connect(this->drone, SIGNAL(recordFilesChanged(RecordsList)), this, SLOT(setListItems(RecordsList)));
@@ -30,29 +29,27 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 void MainWindow::slotSteeringsDataChanged(QHash<QString, SteeringData *> * data) {
+    SteeringData * data2 = data->take("gamepad0");
+
     QLabel * label = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadValue"));
 
-    if (data->take("gamepad0")->isConnected) {
+    if (data2->isConnected) {
         label->setText("connected");
         label->setDisabled(false);
     } else {
         label->setText("connect...");
         label->setDisabled(true);
     }
-}
 
-void MainWindow::setRadioValues(int leftX, int leftY, int rightX, int rightY) {
     QLabel * labelLeftX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftX"));
     QLabel * labelLeftY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftY"));
     QLabel * labelRightX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightX"));
     QLabel * labelRightY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightY"));
 
-    if (this->radioSending) {
-        labelLeftX->setText(QString::number(leftX));
-        labelLeftY->setText(QString::number(leftY));
-        labelRightX->setText(QString::number(rightX));
-        labelRightY->setText(QString::number(rightY));
-    }
+    labelLeftX->setText(QString::number(data2->leftX));
+    labelLeftY->setText(QString::number(data2->leftY));
+    labelRightX->setText(QString::number(data2->rightX));
+    labelRightY->setText(QString::number(data2->rightY));
 }
 
 void MainWindow::setArduinoStatus(QString value) {

@@ -66,7 +66,6 @@ private:
     ThreadArduinoConnect * threadArduinoConnect;
     ThreadArduinoPing * threadArduinoPing;
     ThreadArduinoSend * threadArduinoSend;
-    ThreadGamepadUpdate * threadGamepadUpdate;
     ThreadCamera * threadCamera;
     bool arduinoMode = MODE_ARDUINO_DISCONNECTED;
     bool arduinoIsConnected = false;

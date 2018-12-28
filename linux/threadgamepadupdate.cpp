@@ -1,14 +1,18 @@
 #include "QThread"
 #include "include.h"
 
-ThreadGamepadUpdate::ThreadGamepadUpdate(Drone * drone): QThread()
-{
-    this->drone = drone;
+ThreadGamepadUpdate::ThreadGamepadUpdate(SteeringRegistry * registry): QThread() {
+    this->registry = registry;
+
+    connect(this->registry, SIGNAL(signalSteeringDataChanged(SteeringData *)), this, SLOT(slotSteeringDataChanged(SteeringData *)));
 }
 
 void ThreadGamepadUpdate::run() {
     while (1) {
-        if (/*this->drone->isGamePadConnected()*/true) {
+        QThread::msleep(40);
+        SteeringData * data = this->steeringData;
+
+        if (data->isConnected) {
             GamepadUpdate();
 
             double _leftX = GamepadStickLength(GAMEPAD_0, STICK_LEFT) * cos(GamepadStickAngle(GAMEPAD_0, STICK_LEFT));
@@ -44,10 +48,15 @@ void ThreadGamepadUpdate::run() {
 
             this->setButtons(buttons);
         }
-        QThread::msleep(40);
     }
 }
 
 void ThreadGamepadUpdate::setButtons(ButtonsPressed buttons) {
-    emit buttonsChanged(buttons);
+    emit signalButtonsChanged(buttons);
+}
+
+void ThreadGamepadUpdate::slotSteeringDataChanged(SteeringData * steeringData) {
+    if (steeringData->name.compare("gamepad0") == 0) {
+        this->steeringData = steeringData;
+    }
 }

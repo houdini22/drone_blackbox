@@ -13,6 +13,7 @@ public:
     SteeringRegistry(Drone * drone);
     void add(SteeringInterface * handler);
     void start();
+    QHash<QString, SteeringData *> * getData();
 private:
     QList<SteeringInterface *> registry;
     Drone * drone;
@@ -21,6 +22,7 @@ public slots:
     void slotSteeringDataChanged(SteeringData *);
 signals:
     void signalSteeringsDataChanged(QHash<QString, SteeringData *> *);
+    void signalSteeringDataChanged(SteeringData *);
 };
 
 #endif // STEERINGREGISTRY_H

@@ -9,6 +9,10 @@ class SteeringRegistry;
 struct SteeringData {
     QString name = "";
     bool isConnected = false;
+    int leftX = 0;
+    int leftY = 0;
+    int rightX = 0;
+    int rightY = 0;
 };
 
 class SteeringInterface {
