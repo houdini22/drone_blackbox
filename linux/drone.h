@@ -24,7 +24,6 @@ public:
     void start();
     bool isArduinoDetected();
     bool isArduinoConnected();
-    bool isGamePadConnected();
     QString getArduinoDeviceStr();
     void setArduino(SerialPort * arduino);
     SerialPort * getArduino();
@@ -34,7 +33,7 @@ public:
     void setHandPosition(HandPosition);
     HandPosition getHandPosition();
 private slots:
-    void setGamePadIsConnected(bool value);
+    void slotGamepadIsConnected(bool value);
     void setButtons(ButtonsPressed buttons);
     void setArduinoMode(int value);
     void setArduinoIsConnected(bool value, SerialPort * arduino);
@@ -49,8 +48,9 @@ private slots:
     void setCanStartRecording(QString active);
     void setPlayingMode(bool isActive);
     void setCameraFrame(MyMat);
+    void slotSteeringsDataChanged(QHash<QString,SteeringData*>*);
 signals:
-    void gamePadIsConnectedChanged(bool value);
+    void signalGamepadIsConnected(bool value);
     void gamePadValuesChanged(ButtonsPressed buttons);
     void arduinoStatusChanged(QString value);
     void modeChanged(Modes modes);
@@ -59,16 +59,15 @@ signals:
     void startRecording(QString name);
     void cameraFrameChanged(MyMat);
     void handPositionChanged(HandPosition);
+    void signalSteeringsDataChanged(QHash<QString,SteeringData*>*);
 private:
     MainWindow * window;
-    ThreadGamepad * threadGamepad;
     ThreadArduinoDetect * threadArduinoDetect;
     ThreadArduinoConnect * threadArduinoConnect;
     ThreadArduinoPing * threadArduinoPing;
     ThreadArduinoSend * threadArduinoSend;
     ThreadGamepadUpdate * threadGamepadUpdate;
     ThreadCamera * threadCamera;
-    bool gamePadIsConnected = false;
     bool arduinoMode = MODE_ARDUINO_DISCONNECTED;
     bool arduinoIsConnected = false;
     QString arduinoDeviceStr = "";
@@ -80,6 +79,7 @@ private:
     Leap::Controller leapController;
     LeapEventListener leapEventListener;
     HandPosition handPosition;
+    SteeringRegistry * steeringRegistry;
 };
 
 #endif // DRONE_H

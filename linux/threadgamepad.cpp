@@ -1,27 +1,24 @@
 #include "QThread"
 #include "include.h"
 
-ThreadGamepad::ThreadGamepad(Drone * drone): QThread()
+ThreadGamepad::ThreadGamepad(): QThread()
 {
-    this->drone = drone;
+
 }
 
 void ThreadGamepad::run() {
     while (1) {
         if (!GamepadIsConnected(GAMEPAD_0)) {
-            this->setGamePadIsConnected(false);
+            this->setGamepadIsConnected(false);
             GamepadInit();
         } else {
-            this->setGamePadIsConnected(true);
+            this->setGamepadIsConnected(true);
         }
 
         QThread::msleep(1000);
     }
 }
 
-void ThreadGamepad::setGamePadIsConnected(bool value) {
-    if (this->gamepadIsConnected != value) {
-        this->gamepadIsConnected = value;
-        emit gamePadIsConnectedChanged(value);
-    }
+void ThreadGamepad::setGamepadIsConnected(bool value) {
+    emit signalGamepadIsConnected(value);
 }

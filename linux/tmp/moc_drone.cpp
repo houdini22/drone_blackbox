@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Drone_t {
-    QByteArrayData data[44];
-    char stringdata0[574];
+    QByteArrayData data[47];
+    char stringdata0[656];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,68 +32,72 @@ struct qt_meta_stringdata_Drone_t {
 static const qt_meta_stringdata_Drone_t qt_meta_stringdata_Drone = {
     {
 QT_MOC_LITERAL(0, 0, 5), // "Drone"
-QT_MOC_LITERAL(1, 6, 25), // "gamePadIsConnectedChanged"
-QT_MOC_LITERAL(2, 32, 0), // ""
-QT_MOC_LITERAL(3, 33, 5), // "value"
-QT_MOC_LITERAL(4, 39, 20), // "gamePadValuesChanged"
-QT_MOC_LITERAL(5, 60, 14), // "ButtonsPressed"
-QT_MOC_LITERAL(6, 75, 7), // "buttons"
-QT_MOC_LITERAL(7, 83, 20), // "arduinoStatusChanged"
-QT_MOC_LITERAL(8, 104, 11), // "modeChanged"
-QT_MOC_LITERAL(9, 116, 5), // "Modes"
-QT_MOC_LITERAL(10, 122, 5), // "modes"
-QT_MOC_LITERAL(11, 128, 18), // "radioValuesChanged"
-QT_MOC_LITERAL(12, 147, 5), // "leftX"
-QT_MOC_LITERAL(13, 153, 5), // "leftY"
-QT_MOC_LITERAL(14, 159, 6), // "rightX"
-QT_MOC_LITERAL(15, 166, 6), // "rightY"
-QT_MOC_LITERAL(16, 173, 18), // "recordFilesChanged"
-QT_MOC_LITERAL(17, 192, 11), // "RecordsList"
-QT_MOC_LITERAL(18, 204, 4), // "list"
-QT_MOC_LITERAL(19, 209, 14), // "startRecording"
-QT_MOC_LITERAL(20, 224, 4), // "name"
-QT_MOC_LITERAL(21, 229, 18), // "cameraFrameChanged"
-QT_MOC_LITERAL(22, 248, 5), // "MyMat"
-QT_MOC_LITERAL(23, 254, 19), // "handPositionChanged"
-QT_MOC_LITERAL(24, 274, 12), // "HandPosition"
-QT_MOC_LITERAL(25, 287, 21), // "setGamePadIsConnected"
-QT_MOC_LITERAL(26, 309, 10), // "setButtons"
-QT_MOC_LITERAL(27, 320, 14), // "setArduinoMode"
-QT_MOC_LITERAL(28, 335, 21), // "setArduinoIsConnected"
-QT_MOC_LITERAL(29, 357, 11), // "SerialPort*"
-QT_MOC_LITERAL(30, 369, 7), // "arduino"
-QT_MOC_LITERAL(31, 377, 22), // "setArduinoDeviceString"
-QT_MOC_LITERAL(32, 400, 15), // "setRadioSending"
-QT_MOC_LITERAL(33, 416, 12), // "arduinoReset"
-QT_MOC_LITERAL(34, 429, 14), // "setRadioValues"
-QT_MOC_LITERAL(35, 444, 14), // "setMotorsArmed"
-QT_MOC_LITERAL(36, 459, 15), // "setThrottleMode"
-QT_MOC_LITERAL(37, 475, 16), // "setRecordingMode"
-QT_MOC_LITERAL(38, 492, 14), // "setRecordFiles"
-QT_MOC_LITERAL(39, 507, 20), // "setCanStartRecording"
-QT_MOC_LITERAL(40, 528, 6), // "active"
-QT_MOC_LITERAL(41, 535, 14), // "setPlayingMode"
-QT_MOC_LITERAL(42, 550, 8), // "isActive"
-QT_MOC_LITERAL(43, 559, 14) // "setCameraFrame"
+QT_MOC_LITERAL(1, 6, 24), // "signalGamepadIsConnected"
+QT_MOC_LITERAL(2, 31, 0), // ""
+QT_MOC_LITERAL(3, 32, 5), // "value"
+QT_MOC_LITERAL(4, 38, 20), // "gamePadValuesChanged"
+QT_MOC_LITERAL(5, 59, 14), // "ButtonsPressed"
+QT_MOC_LITERAL(6, 74, 7), // "buttons"
+QT_MOC_LITERAL(7, 82, 20), // "arduinoStatusChanged"
+QT_MOC_LITERAL(8, 103, 11), // "modeChanged"
+QT_MOC_LITERAL(9, 115, 5), // "Modes"
+QT_MOC_LITERAL(10, 121, 5), // "modes"
+QT_MOC_LITERAL(11, 127, 18), // "radioValuesChanged"
+QT_MOC_LITERAL(12, 146, 5), // "leftX"
+QT_MOC_LITERAL(13, 152, 5), // "leftY"
+QT_MOC_LITERAL(14, 158, 6), // "rightX"
+QT_MOC_LITERAL(15, 165, 6), // "rightY"
+QT_MOC_LITERAL(16, 172, 18), // "recordFilesChanged"
+QT_MOC_LITERAL(17, 191, 11), // "RecordsList"
+QT_MOC_LITERAL(18, 203, 4), // "list"
+QT_MOC_LITERAL(19, 208, 14), // "startRecording"
+QT_MOC_LITERAL(20, 223, 4), // "name"
+QT_MOC_LITERAL(21, 228, 18), // "cameraFrameChanged"
+QT_MOC_LITERAL(22, 247, 5), // "MyMat"
+QT_MOC_LITERAL(23, 253, 19), // "handPositionChanged"
+QT_MOC_LITERAL(24, 273, 12), // "HandPosition"
+QT_MOC_LITERAL(25, 286, 26), // "signalSteeringsDataChanged"
+QT_MOC_LITERAL(26, 313, 29), // "QHash<QString,SteeringData*>*"
+QT_MOC_LITERAL(27, 343, 22), // "slotGamepadIsConnected"
+QT_MOC_LITERAL(28, 366, 10), // "setButtons"
+QT_MOC_LITERAL(29, 377, 14), // "setArduinoMode"
+QT_MOC_LITERAL(30, 392, 21), // "setArduinoIsConnected"
+QT_MOC_LITERAL(31, 414, 11), // "SerialPort*"
+QT_MOC_LITERAL(32, 426, 7), // "arduino"
+QT_MOC_LITERAL(33, 434, 22), // "setArduinoDeviceString"
+QT_MOC_LITERAL(34, 457, 15), // "setRadioSending"
+QT_MOC_LITERAL(35, 473, 12), // "arduinoReset"
+QT_MOC_LITERAL(36, 486, 14), // "setRadioValues"
+QT_MOC_LITERAL(37, 501, 14), // "setMotorsArmed"
+QT_MOC_LITERAL(38, 516, 15), // "setThrottleMode"
+QT_MOC_LITERAL(39, 532, 16), // "setRecordingMode"
+QT_MOC_LITERAL(40, 549, 14), // "setRecordFiles"
+QT_MOC_LITERAL(41, 564, 20), // "setCanStartRecording"
+QT_MOC_LITERAL(42, 585, 6), // "active"
+QT_MOC_LITERAL(43, 592, 14), // "setPlayingMode"
+QT_MOC_LITERAL(44, 607, 8), // "isActive"
+QT_MOC_LITERAL(45, 616, 14), // "setCameraFrame"
+QT_MOC_LITERAL(46, 631, 24) // "slotSteeringsDataChanged"
 
     },
-    "Drone\0gamePadIsConnectedChanged\0\0value\0"
+    "Drone\0signalGamepadIsConnected\0\0value\0"
     "gamePadValuesChanged\0ButtonsPressed\0"
     "buttons\0arduinoStatusChanged\0modeChanged\0"
     "Modes\0modes\0radioValuesChanged\0leftX\0"
     "leftY\0rightX\0rightY\0recordFilesChanged\0"
     "RecordsList\0list\0startRecording\0name\0"
     "cameraFrameChanged\0MyMat\0handPositionChanged\0"
-    "HandPosition\0setGamePadIsConnected\0"
-    "setButtons\0setArduinoMode\0"
-    "setArduinoIsConnected\0SerialPort*\0"
-    "arduino\0setArduinoDeviceString\0"
+    "HandPosition\0signalSteeringsDataChanged\0"
+    "QHash<QString,SteeringData*>*\0"
+    "slotGamepadIsConnected\0setButtons\0"
+    "setArduinoMode\0setArduinoIsConnected\0"
+    "SerialPort*\0arduino\0setArduinoDeviceString\0"
     "setRadioSending\0arduinoReset\0"
     "setRadioValues\0setMotorsArmed\0"
     "setThrottleMode\0setRecordingMode\0"
     "setRecordFiles\0setCanStartRecording\0"
     "active\0setPlayingMode\0isActive\0"
-    "setCameraFrame"
+    "setCameraFrame\0slotSteeringsDataChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -103,40 +107,42 @@ static const uint qt_meta_data_Drone[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
+      26,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       9,       // signalCount
+      10,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,  134,    2, 0x06 /* Public */,
-       4,    1,  137,    2, 0x06 /* Public */,
-       7,    1,  140,    2, 0x06 /* Public */,
-       8,    1,  143,    2, 0x06 /* Public */,
-      11,    4,  146,    2, 0x06 /* Public */,
-      16,    1,  155,    2, 0x06 /* Public */,
-      19,    1,  158,    2, 0x06 /* Public */,
-      21,    1,  161,    2, 0x06 /* Public */,
-      23,    1,  164,    2, 0x06 /* Public */,
+       1,    1,  144,    2, 0x06 /* Public */,
+       4,    1,  147,    2, 0x06 /* Public */,
+       7,    1,  150,    2, 0x06 /* Public */,
+       8,    1,  153,    2, 0x06 /* Public */,
+      11,    4,  156,    2, 0x06 /* Public */,
+      16,    1,  165,    2, 0x06 /* Public */,
+      19,    1,  168,    2, 0x06 /* Public */,
+      21,    1,  171,    2, 0x06 /* Public */,
+      23,    1,  174,    2, 0x06 /* Public */,
+      25,    1,  177,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      25,    1,  167,    2, 0x08 /* Private */,
-      26,    1,  170,    2, 0x08 /* Private */,
-      27,    1,  173,    2, 0x08 /* Private */,
-      28,    2,  176,    2, 0x08 /* Private */,
-      31,    1,  181,    2, 0x08 /* Private */,
-      32,    1,  184,    2, 0x08 /* Private */,
-      33,    0,  187,    2, 0x08 /* Private */,
-      34,    4,  188,    2, 0x08 /* Private */,
-      35,    1,  197,    2, 0x08 /* Private */,
-      36,    1,  200,    2, 0x08 /* Private */,
-      37,    1,  203,    2, 0x08 /* Private */,
-      38,    1,  206,    2, 0x08 /* Private */,
-      39,    1,  209,    2, 0x08 /* Private */,
-      41,    1,  212,    2, 0x08 /* Private */,
-      43,    1,  215,    2, 0x08 /* Private */,
+      27,    1,  180,    2, 0x08 /* Private */,
+      28,    1,  183,    2, 0x08 /* Private */,
+      29,    1,  186,    2, 0x08 /* Private */,
+      30,    2,  189,    2, 0x08 /* Private */,
+      33,    1,  194,    2, 0x08 /* Private */,
+      34,    1,  197,    2, 0x08 /* Private */,
+      35,    0,  200,    2, 0x08 /* Private */,
+      36,    4,  201,    2, 0x08 /* Private */,
+      37,    1,  210,    2, 0x08 /* Private */,
+      38,    1,  213,    2, 0x08 /* Private */,
+      39,    1,  216,    2, 0x08 /* Private */,
+      40,    1,  219,    2, 0x08 /* Private */,
+      41,    1,  222,    2, 0x08 /* Private */,
+      43,    1,  225,    2, 0x08 /* Private */,
+      45,    1,  228,    2, 0x08 /* Private */,
+      46,    1,  231,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -148,12 +154,13 @@ static const uint qt_meta_data_Drone[] = {
     QMetaType::Void, QMetaType::QString,   20,
     QMetaType::Void, 0x80000000 | 22,    2,
     QMetaType::Void, 0x80000000 | 24,    2,
+    QMetaType::Void, 0x80000000 | 26,    2,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void, 0x80000000 | 5,    6,
     QMetaType::Void, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Bool, 0x80000000 | 29,    3,   30,
+    QMetaType::Void, QMetaType::Bool, 0x80000000 | 31,    3,   32,
     QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void,
@@ -162,9 +169,10 @@ static const uint qt_meta_data_Drone[] = {
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void, 0x80000000 | 17,   18,
-    QMetaType::Void, QMetaType::QString,   40,
-    QMetaType::Void, QMetaType::Bool,   42,
+    QMetaType::Void, QMetaType::QString,   42,
+    QMetaType::Void, QMetaType::Bool,   44,
     QMetaType::Void, 0x80000000 | 22,    2,
+    QMetaType::Void, 0x80000000 | 26,    2,
 
        0        // eod
 };
@@ -175,7 +183,7 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         Drone *_t = static_cast<Drone *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->gamePadIsConnectedChanged((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 0: _t->signalGamepadIsConnected((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 1: _t->gamePadValuesChanged((*reinterpret_cast< ButtonsPressed(*)>(_a[1]))); break;
         case 2: _t->arduinoStatusChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 3: _t->modeChanged((*reinterpret_cast< Modes(*)>(_a[1]))); break;
@@ -184,21 +192,23 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 6: _t->startRecording((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 7: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
         case 8: _t->handPositionChanged((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
-        case 9: _t->setGamePadIsConnected((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 10: _t->setButtons((*reinterpret_cast< ButtonsPressed(*)>(_a[1]))); break;
-        case 11: _t->setArduinoMode((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 12: _t->setArduinoIsConnected((*reinterpret_cast< bool(*)>(_a[1])),(*reinterpret_cast< SerialPort*(*)>(_a[2]))); break;
-        case 13: _t->setArduinoDeviceString((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 14: _t->setRadioSending((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 15: _t->arduinoReset(); break;
-        case 16: _t->setRadioValues((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
-        case 17: _t->setMotorsArmed((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 18: _t->setThrottleMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 19: _t->setRecordingMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 20: _t->setRecordFiles((*reinterpret_cast< RecordsList(*)>(_a[1]))); break;
-        case 21: _t->setCanStartRecording((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 22: _t->setPlayingMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 23: _t->setCameraFrame((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
+        case 9: _t->signalSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
+        case 10: _t->slotGamepadIsConnected((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 11: _t->setButtons((*reinterpret_cast< ButtonsPressed(*)>(_a[1]))); break;
+        case 12: _t->setArduinoMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 13: _t->setArduinoIsConnected((*reinterpret_cast< bool(*)>(_a[1])),(*reinterpret_cast< SerialPort*(*)>(_a[2]))); break;
+        case 14: _t->setArduinoDeviceString((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 15: _t->setRadioSending((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 16: _t->arduinoReset(); break;
+        case 17: _t->setRadioValues((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
+        case 18: _t->setMotorsArmed((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 19: _t->setThrottleMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 20: _t->setRecordingMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 21: _t->setRecordFiles((*reinterpret_cast< RecordsList(*)>(_a[1]))); break;
+        case 22: _t->setCanStartRecording((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 23: _t->setPlayingMode((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 24: _t->setCameraFrame((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
+        case 25: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -218,14 +228,14 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< MyMat >(); break;
             }
             break;
-        case 10:
+        case 11:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< ButtonsPressed >(); break;
             }
             break;
-        case 23:
+        case 24:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
@@ -237,7 +247,7 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (Drone::*)(bool );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Drone::gamePadIsConnectedChanged)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Drone::signalGamepadIsConnected)) {
                 *result = 0;
                 return;
             }
@@ -298,6 +308,13 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
                 return;
             }
         }
+        {
+            using _t = void (Drone::*)(QHash<QString,SteeringData*> * );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Drone::signalSteeringsDataChanged)) {
+                *result = 9;
+                return;
+            }
+        }
     }
 }
 
@@ -326,19 +343,19 @@ int Drone::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 26)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 26;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 26)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 26;
     }
     return _id;
 }
 
 // SIGNAL 0
-void Drone::gamePadIsConnectedChanged(bool _t1)
+void Drone::signalGamepadIsConnected(bool _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
@@ -398,6 +415,13 @@ void Drone::handPositionChanged(HandPosition _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 8, _a);
+}
+
+// SIGNAL 9
+void Drone::signalSteeringsDataChanged(QHash<QString,SteeringData*> * _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 9, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

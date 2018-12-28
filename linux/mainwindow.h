@@ -25,12 +25,12 @@ private:
     bool radioSending = false;
     QListWidgetItem * currentItem;
 public slots:
-    void setGamePadIsConnected(bool value);
     void setRadioValues(int leftX, int leftY, int rightX, int rightY);
     void setArduinoStatus(QString value);
     void setModes(Modes modes);
     void cameraFrameChanged(MyMat);
     void setHandPosition(HandPosition);
+    void slotSteeringsDataChanged(QHash<QString,SteeringData*>*);
 private slots:
     void on_recordingAddButton_clicked();
     void on_recordingDeleteButton_clicked();

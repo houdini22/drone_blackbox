@@ -63,7 +63,7 @@ void ThreadArduinoSend::run() {
         HandPosition handPosition = this->drone->getHandPosition();
 
         if (!handPosition.isAvailable) {
-            if (this->drone->isGamePadConnected() && this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
+            if (/*this->drone->isGamePadConnected() && */this->drone->isArduinoDetected() && this->drone->isArduinoConnected()) {
                 ButtonsPressed buttons = this->drone->getButtons();
 
                 /* SEND */

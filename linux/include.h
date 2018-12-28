@@ -11,6 +11,7 @@
 #include <QListWidgetItem>
 #include <QLineEdit>
 #include <QMap>
+#include <QHash>
 
 #include <vector>
 #include <list>
@@ -37,6 +38,9 @@ using namespace cv;
 typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
+#include "steeringregistry.h"
+#include "steeringinterface.h"
+#include "steeringgamepad.h"
 #include "QtLeapMotion/Leap/include/Leap.h"
 #include "common.h"
 #include "buttons.h"

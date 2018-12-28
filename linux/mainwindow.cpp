@@ -10,7 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->drone = new Drone(this);
 
-    connect(this->drone, SIGNAL(gamePadIsConnectedChanged(bool)), this, SLOT(setGamePadIsConnected(bool)));
     connect(this->drone, SIGNAL(radioValuesChanged(int,int,int,int)), this, SLOT(setRadioValues(int,int,int,int)));
     connect(this->drone, SIGNAL(arduinoStatusChanged(QString)), this, SLOT(setArduinoStatus(QString)));
     connect(this->drone, SIGNAL(modeChanged(Modes)), this, SLOT(setModes(Modes)));
@@ -18,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->drone, SIGNAL(startRecording(QString)), this, SLOT(setStartRecording(QString)));
     connect(this->drone, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(cameraFrameChanged(MyMat)));
     connect(this->drone, SIGNAL(handPositionChanged(HandPosition)), this, SLOT(setHandPosition(HandPosition)));
+
+    connect(this->drone, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
 
     QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
     connect(listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), this, SLOT(recordingCurrentItemChanged(QListWidgetItem*, QListWidgetItem*)));
@@ -28,10 +29,10 @@ MainWindow::MainWindow(QWidget *parent) :
     this->drone->start();
 }
 
-void MainWindow::setGamePadIsConnected(bool value) {
+void MainWindow::slotSteeringsDataChanged(QHash<QString, SteeringData *> * data) {
     QLabel * label = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadValue"));
 
-    if (value) {
+    if (data->take("gamepad0")->isConnected) {
         label->setText("connected");
         label->setDisabled(false);
     } else {

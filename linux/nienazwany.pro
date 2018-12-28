@@ -85,7 +85,10 @@ SOURCES += \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp \
     QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp \
     QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp \
-    leapeventlistener.cpp
+    leapeventlistener.cpp \
+    steeringregistry.cpp \
+    steeringgamepad.cpp \
+    steeringinterface.cpp
 
 HEADERS += \
     buttons.h \
@@ -148,7 +151,10 @@ HEADERS += \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h \
     QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h \
     QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h \
-    leapeventlistener.h
+    leapeventlistener.h \
+    steeringregistry.h \
+    steeringgamepad.h \
+    steeringinterface.h
 
 FORMS += \
     mainwindow.ui

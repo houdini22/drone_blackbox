@@ -10,9 +10,6 @@ Drone::Drone(MainWindow * window)
     this->database = new Database();
     connect(this->database, SIGNAL(recordingStart(QString)), this, SLOT(setCanStartRecording(QString)));
 
-    this->threadGamepad = new ThreadGamepad(this);
-    connect(this->threadGamepad, SIGNAL(gamePadIsConnectedChanged(bool)), this, SLOT(setGamePadIsConnected(bool)));
-
     this->threadArduinoDetect = new ThreadArduinoDetect(this);
     connect(this->threadArduinoDetect, SIGNAL(arduinoModeChanged(int)), this, SLOT(setArduinoMode(int)));
     connect(this->threadArduinoDetect, SIGNAL(arduinoDeviceStringChanged(QString)), this, SLOT(setArduinoDeviceString(QString)));
@@ -39,10 +36,16 @@ Drone::Drone(MainWindow * window)
 
     this->leapEventListener.setDrone(this);
     this->leapController.addListener(this->leapEventListener);
+
+    this->steeringRegistry = new SteeringRegistry(this);
+    this->steeringRegistry->add(new SteeringGamepad(this, this->steeringRegistry));
+
+    connect(this->steeringRegistry, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
+
+    this->steeringRegistry->start();
 }
 
 void Drone::start() {
-    this->threadGamepad->start();
     this->threadArduinoDetect->start();
     this->threadArduinoConnect->start();
     this->threadArduinoPing->start();
@@ -61,10 +64,6 @@ bool Drone::isArduinoDetected() {
     return this->arduinoMode == MODE_ARDUINO_DETECTED;
 }
 
-bool Drone::isGamePadConnected() {
-    return this->gamePadIsConnected;
-}
-
 SerialPort * Drone::getArduino() {
     return this->arduino;
 }
@@ -77,11 +76,8 @@ QString Drone::getArduinoDeviceStr() {
     return this->arduinoDeviceStr;
 }
 
-void Drone::setGamePadIsConnected(bool value) {
-    if (this->gamePadIsConnected != value) {
-        this->gamePadIsConnected = value;
-        emit gamePadIsConnectedChanged(value);
-    }
+void Drone::slotGamepadIsConnected(bool value) {
+    emit signalGamepadIsConnected(value);
 }
 
 void Drone::setArduinoMode(int value) {
@@ -208,4 +204,8 @@ void Drone::setHandPosition(HandPosition handPosition) {
 
 HandPosition Drone::getHandPosition() {
     return this->handPosition;
+}
+
+void Drone::slotSteeringsDataChanged(QHash<QString,SteeringData*> * data) {
+    emit signalSteeringsDataChanged(data);
 }

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[29];
-    char stringdata0[371];
+    QByteArrayData data[30];
+    char stringdata0[404];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,41 +32,43 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 21), // "setGamePadIsConnected"
-QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 5), // "value"
-QT_MOC_LITERAL(4, 40, 14), // "setRadioValues"
-QT_MOC_LITERAL(5, 55, 5), // "leftX"
-QT_MOC_LITERAL(6, 61, 5), // "leftY"
-QT_MOC_LITERAL(7, 67, 6), // "rightX"
-QT_MOC_LITERAL(8, 74, 6), // "rightY"
-QT_MOC_LITERAL(9, 81, 16), // "setArduinoStatus"
-QT_MOC_LITERAL(10, 98, 8), // "setModes"
-QT_MOC_LITERAL(11, 107, 5), // "Modes"
-QT_MOC_LITERAL(12, 113, 5), // "modes"
-QT_MOC_LITERAL(13, 119, 18), // "cameraFrameChanged"
-QT_MOC_LITERAL(14, 138, 5), // "MyMat"
-QT_MOC_LITERAL(15, 144, 15), // "setHandPosition"
-QT_MOC_LITERAL(16, 160, 12), // "HandPosition"
-QT_MOC_LITERAL(17, 173, 29), // "on_recordingAddButton_clicked"
-QT_MOC_LITERAL(18, 203, 32), // "on_recordingDeleteButton_clicked"
-QT_MOC_LITERAL(19, 236, 27), // "recordingCurrentItemChanged"
-QT_MOC_LITERAL(20, 264, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(21, 281, 4), // "item"
-QT_MOC_LITERAL(22, 286, 4), // "prev"
-QT_MOC_LITERAL(23, 291, 23), // "onRecordingValueChanged"
-QT_MOC_LITERAL(24, 315, 12), // "setListItems"
-QT_MOC_LITERAL(25, 328, 11), // "RecordsList"
-QT_MOC_LITERAL(26, 340, 7), // "records"
-QT_MOC_LITERAL(27, 348, 17), // "setStartRecording"
-QT_MOC_LITERAL(28, 366, 4) // "name"
+QT_MOC_LITERAL(1, 11, 14), // "setRadioValues"
+QT_MOC_LITERAL(2, 26, 0), // ""
+QT_MOC_LITERAL(3, 27, 5), // "leftX"
+QT_MOC_LITERAL(4, 33, 5), // "leftY"
+QT_MOC_LITERAL(5, 39, 6), // "rightX"
+QT_MOC_LITERAL(6, 46, 6), // "rightY"
+QT_MOC_LITERAL(7, 53, 16), // "setArduinoStatus"
+QT_MOC_LITERAL(8, 70, 5), // "value"
+QT_MOC_LITERAL(9, 76, 8), // "setModes"
+QT_MOC_LITERAL(10, 85, 5), // "Modes"
+QT_MOC_LITERAL(11, 91, 5), // "modes"
+QT_MOC_LITERAL(12, 97, 18), // "cameraFrameChanged"
+QT_MOC_LITERAL(13, 116, 5), // "MyMat"
+QT_MOC_LITERAL(14, 122, 15), // "setHandPosition"
+QT_MOC_LITERAL(15, 138, 12), // "HandPosition"
+QT_MOC_LITERAL(16, 151, 24), // "slotSteeringsDataChanged"
+QT_MOC_LITERAL(17, 176, 29), // "QHash<QString,SteeringData*>*"
+QT_MOC_LITERAL(18, 206, 29), // "on_recordingAddButton_clicked"
+QT_MOC_LITERAL(19, 236, 32), // "on_recordingDeleteButton_clicked"
+QT_MOC_LITERAL(20, 269, 27), // "recordingCurrentItemChanged"
+QT_MOC_LITERAL(21, 297, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(22, 314, 4), // "item"
+QT_MOC_LITERAL(23, 319, 4), // "prev"
+QT_MOC_LITERAL(24, 324, 23), // "onRecordingValueChanged"
+QT_MOC_LITERAL(25, 348, 12), // "setListItems"
+QT_MOC_LITERAL(26, 361, 11), // "RecordsList"
+QT_MOC_LITERAL(27, 373, 7), // "records"
+QT_MOC_LITERAL(28, 381, 17), // "setStartRecording"
+QT_MOC_LITERAL(29, 399, 4) // "name"
 
     },
-    "MainWindow\0setGamePadIsConnected\0\0"
-    "value\0setRadioValues\0leftX\0leftY\0"
-    "rightX\0rightY\0setArduinoStatus\0setModes\0"
-    "Modes\0modes\0cameraFrameChanged\0MyMat\0"
-    "setHandPosition\0HandPosition\0"
+    "MainWindow\0setRadioValues\0\0leftX\0leftY\0"
+    "rightX\0rightY\0setArduinoStatus\0value\0"
+    "setModes\0Modes\0modes\0cameraFrameChanged\0"
+    "MyMat\0setHandPosition\0HandPosition\0"
+    "slotSteeringsDataChanged\0"
+    "QHash<QString,SteeringData*>*\0"
     "on_recordingAddButton_clicked\0"
     "on_recordingDeleteButton_clicked\0"
     "recordingCurrentItemChanged\0"
@@ -91,32 +93,32 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   74,    2, 0x0a /* Public */,
-       4,    4,   77,    2, 0x0a /* Public */,
+       1,    4,   74,    2, 0x0a /* Public */,
+       7,    1,   83,    2, 0x0a /* Public */,
        9,    1,   86,    2, 0x0a /* Public */,
-      10,    1,   89,    2, 0x0a /* Public */,
-      13,    1,   92,    2, 0x0a /* Public */,
-      15,    1,   95,    2, 0x0a /* Public */,
-      17,    0,   98,    2, 0x08 /* Private */,
-      18,    0,   99,    2, 0x08 /* Private */,
-      19,    2,  100,    2, 0x08 /* Private */,
-      23,    1,  105,    2, 0x08 /* Private */,
-      24,    1,  108,    2, 0x08 /* Private */,
-      27,    1,  111,    2, 0x08 /* Private */,
+      12,    1,   89,    2, 0x0a /* Public */,
+      14,    1,   92,    2, 0x0a /* Public */,
+      16,    1,   95,    2, 0x0a /* Public */,
+      18,    0,   98,    2, 0x08 /* Private */,
+      19,    0,   99,    2, 0x08 /* Private */,
+      20,    2,  100,    2, 0x08 /* Private */,
+      24,    1,  105,    2, 0x08 /* Private */,
+      25,    1,  108,    2, 0x08 /* Private */,
+      28,    1,  111,    2, 0x08 /* Private */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    5,    6,    7,    8,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, 0x80000000 | 11,   12,
-    QMetaType::Void, 0x80000000 | 14,    2,
-    QMetaType::Void, 0x80000000 | 16,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void, 0x80000000 | 10,   11,
+    QMetaType::Void, 0x80000000 | 13,    2,
+    QMetaType::Void, 0x80000000 | 15,    2,
+    QMetaType::Void, 0x80000000 | 17,    2,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 20, 0x80000000 | 20,   21,   22,
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, 0x80000000 | 25,   26,
-    QMetaType::Void, QMetaType::QString,   28,
+    QMetaType::Void, 0x80000000 | 21, 0x80000000 | 21,   22,   23,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void, 0x80000000 | 26,   27,
+    QMetaType::Void, QMetaType::QString,   29,
 
        0        // eod
 };
@@ -127,12 +129,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->setGamePadIsConnected((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 1: _t->setRadioValues((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
-        case 2: _t->setArduinoStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 3: _t->setModes((*reinterpret_cast< Modes(*)>(_a[1]))); break;
-        case 4: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
-        case 5: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
+        case 0: _t->setRadioValues((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
+        case 1: _t->setArduinoStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: _t->setModes((*reinterpret_cast< Modes(*)>(_a[1]))); break;
+        case 3: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
+        case 4: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
+        case 5: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
         case 6: _t->on_recordingAddButton_clicked(); break;
         case 7: _t->on_recordingDeleteButton_clicked(); break;
         case 8: _t->recordingCurrentItemChanged((*reinterpret_cast< QListWidgetItem*(*)>(_a[1])),(*reinterpret_cast< QListWidgetItem*(*)>(_a[2]))); break;
@@ -144,7 +146,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 4:
+        case 3:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:

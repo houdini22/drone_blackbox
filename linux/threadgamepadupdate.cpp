@@ -8,7 +8,7 @@ ThreadGamepadUpdate::ThreadGamepadUpdate(Drone * drone): QThread()
 
 void ThreadGamepadUpdate::run() {
     while (1) {
-        if (this->drone->isGamePadConnected()) {
+        if (/*this->drone->isGamePadConnected()*/true) {
             GamepadUpdate();
 
             double _leftX = GamepadStickLength(GAMEPAD_0, STICK_LEFT) * cos(GamepadStickAngle(GAMEPAD_0, STICK_LEFT));

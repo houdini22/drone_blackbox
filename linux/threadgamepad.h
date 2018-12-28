@@ -9,16 +9,12 @@ class ThreadGamepad : public QThread
 {
     Q_OBJECT
 public:
-    explicit ThreadGamepad(Drone * drone);
+    explicit ThreadGamepad();
     void run();
 private:
-    QString name;
-    Drone * drone;
-    bool gamepadIsConnected = false;
-public slots:
-    void setGamePadIsConnected(bool value);
+    void setGamepadIsConnected(bool value);
 signals:
-    void gamePadIsConnectedChanged(bool value);
+    void signalGamepadIsConnected(bool value);
 };
 
 #endif // THREADGAMEPAD_H
