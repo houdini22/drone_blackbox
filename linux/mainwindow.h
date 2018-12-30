@@ -31,12 +31,6 @@ public slots:
     void slotSteeringsDataChanged(QHash<QString,SteeringData*>*);
     void slotSendingsDataChanged(QHash<QString,SendingData*>*);
 private slots:
-    void on_recordingAddButton_clicked();
-    void on_recordingDeleteButton_clicked();
-    void recordingCurrentItemChanged(QListWidgetItem * item, QListWidgetItem * prev);
-    void onRecordingValueChanged(QString value);
-    void setListItems(RecordsList records);
-    void setStartRecording(QString name);
 };
 
 #endif // MAINWINDOW_H

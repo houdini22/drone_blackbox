@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[26];
-    char stringdata0[399];
+    QByteArrayData data[13];
+    char stringdata0[195];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,20 +43,7 @@ QT_MOC_LITERAL(8, 74, 12), // "HandPosition"
 QT_MOC_LITERAL(9, 87, 24), // "slotSteeringsDataChanged"
 QT_MOC_LITERAL(10, 112, 29), // "QHash<QString,SteeringData*>*"
 QT_MOC_LITERAL(11, 142, 23), // "slotSendingsDataChanged"
-QT_MOC_LITERAL(12, 166, 28), // "QHash<QString,SendingData*>*"
-QT_MOC_LITERAL(13, 195, 29), // "on_recordingAddButton_clicked"
-QT_MOC_LITERAL(14, 225, 32), // "on_recordingDeleteButton_clicked"
-QT_MOC_LITERAL(15, 258, 27), // "recordingCurrentItemChanged"
-QT_MOC_LITERAL(16, 286, 16), // "QListWidgetItem*"
-QT_MOC_LITERAL(17, 303, 4), // "item"
-QT_MOC_LITERAL(18, 308, 4), // "prev"
-QT_MOC_LITERAL(19, 313, 23), // "onRecordingValueChanged"
-QT_MOC_LITERAL(20, 337, 5), // "value"
-QT_MOC_LITERAL(21, 343, 12), // "setListItems"
-QT_MOC_LITERAL(22, 356, 11), // "RecordsList"
-QT_MOC_LITERAL(23, 368, 7), // "records"
-QT_MOC_LITERAL(24, 376, 17), // "setStartRecording"
-QT_MOC_LITERAL(25, 394, 4) // "name"
+QT_MOC_LITERAL(12, 166, 28) // "QHash<QString,SendingData*>*"
 
     },
     "MainWindow\0setModes\0\0Modes\0modes\0"
@@ -64,14 +51,7 @@ QT_MOC_LITERAL(25, 394, 4) // "name"
     "HandPosition\0slotSteeringsDataChanged\0"
     "QHash<QString,SteeringData*>*\0"
     "slotSendingsDataChanged\0"
-    "QHash<QString,SendingData*>*\0"
-    "on_recordingAddButton_clicked\0"
-    "on_recordingDeleteButton_clicked\0"
-    "recordingCurrentItemChanged\0"
-    "QListWidgetItem*\0item\0prev\0"
-    "onRecordingValueChanged\0value\0"
-    "setListItems\0RecordsList\0records\0"
-    "setStartRecording\0name"
+    "QHash<QString,SendingData*>*"
 };
 #undef QT_MOC_LITERAL
 
@@ -81,7 +61,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -89,17 +69,11 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   69,    2, 0x0a /* Public */,
-       5,    1,   72,    2, 0x0a /* Public */,
-       7,    1,   75,    2, 0x0a /* Public */,
-       9,    1,   78,    2, 0x0a /* Public */,
-      11,    1,   81,    2, 0x0a /* Public */,
-      13,    0,   84,    2, 0x08 /* Private */,
-      14,    0,   85,    2, 0x08 /* Private */,
-      15,    2,   86,    2, 0x08 /* Private */,
-      19,    1,   91,    2, 0x08 /* Private */,
-      21,    1,   94,    2, 0x08 /* Private */,
-      24,    1,   97,    2, 0x08 /* Private */,
+       1,    1,   39,    2, 0x0a /* Public */,
+       5,    1,   42,    2, 0x0a /* Public */,
+       7,    1,   45,    2, 0x0a /* Public */,
+       9,    1,   48,    2, 0x0a /* Public */,
+      11,    1,   51,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -107,12 +81,6 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 8,    2,
     QMetaType::Void, 0x80000000 | 10,    2,
     QMetaType::Void, 0x80000000 | 12,    2,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 16, 0x80000000 | 16,   17,   18,
-    QMetaType::Void, QMetaType::QString,   20,
-    QMetaType::Void, 0x80000000 | 22,   23,
-    QMetaType::Void, QMetaType::QString,   25,
 
        0        // eod
 };
@@ -128,12 +96,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
         case 3: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
         case 4: _t->slotSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
-        case 5: _t->on_recordingAddButton_clicked(); break;
-        case 6: _t->on_recordingDeleteButton_clicked(); break;
-        case 7: _t->recordingCurrentItemChanged((*reinterpret_cast< QListWidgetItem*(*)>(_a[1])),(*reinterpret_cast< QListWidgetItem*(*)>(_a[2]))); break;
-        case 8: _t->onRecordingValueChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 9: _t->setListItems((*reinterpret_cast< RecordsList(*)>(_a[1]))); break;
-        case 10: _t->setStartRecording((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -175,13 +137,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 5;
     }
     return _id;
 }

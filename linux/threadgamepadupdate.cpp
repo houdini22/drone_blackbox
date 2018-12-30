@@ -30,29 +30,25 @@ void ThreadGamepadUpdate::run() {
             _rightX = middlePoint + (area * _rightX);
             _rightY = middlePoint + (area * _rightY);
 
-            ButtonsPressed buttons;
+            ButtonsPressed * buttons = new ButtonsPressed;
 
-            buttons.leftX = ((int) _leftX);
-            buttons.leftY = ((int) _leftY);
-            buttons.rightX = ((int) _rightX);
-            buttons.rightY = ((int) _rightY);
-            buttons.start = ((GamepadButtonDown(GAMEPAD_0, BUTTON_START) ? true : false));
-            buttons.arming = ((GamepadTriggerDown(GAMEPAD_0, TRIGGER_LEFT) && GamepadTriggerDown(GAMEPAD_0, TRIGGER_RIGHT)) ? true : false);
-            buttons.a = (GamepadButtonDown(GAMEPAD_0, BUTTON_A) ? true : false);
-            buttons.b = (GamepadButtonDown(GAMEPAD_0, BUTTON_B) ? true : false);
-            buttons.y = (GamepadButtonDown(GAMEPAD_0, BUTTON_Y) ? true : false);
-            buttons.leftShoulder = (GamepadButtonDown(GAMEPAD_0, BUTTON_LEFT_SHOULDER) ? true : false);
-            buttons.rightShoulder = (GamepadButtonDown(GAMEPAD_0, BUTTON_RIGHT_SHOULDER) ? true : false);
-            buttons.dPadUp = (GamepadButtonDown(GAMEPAD_0, BUTTON_DPAD_UP) ? true : false);
-            buttons.dPadDown = (GamepadButtonDown(GAMEPAD_0, BUTTON_DPAD_DOWN) ? true : false);
+            buttons->leftX = ((int) _leftX);
+            buttons->leftY = ((int) _leftY);
+            buttons->rightX = ((int) _rightX);
+            buttons->rightY = ((int) _rightY);
+            buttons->start = ((GamepadButtonDown(GAMEPAD_0, BUTTON_START) ? true : false));
+            buttons->arming = ((GamepadTriggerDown(GAMEPAD_0, TRIGGER_LEFT) && GamepadTriggerDown(GAMEPAD_0, TRIGGER_RIGHT)) ? true : false);
+            buttons->a = (GamepadButtonDown(GAMEPAD_0, BUTTON_A) ? true : false);
+            buttons->b = (GamepadButtonDown(GAMEPAD_0, BUTTON_B) ? true : false);
+            buttons->y = (GamepadButtonDown(GAMEPAD_0, BUTTON_Y) ? true : false);
+            buttons->leftShoulder = (GamepadButtonDown(GAMEPAD_0, BUTTON_LEFT_SHOULDER) ? true : false);
+            buttons->rightShoulder = (GamepadButtonDown(GAMEPAD_0, BUTTON_RIGHT_SHOULDER) ? true : false);
+            buttons->dPadUp = (GamepadButtonDown(GAMEPAD_0, BUTTON_DPAD_UP) ? true : false);
+            buttons->dPadDown = (GamepadButtonDown(GAMEPAD_0, BUTTON_DPAD_DOWN) ? true : false);
 
-            this->setButtons(buttons);
+            emit signalButtonsChanged(buttons);
         }
     }
-}
-
-void ThreadGamepadUpdate::setButtons(ButtonsPressed buttons) {
-    emit signalButtonsChanged(buttons);
 }
 
 void ThreadGamepadUpdate::slotSteeringDataChanged(SteeringData * steeringData) {

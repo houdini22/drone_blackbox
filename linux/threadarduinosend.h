@@ -9,20 +9,12 @@ class ThreadArduinoSend : public QThread
 {
     Q_OBJECT
 public:
-    explicit ThreadArduinoSend(Drone * drone);
+    explicit ThreadArduinoSend(Drone * drone, SendingRegistry * registry);
     void run();
 private:
-    QString name;
     Drone * drone;
-
-    bool radioSending = false;
-    bool motorsArmed = false;
-    bool throttleModeActive = false;
-
-    int leftX = 1500;
-    int leftY = 1100;
-    int rightX = 1100;
-    int rightY = 1100;
+    SendingRegistry * registry;
+    SendingData * sendingData;
 
     void send(QString buffer);
 
@@ -34,16 +26,9 @@ private:
     void setRadioSending(bool value);
     void setMotorsArmed(bool value);
     void setThrottleMode(bool value);
-    void setRadioValues(double leftX, double leftY, double rightX, double rightY);
-signals:
-    void radioSendingChanged(bool value);
-    void motorsArmedChanged(bool status);
-    void radioValuesChanged(int leftX, int leftY, int rightX, int rightY);
-    void throttleModeChanged(bool value);
-    void recordingModeChanged(bool value);
-    void playingModeChanged(bool value);
-    void recordItemDown();
-    void recordItemUp();
+    void setRadioValues(int leftX, int leftY, int rightX, int rightY);
+public slots:
+    void slotSendingDataChanged(SendingData * sendingData);
 };
 
 #endif // THREADARDUINOSEND_H

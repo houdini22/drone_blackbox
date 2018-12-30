@@ -3,6 +3,7 @@
 SendingRegistry::SendingRegistry(Drone *drone) {
     this->drone = drone;
     this->sendingsData = new QHash<QString, SendingData *>;
+    this->modes = new Modes;
 }
 
 void SendingRegistry::add(SendingInterface * handler) {
@@ -29,4 +30,13 @@ void SendingRegistry::slotSendingDataChanged(SendingData * data) {
     this->sendingsData->insert(data->name, data);
     emit signalSendingsDataChanged(this->sendingsData);
     emit signalSendingDataChanged(data);
+}
+
+Modes * SendingRegistry::getModes() {
+    return this->modes;
+}
+
+void SendingRegistry::setModes(Modes * modes) {
+    this->modes = modes;
+    emit signalModesChanged(this->modes);
 }

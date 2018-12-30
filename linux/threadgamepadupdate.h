@@ -23,10 +23,9 @@ private:
     SteeringRegistry * registry;
     SteeringData * steeringData;
 public slots:
-    void setButtons(ButtonsPressed buttons);
     void slotSteeringDataChanged(SteeringData *);
 signals:
-    void signalButtonsChanged(ButtonsPressed buttons);
+    void signalButtonsChanged(ButtonsPressed * buttons);
 };
 
 #endif // THREADGAMEPADUPDATE_H

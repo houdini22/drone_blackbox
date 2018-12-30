@@ -13,13 +13,17 @@ public:
     SendingRegistry(Drone * drone);
     void add(SendingInterface * handler);
     void start();
+    Modes * getModes();
+    void setModes(Modes * modes);
 private:
     QList<SendingInterface *> registry;
     Drone * drone;
     QHash<QString, SendingData *> * sendingsData;
+    Modes * modes;
 signals:
     void signalSendingDataChanged(SendingData *);
     void signalSendingsDataChanged(QHash<QString, SendingData *> *);
+    void signalModesChanged(Modes *);
 public slots:
     void slotSendingDataChanged(SendingData*);
 };

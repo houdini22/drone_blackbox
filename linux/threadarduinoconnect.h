@@ -9,14 +9,15 @@ class ThreadArduinoConnect : public QThread
 {
     Q_OBJECT
 public:
-    explicit ThreadArduinoConnect(Drone * drone);
+    explicit ThreadArduinoConnect(SendingRegistry * registry);
     void run();
 private:
-    QString name;
-    Drone * drone;
-    bool arduinoIsConnected = false;
+    SendingData * sendingData;
+    SendingRegistry * registry;
+public slots:
+    void slotSendingDataChanged(SendingData * sendingData);
 signals:
-    void arduinoIsConnectedChanged(bool value, SerialPort * arduino);
+    void signalArduinoConnected(bool value, SerialPort * arduino);
 };
 
 #endif // THREADARDUINOCONNECT_H

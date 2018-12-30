@@ -29,13 +29,13 @@ ThreadArduinoDetect::ThreadArduinoDetect(SendingRegistry * registry): QThread() 
 
 void ThreadArduinoDetect::run() {
     while (1) {
-        if (this->sendingData->mode != MODE_ARDUINO_CONNECTED) {
+        if (this->sendingData->mode == MODE_ARDUINO_DISCONNECTED) {
             QString arduinoDeviceStr = detectDevice();
 
             if (arduinoDeviceStr.length() > 0) {
                 emit signalArduinoStatusChanged(MODE_ARDUINO_DETECTED, arduinoDeviceStr);
             } else {
-                emit signalArduinoStatusChanged(MODE_ARDUINO_DISCONNECTED, arduinoDeviceStr);
+                emit signalArduinoStatusChanged(MODE_ARDUINO_DISCONNECTED, "");
             }
         }
 

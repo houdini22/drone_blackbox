@@ -9,13 +9,15 @@ class ThreadArduinoPing : public QThread
 {
     Q_OBJECT
 public:
-    explicit ThreadArduinoPing(Drone * drone);
+    explicit ThreadArduinoPing(SendingRegistry * registry);
     void run();
 private:
-    QString name;
-    Drone * drone;
+    SendingData * sendingData;
+    SendingRegistry * registry;
+public slots:
+    void slotSendingDataChanged(SendingData *);
 signals:
-    void arduinoReset();
+    void signalArduinoReset();
 };
 
 #endif // THREADARDUINOPING_H

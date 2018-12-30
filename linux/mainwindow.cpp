@@ -46,10 +46,10 @@ void MainWindow::slotSteeringsDataChanged(QHash<QString, SteeringData *> * data)
     QLabel * labelRightX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightX"));
     QLabel * labelRightY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightY"));
 
-    labelLeftX->setText(QString::number(data2->leftX));
-    labelLeftY->setText(QString::number(data2->leftY));
-    labelRightX->setText(QString::number(data2->rightX));
-    labelRightY->setText(QString::number(data2->rightY));
+    labelLeftX->setText(QString::number(data2->buttonsPressed->leftX));
+    labelLeftY->setText(QString::number(data2->buttonsPressed->leftY));
+    labelRightX->setText(QString::number(data2->buttonsPressed->rightX));
+    labelRightY->setText(QString::number(data2->buttonsPressed->rightY));
 }
 
 
@@ -61,6 +61,12 @@ void MainWindow::slotSendingsDataChanged(QHash<QString, SendingData *> * data) {
     if (data2->mode == MODE_ARDUINO_DETECTED) {
         label->setDisabled(true);
         label->setText("connecting...");
+    } else if (data2->mode == MODE_ARDUINO_CONNECTED) {
+        label->setDisabled(false);
+        label->setText("connected");
+    } else if (data2->mode == MODE_ARDUINO_DISCONNECTED) {
+        label->setDisabled(true);
+        label->setText("connect...");
     }
 }
 
@@ -106,68 +112,6 @@ void MainWindow::setModes(Modes modes) {
         labelRecordingActive->setText("none");
     }
     */
-}
-
-void MainWindow::on_recordingAddButton_clicked() {
-
-}
-
-void MainWindow::on_recordingDeleteButton_clicked() {
-    QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
-    QListWidgetItem * item = listWidget->currentItem();
-
-    if (item != nullptr) {
-        this->drone->getDatabase()->remove(item->text());
-        listWidget->takeItem(listWidget->row(listWidget->currentItem()));
-    }
-}
-
-void MainWindow::recordingCurrentItemChanged(QListWidgetItem * item, QListWidgetItem * prev) {
-    QLineEdit * input = this->centralWidget()->findChild<QLineEdit *>(QString("lineRecordingName"));
-
-    if (item != nullptr) {
-        input->setText(item->text());
-        this->drone->getDatabase()->setActivePlay(item->text());
-    } else {
-        input->setText("");
-    }
-
-    this->currentItem = item;
-}
-
-void MainWindow::onRecordingValueChanged(QString value) {
-    QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
-    QListWidgetItem * item = listWidget->currentItem();
-
-    if (this->currentItem != item) {
-        if (item != nullptr) {
-            item->setText(value);
-        }
-    } else {
-        if (item != nullptr) {
-            this->drone->getDatabase()->move(item->text(), value);
-            item->setText(value);
-        }
-    }
-}
-
-void MainWindow::setListItems(RecordsList records) {
-    QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
-
-    for (RecordsList::iterator it = records.begin(); it != records.end(); ++it) {
-        QListWidgetItem * item = new QListWidgetItem(tr((*it).toStdString().c_str()), listWidget);
-        listWidget->addItem(item);
-    }
-}
-
-void MainWindow::setStartRecording(QString name) {
-    QListWidget * listWidget = this->centralWidget()->findChild<QListWidget *>(QString("listWidgetRecording"));
-    QListWidgetItem * item = new QListWidgetItem(tr(name.toStdString().c_str()), listWidget);
-
-    listWidget->addItem(item);
-    listWidget->setCurrentItem(item);
-
-    this->drone->getDatabase()->setActivePlay(item->text());
 }
 
 MainWindow::~MainWindow()

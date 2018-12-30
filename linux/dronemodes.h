@@ -4,6 +4,10 @@
 #include "include.h"
 
 struct Modes {
+    int leftX = 0;
+    int leftY = 0;
+    int rightX = 0;
+    int rightY = 0;
     bool radioSending = false;
     bool motorsArmed = false;
     bool throttleModeActive = false;

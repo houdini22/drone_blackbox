@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SteeringGamepad_t {
     QByteArrayData data[7];
-    char stringdata0[114];
+    char stringdata0[115];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,12 +37,12 @@ QT_MOC_LITERAL(2, 42, 0), // ""
 QT_MOC_LITERAL(3, 43, 13), // "SteeringData*"
 QT_MOC_LITERAL(4, 57, 22), // "slotGamepadIsConnected"
 QT_MOC_LITERAL(5, 80, 18), // "slotButtonsChanged"
-QT_MOC_LITERAL(6, 99, 14) // "ButtonsPressed"
+QT_MOC_LITERAL(6, 99, 15) // "ButtonsPressed*"
 
     },
     "SteeringGamepad\0signalSteeringDataChanged\0"
     "\0SteeringData*\0slotGamepadIsConnected\0"
-    "slotButtonsChanged\0ButtonsPressed"
+    "slotButtonsChanged\0ButtonsPressed*"
 };
 #undef QT_MOC_LITERAL
 
@@ -84,19 +84,8 @@ void SteeringGamepad::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         switch (_id) {
         case 0: _t->signalSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         case 1: _t->slotGamepadIsConnected((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 2: _t->slotButtonsChanged((*reinterpret_cast< ButtonsPressed(*)>(_a[1]))); break;
+        case 2: _t->slotButtonsChanged((*reinterpret_cast< ButtonsPressed*(*)>(_a[1]))); break;
         default: ;
-        }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 2:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< ButtonsPressed >(); break;
-            }
-            break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
@@ -142,7 +131,7 @@ int SteeringGamepad::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 3)
-            qt_static_metacall(this, _c, _id, _a);
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 3;
     }
     return _id;

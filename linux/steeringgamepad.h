@@ -17,7 +17,7 @@ private:
     ThreadGamepadUpdate * threadGamepadUpdate;
 public slots:
     void slotGamepadIsConnected(bool);
-    void slotButtonsChanged(ButtonsPressed);
+    void slotButtonsChanged(ButtonsPressed *);
 signals:
     void signalSteeringDataChanged(SteeringData *);
 };

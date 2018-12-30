@@ -1,17 +1,17 @@
 #include "QThread"
 #include "include.h"
 
-ThreadArduinoConnect::ThreadArduinoConnect(Drone * drone): QThread()
-{
-    this->drone = drone;
+ThreadArduinoConnect::ThreadArduinoConnect(SendingRegistry * registry): QThread() {
+    this->registry = registry;
+
+    connect(this->registry, SIGNAL(signalSendingDataChanged(SendingData *)), this, SLOT(slotSendingDataChanged(SendingData *)));
 }
 
 void ThreadArduinoConnect::run() {
     while (1) {
-        /*
-        if (this->drone->isArduinoDetected() && !this->drone->isArduinoConnected()) {
+        if (this->sendingData->mode == MODE_ARDUINO_DETECTED) {
+            SerialPort * arduino = new SerialPort(this->sendingData->deviceString.toStdString());
 
-            SerialPort * arduino = new SerialPort(this->drone->getArduinoDeviceStr().toStdString());
             arduino->Open(SerialPort::BAUD_115200, SerialPort::CHAR_SIZE_8,
                           SerialPort::PARITY_NONE, SerialPort::STOP_BITS_1,
                           SerialPort::FLOW_CONTROL_NONE);
@@ -31,10 +31,15 @@ void ThreadArduinoConnect::run() {
                 }
             }
 
-            emit arduinoIsConnectedChanged(true, arduino);
+            emit signalArduinoConnected(true, arduino);
         }
 
-        */
         QThread::msleep(1000);
+    }
+}
+
+void ThreadArduinoConnect::slotSendingDataChanged(SendingData * sendingData) {
+    if (sendingData->name.compare("arduino0") == 0) {
+        this->sendingData = sendingData;
     }
 }

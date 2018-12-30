@@ -14,8 +14,6 @@ public:
     explicit ThreadArduinoDetect(SendingRegistry * registry);
     void run();
 private:
-    QString name;
-    Drone * drone;
     SendingData * sendingData;
     SendingRegistry * registry;
 public slots:
