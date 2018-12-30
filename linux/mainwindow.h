@@ -25,7 +25,7 @@ private:
     bool radioSending = false;
     QListWidgetItem * currentItem;
 public slots:
-    void setModes(Modes modes);
+    void slotModesChanged(Modes * modes);
     void cameraFrameChanged(MyMat);
     void setHandPosition(HandPosition);
     void slotSteeringsDataChanged(QHash<QString,SteeringData*>*);

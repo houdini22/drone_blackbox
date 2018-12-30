@@ -54,7 +54,6 @@ void ThreadArduinoSend::run() {
     double leftY = 0.0;
     int sendingLeftY = 0;
     int sendingRecording = 0;
-    bool recordingMode = false;
     int sendingDpadDown = 0;
     int sendingDpadUp = 0;
     int sendingB = 0;
@@ -63,35 +62,34 @@ void ThreadArduinoSend::run() {
         QThread::msleep(40);
 
         if (this->sendingData->mode == MODE_ARDUINO_CONNECTED) {
-            ButtonsPressed * buttons = this->drone->getButtons();
+            ButtonsPressed buttons = this->drone->getButtons();
 
             // send
             if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
                 if (throttleMode) {
-                    this->setRadioValues(buttons->leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons->rightX, buttons->rightY);
-                    this->send(this->createAxisBuffer(buttons->leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons->rightX, buttons->rightY));
+                    this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
+                    this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
                 } else {
-                    this->setRadioValues(buttons->leftX, buttons->leftY, buttons->rightX, buttons->rightY);
-                    this->send(this->createAxisBuffer(buttons->leftX, buttons->leftY, buttons->rightX, buttons->rightY));
+                    this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
+                    this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
                 }
             }
 
             if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
-                if (buttons->a) { // toggle Throttle mode
+                if (buttons.a) { // toggle Throttle mode
                     sendingThrottle = 13;
                     throttleMode = !throttleMode;
-                    this->setThrottleMode(throttleMode);
 
                     continue;
                 }
 
-                if (buttons->b) {
+                if (buttons.b) {
                     sendingB = 13;
 
                     continue;
                 }
 
-                if (buttons->start && !armingMode) { // toggle sending
+                if (buttons.start && !armingMode) { // toggle sending
                     if (startMode) {
                         sendingStart = 26; // 26 * 40 ms
 
@@ -108,7 +106,7 @@ void ThreadArduinoSend::run() {
                 }
 
                 if (startMode) { // if toggled sendinf true
-                    if (buttons->arming) { // if arming
+                    if (buttons.arming) { // if arming
                         if (!armingMode) {
                             sendingArm = 28; // 28 * 40 ms
 
@@ -126,14 +124,14 @@ void ThreadArduinoSend::run() {
                 }
 
                 if (throttleMode) { // a on
-                    if (buttons->leftShoulder) {
+                    if (buttons.leftShoulder) {
                         sendingLeftY = 6;
 
                         leftY -= 0.025;
                         if (leftY < 0.0) {
                             leftY = 0.0;
                         }
-                    } else if (buttons->rightShoulder) {
+                    } else if (buttons.rightShoulder) {
                         sendingLeftY = 6;
 
                         leftY += 0.025;
@@ -179,6 +177,10 @@ void ThreadArduinoSend::run() {
 
             if (sendingThrottle > 0) {
                 sendingThrottle--;
+
+                if (sendingThrottle == 0) {
+                    this->setThrottleMode(throttleMode);
+                }
 
                 continue;
             }
@@ -260,21 +262,26 @@ void ThreadArduinoSend::run() {
 
 void ThreadArduinoSend::setRadioSending(bool value) {
     Modes * modes = this->drone->getModes();
-    modes->radioSending = value;
-    this->drone->setModes(modes);
-
+    if (modes->radioSending != value) {
+        modes->radioSending = value;
+        this->drone->setModes(modes);
+    }
 }
 
 void ThreadArduinoSend::setMotorsArmed(bool value) {
     Modes * modes = this->drone->getModes();
-    modes->motorsArmed = value;
-    this->drone->setModes(modes);
+    if (modes->motorsArmed != value) {
+        modes->motorsArmed = value;
+        this->drone->setModes(modes);
+    }
 }
 
 void ThreadArduinoSend::setThrottleMode(bool value) {
     Modes * modes = this->drone->getModes();
-    modes->throttleModeActive = value;
-    this->drone->setModes(modes);
+    if (modes->throttleModeActive != value) {
+        modes->throttleModeActive = value;
+        this->drone->setModes(modes);
+    }
 }
 
 void ThreadArduinoSend::setRadioValues(int leftX, int leftY, int rightX, int rightY) {

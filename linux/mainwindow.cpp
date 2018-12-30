@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->drone = new Drone(this);
 
-    connect(this->drone, SIGNAL(modeChanged(Modes)), this, SLOT(setModes(Modes)));
+    connect(this->drone, SIGNAL(signalModesChanged(Modes*)), this, SLOT(slotModesChanged(Modes*)));
     connect(this->drone, SIGNAL(recordFilesChanged(RecordsList)), this, SLOT(setListItems(RecordsList)));
     connect(this->drone, SIGNAL(startRecording(QString)), this, SLOT(setStartRecording(QString)));
     connect(this->drone, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(cameraFrameChanged(MyMat)));
@@ -40,16 +40,6 @@ void MainWindow::slotSteeringsDataChanged(QHash<QString, SteeringData *> * data)
         label->setText("connect...");
         label->setDisabled(true);
     }
-
-    QLabel * labelLeftX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftX"));
-    QLabel * labelLeftY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftY"));
-    QLabel * labelRightX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightX"));
-    QLabel * labelRightY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightY"));
-
-    labelLeftX->setText(QString::number(data2->buttonsPressed->leftX));
-    labelLeftY->setText(QString::number(data2->buttonsPressed->leftY));
-    labelRightX->setText(QString::number(data2->buttonsPressed->rightX));
-    labelRightY->setText(QString::number(data2->buttonsPressed->rightY));
 }
 
 
@@ -70,9 +60,7 @@ void MainWindow::slotSendingsDataChanged(QHash<QString, SendingData *> * data) {
     }
 }
 
-void MainWindow::setModes(Modes modes) {
-    this->radioSending = modes.radioSending;
-
+void MainWindow::slotModesChanged(Modes * modes) {
     QLabel * labelLeftX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftX"));
     QLabel * labelLeftY = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadLeftY"));
     QLabel * labelRightX = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadRightX"));
@@ -80,38 +68,32 @@ void MainWindow::setModes(Modes modes) {
     QLabel * labelArmedValue = this->centralWidget()->findChild<QLabel *>(QString("labelArmedValue"));
     QLabel * labelThrottleMode = this->centralWidget()->findChild<QLabel *>(QString("labelThrottleMode"));
     QLabel * labelSending = this->centralWidget()->findChild<QLabel *>(QString("labelSending"));
-    QLabel * labelRecordingActive = this->centralWidget()->findChild<QLabel *>(QString("labelRecordingActive"));
 
-    if (!modes.radioSending) {
+    if (!modes->radioSending) {
         labelLeftX->setText("-");
         labelLeftY->setText("-");
         labelRightX->setText("-");
         labelRightY->setText("-");
+    } else {
+        labelLeftX->setText(QString::number(modes->leftX));
+        labelLeftY->setText(QString::number(modes->leftY));
+        labelRightX->setText(QString::number(modes->rightX));
+        labelRightY->setText(QString::number(modes->rightY));
     }
 
-    labelArmedValue->setText(modes.motorsArmed ? QString("armed") : QString("not armed"));
+    labelArmedValue->setText(modes->motorsArmed ? QString("armed") : QString("not armed"));
 
-    if (modes.throttleModeActive) {
+    if (modes->throttleModeActive) {
         labelThrottleMode->setText("active");
     } else {
         labelThrottleMode->setText("not active");
     }
 
-    if (modes.radioSending) {
+    if (modes->radioSending) {
         labelSending->setText("sending");
     } else {
         labelSending->setText("not sending");
     }
-
-    /*
-    if (modes.recordingActive) {
-        labelRecordingActive->setText("recording");
-    } else if (modes.playingActive) {
-        labelRecordingActive->setText("playing");
-    } else {
-        labelRecordingActive->setText("none");
-    }
-    */
 }
 
 MainWindow::~MainWindow()

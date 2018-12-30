@@ -25,7 +25,7 @@ private:
 public slots:
     void slotSteeringDataChanged(SteeringData *);
 signals:
-    void signalButtonsChanged(ButtonsPressed * buttons);
+    void signalButtonsChanged(ButtonsPressed buttons);
 };
 
 #endif // THREADGAMEPADUPDATE_H

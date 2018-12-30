@@ -26,7 +26,7 @@ public:
     QString getArduinoDeviceStr();
     void setArduino(SerialPort * arduino);
     SerialPort * getArduino();
-    ButtonsPressed * getButtons();
+    ButtonsPressed getButtons();
     Database * getDatabase();
     bool getCanStartRecording();
     void setHandPosition(HandPosition);
@@ -37,6 +37,7 @@ private slots:
     void setCameraFrame(MyMat);
     void slotSteeringsDataChanged(QHash<QString,SteeringData*> *);
     void slotSendingsDataChanged(QHash<QString,SendingData*> *);
+    void slotSteeringDataChanged(SteeringData *);
 signals:
     void signalModesChanged(Modes * modes);
     void radioValuesChanged(int leftX, int leftY, int rightX, int rightY);
@@ -55,6 +56,7 @@ private:
     HandPosition handPosition;
     SteeringRegistry * steeringRegistry;
     SendingRegistry * sendingRegistry;
+    SteeringData * gamepad0;
 };
 
 #endif // DRONE_H

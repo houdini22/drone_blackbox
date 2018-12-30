@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[13];
-    char stringdata0[195];
+    char stringdata0[204];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,23 +32,24 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 8), // "setModes"
-QT_MOC_LITERAL(2, 20, 0), // ""
-QT_MOC_LITERAL(3, 21, 5), // "Modes"
-QT_MOC_LITERAL(4, 27, 5), // "modes"
-QT_MOC_LITERAL(5, 33, 18), // "cameraFrameChanged"
-QT_MOC_LITERAL(6, 52, 5), // "MyMat"
-QT_MOC_LITERAL(7, 58, 15), // "setHandPosition"
-QT_MOC_LITERAL(8, 74, 12), // "HandPosition"
-QT_MOC_LITERAL(9, 87, 24), // "slotSteeringsDataChanged"
-QT_MOC_LITERAL(10, 112, 29), // "QHash<QString,SteeringData*>*"
-QT_MOC_LITERAL(11, 142, 23), // "slotSendingsDataChanged"
-QT_MOC_LITERAL(12, 166, 28) // "QHash<QString,SendingData*>*"
+QT_MOC_LITERAL(1, 11, 16), // "slotModesChanged"
+QT_MOC_LITERAL(2, 28, 0), // ""
+QT_MOC_LITERAL(3, 29, 6), // "Modes*"
+QT_MOC_LITERAL(4, 36, 5), // "modes"
+QT_MOC_LITERAL(5, 42, 18), // "cameraFrameChanged"
+QT_MOC_LITERAL(6, 61, 5), // "MyMat"
+QT_MOC_LITERAL(7, 67, 15), // "setHandPosition"
+QT_MOC_LITERAL(8, 83, 12), // "HandPosition"
+QT_MOC_LITERAL(9, 96, 24), // "slotSteeringsDataChanged"
+QT_MOC_LITERAL(10, 121, 29), // "QHash<QString,SteeringData*>*"
+QT_MOC_LITERAL(11, 151, 23), // "slotSendingsDataChanged"
+QT_MOC_LITERAL(12, 175, 28) // "QHash<QString,SendingData*>*"
 
     },
-    "MainWindow\0setModes\0\0Modes\0modes\0"
-    "cameraFrameChanged\0MyMat\0setHandPosition\0"
-    "HandPosition\0slotSteeringsDataChanged\0"
+    "MainWindow\0slotModesChanged\0\0Modes*\0"
+    "modes\0cameraFrameChanged\0MyMat\0"
+    "setHandPosition\0HandPosition\0"
+    "slotSteeringsDataChanged\0"
     "QHash<QString,SteeringData*>*\0"
     "slotSendingsDataChanged\0"
     "QHash<QString,SendingData*>*"
@@ -91,7 +92,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->setModes((*reinterpret_cast< Modes(*)>(_a[1]))); break;
+        case 0: _t->slotModesChanged((*reinterpret_cast< Modes*(*)>(_a[1]))); break;
         case 1: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
         case 2: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
         case 3: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;

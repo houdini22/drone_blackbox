@@ -17,11 +17,13 @@ Drone::Drone(MainWindow * window)
     this->steeringRegistry = new SteeringRegistry(this);
     this->steeringRegistry->add(new SteeringGamepad(this, this->steeringRegistry));
     connect(this->steeringRegistry, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
+    connect(this->steeringRegistry, SIGNAL(signalSteeringDataChanged(SteeringData*)), this, SLOT(slotSteeringDataChanged(SteeringData*)));
     this->steeringRegistry->start();
 
     this->sendingRegistry = new SendingRegistry(this);
     this->sendingRegistry->add(new SendingArduino(this, this->sendingRegistry));
     connect(this->sendingRegistry, SIGNAL(signalSendingsDataChanged(QHash<QString,SendingData*>*)), this, SLOT(slotSendingsDataChanged(QHash<QString,SendingData*>*)));
+    connect(this->sendingRegistry, SIGNAL(signalSendingDataChanged(SendingData*)), this, SLOT(slotSendingDataChanged(SendingData*)));
     this->sendingRegistry->start();
 }
 
@@ -50,15 +52,21 @@ void Drone::slotSendingsDataChanged(QHash<QString,SendingData*> * data) {
     emit signalSendingsDataChanged(data);
 }
 
-ButtonsPressed * Drone::getButtons() {
-    return this->steeringRegistry->getData()->take("gamepad0")->buttonsPressed;
+ButtonsPressed Drone::getButtons() {
+    return this->gamepad0->buttonsPressed;
 }
 
 void Drone::setModes(Modes * modes) {
-    this->setModes(modes);
+    this->modes = modes;
     emit signalModesChanged(modes);
 }
 
 Modes * Drone::getModes() {
     return this->modes;
+}
+
+void Drone::slotSteeringDataChanged(SteeringData * data) {
+    if (data->name.compare("gamepad0") == 0) {
+        this->gamepad0 = data;
+    }
 }

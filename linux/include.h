@@ -38,6 +38,9 @@ using namespace cv;
 typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
+#include "common.h"
+#include "buttons.h"
+#include "gamepad.h"
 #include "dronemodes.h"
 #include "steeringregistry.h"
 #include "steeringinterface.h"
@@ -46,9 +49,6 @@ Q_DECLARE_METATYPE(MyMat)
 #include "sendinginterface.h"
 #include "sendingarduino.h"
 #include "QtLeapMotion/Leap/include/Leap.h"
-#include "common.h"
-#include "buttons.h"
-#include "gamepad.h"
 #include "database.h"
 #include "leapeventlistener.h"
 #include "drone.h"

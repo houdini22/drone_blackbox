@@ -10,7 +10,7 @@ struct ButtonsPressed;
 struct SteeringData {
     QString name = "";
     bool isConnected = false;
-    ButtonsPressed * buttonsPressed;
+    ButtonsPressed buttonsPressed;
 };
 
 class SteeringInterface {

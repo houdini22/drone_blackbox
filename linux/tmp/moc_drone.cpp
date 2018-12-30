@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Drone_t {
-    QByteArrayData data[26];
-    char stringdata0[374];
+    QByteArrayData data[28];
+    char stringdata0[412];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -56,7 +56,9 @@ QT_MOC_LITERAL(21, 255, 25), // "signalSendingsDataChanged"
 QT_MOC_LITERAL(22, 281, 28), // "QHash<QString,SendingData*>*"
 QT_MOC_LITERAL(23, 310, 14), // "setCameraFrame"
 QT_MOC_LITERAL(24, 325, 24), // "slotSteeringsDataChanged"
-QT_MOC_LITERAL(25, 350, 23) // "slotSendingsDataChanged"
+QT_MOC_LITERAL(25, 350, 23), // "slotSendingsDataChanged"
+QT_MOC_LITERAL(26, 374, 23), // "slotSteeringDataChanged"
+QT_MOC_LITERAL(27, 398, 13) // "SteeringData*"
 
     },
     "Drone\0signalModesChanged\0\0Modes*\0modes\0"
@@ -69,7 +71,8 @@ QT_MOC_LITERAL(25, 350, 23) // "slotSendingsDataChanged"
     "signalSendingsDataChanged\0"
     "QHash<QString,SendingData*>*\0"
     "setCameraFrame\0slotSteeringsDataChanged\0"
-    "slotSendingsDataChanged"
+    "slotSendingsDataChanged\0slotSteeringDataChanged\0"
+    "SteeringData*"
 };
 #undef QT_MOC_LITERAL
 
@@ -79,7 +82,7 @@ static const uint qt_meta_data_Drone[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -87,19 +90,20 @@ static const uint qt_meta_data_Drone[] = {
        8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   69,    2, 0x06 /* Public */,
-       5,    4,   72,    2, 0x06 /* Public */,
-      10,    1,   81,    2, 0x06 /* Public */,
-      13,    1,   84,    2, 0x06 /* Public */,
-      15,    1,   87,    2, 0x06 /* Public */,
-      17,    1,   90,    2, 0x06 /* Public */,
-      19,    1,   93,    2, 0x06 /* Public */,
-      21,    1,   96,    2, 0x06 /* Public */,
+       1,    1,   74,    2, 0x06 /* Public */,
+       5,    4,   77,    2, 0x06 /* Public */,
+      10,    1,   86,    2, 0x06 /* Public */,
+      13,    1,   89,    2, 0x06 /* Public */,
+      15,    1,   92,    2, 0x06 /* Public */,
+      17,    1,   95,    2, 0x06 /* Public */,
+      19,    1,   98,    2, 0x06 /* Public */,
+      21,    1,  101,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      23,    1,   99,    2, 0x08 /* Private */,
-      24,    1,  102,    2, 0x08 /* Private */,
-      25,    1,  105,    2, 0x08 /* Private */,
+      23,    1,  104,    2, 0x08 /* Private */,
+      24,    1,  107,    2, 0x08 /* Private */,
+      25,    1,  110,    2, 0x08 /* Private */,
+      26,    1,  113,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -115,6 +119,7 @@ static const uint qt_meta_data_Drone[] = {
     QMetaType::Void, 0x80000000 | 16,    2,
     QMetaType::Void, 0x80000000 | 20,    2,
     QMetaType::Void, 0x80000000 | 22,    2,
+    QMetaType::Void, 0x80000000 | 27,    2,
 
        0        // eod
 };
@@ -136,6 +141,7 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 8: _t->setCameraFrame((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
         case 9: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
         case 10: _t->slotSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
+        case 11: _t->slotSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -242,13 +248,13 @@ int Drone::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

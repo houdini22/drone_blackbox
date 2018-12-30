@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ThreadGamepadUpdate_t {
     QByteArrayData data[7];
-    char stringdata0[104];
+    char stringdata0[103];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,15 +34,15 @@ static const qt_meta_stringdata_ThreadGamepadUpdate_t qt_meta_stringdata_ThreadG
 QT_MOC_LITERAL(0, 0, 19), // "ThreadGamepadUpdate"
 QT_MOC_LITERAL(1, 20, 20), // "signalButtonsChanged"
 QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 15), // "ButtonsPressed*"
-QT_MOC_LITERAL(4, 58, 7), // "buttons"
-QT_MOC_LITERAL(5, 66, 23), // "slotSteeringDataChanged"
-QT_MOC_LITERAL(6, 90, 13) // "SteeringData*"
+QT_MOC_LITERAL(3, 42, 14), // "ButtonsPressed"
+QT_MOC_LITERAL(4, 57, 7), // "buttons"
+QT_MOC_LITERAL(5, 65, 23), // "slotSteeringDataChanged"
+QT_MOC_LITERAL(6, 89, 13) // "SteeringData*"
 
     },
     "ThreadGamepadUpdate\0signalButtonsChanged\0"
-    "\0ButtonsPressed*\0buttons\0"
-    "slotSteeringDataChanged\0SteeringData*"
+    "\0ButtonsPressed\0buttons\0slotSteeringDataChanged\0"
+    "SteeringData*"
 };
 #undef QT_MOC_LITERAL
 
@@ -80,14 +80,25 @@ void ThreadGamepadUpdate::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         ThreadGamepadUpdate *_t = static_cast<ThreadGamepadUpdate *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->signalButtonsChanged((*reinterpret_cast< ButtonsPressed*(*)>(_a[1]))); break;
+        case 0: _t->signalButtonsChanged((*reinterpret_cast< ButtonsPressed(*)>(_a[1]))); break;
         case 1: _t->slotSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 0:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            case 0:
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< ButtonsPressed >(); break;
+            }
+            break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (ThreadGamepadUpdate::*)(ButtonsPressed * );
+            using _t = void (ThreadGamepadUpdate::*)(ButtonsPressed );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ThreadGamepadUpdate::signalButtonsChanged)) {
                 *result = 0;
                 return;
@@ -126,14 +137,14 @@ int ThreadGamepadUpdate::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            qt_static_metacall(this, _c, _id, _a);
         _id -= 2;
     }
     return _id;
 }
 
 // SIGNAL 0
-void ThreadGamepadUpdate::signalButtonsChanged(ButtonsPressed * _t1)
+void ThreadGamepadUpdate::signalButtonsChanged(ButtonsPressed _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
