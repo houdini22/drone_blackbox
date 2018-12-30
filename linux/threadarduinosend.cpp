@@ -62,7 +62,7 @@ void ThreadArduinoSend::run() {
         QThread::msleep(40);
 
         if (this->sendingData->mode == MODE_ARDUINO_CONNECTED) {
-            ButtonsPressed buttons = this->drone->getButtons();
+            ButtonsPressed buttons = this->drone->getGamepad()->getData()->buttonsPressed;
 
             // send
             if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
@@ -78,7 +78,6 @@ void ThreadArduinoSend::run() {
             if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
                 if (buttons.a) { // toggle Throttle mode
                     sendingThrottle = 13;
-                    throttleMode = !throttleMode;
 
                     continue;
                 }
@@ -179,6 +178,7 @@ void ThreadArduinoSend::run() {
                 sendingThrottle--;
 
                 if (sendingThrottle == 0) {
+                    throttleMode = !throttleMode;
                     this->setThrottleMode(throttleMode);
                 }
 

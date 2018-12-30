@@ -14,6 +14,7 @@ class ThreadArduinoPing;
 class ThreadArduinoSend;
 class ThreadGamepadUpdate;
 class ThreadCamera;
+class SteeringGamepad;
 class Database;
 
 class Drone : public QObject
@@ -22,27 +23,17 @@ class Drone : public QObject
 public:
     Drone(MainWindow * window);
     void start();
-    bool isArduinoConnected();
-    QString getArduinoDeviceStr();
-    void setArduino(SerialPort * arduino);
-    SerialPort * getArduino();
-    ButtonsPressed getButtons();
-    Database * getDatabase();
-    bool getCanStartRecording();
     void setHandPosition(HandPosition);
     HandPosition getHandPosition();
     Modes * getModes();
     void setModes(Modes * modes);
+    SteeringGamepad * getGamepad();
 private slots:
     void setCameraFrame(MyMat);
     void slotSteeringsDataChanged(QHash<QString,SteeringData*> *);
     void slotSendingsDataChanged(QHash<QString,SendingData*> *);
-    void slotSteeringDataChanged(SteeringData *);
 signals:
     void signalModesChanged(Modes * modes);
-    void radioValuesChanged(int leftX, int leftY, int rightX, int rightY);
-    void recordFilesChanged(RecordsList list);
-    void startRecording(QString name);
     void cameraFrameChanged(MyMat);
     void handPositionChanged(HandPosition);
     void signalSteeringsDataChanged(QHash<QString,SteeringData*>*);
@@ -56,7 +47,7 @@ private:
     HandPosition handPosition;
     SteeringRegistry * steeringRegistry;
     SendingRegistry * sendingRegistry;
-    SteeringData * gamepad0;
+    SteeringGamepad * gamepad0;
 };
 
 #endif // DRONE_H
