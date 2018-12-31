@@ -17,6 +17,23 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->drone, SIGNAL(signalSendingsDataChanged(QHash<QString,SendingData*>*)), this, SLOT(slotSendingsDataChanged(QHash<QString,SendingData*>*)));
 
     this->drone->start();
+
+    QLineEdit * inputMin = this->centralWidget()->findChild<QLineEdit *>(QString("inputRadioMin"));
+    QLineEdit * inputMiddle = this->centralWidget()->findChild<QLineEdit *>(QString("inputRadioMiddle"));
+    QLineEdit * inputMax = this->centralWidget()->findChild<QLineEdit *>(QString("inputRadioMax"));
+
+    inputMin->setValidator( new QIntValidator(800, 2200, this));
+    inputMiddle->setValidator( new QIntValidator(800, 2200, this));
+    inputMax->setValidator( new QIntValidator(800, 2200, this));
+
+    nlohmann::json data = Storage::getInstance().getData();
+    nlohmann::json dataRadio = data["radio"];
+
+    /*
+    inputMin->setText(QString::number(data["radio"]["min"].get<int>()));
+    inputMiddle->setText(QString::number(data["radio"]["middle"].get<int>()));
+    inputMax->setText(QString::number(data["radio"]["max"].get<int>()));
+    */
 }
 
 void MainWindow::slotSteeringDataChanged(SteeringData * data) {
@@ -34,11 +51,11 @@ void MainWindow::slotSteeringDataChanged(SteeringData * data) {
         QLabel * labelLeapMotion = this->centralWidget()->findChild<QLabel *>(QString("labelLeapMotionValue"));
 
         if (data->isConnected) {
-            labelLeapMotion->setText("connect...");
-            labelLeapMotion->setDisabled(true);
-        } else {
             labelLeapMotion->setText("connected");
             labelLeapMotion->setDisabled(false);
+        } else {
+            labelLeapMotion->setText("connect...");
+            labelLeapMotion->setDisabled(true);
         }
     }
 }

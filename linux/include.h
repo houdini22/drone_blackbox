@@ -12,6 +12,7 @@
 #include <QLineEdit>
 #include <QMap>
 #include <QHash>
+#include <QLineEdit>
 
 #include <vector>
 #include <list>
@@ -38,6 +39,8 @@ using namespace cv;
 typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
+#include "json.hpp"
+#include "storage.h"
 #include "common.h"
 #include "buttons.h"
 #include "gamepad.h"

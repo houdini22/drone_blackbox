@@ -30,7 +30,6 @@ public slots:
     void setHandPosition(HandPosition);
     void slotSteeringDataChanged(SteeringData *);
     void slotSendingsDataChanged(QHash<QString,SendingData*>*);
-private slots:
 };
 
 #endif // MAINWINDOW_H

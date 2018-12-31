@@ -2,11 +2,13 @@
 #include "mainwindow.h"
 
 using namespace cv;
+using namespace std::experimental::filesystem::v1;
 
-Drone::Drone(MainWindow * window)
-{
+Drone::Drone(MainWindow * window) {
     this->window = window;
     this->modes = new Modes;
+
+    this->createStorage();
 
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
@@ -61,4 +63,8 @@ Modes * Drone::getModes() {
 
 SteeringGamepad * Drone::getGamepad() {
     return this->gamepad0;
+}
+
+void Drone::createStorage() {
+    Storage::getInstance().create();
 }

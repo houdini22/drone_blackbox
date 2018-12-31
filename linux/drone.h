@@ -46,6 +46,7 @@ private:
     SendingRegistry * sendingRegistry;
     SteeringGamepad * gamepad0;
     SteeringLeapMotion * leapMotion0;
+    void createStorage();
 };
 
 #endif // DRONE_H

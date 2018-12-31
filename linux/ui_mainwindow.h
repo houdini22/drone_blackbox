@@ -15,6 +15,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -48,6 +49,12 @@ public:
     QLabel *labelGamePadRightY;
     QLabel *label_6;
     QLabel *label_7;
+    QLabel *label_16;
+    QLabel *label_17;
+    QLabel *label_18;
+    QLineEdit *inputRadioMin;
+    QLineEdit *inputRadioMiddle;
+    QLineEdit *inputRadioMax;
     QGroupBox *groupBox;
     QLabel *labelArmedValue;
     QLabel *label_8;
@@ -84,7 +91,7 @@ public:
         kdialog->setGeometry(QRect(942, 548, 16, 16));
         groupBoxStatus = new QGroupBox(centralWidget);
         groupBoxStatus->setObjectName(QStringLiteral("groupBoxStatus"));
-        groupBoxStatus->setGeometry(QRect(10, 10, 491, 231));
+        groupBoxStatus->setGeometry(QRect(10, 10, 491, 261));
         QFont font;
         font.setPointSize(20);
         groupBoxStatus->setFont(font);
@@ -124,7 +131,7 @@ public:
         labelLeapMotionValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBoxTitle = new QGroupBox(centralWidget);
         groupBoxTitle->setObjectName(QStringLiteral("groupBoxTitle"));
-        groupBoxTitle->setGeometry(QRect(520, 10, 491, 231));
+        groupBoxTitle->setGeometry(QRect(520, 10, 491, 261));
         groupBoxTitle->setFont(font);
         label_2 = new QLabel(groupBoxTitle);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -162,15 +169,36 @@ public:
         labelGamePadRightY->setFont(font1);
         label_6 = new QLabel(groupBoxTitle);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(250, 120, 21, 31));
+        label_6->setGeometry(QRect(240, 120, 31, 31));
         label_6->setFont(font1);
         label_7 = new QLabel(groupBoxTitle);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(250, 90, 21, 31));
+        label_7->setGeometry(QRect(240, 90, 31, 31));
         label_7->setFont(font1);
+        label_16 = new QLabel(groupBoxTitle);
+        label_16->setObjectName(QStringLiteral("label_16"));
+        label_16->setGeometry(QRect(20, 160, 41, 31));
+        label_16->setFont(font1);
+        label_17 = new QLabel(groupBoxTitle);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setGeometry(QRect(210, 160, 71, 31));
+        label_17->setFont(font1);
+        label_18 = new QLabel(groupBoxTitle);
+        label_18->setObjectName(QStringLiteral("label_18"));
+        label_18->setGeometry(QRect(430, 160, 51, 31));
+        label_18->setFont(font1);
+        inputRadioMin = new QLineEdit(groupBoxTitle);
+        inputRadioMin->setObjectName(QStringLiteral("inputRadioMin"));
+        inputRadioMin->setGeometry(QRect(20, 200, 113, 32));
+        inputRadioMiddle = new QLineEdit(groupBoxTitle);
+        inputRadioMiddle->setObjectName(QStringLiteral("inputRadioMiddle"));
+        inputRadioMiddle->setGeometry(QRect(180, 200, 131, 32));
+        inputRadioMax = new QLineEdit(groupBoxTitle);
+        inputRadioMax->setObjectName(QStringLiteral("inputRadioMax"));
+        inputRadioMax->setGeometry(QRect(360, 200, 113, 32));
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 250, 491, 361));
+        groupBox->setGeometry(QRect(10, 280, 491, 361));
         groupBox->setFont(font);
         labelArmedValue = new QLabel(groupBox);
         labelArmedValue->setObjectName(QStringLiteral("labelArmedValue"));
@@ -201,7 +229,7 @@ public:
         labelSending->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(520, 250, 491, 361));
+        groupBox_2->setGeometry(QRect(520, 280, 491, 361));
         groupBox_2->setFont(font);
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
@@ -282,6 +310,9 @@ public:
         labelGamePadRightY->setText(QApplication::translate("MainWindow", "---", nullptr));
         label_6->setText(QApplication::translate("MainWindow", "Y", nullptr));
         label_7->setText(QApplication::translate("MainWindow", "X", nullptr));
+        label_16->setText(QApplication::translate("MainWindow", "min", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "middle", nullptr));
+        label_18->setText(QApplication::translate("MainWindow", "max", nullptr));
         groupBox->setTitle(QApplication::translate("MainWindow", "Drone", nullptr));
         labelArmedValue->setText(QApplication::translate("MainWindow", "not armed", nullptr));
         label_8->setText(QApplication::translate("MainWindow", "Motors", nullptr));

@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -std=c++11 -g -std=gnu++1y -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -isystem /usr/include/boost/compute/interop/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -Itmp -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+INCPATH       = -I. -isystem /usr/include/boost/compute/interop/opencv -IQtLeapMotion/Leap/include -isystem /usr/include/KF5/KDELibs4Support -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -Itmp -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = nienazwany1.0.0
 DISTDIR = /home/anonymous/Projects/drone_blackbox/linux/tmp/nienazwany1.0.0
 LINK          = g++
 LFLAGS        = 
-LIBS          = $(SUBLIBS) -ludev -lserial -lstdc++fs -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_videoio -L/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/lib/x64/ -lLeap -lGLU -lQt5Quick -lQt5Widgets -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -ludev -lserial -lstdc++fs -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_videoio -lGLU -L/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/lib/x64/ -lLeap -lQt5Quick -lQt5Widgets -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -137,7 +137,6 @@ SOURCES       = common.cpp \
 		tmp/moc_QtLeapTool.cpp \
 		tmp/moc_DefaultQtLeapMouseHandler.cpp \
 		tmp/moc_DefaultQtLeapTouchHandler.cpp \
-		tmp/moc_leapeventlistener.cpp \
 		tmp/moc_steeringregistry.cpp \
 		tmp/moc_steeringgamepad.cpp \
 		tmp/moc_sendingregistry.cpp \
@@ -231,7 +230,6 @@ OBJECTS       = tmp/common.o \
 		tmp/moc_QtLeapTool.o \
 		tmp/moc_DefaultQtLeapMouseHandler.o \
 		tmp/moc_DefaultQtLeapTouchHandler.o \
-		tmp/moc_leapeventlistener.o \
 		tmp/moc_steeringregistry.o \
 		tmp/moc_steeringgamepad.o \
 		tmp/moc_sendingregistry.o \
@@ -246,7 +244,56 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/g++-base.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/g++-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/qconfig.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Attica.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Baloo.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KArchive.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KAuth.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KBookmarks.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCMUtils.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCodecs.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCompletion.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigGui.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCoreAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCrash.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDBusAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDESu.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDEWebKit.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDNSSD.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KEmoticons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KGlobalAccel.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KGuiAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KHtml.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KI18n.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIconThemes.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIdleTime.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOFileWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOGui.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KItemModels.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KItemViews.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJobWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJS.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJSApi.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNewStuff.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNewStuffCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNotifications.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNotifyConfig.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNTLM.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KParts.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KPlotting.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KPty.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KrossCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KrossUi.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KService.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KTextWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KUnitConversion.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWallet.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWidgetsAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWindowSystem.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KXmlGui.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_accessibility_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_concurrent.pri \
@@ -282,17 +329,25 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_qmltest.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_quick.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_quickwidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_script.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_scripttools.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_service_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_sql.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_testlib_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_theme_support_private.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_webkit.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_webkitwidgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xml.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xml_private.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Solid.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_SonnetCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_SonnetUi.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_ThreadWeaver.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_functions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
@@ -384,7 +439,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		sendingregistry.h \
 		sendinginterface.h \
 		sendingarduino.h \
-		steeringleapmotion.h common.cpp \
+		steeringleapmotion.h \
+		json.hpp \
+		storage.h common.cpp \
 		database.cpp \
 		drone.cpp \
 		gamepad.cpp \
@@ -456,7 +513,56 @@ Makefile: nienazwany.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.c
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/g++-base.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/g++-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/qconfig.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Attica.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Baloo.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KArchive.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KAuth.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KBookmarks.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCMUtils.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCodecs.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCompletion.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigGui.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCoreAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCrash.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDBusAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDESu.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDEWebKit.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDNSSD.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KEmoticons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KGlobalAccel.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KGuiAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KHtml.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KI18n.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIconThemes.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIdleTime.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOFileWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOGui.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KItemModels.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KItemViews.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJobWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJS.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJSApi.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNewStuff.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNewStuffCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNotifications.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNotifyConfig.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNTLM.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KParts.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KPlotting.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KPty.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KrossCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KrossUi.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KService.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KTextWidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KUnitConversion.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWallet.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWidgetsAddons.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWindowSystem.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KXmlGui.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_accessibility_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_concurrent.pri \
@@ -492,17 +598,25 @@ Makefile: nienazwany.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.c
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_qmltest.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_quick.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_quickwidgets.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_script.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_scripttools.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_service_support_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_sql.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_sql_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_testlib_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_theme_support_private.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_webkit.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_webkitwidgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xml.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xml_private.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Solid.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_SonnetCore.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_SonnetUi.pri \
+		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_ThreadWeaver.pri \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_functions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf \
@@ -544,7 +658,56 @@ Makefile: nienazwany.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.c
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/g++-base.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/g++-unix.conf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/qconfig.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Attica.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Baloo.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KArchive.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KAuth.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KBookmarks.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCMUtils.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCodecs.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCompletion.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigCore.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigGui.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KConfigWidgets.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCoreAddons.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KCrash.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDBusAddons.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDESu.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDEWebKit.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KDNSSD.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KEmoticons.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KGlobalAccel.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KGuiAddons.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KHtml.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KI18n.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIconThemes.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIdleTime.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOCore.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOFileWidgets.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOGui.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KIOWidgets.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KItemModels.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KItemViews.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJobWidgets.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJS.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KJSApi.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNewStuff.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNewStuffCore.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNotifications.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNotifyConfig.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KNTLM.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KParts.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KPlotting.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KPty.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KrossCore.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KrossUi.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KService.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KTextWidgets.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KUnitConversion.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWallet.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWidgetsAddons.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KWindowSystem.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_KXmlGui.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_accessibility_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_concurrent.pri:
@@ -580,17 +743,25 @@ Makefile: nienazwany.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.c
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_qmltest.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_quick.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_quickwidgets.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_script.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_scripttools.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_service_support_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_sql.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_sql_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_testlib_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_theme_support_private.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_webkit.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_webkitwidgets.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xml.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_lib_xml_private.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_Solid.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_SonnetCore.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_SonnetUi.pri:
+/usr/lib/x86_64-linux-gnu/qt5/mkspecs/modules/qt_ThreadWeaver.pri:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_functions.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qt_config.prf:
 /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf:
@@ -637,7 +808,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents buttons.h common.h database.h drone.h dronemanager.h dronemodes.h gamepad.h include.h mainwindow.h threadarduinoconnect.h threadarduinodetect.h threadarduinoping.h threadarduinosend.h threadcamera.h threadgamepad.h threadgamepadupdate.h ui_mainwindow.h QtLeapMotion/Leap/include/Leap.h QtLeapMotion/Leap/include/LeapMath.h QtLeapMotion/Leap/util/LeapScene.h QtLeapMotion/Leap/util/LeapUtil.h QtLeapMotion/Leap/util/LeapUtilGL.h QtLeapMotion/QtLeapDevice/QtLeapMotionController.h QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h QtLeapMotion/QtLeapGestures/Listeners/QtLeapGestureListenerInterface.h QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h QtLeapMotion/QtLeapGestures/QtLeapGesture.h QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapHandsHandlerInterface.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapMotionHandler.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapFingersListenerInterface.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapHandsListenerInterface.h QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h QtLeapMotion/QtLeapGlobal/QtLeapBone.h QtLeapMotion/QtLeapGlobal/QtLeapFinger.h QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h QtLeapMotion/QtLeapGlobal/QtLeapHand.h QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h QtLeapMotion/QtLeapGlobal/QtLeapPointable.h QtLeapMotion/QtLeapGlobal/QtLeapTool.h QtLeapMotion/QtLeapGlobal/QtLeapUtils.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h leapeventlistener.h steeringregistry.h steeringgamepad.h steeringinterface.h sendingregistry.h sendinginterface.h sendingarduino.h steeringleapmotion.h $(DISTDIR)/
+	$(COPY_FILE) --parents buttons.h common.h database.h drone.h dronemanager.h dronemodes.h gamepad.h include.h mainwindow.h threadarduinoconnect.h threadarduinodetect.h threadarduinoping.h threadarduinosend.h threadcamera.h threadgamepad.h threadgamepadupdate.h ui_mainwindow.h QtLeapMotion/Leap/include/Leap.h QtLeapMotion/Leap/include/LeapMath.h QtLeapMotion/Leap/util/LeapScene.h QtLeapMotion/Leap/util/LeapUtil.h QtLeapMotion/Leap/util/LeapUtilGL.h QtLeapMotion/QtLeapDevice/QtLeapMotionController.h QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h QtLeapMotion/QtLeapGestures/Listeners/QtLeapGestureListenerInterface.h QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h QtLeapMotion/QtLeapGestures/QtLeapGesture.h QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapHandsHandlerInterface.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapMotionHandler.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapFingersListenerInterface.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapHandsListenerInterface.h QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h QtLeapMotion/QtLeapGlobal/QtLeapBone.h QtLeapMotion/QtLeapGlobal/QtLeapFinger.h QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h QtLeapMotion/QtLeapGlobal/QtLeapHand.h QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h QtLeapMotion/QtLeapGlobal/QtLeapPointable.h QtLeapMotion/QtLeapGlobal/QtLeapTool.h QtLeapMotion/QtLeapGlobal/QtLeapUtils.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h leapeventlistener.h steeringregistry.h steeringgamepad.h steeringinterface.h sendingregistry.h sendinginterface.h sendingarduino.h steeringleapmotion.h json.hpp storage.h $(DISTDIR)/
 	$(COPY_FILE) --parents common.cpp database.cpp drone.cpp gamepad.cpp main.cpp mainwindow.cpp threadarduinoconnect.cpp threadarduinodetect.cpp threadarduinoping.cpp threadarduinosend.cpp threadcamera.cpp threadgamepad.cpp threadgamepadupdate.cpp QtLeapMotion/Leap/util/LeapScene.cpp QtLeapMotion/Leap/util/LeapUtil.cpp QtLeapMotion/Leap/util/LeapUtilGL.cpp QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp leapeventlistener.cpp steeringregistry.cpp steeringgamepad.cpp steeringinterface.cpp sendingregistry.cpp sendingarduino.cpp sendinginterface.cpp steeringleapmotion.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
@@ -671,10 +842,12 @@ compiler_moc_predefs_clean:
 tmp/moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -std=c++11 -g -std=gnu++1y -Wall -W -dM -E -o tmp/moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_leapeventlistener.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_steeringleapmotion.cpp
+compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_steeringleapmotion.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_leapeventlistener.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_steeringleapmotion.cpp
+	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_steeringleapmotion.cpp
 tmp/moc_database.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -702,9 +875,11 @@ tmp/moc_database.cpp: include.h \
 		database.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include database.h -o tmp/moc_database.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include database.h -o tmp/moc_database.cpp
 
 tmp/moc_drone.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -732,9 +907,11 @@ tmp/moc_drone.cpp: include.h \
 		drone.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include drone.h -o tmp/moc_drone.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include drone.h -o tmp/moc_drone.cpp
 
 tmp/moc_mainwindow.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -762,9 +939,11 @@ tmp/moc_mainwindow.cpp: include.h \
 		mainwindow.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o tmp/moc_mainwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o tmp/moc_mainwindow.cpp
 
 tmp/moc_threadarduinoconnect.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -792,9 +971,11 @@ tmp/moc_threadarduinoconnect.cpp: include.h \
 		threadarduinoconnect.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoconnect.h -o tmp/moc_threadarduinoconnect.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoconnect.h -o tmp/moc_threadarduinoconnect.cpp
 
 tmp/moc_threadarduinodetect.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -822,9 +1003,11 @@ tmp/moc_threadarduinodetect.cpp: include.h \
 		threadarduinodetect.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinodetect.h -o tmp/moc_threadarduinodetect.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinodetect.h -o tmp/moc_threadarduinodetect.cpp
 
 tmp/moc_threadarduinoping.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -852,9 +1035,11 @@ tmp/moc_threadarduinoping.cpp: include.h \
 		threadarduinoping.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoping.h -o tmp/moc_threadarduinoping.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoping.h -o tmp/moc_threadarduinoping.cpp
 
 tmp/moc_threadarduinosend.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -882,9 +1067,11 @@ tmp/moc_threadarduinosend.cpp: include.h \
 		threadarduinosend.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinosend.h -o tmp/moc_threadarduinosend.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinosend.h -o tmp/moc_threadarduinosend.cpp
 
 tmp/moc_threadcamera.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -912,9 +1099,11 @@ tmp/moc_threadcamera.cpp: include.h \
 		threadcamera.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadcamera.h -o tmp/moc_threadcamera.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadcamera.h -o tmp/moc_threadcamera.cpp
 
 tmp/moc_threadgamepad.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -942,9 +1131,11 @@ tmp/moc_threadgamepad.cpp: include.h \
 		threadgamepad.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadgamepad.h -o tmp/moc_threadgamepad.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadgamepad.h -o tmp/moc_threadgamepad.cpp
 
 tmp/moc_threadgamepadupdate.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -972,14 +1163,14 @@ tmp/moc_threadgamepadupdate.cpp: include.h \
 		threadgamepadupdate.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadgamepadupdate.h -o tmp/moc_threadgamepadupdate.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadgamepadupdate.h -o tmp/moc_threadgamepadupdate.cpp
 
 tmp/moc_QtLeapMotionController.cpp: QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
 		QtLeapMotion/QtLeapDevice/QtLeapMotionController.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapDevice/QtLeapMotionController.h -o tmp/moc_QtLeapMotionController.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapDevice/QtLeapMotionController.h -o tmp/moc_QtLeapMotionController.cpp
 
 tmp/moc_QtLeapMotionListener.cpp: QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
@@ -987,7 +1178,7 @@ tmp/moc_QtLeapMotionListener.cpp: QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h -o tmp/moc_QtLeapMotionListener.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h -o tmp/moc_QtLeapMotionListener.cpp
 
 tmp/moc_DefaultQtLeapCircleGestureHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h \
@@ -998,7 +1189,7 @@ tmp/moc_DefaultQtLeapCircleGestureHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapG
 		QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h -o tmp/moc_DefaultQtLeapCircleGestureHandler.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h -o tmp/moc_DefaultQtLeapCircleGestureHandler.cpp
 
 tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h \
@@ -1009,7 +1200,7 @@ tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGl
 		QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h -o tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h -o tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp
 
 tmp/moc_DefaultQtLeapTapGestureHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h \
@@ -1020,7 +1211,7 @@ tmp/moc_DefaultQtLeapTapGestureHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlob
 		QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h -o tmp/moc_DefaultQtLeapTapGestureHandler.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h -o tmp/moc_DefaultQtLeapTapGestureHandler.cpp
 
 tmp/moc_AbstractGestureArea.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
@@ -1030,7 +1221,7 @@ tmp/moc_AbstractGestureArea.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h -o tmp/moc_AbstractGestureArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h -o tmp/moc_AbstractGestureArea.cpp
 
 tmp/moc_CircleLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h \
 		QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
@@ -1042,7 +1233,7 @@ tmp/moc_CircleLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapCircleGestu
 		QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h -o tmp/moc_CircleLeapGestureArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h -o tmp/moc_CircleLeapGestureArea.cpp
 
 tmp/moc_KeyTapLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h \
 		QtLeapMotion/Leap/include/Leap.h \
@@ -1054,7 +1245,7 @@ tmp/moc_KeyTapLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapTapGesture.
 		QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h -o tmp/moc_KeyTapLeapGestureArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h -o tmp/moc_KeyTapLeapGestureArea.cpp
 
 tmp/moc_ScreenTapLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h \
 		QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h \
@@ -1067,7 +1258,7 @@ tmp/moc_ScreenTapLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapScreenTa
 		QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h -o tmp/moc_ScreenTapLeapGestureArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h -o tmp/moc_ScreenTapLeapGestureArea.cpp
 
 tmp/moc_SwipeLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h \
 		QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
@@ -1079,7 +1270,7 @@ tmp/moc_SwipeLeapGestureArea.cpp: QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture
 		QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h -o tmp/moc_SwipeLeapGestureArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h -o tmp/moc_SwipeLeapGestureArea.cpp
 
 tmp/moc_QtLeapCircleGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
 		QtLeapMotion/Leap/include/Leap.h \
@@ -1088,7 +1279,7 @@ tmp/moc_QtLeapCircleGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
 		QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h -o tmp/moc_QtLeapCircleGesture.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h -o tmp/moc_QtLeapCircleGesture.cpp
 
 tmp/moc_QtLeapKeyTapGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h \
 		QtLeapMotion/Leap/include/Leap.h \
@@ -1098,7 +1289,7 @@ tmp/moc_QtLeapKeyTapGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h 
 		QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h -o tmp/moc_QtLeapKeyTapGesture.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h -o tmp/moc_QtLeapKeyTapGesture.cpp
 
 tmp/moc_QtLeapScreenTapGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h \
 		QtLeapMotion/Leap/include/Leap.h \
@@ -1108,7 +1299,7 @@ tmp/moc_QtLeapScreenTapGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapTapGesture
 		QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h -o tmp/moc_QtLeapScreenTapGesture.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h -o tmp/moc_QtLeapScreenTapGesture.cpp
 
 tmp/moc_QtLeapSwipeGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
 		QtLeapMotion/Leap/include/Leap.h \
@@ -1117,7 +1308,7 @@ tmp/moc_QtLeapSwipeGesture.cpp: QtLeapMotion/QtLeapGestures/QtLeapGesture.h \
 		QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h -o tmp/moc_QtLeapSwipeGesture.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h -o tmp/moc_QtLeapSwipeGesture.cpp
 
 tmp/moc_QtLeapTapGesture.cpp: QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/Leap/include/LeapMath.h \
@@ -1126,7 +1317,7 @@ tmp/moc_QtLeapTapGesture.cpp: QtLeapMotion/Leap/include/Leap.h \
 		QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h -o tmp/moc_QtLeapTapGesture.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h -o tmp/moc_QtLeapTapGesture.cpp
 
 tmp/moc_DefaultQtLeapHandsHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/Handlers/QtLeapHandsHandlerInterface.h \
@@ -1137,59 +1328,59 @@ tmp/moc_DefaultQtLeapHandsHandler.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h 
 		QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h -o tmp/moc_DefaultQtLeapHandsHandler.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h -o tmp/moc_DefaultQtLeapHandsHandler.cpp
 
 tmp/moc_FingersMotionArea.cpp: QtLeapMotion/QtLeapGlobal/Listeners/QtLeapFingersListenerInterface.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h -o tmp/moc_FingersMotionArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h -o tmp/moc_FingersMotionArea.cpp
 
 tmp/moc_HandsMotionArea.cpp: QtLeapMotion/QtLeapGlobal/Listeners/QtLeapHandsListenerInterface.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h -o tmp/moc_HandsMotionArea.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h -o tmp/moc_HandsMotionArea.cpp
 
 tmp/moc_QtLeapBone.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapBone.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapBone.h -o tmp/moc_QtLeapBone.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapBone.h -o tmp/moc_QtLeapBone.cpp
 
 tmp/moc_QtLeapFinger.cpp: QtLeapMotion/QtLeapGlobal/QtLeapPointable.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapFinger.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapFinger.h -o tmp/moc_QtLeapFinger.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapFinger.h -o tmp/moc_QtLeapFinger.cpp
 
 tmp/moc_QtLeapHand.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapHand.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapHand.h -o tmp/moc_QtLeapHand.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapHand.h -o tmp/moc_QtLeapHand.cpp
 
 tmp/moc_QtLeapMotionQQuickView.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h -o tmp/moc_QtLeapMotionQQuickView.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h -o tmp/moc_QtLeapMotionQQuickView.cpp
 
 tmp/moc_QtLeapPointable.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapPointable.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapPointable.h -o tmp/moc_QtLeapPointable.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapPointable.h -o tmp/moc_QtLeapPointable.cpp
 
 tmp/moc_QtLeapTool.cpp: QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapPointable.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapTool.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapTool.h -o tmp/moc_QtLeapTool.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapGlobal/QtLeapTool.h -o tmp/moc_QtLeapTool.cpp
 
 tmp/moc_DefaultQtLeapMouseHandler.cpp: QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
@@ -1200,7 +1391,7 @@ tmp/moc_DefaultQtLeapMouseHandler.cpp: QtLeapMotion/QtLeapTouch/Handlers/QtLeapM
 		QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h -o tmp/moc_DefaultQtLeapMouseHandler.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h -o tmp/moc_DefaultQtLeapMouseHandler.cpp
 
 tmp/moc_DefaultQtLeapTouchHandler.cpp: QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h \
 		QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h \
@@ -1212,39 +1403,11 @@ tmp/moc_DefaultQtLeapTouchHandler.cpp: QtLeapMotion/QtLeapTouch/QtLeapMotionTouc
 		QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h -o tmp/moc_DefaultQtLeapTouchHandler.cpp
-
-tmp/moc_leapeventlistener.cpp: include.h \
-		common.h \
-		buttons.h \
-		gamepad.h \
-		dronemodes.h \
-		steeringregistry.h \
-		steeringinterface.h \
-		steeringgamepad.h \
-		QtLeapMotion/Leap/include/Leap.h \
-		QtLeapMotion/Leap/include/LeapMath.h \
-		leapeventlistener.h \
-		steeringleapmotion.h \
-		sendingregistry.h \
-		sendinginterface.h \
-		sendingarduino.h \
-		database.h \
-		drone.h \
-		mainwindow.h \
-		threadgamepad.h \
-		threadarduinodetect.h \
-		threadarduinoconnect.h \
-		threadarduinoping.h \
-		threadarduinosend.h \
-		threadgamepadupdate.h \
-		threadcamera.h \
-		leapeventlistener.h \
-		tmp/moc_predefs.h \
-		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include leapeventlistener.h -o tmp/moc_leapeventlistener.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h -o tmp/moc_DefaultQtLeapTouchHandler.cpp
 
 tmp/moc_steeringregistry.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1272,9 +1435,11 @@ tmp/moc_steeringregistry.cpp: include.h \
 		steeringregistry.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringregistry.h -o tmp/moc_steeringregistry.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringregistry.h -o tmp/moc_steeringregistry.cpp
 
 tmp/moc_steeringgamepad.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1302,9 +1467,11 @@ tmp/moc_steeringgamepad.cpp: include.h \
 		steeringgamepad.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringgamepad.h -o tmp/moc_steeringgamepad.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringgamepad.h -o tmp/moc_steeringgamepad.cpp
 
 tmp/moc_sendingregistry.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1332,9 +1499,11 @@ tmp/moc_sendingregistry.cpp: include.h \
 		sendingregistry.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include sendingregistry.h -o tmp/moc_sendingregistry.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include sendingregistry.h -o tmp/moc_sendingregistry.cpp
 
 tmp/moc_sendingarduino.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1362,9 +1531,11 @@ tmp/moc_sendingarduino.cpp: include.h \
 		sendingarduino.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include sendingarduino.h -o tmp/moc_sendingarduino.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include sendingarduino.h -o tmp/moc_sendingarduino.cpp
 
 tmp/moc_steeringleapmotion.cpp: include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1392,7 +1563,7 @@ tmp/moc_steeringleapmotion.cpp: include.h \
 		steeringleapmotion.h \
 		tmp/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringleapmotion.h -o tmp/moc_steeringleapmotion.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringleapmotion.h -o tmp/moc_steeringleapmotion.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1416,6 +1587,8 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 ####### Compile
 
 tmp/common.o: common.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1443,6 +1616,8 @@ tmp/common.o: common.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/common.o common.cpp
 
 tmp/database.o: database.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1470,6 +1645,8 @@ tmp/database.o: database.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/database.o database.cpp
 
 tmp/drone.o: drone.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1498,6 +1675,8 @@ tmp/drone.o: drone.cpp include.h \
 
 tmp/gamepad.o: gamepad.cpp gamepad.h \
 		include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		dronemodes.h \
@@ -1525,6 +1704,8 @@ tmp/gamepad.o: gamepad.cpp gamepad.h \
 
 tmp/main.o: main.cpp mainwindow.h \
 		include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1552,6 +1733,8 @@ tmp/main.o: main.cpp mainwindow.h \
 
 tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 		include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1579,6 +1762,8 @@ tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/mainwindow.o mainwindow.cpp
 
 tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1606,6 +1791,8 @@ tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinoconnect.o threadarduinoconnect.cpp
 
 tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1633,6 +1820,8 @@ tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinodetect.o threadarduinodetect.cpp
 
 tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1660,6 +1849,8 @@ tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinoping.o threadarduinoping.cpp
 
 tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1687,6 +1878,8 @@ tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinosend.o threadarduinosend.cpp
 
 tmp/threadcamera.o: threadcamera.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1714,6 +1907,8 @@ tmp/threadcamera.o: threadcamera.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadcamera.o threadcamera.cpp
 
 tmp/threadgamepad.o: threadgamepad.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -1741,6 +1936,8 @@ tmp/threadgamepad.o: threadgamepad.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadgamepad.o threadgamepad.cpp
 
 tmp/threadgamepadupdate.o: threadgamepadupdate.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2066,6 +2263,8 @@ tmp/QtLeapMotionTouchDevice.o: QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/QtLeapMotionTouchDevice.o QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
 
 tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2093,6 +2292,8 @@ tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/leapeventlistener.o leapeventlistener.cpp
 
 tmp/steeringregistry.o: steeringregistry.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2120,6 +2321,8 @@ tmp/steeringregistry.o: steeringregistry.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringregistry.o steeringregistry.cpp
 
 tmp/steeringgamepad.o: steeringgamepad.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2147,6 +2350,8 @@ tmp/steeringgamepad.o: steeringgamepad.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringgamepad.o steeringgamepad.cpp
 
 tmp/steeringinterface.o: steeringinterface.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2174,6 +2379,8 @@ tmp/steeringinterface.o: steeringinterface.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringinterface.o steeringinterface.cpp
 
 tmp/sendingregistry.o: sendingregistry.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2201,6 +2408,8 @@ tmp/sendingregistry.o: sendingregistry.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/sendingregistry.o sendingregistry.cpp
 
 tmp/sendingarduino.o: sendingarduino.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2228,6 +2437,8 @@ tmp/sendingarduino.o: sendingarduino.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/sendingarduino.o sendingarduino.cpp
 
 tmp/sendinginterface.o: sendinginterface.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2255,6 +2466,8 @@ tmp/sendinginterface.o: sendinginterface.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/sendinginterface.o sendinginterface.cpp
 
 tmp/steeringleapmotion.o: steeringleapmotion.cpp include.h \
+		json.hpp \
+		storage.h \
 		common.h \
 		buttons.h \
 		gamepad.h \
@@ -2388,9 +2601,6 @@ tmp/moc_DefaultQtLeapMouseHandler.o: tmp/moc_DefaultQtLeapMouseHandler.cpp
 
 tmp/moc_DefaultQtLeapTouchHandler.o: tmp/moc_DefaultQtLeapTouchHandler.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_DefaultQtLeapTouchHandler.o tmp/moc_DefaultQtLeapTouchHandler.cpp
-
-tmp/moc_leapeventlistener.o: tmp/moc_leapeventlistener.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_leapeventlistener.o tmp/moc_leapeventlistener.cpp
 
 tmp/moc_steeringregistry.o: tmp/moc_steeringregistry.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_steeringregistry.o tmp/moc_steeringregistry.cpp
