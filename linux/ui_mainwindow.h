@@ -35,6 +35,8 @@ public:
     QLabel *labelGamePadValue;
     QLabel *label;
     QLabel *labelArduinoValue;
+    QLabel *label_15;
+    QLabel *labelLeapMotionValue;
     QGroupBox *groupBoxTitle;
     QLabel *label_2;
     QLabel *label_3;
@@ -82,7 +84,7 @@ public:
         kdialog->setGeometry(QRect(942, 548, 16, 16));
         groupBoxStatus = new QGroupBox(centralWidget);
         groupBoxStatus->setObjectName(QStringLiteral("groupBoxStatus"));
-        groupBoxStatus->setGeometry(QRect(10, 10, 491, 191));
+        groupBoxStatus->setGeometry(QRect(10, 10, 491, 231));
         QFont font;
         font.setPointSize(20);
         groupBoxStatus->setFont(font);
@@ -110,9 +112,19 @@ public:
         labelArduinoValue->setGeometry(QRect(330, 119, 141, 31));
         labelArduinoValue->setFont(font1);
         labelArduinoValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label_15 = new QLabel(groupBoxStatus);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setGeometry(QRect(20, 150, 131, 31));
+        label_15->setFont(font1);
+        labelLeapMotionValue = new QLabel(groupBoxStatus);
+        labelLeapMotionValue->setObjectName(QStringLiteral("labelLeapMotionValue"));
+        labelLeapMotionValue->setEnabled(false);
+        labelLeapMotionValue->setGeometry(QRect(330, 150, 141, 31));
+        labelLeapMotionValue->setFont(font1);
+        labelLeapMotionValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBoxTitle = new QGroupBox(centralWidget);
         groupBoxTitle->setObjectName(QStringLiteral("groupBoxTitle"));
-        groupBoxTitle->setGeometry(QRect(520, 10, 491, 191));
+        groupBoxTitle->setGeometry(QRect(520, 10, 491, 231));
         groupBoxTitle->setFont(font);
         label_2 = new QLabel(groupBoxTitle);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -158,7 +170,7 @@ public:
         label_7->setFont(font1);
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 210, 491, 361));
+        groupBox->setGeometry(QRect(10, 250, 491, 361));
         groupBox->setFont(font);
         labelArmedValue = new QLabel(groupBox);
         labelArmedValue->setObjectName(QStringLiteral("labelArmedValue"));
@@ -189,7 +201,7 @@ public:
         labelSending->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(520, 210, 491, 361));
+        groupBox_2->setGeometry(QRect(520, 250, 491, 361));
         groupBox_2->setFont(font);
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
@@ -257,6 +269,8 @@ public:
         labelGamePadValue->setText(QApplication::translate("MainWindow", "connect", nullptr));
         label->setText(QApplication::translate("MainWindow", "Arduino", nullptr));
         labelArduinoValue->setText(QApplication::translate("MainWindow", "connect", nullptr));
+        label_15->setText(QApplication::translate("MainWindow", "LeapMotion", nullptr));
+        labelLeapMotionValue->setText(QApplication::translate("MainWindow", "connect", nullptr));
         groupBoxTitle->setTitle(QApplication::translate("MainWindow", "Radio", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "X", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Y", nullptr));

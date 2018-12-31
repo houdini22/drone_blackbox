@@ -15,7 +15,6 @@ class ThreadArduinoSend;
 class ThreadGamepadUpdate;
 class ThreadCamera;
 class SteeringGamepad;
-class Database;
 
 class Drone : public QObject
 {
@@ -30,24 +29,23 @@ public:
     SteeringGamepad * getGamepad();
 private slots:
     void setCameraFrame(MyMat);
-    void slotSteeringsDataChanged(QHash<QString,SteeringData*> *);
+    void slotSteeringDataChanged(SteeringData *);
     void slotSendingsDataChanged(QHash<QString,SendingData*> *);
 signals:
     void signalModesChanged(Modes * modes);
     void cameraFrameChanged(MyMat);
     void handPositionChanged(HandPosition);
-    void signalSteeringsDataChanged(QHash<QString,SteeringData*>*);
+    void signalSteeringDataChanged(SteeringData *);
     void signalSendingsDataChanged(QHash<QString,SendingData*>*);
 private:
     MainWindow * window;
     ThreadCamera * threadCamera;
     Modes * modes;
-    Leap::Controller leapController;
-    LeapEventListener leapEventListener;
     HandPosition handPosition;
     SteeringRegistry * steeringRegistry;
     SendingRegistry * sendingRegistry;
     SteeringGamepad * gamepad0;
+    SteeringLeapMotion * leapMotion0;
 };
 
 #endif // DRONE_H

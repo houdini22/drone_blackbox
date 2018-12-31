@@ -11,13 +11,12 @@ Drone::Drone(MainWindow * window)
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
 
-    this->leapEventListener.setDrone(this);
-    this->leapController.addListener(this->leapEventListener);
-
     this->steeringRegistry = new SteeringRegistry(this);
     this->gamepad0 = new SteeringGamepad(this, this->steeringRegistry);
+    this->leapMotion0 = new SteeringLeapMotion(this, this->steeringRegistry);
     this->steeringRegistry->add(this->gamepad0);
-    connect(this->steeringRegistry, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
+    this->steeringRegistry->add(this->leapMotion0);
+    connect(this->steeringRegistry, SIGNAL(signalSteeringDataChanged(SteeringData*)), this, SLOT(slotSteeringDataChanged(SteeringData*)));
     this->steeringRegistry->start();
 
     this->sendingRegistry = new SendingRegistry(this);
@@ -43,8 +42,8 @@ HandPosition Drone::getHandPosition() {
     return this->handPosition;
 }
 
-void Drone::slotSteeringsDataChanged(QHash<QString,SteeringData*> * data) {
-    emit signalSteeringsDataChanged(data);
+void Drone::slotSteeringDataChanged(SteeringData * data) {
+    emit signalSteeringDataChanged(data);
 }
 
 void Drone::slotSendingsDataChanged(QHash<QString,SendingData*> * data) {

@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[13];
-    char stringdata0[204];
+    char stringdata0[187];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,17 +40,16 @@ QT_MOC_LITERAL(5, 42, 18), // "cameraFrameChanged"
 QT_MOC_LITERAL(6, 61, 5), // "MyMat"
 QT_MOC_LITERAL(7, 67, 15), // "setHandPosition"
 QT_MOC_LITERAL(8, 83, 12), // "HandPosition"
-QT_MOC_LITERAL(9, 96, 24), // "slotSteeringsDataChanged"
-QT_MOC_LITERAL(10, 121, 29), // "QHash<QString,SteeringData*>*"
-QT_MOC_LITERAL(11, 151, 23), // "slotSendingsDataChanged"
-QT_MOC_LITERAL(12, 175, 28) // "QHash<QString,SendingData*>*"
+QT_MOC_LITERAL(9, 96, 23), // "slotSteeringDataChanged"
+QT_MOC_LITERAL(10, 120, 13), // "SteeringData*"
+QT_MOC_LITERAL(11, 134, 23), // "slotSendingsDataChanged"
+QT_MOC_LITERAL(12, 158, 28) // "QHash<QString,SendingData*>*"
 
     },
     "MainWindow\0slotModesChanged\0\0Modes*\0"
     "modes\0cameraFrameChanged\0MyMat\0"
     "setHandPosition\0HandPosition\0"
-    "slotSteeringsDataChanged\0"
-    "QHash<QString,SteeringData*>*\0"
+    "slotSteeringDataChanged\0SteeringData*\0"
     "slotSendingsDataChanged\0"
     "QHash<QString,SendingData*>*"
 };
@@ -95,7 +94,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 0: _t->slotModesChanged((*reinterpret_cast< Modes*(*)>(_a[1]))); break;
         case 1: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
         case 2: _t->setHandPosition((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
-        case 3: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
+        case 3: _t->slotSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         case 4: _t->slotSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
         default: ;
         }

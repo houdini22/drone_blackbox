@@ -28,7 +28,7 @@ public slots:
     void slotModesChanged(Modes * modes);
     void cameraFrameChanged(MyMat);
     void setHandPosition(HandPosition);
-    void slotSteeringsDataChanged(QHash<QString,SteeringData*>*);
+    void slotSteeringDataChanged(SteeringData *);
     void slotSendingsDataChanged(QHash<QString,SendingData*>*);
 private slots:
 };

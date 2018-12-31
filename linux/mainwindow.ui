@@ -30,7 +30,7 @@
       <x>10</x>
       <y>10</y>
       <width>491</width>
-      <height>191</height>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -131,6 +131,48 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>LeapMotion</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelLeapMotionValue">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>150</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>connect</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBoxTitle">
     <property name="geometry">
@@ -138,7 +180,7 @@
       <x>520</x>
       <y>10</y>
       <width>491</width>
-      <height>191</height>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -340,7 +382,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>210</y>
+      <y>250</y>
       <width>491</width>
       <height>361</height>
      </rect>
@@ -475,7 +517,7 @@
     <property name="geometry">
      <rect>
       <x>520</x>
-      <y>210</y>
+      <y>250</y>
       <width>491</width>
       <height>361</height>
      </rect>

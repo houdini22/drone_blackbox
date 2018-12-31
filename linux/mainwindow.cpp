@@ -13,23 +13,33 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->drone, SIGNAL(signalModesChanged(Modes*)), this, SLOT(slotModesChanged(Modes*)));
     connect(this->drone, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(cameraFrameChanged(MyMat)));
     connect(this->drone, SIGNAL(handPositionChanged(HandPosition)), this, SLOT(setHandPosition(HandPosition)));
-    connect(this->drone, SIGNAL(signalSteeringsDataChanged(QHash<QString,SteeringData*>*)), this, SLOT(slotSteeringsDataChanged(QHash<QString,SteeringData*>*)));
+    connect(this->drone, SIGNAL(signalSteeringDataChanged(SteeringData *)), this, SLOT(slotSteeringDataChanged(SteeringData *)));
     connect(this->drone, SIGNAL(signalSendingsDataChanged(QHash<QString,SendingData*>*)), this, SLOT(slotSendingsDataChanged(QHash<QString,SendingData*>*)));
 
     this->drone->start();
 }
 
-void MainWindow::slotSteeringsDataChanged(QHash<QString, SteeringData *> * data) {
-    SteeringData * data2 = data->take("gamepad0");
+void MainWindow::slotSteeringDataChanged(SteeringData * data) {
+    if (data->name.compare("gamepad0") == 0) {
+        QLabel * labelGamePad = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadValue"));
 
-    QLabel * label = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadValue"));
-
-    if (data2->isConnected) {
-        label->setText("connected");
-        label->setDisabled(false);
+        if (data->isConnected) {
+            labelGamePad->setText("connected");
+            labelGamePad->setDisabled(false);
+        } else {
+            labelGamePad->setText("connect...");
+            labelGamePad->setDisabled(true);
+        }
     } else {
-        label->setText("connect...");
-        label->setDisabled(true);
+        QLabel * labelLeapMotion = this->centralWidget()->findChild<QLabel *>(QString("labelLeapMotionValue"));
+
+        if (data->isConnected) {
+            labelLeapMotion->setText("connect...");
+            labelLeapMotion->setDisabled(true);
+        } else {
+            labelLeapMotion->setText("connected");
+            labelLeapMotion->setDisabled(false);
+        }
     }
 }
 

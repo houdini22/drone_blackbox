@@ -1,10 +1,15 @@
 #include "include.h"
 
-void LeapEventListener::onConnect(const Controller& controller) {
+void LeapEventListener::onConnect(const Controller & controller) {
+    SteeringData * data = this->steeringLeapMotion->getData();
+    data->isConnected = true;
+    this->steeringLeapMotion->setData(data);
 }
 
-//Not dispatched when running in a debugger
-void LeapEventListener::onDisconnect(const Controller& controller) {
+void LeapEventListener::onDisconnect(const Controller & controller) {
+    SteeringData * data = this->steeringLeapMotion->getData();
+    data->isConnected = false;
+    this->steeringLeapMotion->setData(data);
 }
 
 void LeapEventListener::onFrame(const Controller& controller) {
@@ -38,10 +43,8 @@ void LeapEventListener::onFrame(const Controller& controller) {
     handPosition.x = std::min(std::max(handPosition.x, (float) -200), (float) 200) / 200;
     handPosition.y = std::min(std::max(handPosition.y, (float) 0), (float) 400) / 400;
     handPosition.z = std::min(std::max(handPosition.z, (float) -200), (float) 200) / 200;
-
-    this->drone->setHandPosition(handPosition);
 }
 
-void LeapEventListener::setDrone(Drone *drone) {
-    this->drone = drone;
+void LeapEventListener::setSteeringLeapMotion(SteeringLeapMotion * steeringLeapMotion) {
+    this->steeringLeapMotion = steeringLeapMotion;
 }

@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Drone_t {
     QByteArrayData data[16];
-    char stringdata0[273];
+    char stringdata0[255];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,22 +40,21 @@ QT_MOC_LITERAL(5, 39, 18), // "cameraFrameChanged"
 QT_MOC_LITERAL(6, 58, 5), // "MyMat"
 QT_MOC_LITERAL(7, 64, 19), // "handPositionChanged"
 QT_MOC_LITERAL(8, 84, 12), // "HandPosition"
-QT_MOC_LITERAL(9, 97, 26), // "signalSteeringsDataChanged"
-QT_MOC_LITERAL(10, 124, 29), // "QHash<QString,SteeringData*>*"
-QT_MOC_LITERAL(11, 154, 25), // "signalSendingsDataChanged"
-QT_MOC_LITERAL(12, 180, 28), // "QHash<QString,SendingData*>*"
-QT_MOC_LITERAL(13, 209, 14), // "setCameraFrame"
-QT_MOC_LITERAL(14, 224, 24), // "slotSteeringsDataChanged"
-QT_MOC_LITERAL(15, 249, 23) // "slotSendingsDataChanged"
+QT_MOC_LITERAL(9, 97, 25), // "signalSteeringDataChanged"
+QT_MOC_LITERAL(10, 123, 13), // "SteeringData*"
+QT_MOC_LITERAL(11, 137, 25), // "signalSendingsDataChanged"
+QT_MOC_LITERAL(12, 163, 28), // "QHash<QString,SendingData*>*"
+QT_MOC_LITERAL(13, 192, 14), // "setCameraFrame"
+QT_MOC_LITERAL(14, 207, 23), // "slotSteeringDataChanged"
+QT_MOC_LITERAL(15, 231, 23) // "slotSendingsDataChanged"
 
     },
     "Drone\0signalModesChanged\0\0Modes*\0modes\0"
     "cameraFrameChanged\0MyMat\0handPositionChanged\0"
-    "HandPosition\0signalSteeringsDataChanged\0"
-    "QHash<QString,SteeringData*>*\0"
-    "signalSendingsDataChanged\0"
+    "HandPosition\0signalSteeringDataChanged\0"
+    "SteeringData*\0signalSendingsDataChanged\0"
     "QHash<QString,SendingData*>*\0"
-    "setCameraFrame\0slotSteeringsDataChanged\0"
+    "setCameraFrame\0slotSteeringDataChanged\0"
     "slotSendingsDataChanged"
 };
 #undef QT_MOC_LITERAL
@@ -109,10 +108,10 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 0: _t->signalModesChanged((*reinterpret_cast< Modes*(*)>(_a[1]))); break;
         case 1: _t->cameraFrameChanged((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
         case 2: _t->handPositionChanged((*reinterpret_cast< HandPosition(*)>(_a[1]))); break;
-        case 3: _t->signalSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
+        case 3: _t->signalSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         case 4: _t->signalSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
         case 5: _t->setCameraFrame((*reinterpret_cast< MyMat(*)>(_a[1]))); break;
-        case 6: _t->slotSteeringsDataChanged((*reinterpret_cast< QHash<QString,SteeringData*>*(*)>(_a[1]))); break;
+        case 6: _t->slotSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         case 7: _t->slotSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
         default: ;
         }
@@ -158,8 +157,8 @@ void Drone::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
             }
         }
         {
-            using _t = void (Drone::*)(QHash<QString,SteeringData*> * );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Drone::signalSteeringsDataChanged)) {
+            using _t = void (Drone::*)(SteeringData * );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Drone::signalSteeringDataChanged)) {
                 *result = 3;
                 return;
             }
@@ -232,7 +231,7 @@ void Drone::handPositionChanged(HandPosition _t1)
 }
 
 // SIGNAL 3
-void Drone::signalSteeringsDataChanged(QHash<QString,SteeringData*> * _t1)
+void Drone::signalSteeringDataChanged(SteeringData * _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);

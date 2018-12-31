@@ -91,7 +91,8 @@ SOURCES += \
     steeringinterface.cpp \
     sendingregistry.cpp \
     sendingarduino.cpp \
-    sendinginterface.cpp
+    sendinginterface.cpp \
+    steeringleapmotion.cpp
 
 HEADERS += \
     buttons.h \
@@ -160,7 +161,8 @@ HEADERS += \
     steeringinterface.h \
     sendingregistry.h \
     sendinginterface.h \
-    sendingarduino.h
+    sendingarduino.h \
+    steeringleapmotion.h
 
 FORMS += \
     mainwindow.ui
