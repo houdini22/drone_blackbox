@@ -1,0 +1,3 @@
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/rebuild_cache.dir
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/nienazwany.dir
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/edit_cache.dir

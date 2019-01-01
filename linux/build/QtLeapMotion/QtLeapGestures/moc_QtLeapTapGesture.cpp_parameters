@@ -1,0 +1,7 @@
+-I/home/anonymous/Projects/drone_blackbox/linux/build
+-I/usr/include/x86_64-linux-gnu/qt5
+-I/usr/include/x86_64-linux-gnu/qt5/QtCore
+-I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+-o
+/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp
+/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h

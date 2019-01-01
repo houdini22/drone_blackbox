@@ -15,7 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 QMAKE_CXXFLAGS += -std=c++11
 
-CONFIG += c++14 static dll
+CONFIG += c++14 staticlib dll
 
 OBJECTS_DIR = tmp
 
@@ -27,7 +27,7 @@ LIBS += -lpthread
 LIBS += -lstdc++fs
 LIBS += -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_videoio
 LIBS += -lGLU
-LIBS += -L$$PWD/QtLeapMotion/Leap/lib/x64/ -lLeap
+LIBS += -L$$PWD/ -lLeap
 
 DEPENDPATH += $$PWD/QtLeapMotion/Leap/include
 

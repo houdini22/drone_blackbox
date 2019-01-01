@@ -13,8 +13,8 @@ MAKEFILE      = Makefile
 CC            = gcc
 CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
-CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-CXXFLAGS      = -pipe -std=c++11 -g -std=gnu++1y -Wall -W -D_REENTRANT -fPIC $(DEFINES)
+CFLAGS        = -pipe -g -fPIC -Wall -W -D_REENTRANT -fPIC $(DEFINES)
+CXXFLAGS      = -pipe -std=c++11 -g -fPIC -std=gnu++1y -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I. -isystem /usr/include/boost/compute/interop/opencv -IQtLeapMotion/Leap/include -isystem /usr/include/KF5/KDELibs4Support -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -Itmp -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
@@ -38,7 +38,7 @@ DISTNAME      = nienazwany1.0.0
 DISTDIR = /home/anonymous/Projects/drone_blackbox/linux/tmp/nienazwany1.0.0
 LINK          = g++
 LFLAGS        = 
-LIBS          = $(SUBLIBS) -ludev -lserial -lstdc++fs -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_videoio -lGLU -L/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/lib/x64/ -lLeap -lQt5Quick -lQt5Widgets -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -ludev -lserial -lstdc++fs -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_videoio -lGLU -L/home/anonymous/Projects/drone_blackbox/linux/ -lLeap -lQt5Quick -lQt5Widgets -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -840,7 +840,7 @@ compiler_moc_predefs_make_all: tmp/moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) tmp/moc_predefs.h
 tmp/moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
-	g++ -pipe -std=c++11 -g -std=gnu++1y -Wall -W -dM -E -o tmp/moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
+	g++ -pipe -std=c++11 -g -fPIC -std=gnu++1y -Wall -W -dM -E -o tmp/moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
 compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_steeringleapmotion.cpp
 compiler_moc_header_clean:

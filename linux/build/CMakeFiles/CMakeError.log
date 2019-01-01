@@ -1,0 +1,1050 @@
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1310e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1310e.dir/build.make CMakeFiles/cmTC_1310e.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1310e.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_1310e.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_1310e.dir/build.make:66: CMakeFiles/cmTC_1310e.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1310e/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_78300/fast"
+/usr/bin/make -f CMakeFiles/cmTC_78300.dir/build.make CMakeFiles/cmTC_78300.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_78300.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_78300.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_78300.dir/build.make:66: CMakeFiles/cmTC_78300.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_78300/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_10752/fast"
+/usr/bin/make -f CMakeFiles/cmTC_10752.dir/build.make CMakeFiles/cmTC_10752.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_10752.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_10752.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_10752.dir/build.make:66: CMakeFiles/cmTC_10752.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_10752/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b610/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b610.dir/build.make CMakeFiles/cmTC_3b610.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3b610.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_3b610.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_3b610.dir/build.make:66: CMakeFiles/cmTC_3b610.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3b610/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f2745/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f2745.dir/build.make CMakeFiles/cmTC_f2745.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f2745.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_f2745.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_f2745.dir/build.make:66: CMakeFiles/cmTC_f2745.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_f2745/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_95e05/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95e05.dir/build.make CMakeFiles/cmTC_95e05.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95e05.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_95e05.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_95e05.dir/build.make:66: CMakeFiles/cmTC_95e05.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_95e05/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e1151/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e1151.dir/build.make CMakeFiles/cmTC_e1151.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e1151.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_e1151.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_e1151.dir/build.make:66: CMakeFiles/cmTC_e1151.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e1151/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_28cd6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28cd6.dir/build.make CMakeFiles/cmTC_28cd6.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_28cd6.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_28cd6.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_28cd6.dir/build.make:66: CMakeFiles/cmTC_28cd6.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_28cd6/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0755d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0755d.dir/build.make CMakeFiles/cmTC_0755d.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0755d.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_0755d.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_0755d.dir/build.make:66: CMakeFiles/cmTC_0755d.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0755d/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ec09c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ec09c.dir/build.make CMakeFiles/cmTC_ec09c.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ec09c.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_ec09c.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_ec09c.dir/build.make:66: CMakeFiles/cmTC_ec09c.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ec09c/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2379f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2379f.dir/build.make CMakeFiles/cmTC_2379f.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2379f.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_2379f.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_2379f.dir/build.make:66: CMakeFiles/cmTC_2379f.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2379f/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1ca5c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1ca5c.dir/build.make CMakeFiles/cmTC_1ca5c.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1ca5c.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_1ca5c.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_1ca5c.dir/build.make:66: CMakeFiles/cmTC_1ca5c.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1ca5c/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7409d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7409d.dir/build.make CMakeFiles/cmTC_7409d.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7409d.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_7409d.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_7409d.dir/build.make:66: CMakeFiles/cmTC_7409d.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7409d/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_648e5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_648e5.dir/build.make CMakeFiles/cmTC_648e5.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_648e5.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_648e5.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_648e5.dir/build.make:66: CMakeFiles/cmTC_648e5.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_648e5/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_749c7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_749c7.dir/build.make CMakeFiles/cmTC_749c7.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_749c7.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_749c7.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_749c7.dir/build.make:66: CMakeFiles/cmTC_749c7.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_749c7/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_127aa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_127aa.dir/build.make CMakeFiles/cmTC_127aa.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_127aa.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_127aa.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_127aa.dir/build.make:66: CMakeFiles/cmTC_127aa.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_127aa/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c8a0c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c8a0c.dir/build.make CMakeFiles/cmTC_c8a0c.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c8a0c.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_c8a0c.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_c8a0c.dir/build.make:66: CMakeFiles/cmTC_c8a0c.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c8a0c/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_df27d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_df27d.dir/build.make CMakeFiles/cmTC_df27d.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_df27d.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_df27d.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_df27d.dir/build.make:66: CMakeFiles/cmTC_df27d.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_df27d/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_430e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_430e2.dir/build.make CMakeFiles/cmTC_430e2.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_430e2.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_430e2.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_430e2.dir/build.make:66: CMakeFiles/cmTC_430e2.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_430e2/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fe433/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fe433.dir/build.make CMakeFiles/cmTC_fe433.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fe433.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_fe433.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_fe433.dir/build.make:66: CMakeFiles/cmTC_fe433.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_fe433/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_313e3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_313e3.dir/build.make CMakeFiles/cmTC_313e3.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_313e3.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_313e3.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_313e3.dir/build.make:66: CMakeFiles/cmTC_313e3.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_313e3/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8444c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8444c.dir/build.make CMakeFiles/cmTC_8444c.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8444c.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_8444c.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_8444c.dir/build.make:66: CMakeFiles/cmTC_8444c.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8444c/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20a5f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20a5f.dir/build.make CMakeFiles/cmTC_20a5f.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_20a5f.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_20a5f.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_20a5f.dir/build.make:66: CMakeFiles/cmTC_20a5f.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_20a5f/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_651b3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_651b3.dir/build.make CMakeFiles/cmTC_651b3.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_651b3.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_651b3.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_651b3.dir/build.make:66: CMakeFiles/cmTC_651b3.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_651b3/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cbfa9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cbfa9.dir/build.make CMakeFiles/cmTC_cbfa9.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cbfa9.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_cbfa9.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_cbfa9.dir/build.make:66: CMakeFiles/cmTC_cbfa9.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cbfa9/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6caf9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6caf9.dir/build.make CMakeFiles/cmTC_6caf9.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6caf9.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_6caf9.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_6caf9.dir/build.make:66: CMakeFiles/cmTC_6caf9.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6caf9/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7f376/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7f376.dir/build.make CMakeFiles/cmTC_7f376.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7f376.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_7f376.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_7f376.dir/build.make:66: CMakeFiles/cmTC_7f376.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7f376/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c6e6c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c6e6c.dir/build.make CMakeFiles/cmTC_c6e6c.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c6e6c.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_c6e6c.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_c6e6c.dir/build.make:66: CMakeFiles/cmTC_c6e6c.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c6e6c/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3a0a6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a0a6.dir/build.make CMakeFiles/cmTC_3a0a6.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a0a6.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_3a0a6.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_3a0a6.dir/build.make:66: CMakeFiles/cmTC_3a0a6.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3a0a6/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_04b28/fast"
+/usr/bin/make -f CMakeFiles/cmTC_04b28.dir/build.make CMakeFiles/cmTC_04b28.dir/build
+make[1]: Wejście do katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_04b28.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_04b28.dir/CheckSymbolExists.cxx.o -c /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+make[1]: *** [CMakeFiles/cmTC_04b28.dir/build.make:66: CMakeFiles/cmTC_04b28.dir/CheckSymbolExists.cxx.o] Błąd 1
+make[1]: Opuszczenie katalogu '/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_04b28/fast] Błąd 2
+
+File /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
