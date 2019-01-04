@@ -1,0 +1,4 @@
+#ifndef FOCUSWATCHER_H
+#define FOCUSWATCHER_H
+
+#endif // FOCUSWATCHER_H
