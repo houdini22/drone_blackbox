@@ -34,16 +34,75 @@ MainWindow::MainWindow(QWidget *parent) :
     MouseSteering * mouseSteering = this->centralWidget()->findChild<MouseSteering *>(QString("mouseSteering"));
     mouseSteering->setDrone(this->drone);
 
-    QRadioButton * radio = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteering"));
-    connect(radio, SIGNAL(toggled(bool)), this, SLOT(slotRadioToggled(bool)));
+    QRadioButton * radioMouseSteeringSending = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringSending"));
+    connect(radioMouseSteeringSending, SIGNAL(toggled(bool)), this, SLOT(slotRadioMouseSendingToggled(bool)));
+
+    QRadioButton * radioMouseSteeringEnabled = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    connect(radioMouseSteeringEnabled, SIGNAL(toggled(bool)), this, SLOT(slotRadioMouseSteeringEnabledToggled(bool)));
+
+    QRadioButton * radioGamePad1Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    connect(radioGamePad1Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad1Enable(bool)));
+
+    QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    connect(radioGamePad2Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad2Enable(bool)));
 }
 
-void MainWindow::slotRadioToggled(bool active) {
+void MainWindow::slotRadioGamePad1Enable(bool active) {
+    QRadioButton * radioGamePad1Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    connect(radioGamePad1Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad1Enable(bool)));
+
+    SteeringData * steeringData = this->drone->getGamepad0()->getData();
+    steeringData->isEnabled = active;
+    this->drone->getGamepad0()->setData(steeringData);
+
+    if (active) {
+        radioGamePad1Enable->setStyleSheet("color: rgb(255, 255, 255);");
+        radioGamePad1Enable->setText("enabled");
+    } else {
+        radioGamePad1Enable->setStyleSheet("color: rgb(97, 105, 114);");
+        radioGamePad1Enable->setText("disabled");
+    }
+}
+
+void MainWindow::slotRadioGamePad2Enable(bool active) {
+    QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    connect(radioGamePad2Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad2Enable(bool)));
+
+    SteeringData * steeringData = this->drone->getGamepad1()->getData();
+    steeringData->isEnabled = active;
+    this->drone->getGamepad0()->setData(steeringData);
+
+    if (active) {
+        radioGamePad2Enable->setStyleSheet("color: rgb(255, 255, 255);");
+        radioGamePad2Enable->setText("enabled");
+    } else {
+        radioGamePad2Enable->setStyleSheet("color: rgb(97, 105, 114);");
+        radioGamePad2Enable->setText("disabled");
+    }
+}
+void MainWindow::slotRadioMouseSendingToggled(bool active) {
     Modes * modes = this->drone->getModes();
     if (modes->mouseSteering) {
         modes->radioSending = active;
         this->drone->setModes(modes);
     }
+}
+
+void MainWindow::slotRadioMouseSteeringEnabledToggled(bool active) {
+    Modes * modes = this->drone->getModes();
+    modes->mouseSteering = active;
+
+    QRadioButton * radioMouseSteeringEnabled = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+
+    if (active) {
+        radioMouseSteeringEnabled->setStyleSheet("color: rgb(255, 255, 255);");
+        radioMouseSteeringEnabled->setText("enabled");
+    } else {
+        radioMouseSteeringEnabled->setStyleSheet("color: rgb(97, 105, 114);");
+        radioMouseSteeringEnabled->setText("disabled");
+    }
+
+    this->drone->setModes(modes);
 }
 
 void MainWindow::handleRadioSettingsTriggered(bool active) {
@@ -160,16 +219,6 @@ void MainWindow::slotModesChanged(Modes * modes) {
         labelSending->setText("sending");
     } else {
         labelSending->setText("not sending");
-    }
-
-    QLabel * labelMouseSteering = this->centralWidget()->findChild<QLabel *>(QString("labelMouseSteering"));
-
-    if (modes->mouseSteering) {
-        labelMouseSteering->setText("active");
-        labelMouseSteering->setDisabled(false);
-    } else {
-        labelMouseSteering->setText("not active");
-        labelMouseSteering->setDisabled(true);
     }
 }
 

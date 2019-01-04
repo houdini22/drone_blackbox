@@ -10,3 +10,7 @@ void SteeringInterface::start() {}
 SteeringData * SteeringInterface::getData() {
     return this->data;
 }
+
+void SteeringInterface::setData(SteeringData * data) {
+    emit signalSteeringDataChanged(this->data);
+}

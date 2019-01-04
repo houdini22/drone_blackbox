@@ -10,7 +10,9 @@ class ThreadGamepad : public QThread
     Q_OBJECT
 public:
     explicit ThreadGamepad();
-    void run();
+    virtual void run();
+protected:
+    GAMEPAD_DEVICE gamepad = GAMEPAD_0;
 private:
     void setGamepadIsConnected(bool value);
 signals:

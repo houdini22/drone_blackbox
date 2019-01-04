@@ -56,7 +56,7 @@
       </font>
      </property>
      <property name="text">
-      <string>GamePad</string>
+      <string>GamePad 1</string>
      </property>
     </widget>
     <widget class="QLabel" name="labelGamePadValue">
@@ -93,7 +93,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>120</y>
+       <y>151</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -114,7 +114,7 @@
      <property name="geometry">
       <rect>
        <x>330</x>
-       <y>119</y>
+       <y>150</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -135,7 +135,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>150</y>
+       <y>181</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -156,7 +156,7 @@
      <property name="geometry">
       <rect>
        <x>330</x>
-       <y>150</y>
+       <y>181</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -177,7 +177,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>180</y>
+       <y>211</y>
        <width>151</width>
        <height>31</height>
       </rect>
@@ -191,14 +191,56 @@
       <string>Mouse Steering</string>
      </property>
     </widget>
-    <widget class="QLabel" name="labelMouseSteering">
+    <widget class="QRadioButton" name="radioMouseSteeringEnable">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>211</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(97, 105, 114);</string>
+     </property>
+     <property name="text">
+      <string>disabled</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelGamePad_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>GamePad 2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelGamePadValue2">
      <property name="enabled">
       <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
        <x>330</x>
-       <y>180</y>
+       <y>120</y>
        <width>141</width>
        <height>31</height>
       </rect>
@@ -212,13 +254,61 @@
       <string notr="true"/>
      </property>
      <property name="text">
-      <string>not active</string>
+      <string>connect</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
      <property name="indent">
       <number>0</number>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioGamePad1Enable">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>90</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(97, 105, 114);</string>
+     </property>
+     <property name="text">
+      <string>disabled</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioGamePad2Enable">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>120</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(97, 105, 114);</string>
+     </property>
+     <property name="text">
+      <string>disabled</string>
      </property>
     </widget>
    </widget>

@@ -5,6 +5,9 @@
 
 class Drone;
 
+#define MIN_SEND_VALUE_FORCE 1000
+#define MAX_SEND_VALUE_FORCE 2000
+
 class ThreadArduinoSend : public QThread
 {
     Q_OBJECT

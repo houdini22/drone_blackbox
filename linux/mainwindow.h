@@ -26,6 +26,10 @@ private:
     bool radioSending = false;
     QListWidgetItem * currentItem;
     DialogRadioSettings * dialogRadioSettings = nullptr;
+protected:
+    void moveEvent(QMoveEvent* ev) {
+        move(QPoint(0, 0));
+    }
 public slots:
     void slotModesChanged(Modes * modes);
     void cameraFrameChanged(MyMat);
@@ -34,7 +38,10 @@ public slots:
     void slotSendingsDataChanged(QHash<QString,SendingData*>*);
     void handleRadioSettingsTriggered(bool);
     void slotRefreshLabels();
-    void slotRadioToggled(bool);
+    void slotRadioMouseSendingToggled(bool);
+    void slotRadioMouseSteeringEnabledToggled(bool);
+    void slotRadioGamePad1Enable(bool);
+    void slotRadioGamePad2Enable(bool);
 };
 
 #endif // MAINWINDOW_H

@@ -62,7 +62,7 @@ void ThreadArduinoSend::run() {
         QThread::msleep(40);
 
         Modes * modes = this->drone->getModes();
-        ButtonsPressed buttons = this->drone->getGamepad()->getData()->buttonsPressed;
+        ButtonsPressed buttons = this->drone->getGamepad0()->getData()->buttonsPressed;
 
         if (this->sendingData->mode == MODE_ARDUINO_CONNECTED) {
             if (modes->mouseSteering) {
@@ -95,8 +95,8 @@ void ThreadArduinoSend::run() {
                 // send
                 if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
                     if (throttleMode) {
-                        this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
-                        this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
+                        this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
+                        this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
                     } else {
                         this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
                         this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));

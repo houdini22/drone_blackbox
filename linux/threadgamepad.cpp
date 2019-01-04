@@ -1,14 +1,13 @@
 #include "QThread"
 #include "include.h"
 
-ThreadGamepad::ThreadGamepad(): QThread()
-{
+ThreadGamepad::ThreadGamepad(): QThread() {
 
 }
 
 void ThreadGamepad::run() {
     while (1) {
-        if (!GamepadIsConnected(GAMEPAD_0)) {
+        if (!GamepadIsConnected(this->gamepad)) {
             this->setGamepadIsConnected(false);
             GamepadInit();
         } else {

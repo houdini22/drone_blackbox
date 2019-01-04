@@ -46,6 +46,7 @@ using namespace cv;
 typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
+#include "gamepad.h"
 #include "dialogradiosettings.h"
 #include "mousesteering.h"
 #include "json.hpp"
@@ -53,7 +54,6 @@ Q_DECLARE_METATYPE(MyMat)
 #include "storage.h"
 #include "common.h"
 #include "buttons.h"
-#include "gamepad.h"
 #include "dronemodes.h"
 #include "steeringregistry.h"
 #include "steeringinterface.h"
@@ -67,11 +67,18 @@ Q_DECLARE_METATYPE(MyMat)
 #include "database.h"
 #include "drone.h"
 #include "threadgamepad.h"
+#include "threadgamepad0.h"
+#include "threadgamepad1.h"
 #include "threadarduinodetect.h"
 #include "threadarduinoconnect.h"
 #include "threadarduinoping.h"
 #include "threadarduinosend.h"
 #include "threadgamepadupdate.h"
+#include "threadgamepad0update.h"
+#include "threadgamepad1update.h"
 #include "threadcamera.h"
+#include "steeringgamepad.h"
+#include "steeringgamepad0.h"
+#include "steeringgamepad1.h"
 
 #endif // INCLUDE_H

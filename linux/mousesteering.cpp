@@ -14,7 +14,7 @@ void MouseSteering::mousePressEvent(QMouseEvent *event) {
     nlohmann::json data = Storage::getInstance().getData();
 
     if (event->button() == Qt::MiddleButton) {
-        emit signalMiddleButtonPressed();
+
     } else if (event->button() == Qt::LeftButton) {
         modes->leftY -= 25;
         modes->leftY = std::max((int) data["radio"]["leftY"]["min"].get<int>(), modes->leftY);
@@ -22,6 +22,12 @@ void MouseSteering::mousePressEvent(QMouseEvent *event) {
         modes->leftY += 25;
         modes->leftY = std::min((int) data["radio"]["leftY"]["max"].get<int>(), modes->leftY);
     }
+
+    this->drone->setModes(modes);
+}
+
+void MouseSteering::mouseDoubleClickEvent(QMouseEvent * event) {
+
 }
 
 void MouseSteering::mouseMoveEvent(QMouseEvent *event) {

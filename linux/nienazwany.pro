@@ -89,7 +89,10 @@ SOURCES += \
     sendinginterface.cpp \
     steeringleapmotion.cpp \
     dialogradiosettings.cpp \
-    mousesteering.cpp
+    mousesteering.cpp \
+    steeringgamepad1.cpp \
+    threadgamepadupdate0.cpp \
+    steeringgamepad0.cpp
 
 HEADERS += \
     buttons.h \
@@ -164,7 +167,13 @@ HEADERS += \
     storage.h \
     focuswatcher.h \
     dialogradiosettings.h \
-    mousesteering.h
+    mousesteering.h \
+    steeringgamepad1.h \
+    threadgamepad1.h \
+    steeringgamepad0.h \
+    threadgamepad0update.h \
+    threadgamepad1update.h \
+    threadgamepad0.h
 
 FORMS += \
     mainwindow.ui \

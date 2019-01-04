@@ -5,12 +5,6 @@
 
 class Drone;
 
-#define MIN_SEND_VALUE 1000
-#define MAX_SEND_VALUE 2000
-#define MIN_SEND_VALUE_FORCE 1000
-#define MAX_SEND_VALUE_FORCE 2000
-#define SEND_SCALE_RATIO 0.4
-
 class ThreadGamepadUpdate : public QThread
 {
     Q_OBJECT
@@ -22,6 +16,7 @@ private:
     Drone * drone;
     SteeringRegistry * registry;
     SteeringData * steeringData;
+    GAMEPAD_DEVICE gamepad = GAMEPAD_0;
 public slots:
     void slotSteeringDataChanged(SteeringData *);
 signals:

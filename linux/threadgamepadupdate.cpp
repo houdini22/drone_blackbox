@@ -17,10 +17,10 @@ void ThreadGamepadUpdate::run() {
         if (steeringData->isConnected) {
             GamepadUpdate();
 
-            double _leftX = GamepadStickLength(GAMEPAD_0, STICK_LEFT) * cos(GamepadStickAngle(GAMEPAD_0, STICK_LEFT));
-            double _leftY = GamepadStickLength(GAMEPAD_0, STICK_LEFT) * sin(GamepadStickAngle(GAMEPAD_0, STICK_LEFT));
-            double _rightX = GamepadStickLength(GAMEPAD_0, STICK_RIGHT) * cos(GamepadStickAngle(GAMEPAD_0, STICK_RIGHT));
-            double _rightY = GamepadStickLength(GAMEPAD_0, STICK_RIGHT) * sin(GamepadStickAngle(GAMEPAD_0, STICK_RIGHT));
+            double _leftX = GamepadStickLength(this->gamepad, STICK_LEFT) * cos(GamepadStickAngle(this->gamepad, STICK_LEFT));
+            double _leftY = GamepadStickLength(this->gamepad, STICK_LEFT) * sin(GamepadStickAngle(this->gamepad, STICK_LEFT));
+            double _rightX = GamepadStickLength(this->gamepad, STICK_RIGHT) * cos(GamepadStickAngle(this->gamepad, STICK_RIGHT));
+            double _rightY = GamepadStickLength(this->gamepad, STICK_RIGHT) * sin(GamepadStickAngle(this->gamepad, STICK_RIGHT));
 
             if (_leftX < 0) {
                 double area = data["radio"]["leftX"]["middle"].get<int>() - data["radio"]["leftX"]["min"].get<int>();
@@ -54,15 +54,15 @@ void ThreadGamepadUpdate::run() {
             buttons.leftY = ((int) _leftY);
             buttons.rightX = ((int) _rightX);
             buttons.rightY = ((int) _rightY);
-            buttons.start = ((GamepadButtonDown(GAMEPAD_0, BUTTON_START) ? true : false));
-            buttons.arming = ((GamepadTriggerDown(GAMEPAD_0, TRIGGER_LEFT) && GamepadTriggerDown(GAMEPAD_0, TRIGGER_RIGHT)) ? true : false);
-            buttons.a = (GamepadButtonDown(GAMEPAD_0, BUTTON_A) ? true : false);
-            buttons.b = (GamepadButtonDown(GAMEPAD_0, BUTTON_B) ? true : false);
-            buttons.y = (GamepadButtonDown(GAMEPAD_0, BUTTON_Y) ? true : false);
-            buttons.leftShoulder = (GamepadButtonDown(GAMEPAD_0, BUTTON_LEFT_SHOULDER) ? true : false);
-            buttons.rightShoulder = (GamepadButtonDown(GAMEPAD_0, BUTTON_RIGHT_SHOULDER) ? true : false);
-            buttons.dPadUp = (GamepadButtonDown(GAMEPAD_0, BUTTON_DPAD_UP) ? true : false);
-            buttons.dPadDown = (GamepadButtonDown(GAMEPAD_0, BUTTON_DPAD_DOWN) ? true : false);
+            buttons.start = ((GamepadButtonDown(this->gamepad, BUTTON_START) ? true : false));
+            buttons.arming = ((GamepadTriggerDown(this->gamepad, TRIGGER_LEFT) && GamepadTriggerDown(this->gamepad, TRIGGER_RIGHT)) ? true : false);
+            buttons.a = (GamepadButtonDown(this->gamepad, BUTTON_A) ? true : false);
+            buttons.b = (GamepadButtonDown(this->gamepad, BUTTON_B) ? true : false);
+            buttons.y = (GamepadButtonDown(this->gamepad, BUTTON_Y) ? true : false);
+            buttons.leftShoulder = (GamepadButtonDown(this->gamepad, BUTTON_LEFT_SHOULDER) ? true : false);
+            buttons.rightShoulder = (GamepadButtonDown(this->gamepad, BUTTON_RIGHT_SHOULDER) ? true : false);
+            buttons.dPadUp = (GamepadButtonDown(this->gamepad, BUTTON_DPAD_UP) ? true : false);
+            buttons.dPadDown = (GamepadButtonDown(this->gamepad, BUTTON_DPAD_DOWN) ? true : false);
 
             emit signalButtonsChanged(buttons);
         }

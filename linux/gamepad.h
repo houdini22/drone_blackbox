@@ -1,7 +1,25 @@
 #ifndef GAMEPAD_H
 #define GAMEPAD_H
 
-#include "include.h"
+#include <vector>
+#include <list>
+#include <algorithm>
+#include <functional>
+#include <chrono>
+#include <future>
+#include <math.h>
+#include <SerialStream.h>
+#include <string>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/statvfs.h>
+#include <map>
+#include <sstream>
+#include <iostream>
+#include <experimental/filesystem>
+#include <dirent.h>
+#include <string.h>
 
 #if defined(GAMEPAD_STATIC_LIB)
 #	define GAMEPAD_API
