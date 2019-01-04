@@ -3,6 +3,7 @@
 
 #include "include.h"
 
+/*
 using namespace Leap;
 class SteeringLeapMotion;
 
@@ -15,5 +16,6 @@ public:
 private:
     SteeringLeapMotion * steeringLeapMotion;
 };
+*/
 
 #endif // LEAPEVENTLISTENER_H

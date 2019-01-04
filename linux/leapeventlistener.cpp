@@ -1,5 +1,6 @@
 #include "include.h"
 
+/*
 void LeapEventListener::onConnect(const Controller & controller) {
     SteeringData * data = this->steeringLeapMotion->getData();
     data->isConnected = true;
@@ -48,3 +49,4 @@ void LeapEventListener::onFrame(const Controller& controller) {
 void LeapEventListener::setSteeringLeapMotion(SteeringLeapMotion * steeringLeapMotion) {
     this->steeringLeapMotion = steeringLeapMotion;
 }
+*/

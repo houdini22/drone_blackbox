@@ -1,5 +1,6 @@
 #include "include.h"
 
+/*
 SteeringLeapMotion::SteeringLeapMotion(Drone * drone, SteeringRegistry * registry) : SteeringInterface(drone, registry) {
     this->data = new SteeringData;
     this->data->name = "leapmotion0";
@@ -16,3 +17,4 @@ void SteeringLeapMotion::setData(SteeringData *data) {
     this->data = data;
     emit signalSteeringDataChanged(this->data);
 }
+*/

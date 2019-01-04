@@ -1,7 +1,0 @@
--I/home/anonymous/Projects/drone_blackbox/linux/build
--I/usr/include/x86_64-linux-gnu/qt5
--I/usr/include/x86_64-linux-gnu/qt5/QtCore
--I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
--o
-/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp
-/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h

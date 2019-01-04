@@ -125,225 +125,53 @@ moc_ui_mainwindow.cpp: ../ui_mainwindow.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating moc_ui_mainwindow.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_ui_mainwindow.cpp_parameters
 
-QtLeapMotion/Leap/include/moc_Leap.cpp: ../QtLeapMotion/Leap/include/Leap.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating QtLeapMotion/Leap/include/moc_Leap.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp_parameters
-
-QtLeapMotion/Leap/include/moc_LeapMath.cpp: ../QtLeapMotion/Leap/include/LeapMath.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating QtLeapMotion/Leap/include/moc_LeapMath.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp_parameters
-
-QtLeapMotion/Leap/util/moc_LeapScene.cpp: ../QtLeapMotion/Leap/util/LeapScene.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating QtLeapMotion/Leap/util/moc_LeapScene.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapScene.cpp_parameters
-
-QtLeapMotion/Leap/util/moc_LeapUtil.cpp: ../QtLeapMotion/Leap/util/LeapUtil.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating QtLeapMotion/Leap/util/moc_LeapUtil.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtil.cpp_parameters
-
-QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp: ../QtLeapMotion/Leap/util/LeapUtilGL.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp_parameters
-
-QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp: ../QtLeapMotion/QtLeapDevice/QtLeapMotionController.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp_parameters
-
-QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp: ../QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp: ../QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp: ../QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp: ../QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp: ../QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp: ../QtLeapMotion/QtLeapGestures/Listeners/QtLeapGestureListenerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Listeners && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp: ../QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp: ../QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp: ../QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp: ../QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp: ../QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp: ../QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp: ../QtLeapMotion/QtLeapGestures/QtLeapGesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp: ../QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Generating QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp: ../QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp: ../QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp_parameters
-
-QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp: ../QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Generating QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp: ../QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Generating QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp: ../QtLeapMotion/QtLeapGlobal/Handlers/QtLeapHandsHandlerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Generating QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp: ../QtLeapMotion/QtLeapGlobal/Handlers/QtLeapMotionHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Generating QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp: ../QtLeapMotion/QtLeapGlobal/Listeners/QtLeapFingersListenerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Generating QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp: ../QtLeapMotion/QtLeapGlobal/Listeners/QtLeapHandsListenerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Generating QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp: ../QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Generating QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp: ../QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Generating QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapBone.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapFinger.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapHand.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapPointable.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapTool.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp_parameters
-
-QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp: ../QtLeapMotion/QtLeapGlobal/QtLeapUtils.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Generating QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp_parameters
-
-QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp: ../QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Generating QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp_parameters
-
-QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp: ../QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Generating QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp_parameters
-
-QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp: ../QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Generating QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp: ../QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Generating QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp_parameters
-
-QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp: ../QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Generating QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp"
-	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp_parameters
-
 moc_leapeventlistener.cpp: ../leapeventlistener.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Generating moc_leapeventlistener.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating moc_leapeventlistener.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_leapeventlistener.cpp_parameters
 
 moc_steeringregistry.cpp: ../steeringregistry.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Generating moc_steeringregistry.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating moc_steeringregistry.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringregistry.cpp_parameters
 
 moc_steeringgamepad.cpp: ../steeringgamepad.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Generating moc_steeringgamepad.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating moc_steeringgamepad.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp_parameters
 
 moc_steeringinterface.cpp: ../steeringinterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Generating moc_steeringinterface.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating moc_steeringinterface.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp_parameters
 
 moc_sendingregistry.cpp: ../sendingregistry.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Generating moc_sendingregistry.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating moc_sendingregistry.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_sendingregistry.cpp_parameters
 
 moc_sendinginterface.cpp: ../sendinginterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Generating moc_sendinginterface.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating moc_sendinginterface.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_sendinginterface.cpp_parameters
 
 moc_sendingarduino.cpp: ../sendingarduino.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Generating moc_sendingarduino.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating moc_sendingarduino.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_sendingarduino.cpp_parameters
 
 moc_steeringleapmotion.cpp: ../steeringleapmotion.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Generating moc_steeringleapmotion.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating moc_steeringleapmotion.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringleapmotion.cpp_parameters
 
 moc_json.cpp: ../json.hpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Generating moc_json.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating moc_json.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_json.cpp_parameters
 
 moc_storage.cpp: ../storage.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Generating moc_storage.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating moc_storage.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_storage.cpp_parameters
 
 ui_mainwindow.h: ../mainwindow.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Generating ui_mainwindow.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating ui_mainwindow.h"
 	/usr/lib/qt5/bin/uic -o /home/anonymous/Projects/drone_blackbox/linux/build/ui_mainwindow.h /home/anonymous/Projects/drone_blackbox/linux/mainwindow.ui
 
 CMakeFiles/nienazwany.dir/common.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/common.cpp.o: ../common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/nienazwany.dir/common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/nienazwany.dir/common.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/common.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/common.cpp
 
 CMakeFiles/nienazwany.dir/common.cpp.i: cmake_force
@@ -356,7 +184,7 @@ CMakeFiles/nienazwany.dir/common.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/database.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/database.cpp.o: ../database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/nienazwany.dir/database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/nienazwany.dir/database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/database.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/database.cpp
 
 CMakeFiles/nienazwany.dir/database.cpp.i: cmake_force
@@ -369,7 +197,7 @@ CMakeFiles/nienazwany.dir/database.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/drone.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/drone.cpp.o: ../drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/nienazwany.dir/drone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/nienazwany.dir/drone.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/drone.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/drone.cpp
 
 CMakeFiles/nienazwany.dir/drone.cpp.i: cmake_force
@@ -382,7 +210,7 @@ CMakeFiles/nienazwany.dir/drone.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/gamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/gamepad.cpp.o: ../gamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/nienazwany.dir/gamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/nienazwany.dir/gamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/gamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/gamepad.cpp
 
 CMakeFiles/nienazwany.dir/gamepad.cpp.i: cmake_force
@@ -395,7 +223,7 @@ CMakeFiles/nienazwany.dir/gamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/main.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/nienazwany.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/nienazwany.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/main.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/main.cpp
 
 CMakeFiles/nienazwany.dir/main.cpp.i: cmake_force
@@ -408,7 +236,7 @@ CMakeFiles/nienazwany.dir/main.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/mainwindow.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/mainwindow.cpp.o: ../mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/nienazwany.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/nienazwany.dir/mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/mainwindow.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/mainwindow.cpp
 
 CMakeFiles/nienazwany.dir/mainwindow.cpp.i: cmake_force
@@ -421,7 +249,7 @@ CMakeFiles/nienazwany.dir/mainwindow.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o: ../threadarduinoconnect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinoconnect.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.i: cmake_force
@@ -434,7 +262,7 @@ CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o: ../threadarduinodetect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinodetect.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.i: cmake_force
@@ -447,7 +275,7 @@ CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o: ../threadarduinoping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinoping.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinoping.cpp.i: cmake_force
@@ -460,7 +288,7 @@ CMakeFiles/nienazwany.dir/threadarduinoping.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o: ../threadarduinosend.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinosend.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinosend.cpp.i: cmake_force
@@ -473,7 +301,7 @@ CMakeFiles/nienazwany.dir/threadarduinosend.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadcamera.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadcamera.cpp.o: ../threadcamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/nienazwany.dir/threadcamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/nienazwany.dir/threadcamera.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadcamera.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadcamera.cpp
 
 CMakeFiles/nienazwany.dir/threadcamera.cpp.i: cmake_force
@@ -486,7 +314,7 @@ CMakeFiles/nienazwany.dir/threadcamera.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadgamepad.cpp.o: ../threadgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadgamepad.cpp
 
 CMakeFiles/nienazwany.dir/threadgamepad.cpp.i: cmake_force
@@ -499,7 +327,7 @@ CMakeFiles/nienazwany.dir/threadgamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o: ../threadgamepadupdate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadgamepadupdate.cpp
 
 CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.i: cmake_force
@@ -510,412 +338,9 @@ CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/threadgamepadupdate.cpp -o CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.s
 
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.o: ../QtLeapMotion/Leap/util/LeapScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapScene.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapScene.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapScene.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.o: ../QtLeapMotion/Leap/util/LeapUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapUtil.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapUtil.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapUtil.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.o: ../QtLeapMotion/Leap/util/LeapUtilGL.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapUtilGL.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapUtilGL.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/util/LeapUtilGL.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.o: ../QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.o: ../QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.o: ../QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.o: ../QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.o: ../QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.o: ../QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.o: ../QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.o: ../QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.o: ../QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.o: ../QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.o: ../QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.o: ../QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.o: ../QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.o: ../QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.o: ../QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.o: ../QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.o: ../QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.o: ../QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.o: ../QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.o: ../QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.o: ../QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.o: ../QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.s
-
 CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o: ../leapeventlistener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/leapeventlistener.cpp
 
 CMakeFiles/nienazwany.dir/leapeventlistener.cpp.i: cmake_force
@@ -928,7 +353,7 @@ CMakeFiles/nienazwany.dir/leapeventlistener.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/steeringregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/steeringregistry.cpp.o: ../steeringregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object CMakeFiles/nienazwany.dir/steeringregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/nienazwany.dir/steeringregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringregistry.cpp
 
 CMakeFiles/nienazwany.dir/steeringregistry.cpp.i: cmake_force
@@ -941,7 +366,7 @@ CMakeFiles/nienazwany.dir/steeringregistry.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o: ../steeringgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.cpp
 
 CMakeFiles/nienazwany.dir/steeringgamepad.cpp.i: cmake_force
@@ -954,7 +379,7 @@ CMakeFiles/nienazwany.dir/steeringgamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/steeringinterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/steeringinterface.cpp.o: ../steeringinterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object CMakeFiles/nienazwany.dir/steeringinterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/nienazwany.dir/steeringinterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringinterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringinterface.cpp
 
 CMakeFiles/nienazwany.dir/steeringinterface.cpp.i: cmake_force
@@ -967,7 +392,7 @@ CMakeFiles/nienazwany.dir/steeringinterface.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/sendingregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/sendingregistry.cpp.o: ../sendingregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object CMakeFiles/nienazwany.dir/sendingregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/nienazwany.dir/sendingregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/sendingregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/sendingregistry.cpp
 
 CMakeFiles/nienazwany.dir/sendingregistry.cpp.i: cmake_force
@@ -980,7 +405,7 @@ CMakeFiles/nienazwany.dir/sendingregistry.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/sendingarduino.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/sendingarduino.cpp.o: ../sendingarduino.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object CMakeFiles/nienazwany.dir/sendingarduino.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/nienazwany.dir/sendingarduino.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/sendingarduino.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/sendingarduino.cpp
 
 CMakeFiles/nienazwany.dir/sendingarduino.cpp.i: cmake_force
@@ -993,7 +418,7 @@ CMakeFiles/nienazwany.dir/sendingarduino.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/sendinginterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/sendinginterface.cpp.o: ../sendinginterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object CMakeFiles/nienazwany.dir/sendinginterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/nienazwany.dir/sendinginterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/sendinginterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/sendinginterface.cpp
 
 CMakeFiles/nienazwany.dir/sendinginterface.cpp.i: cmake_force
@@ -1006,7 +431,7 @@ CMakeFiles/nienazwany.dir/sendinginterface.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o: ../steeringleapmotion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringleapmotion.cpp
 
 CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.i: cmake_force
@@ -1019,7 +444,7 @@ CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_buttons.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_buttons.cpp.o: moc_buttons.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/nienazwany.dir/moc_buttons.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/nienazwany.dir/moc_buttons.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_buttons.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_buttons.cpp
 
 CMakeFiles/nienazwany.dir/moc_buttons.cpp.i: cmake_force
@@ -1032,7 +457,7 @@ CMakeFiles/nienazwany.dir/moc_buttons.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_common.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_common.cpp.o: moc_common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object CMakeFiles/nienazwany.dir/moc_common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/nienazwany.dir/moc_common.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_common.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_common.cpp
 
 CMakeFiles/nienazwany.dir/moc_common.cpp.i: cmake_force
@@ -1045,7 +470,7 @@ CMakeFiles/nienazwany.dir/moc_common.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_database.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_database.cpp.o: moc_database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object CMakeFiles/nienazwany.dir/moc_database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/nienazwany.dir/moc_database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_database.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_database.cpp
 
 CMakeFiles/nienazwany.dir/moc_database.cpp.i: cmake_force
@@ -1058,7 +483,7 @@ CMakeFiles/nienazwany.dir/moc_database.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_drone.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_drone.cpp.o: moc_drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object CMakeFiles/nienazwany.dir/moc_drone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/nienazwany.dir/moc_drone.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_drone.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_drone.cpp
 
 CMakeFiles/nienazwany.dir/moc_drone.cpp.i: cmake_force
@@ -1071,7 +496,7 @@ CMakeFiles/nienazwany.dir/moc_drone.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o: moc_dronemanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dronemanager.cpp
 
 CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.i: cmake_force
@@ -1084,7 +509,7 @@ CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o: moc_dronemodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dronemodes.cpp
 
 CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.i: cmake_force
@@ -1097,7 +522,7 @@ CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o: moc_gamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_gamepad.cpp
 
 CMakeFiles/nienazwany.dir/moc_gamepad.cpp.i: cmake_force
@@ -1110,7 +535,7 @@ CMakeFiles/nienazwany.dir/moc_gamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_include.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_include.cpp.o: moc_include.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object CMakeFiles/nienazwany.dir/moc_include.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/nienazwany.dir/moc_include.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_include.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_include.cpp
 
 CMakeFiles/nienazwany.dir/moc_include.cpp.i: cmake_force
@@ -1123,7 +548,7 @@ CMakeFiles/nienazwany.dir/moc_include.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o: moc_mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_mainwindow.cpp
 
 CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.i: cmake_force
@@ -1136,7 +561,7 @@ CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o: moc_threadarduinoconnect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinoconnect.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.i: cmake_force
@@ -1149,7 +574,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o: moc_threadarduinodetect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinodetect.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.i: cmake_force
@@ -1162,7 +587,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o: moc_threadarduinoping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinoping.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.i: cmake_force
@@ -1175,7 +600,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o: moc_threadarduinosend.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinosend.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.i: cmake_force
@@ -1188,7 +613,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o: moc_threadcamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadcamera.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.i: cmake_force
@@ -1201,7 +626,7 @@ CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o: moc_threadgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadgamepad.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.i: cmake_force
@@ -1214,7 +639,7 @@ CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o: moc_threadgamepadupdate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadgamepadupdate.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.i: cmake_force
@@ -1227,7 +652,7 @@ CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o: moc_ui_mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_ui_mainwindow.cpp
 
 CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.i: cmake_force
@@ -1238,568 +663,9 @@ CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_ui_mainwindow.cpp -o CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s
 
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o: QtLeapMotion/Leap/include/moc_Leap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o: QtLeapMotion/Leap/include/moc_LeapMath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.o: QtLeapMotion/Leap/util/moc_LeapScene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapScene.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapScene.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapScene.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.o: QtLeapMotion/Leap/util/moc_LeapUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtil.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtil.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtil.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.o: QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.o: QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.o: QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.o: QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.o: QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.o: QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.o: QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.o: QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.o: QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.o: QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.o: QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.o: QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.o: QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.o: QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.o: QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.o: QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.o: QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.o: QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.o: QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.o: QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.o: QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.o: QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.o: QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.o: QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.o: QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.o: QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.o: QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.o: QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.o: QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.o: QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.o: QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.s
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.o: QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.i
-
-CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.s
-
 CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o: moc_leapeventlistener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_leapeventlistener.cpp
 
 CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.i: cmake_force
@@ -1812,7 +678,7 @@ CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o: moc_steeringregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringregistry.cpp
 
 CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.i: cmake_force
@@ -1825,7 +691,7 @@ CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o: moc_steeringgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp
 
 CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.i: cmake_force
@@ -1838,7 +704,7 @@ CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o: moc_steeringinterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp
 
 CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.i: cmake_force
@@ -1851,7 +717,7 @@ CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o: moc_sendingregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_sendingregistry.cpp
 
 CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.i: cmake_force
@@ -1864,7 +730,7 @@ CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o: moc_sendinginterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_sendinginterface.cpp
 
 CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.i: cmake_force
@@ -1877,7 +743,7 @@ CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o: moc_sendingarduino.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_sendingarduino.cpp
 
 CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.i: cmake_force
@@ -1890,7 +756,7 @@ CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o: moc_steeringleapmotion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringleapmotion.cpp
 
 CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.i: cmake_force
@@ -1903,7 +769,7 @@ CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_json.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_json.cpp.o: moc_json.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object CMakeFiles/nienazwany.dir/moc_json.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/nienazwany.dir/moc_json.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_json.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_json.cpp
 
 CMakeFiles/nienazwany.dir/moc_json.cpp.i: cmake_force
@@ -1916,7 +782,7 @@ CMakeFiles/nienazwany.dir/moc_json.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_storage.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_storage.cpp.o: moc_storage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object CMakeFiles/nienazwany.dir/moc_storage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/nienazwany.dir/moc_storage.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_storage.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_storage.cpp
 
 CMakeFiles/nienazwany.dir/moc_storage.cpp.i: cmake_force
@@ -1942,37 +808,6 @@ nienazwany_OBJECTS = \
 "CMakeFiles/nienazwany.dir/threadcamera.cpp.o" \
 "CMakeFiles/nienazwany.dir/threadgamepad.cpp.o" \
 "CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.o" \
 "CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o" \
 "CMakeFiles/nienazwany.dir/steeringregistry.cpp.o" \
 "CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o" \
@@ -1998,49 +833,6 @@ nienazwany_OBJECTS = \
 "CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.o" \
-"CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o" \
@@ -2068,37 +860,6 @@ nienazwany: CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/threadcamera.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/threadgamepad.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapScene.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtil.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/LeapUtilGL.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/steeringregistry.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o
@@ -2124,49 +885,6 @@ nienazwany: CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapScene.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtil.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o
@@ -2185,7 +903,7 @@ nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.11.1
 nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.11.1
 nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.11.1
 nienazwany: CMakeFiles/nienazwany.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Linking CXX executable nienazwany"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Linking CXX executable nienazwany"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nienazwany.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2214,49 +932,6 @@ CMakeFiles/nienazwany.dir/depend: moc_threadcamera.cpp
 CMakeFiles/nienazwany.dir/depend: moc_threadgamepad.cpp
 CMakeFiles/nienazwany.dir/depend: moc_threadgamepadupdate.cpp
 CMakeFiles/nienazwany.dir/depend: moc_ui_mainwindow.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/include/moc_Leap.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/include/moc_LeapMath.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/util/moc_LeapScene.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/util/moc_LeapUtil.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/util/moc_LeapUtilGL.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapDevice/moc_QtLeapMotionController.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapDevice/moc_QtLeapMotionListener.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapCircleGestureHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapSwipeGestureHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Handlers/moc_DefaultQtLeapTapGestureHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Handlers/moc_QtLeapGestureHandlerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Listeners/moc_QtLeapGestureListenerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Qml/moc_AbstractGestureArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Qml/moc_CircleLeapGestureArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Qml/moc_KeyTapLeapGestureArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Qml/moc_ScreenTapLeapGestureArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/Qml/moc_SwipeLeapGestureArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/moc_QtLeapCircleGesture.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/moc_QtLeapGesture.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/moc_QtLeapKeyTapGesture.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/moc_QtLeapScreenTapGesture.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/moc_QtLeapSwipeGesture.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGestures/moc_QtLeapTapGesture.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Handlers/moc_DefaultQtLeapHandsHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapHandsHandlerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Handlers/moc_QtLeapMotionHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapFingersListenerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Listeners/moc_QtLeapHandsListenerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Qml/moc_FingersMotionArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/Qml/moc_HandsMotionArea.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapBone.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapFinger.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapGlobal.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapHand.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapMotionQQuickView.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapPointable.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapTool.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapGlobal/moc_QtLeapUtils.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapMouseHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapTouch/Handlers/moc_DefaultQtLeapTouchHandler.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapMouseHandlerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapTouch/Handlers/moc_QtLeapTouchHandlerInterface.cpp
-CMakeFiles/nienazwany.dir/depend: QtLeapMotion/QtLeapTouch/moc_QtLeapMotionTouchDevice.cpp
 CMakeFiles/nienazwany.dir/depend: moc_leapeventlistener.cpp
 CMakeFiles/nienazwany.dir/depend: moc_steeringregistry.cpp
 CMakeFiles/nienazwany.dir/depend: moc_steeringgamepad.cpp

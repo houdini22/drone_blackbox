@@ -13,6 +13,8 @@
 #include <QMap>
 #include <QHash>
 #include <QLineEdit>
+#include <QEvent>
+#include <QAbstractButton>
 
 #include <vector>
 #include <list>
@@ -39,7 +41,9 @@ using namespace cv;
 typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
+#include "dialogradiosettings.h"
 #include "json.hpp"
+#include "focuswatcher.h"
 #include "storage.h"
 #include "common.h"
 #include "buttons.h"

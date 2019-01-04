@@ -18,22 +18,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->drone->start();
 
-    QLineEdit * inputMin = this->centralWidget()->findChild<QLineEdit *>(QString("inputRadioMin"));
-    QLineEdit * inputMiddle = this->centralWidget()->findChild<QLineEdit *>(QString("inputRadioMiddle"));
-    QLineEdit * inputMax = this->centralWidget()->findChild<QLineEdit *>(QString("inputRadioMax"));
+    QMenu * menu = this->menuBar()->findChild<QMenu*>(QString("menuSettings"));
+    foreach (QAction *action, menu->actions()) {
+        if (action->text().compare("&Radio") == 0) {
+            connect(action, SIGNAL(triggered(bool)), this, SLOT(handleRadioSettingsTriggered(bool)));
+            break;
+        }
+    }
+}
 
-    inputMin->setValidator( new QIntValidator(800, 2200, this));
-    inputMiddle->setValidator( new QIntValidator(800, 2200, this));
-    inputMax->setValidator( new QIntValidator(800, 2200, this));
-
-    nlohmann::json data = Storage::getInstance().getData();
-    nlohmann::json dataRadio = data["radio"];
-
-    /*
-    inputMin->setText(QString::number(data["radio"]["min"].get<int>()));
-    inputMiddle->setText(QString::number(data["radio"]["middle"].get<int>()));
-    inputMax->setText(QString::number(data["radio"]["max"].get<int>()));
-    */
+void MainWindow::handleRadioSettingsTriggered(bool active) {
+    this->dialogRadioSettings = new DialogRadioSettings(this); // Be sure to destroy your window somewhere
+    this->dialogRadioSettings->show();
 }
 
 void MainWindow::slotSteeringDataChanged(SteeringData * data) {

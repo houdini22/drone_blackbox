@@ -87,7 +87,8 @@ SOURCES += \
     sendingregistry.cpp \
     sendingarduino.cpp \
     sendinginterface.cpp \
-    steeringleapmotion.cpp
+    steeringleapmotion.cpp \
+    dialogradiosettings.cpp
 
 HEADERS += \
     buttons.h \
@@ -159,10 +160,13 @@ HEADERS += \
     sendingarduino.h \
     steeringleapmotion.h \
     json.hpp \
-    storage.h
+    storage.h \
+    focuswatcher.h \
+    dialogradiosettings.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    dialogradiosettings.ui
 
 SUBDIRS += \
     QtLeapMotion/QtLeapMotion.pro

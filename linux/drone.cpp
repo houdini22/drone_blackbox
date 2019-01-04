@@ -15,9 +15,9 @@ Drone::Drone(MainWindow * window) {
 
     this->steeringRegistry = new SteeringRegistry(this);
     this->gamepad0 = new SteeringGamepad(this, this->steeringRegistry);
-    this->leapMotion0 = new SteeringLeapMotion(this, this->steeringRegistry);
+    //this->leapMotion0 = new SteeringLeapMotion(this, this->steeringRegistry);
     this->steeringRegistry->add(this->gamepad0);
-    this->steeringRegistry->add(this->leapMotion0);
+    //this->steeringRegistry->add(this->leapMotion0);
     connect(this->steeringRegistry, SIGNAL(signalSteeringDataChanged(SteeringData*)), this, SLOT(slotSteeringDataChanged(SteeringData*)));
     this->steeringRegistry->start();
 
@@ -28,6 +28,8 @@ Drone::Drone(MainWindow * window) {
 }
 
 void Drone::start() {
+    Storage::getInstance().create();
+
     this->threadCamera->start();
 }
 

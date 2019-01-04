@@ -10,9 +10,11 @@ ThreadGamepadUpdate::ThreadGamepadUpdate(SteeringRegistry * registry): QThread()
 void ThreadGamepadUpdate::run() {
     while (1) {
         QThread::msleep(40);
-        SteeringData * data = this->steeringData;
 
-        if (data->isConnected) {
+        nlohmann::json data = Storage::getInstance().getData();
+        SteeringData * steeringData = this->steeringData;
+
+        if (steeringData->isConnected) {
             GamepadUpdate();
 
             double _leftX = GamepadStickLength(GAMEPAD_0, STICK_LEFT) * cos(GamepadStickAngle(GAMEPAD_0, STICK_LEFT));
@@ -20,15 +22,31 @@ void ThreadGamepadUpdate::run() {
             double _rightX = GamepadStickLength(GAMEPAD_0, STICK_RIGHT) * cos(GamepadStickAngle(GAMEPAD_0, STICK_RIGHT));
             double _rightY = GamepadStickLength(GAMEPAD_0, STICK_RIGHT) * sin(GamepadStickAngle(GAMEPAD_0, STICK_RIGHT));
 
-            double middlePoint = (((double) MAX_SEND_VALUE + (double) MIN_SEND_VALUE) / 2.0);
-            double area = ((double) MAX_SEND_VALUE - (double) MIN_SEND_VALUE) / 2.0;
+            if (_leftX < 0) {
+                double area = data["radio"]["leftX"]["middle"].get<int>() - data["radio"]["leftX"]["min"].get<int>();
+                _leftX = data["radio"]["leftX"]["middle"].get<int>() + (area * _leftX);
+            } else {
+                double area = data["radio"]["leftX"]["max"].get<int>() - data["radio"]["leftX"]["middle"].get<int>();
+                _leftX = data["radio"]["leftX"]["middle"].get<int>() + (area * _leftX);
+            }
 
-            area *= SEND_SCALE_RATIO;
+            if (_rightX < 0) {
+                double area = data["radio"]["rightX"]["middle"].get<int>() - data["radio"]["rightX"]["min"].get<int>();
+                _rightX = data["radio"]["rightX"]["middle"].get<int>() + (area * _rightX);
+            } else {
+                double area = data["radio"]["rightX"]["max"].get<int>() - data["radio"]["rightX"]["middle"].get<int>();
+                _rightX = data["radio"]["rightX"]["middle"].get<int>() + (area * _rightX);
+            }
 
-            _leftX = middlePoint + (area * _leftX);
-            _leftY = std::max((double) MIN_SEND_VALUE, MIN_SEND_VALUE + (_leftY * (MAX_SEND_VALUE - MIN_SEND_VALUE)));
-            _rightX = middlePoint + (area * _rightX);
-            _rightY = middlePoint + (area * _rightY);
+            if (_rightY < 0) {
+                double area = data["radio"]["rightY"]["middle"].get<int>() - data["radio"]["rightY"]["min"].get<int>();
+                _rightY = data["radio"]["rightY"]["middle"].get<int>() + (area * _rightY);
+            } else {
+                double area = data["radio"]["rightY"]["max"].get<int>() - data["radio"]["rightY"]["middle"].get<int>();
+                _rightY = data["radio"]["rightY"]["middle"].get<int>() + (area * _rightY);
+            }
+
+            _leftY = std::max((double) data["radio"]["leftY"]["min"].get<int>(), data["radio"]["leftY"]["min"].get<int>() + (_leftY * (data["radio"]["leftY"]["max"].get<int>() - data["radio"]["leftY"]["min"].get<int>())));
 
             ButtonsPressed buttons;
 

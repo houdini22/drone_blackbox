@@ -3,6 +3,7 @@
 
 #include "include.h"
 
+/*
 class ThreadGamepad;
 class ThreadGamepadUpdate;
 struct ButtonsPressed;
@@ -19,5 +20,6 @@ private:
     Leap::Controller leapController;
     LeapEventListener leapEventListener;
 };
+*/
 
 #endif // STEERINGLEAPMOTION_H

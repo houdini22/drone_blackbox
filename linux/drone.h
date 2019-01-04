@@ -45,7 +45,7 @@ private:
     SteeringRegistry * steeringRegistry;
     SendingRegistry * sendingRegistry;
     SteeringGamepad * gamepad0;
-    SteeringLeapMotion * leapMotion0;
+    //SteeringLeapMotion * leapMotion0;
     void createStorage();
 };
 

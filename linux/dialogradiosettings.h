@@ -14,7 +14,8 @@ class DialogRadioSettings : public QDialog
 public:
     explicit DialogRadioSettings(QWidget *parent = 0);
     ~DialogRadioSettings();
-
+private slots:
+    void signalAccepted();
 private:
     Ui::DialogRadioSettings *ui;
 };
