@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[14];
-    char stringdata0[216];
+    QByteArrayData data[16];
+    char stringdata0[251];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -44,7 +44,9 @@ QT_MOC_LITERAL(9, 96, 23), // "slotSteeringDataChanged"
 QT_MOC_LITERAL(10, 120, 13), // "SteeringData*"
 QT_MOC_LITERAL(11, 134, 23), // "slotSendingsDataChanged"
 QT_MOC_LITERAL(12, 158, 28), // "QHash<QString,SendingData*>*"
-QT_MOC_LITERAL(13, 187, 28) // "handleRadioSettingsTriggered"
+QT_MOC_LITERAL(13, 187, 28), // "handleRadioSettingsTriggered"
+QT_MOC_LITERAL(14, 216, 17), // "slotRefreshLabels"
+QT_MOC_LITERAL(15, 234, 16) // "slotRadioToggled"
 
     },
     "MainWindow\0slotModesChanged\0\0Modes*\0"
@@ -53,7 +55,8 @@ QT_MOC_LITERAL(13, 187, 28) // "handleRadioSettingsTriggered"
     "slotSteeringDataChanged\0SteeringData*\0"
     "slotSendingsDataChanged\0"
     "QHash<QString,SendingData*>*\0"
-    "handleRadioSettingsTriggered"
+    "handleRadioSettingsTriggered\0"
+    "slotRefreshLabels\0slotRadioToggled"
 };
 #undef QT_MOC_LITERAL
 
@@ -63,7 +66,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,12 +74,14 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   44,    2, 0x0a /* Public */,
-       5,    1,   47,    2, 0x0a /* Public */,
-       7,    1,   50,    2, 0x0a /* Public */,
-       9,    1,   53,    2, 0x0a /* Public */,
-      11,    1,   56,    2, 0x0a /* Public */,
-      13,    1,   59,    2, 0x0a /* Public */,
+       1,    1,   54,    2, 0x0a /* Public */,
+       5,    1,   57,    2, 0x0a /* Public */,
+       7,    1,   60,    2, 0x0a /* Public */,
+       9,    1,   63,    2, 0x0a /* Public */,
+      11,    1,   66,    2, 0x0a /* Public */,
+      13,    1,   69,    2, 0x0a /* Public */,
+      14,    0,   72,    2, 0x0a /* Public */,
+      15,    1,   73,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -84,6 +89,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 8,    2,
     QMetaType::Void, 0x80000000 | 10,    2,
     QMetaType::Void, 0x80000000 | 12,    2,
+    QMetaType::Void, QMetaType::Bool,    2,
+    QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,    2,
 
        0        // eod
@@ -101,6 +108,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->slotSteeringDataChanged((*reinterpret_cast< SteeringData*(*)>(_a[1]))); break;
         case 4: _t->slotSendingsDataChanged((*reinterpret_cast< QHash<QString,SendingData*>*(*)>(_a[1]))); break;
         case 5: _t->handleRadioSettingsTriggered((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 6: _t->slotRefreshLabels(); break;
+        case 7: _t->slotRadioToggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -142,13 +151,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }

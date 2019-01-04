@@ -8,6 +8,10 @@ Drone::Drone(MainWindow * window) {
     this->window = window;
     this->modes = new Modes;
 
+    nlohmann::json data = Storage::getInstance().getData();
+    this->modes->leftX = data["radio"]["leftX"]["middle"];
+    this->modes->leftY = data["radio"]["leftY"]["min"];
+
     this->createStorage();
 
     this->threadCamera = new ThreadCamera(this);

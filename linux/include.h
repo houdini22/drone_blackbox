@@ -15,6 +15,11 @@
 #include <QLineEdit>
 #include <QEvent>
 #include <QAbstractButton>
+#include <QDesktopWidget>
+#include <QRect>
+#include <QGroupBox>
+#include <QMouseEvent>
+#include <QRadioButton>
 
 #include <vector>
 #include <list>
@@ -42,6 +47,7 @@ typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
 #include "dialogradiosettings.h"
+#include "mousesteering.h"
 #include "json.hpp"
 #include "focuswatcher.h"
 #include "storage.h"

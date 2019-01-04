@@ -102,7 +102,8 @@ SOURCES       = common.cpp \
 		sendingarduino.cpp \
 		sendinginterface.cpp \
 		steeringleapmotion.cpp \
-		dialogradiosettings.cpp tmp/moc_database.cpp \
+		dialogradiosettings.cpp \
+		mousesteering.cpp tmp/moc_database.cpp \
 		tmp/moc_drone.cpp \
 		tmp/moc_mainwindow.cpp \
 		tmp/moc_threadarduinoconnect.cpp \
@@ -143,7 +144,8 @@ SOURCES       = common.cpp \
 		tmp/moc_sendingregistry.cpp \
 		tmp/moc_sendingarduino.cpp \
 		tmp/moc_focuswatcher.cpp \
-		tmp/moc_dialogradiosettings.cpp
+		tmp/moc_dialogradiosettings.cpp \
+		tmp/moc_mousesteering.cpp
 OBJECTS       = tmp/common.o \
 		tmp/database.o \
 		tmp/drone.o \
@@ -197,6 +199,7 @@ OBJECTS       = tmp/common.o \
 		tmp/sendinginterface.o \
 		tmp/steeringleapmotion.o \
 		tmp/dialogradiosettings.o \
+		tmp/mousesteering.o \
 		tmp/moc_database.o \
 		tmp/moc_drone.o \
 		tmp/moc_mainwindow.o \
@@ -238,7 +241,8 @@ OBJECTS       = tmp/common.o \
 		tmp/moc_sendingregistry.o \
 		tmp/moc_sendingarduino.o \
 		tmp/moc_focuswatcher.o \
-		tmp/moc_dialogradiosettings.o
+		tmp/moc_dialogradiosettings.o \
+		tmp/moc_mousesteering.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -447,7 +451,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		json.hpp \
 		storage.h \
 		focuswatcher.h \
-		dialogradiosettings.h common.cpp \
+		dialogradiosettings.h \
+		mousesteering.h common.cpp \
 		database.cpp \
 		drone.cpp \
 		gamepad.cpp \
@@ -499,7 +504,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		sendingarduino.cpp \
 		sendinginterface.cpp \
 		steeringleapmotion.cpp \
-		dialogradiosettings.cpp
+		dialogradiosettings.cpp \
+		mousesteering.cpp
 QMAKE_TARGET  = nienazwany
 DESTDIR       = 
 TARGET        = nienazwany
@@ -815,8 +821,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents buttons.h common.h database.h drone.h dronemanager.h dronemodes.h gamepad.h include.h mainwindow.h threadarduinoconnect.h threadarduinodetect.h threadarduinoping.h threadarduinosend.h threadcamera.h threadgamepad.h threadgamepadupdate.h ui_mainwindow.h QtLeapMotion/Leap/include/Leap.h QtLeapMotion/Leap/include/LeapMath.h QtLeapMotion/Leap/util/LeapScene.h QtLeapMotion/Leap/util/LeapUtil.h QtLeapMotion/Leap/util/LeapUtilGL.h QtLeapMotion/QtLeapDevice/QtLeapMotionController.h QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h QtLeapMotion/QtLeapGestures/Listeners/QtLeapGestureListenerInterface.h QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h QtLeapMotion/QtLeapGestures/QtLeapGesture.h QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapHandsHandlerInterface.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapMotionHandler.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapFingersListenerInterface.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapHandsListenerInterface.h QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h QtLeapMotion/QtLeapGlobal/QtLeapBone.h QtLeapMotion/QtLeapGlobal/QtLeapFinger.h QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h QtLeapMotion/QtLeapGlobal/QtLeapHand.h QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h QtLeapMotion/QtLeapGlobal/QtLeapPointable.h QtLeapMotion/QtLeapGlobal/QtLeapTool.h QtLeapMotion/QtLeapGlobal/QtLeapUtils.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h leapeventlistener.h steeringregistry.h steeringgamepad.h steeringinterface.h sendingregistry.h sendinginterface.h sendingarduino.h steeringleapmotion.h json.hpp storage.h focuswatcher.h dialogradiosettings.h $(DISTDIR)/
-	$(COPY_FILE) --parents common.cpp database.cpp drone.cpp gamepad.cpp main.cpp mainwindow.cpp threadarduinoconnect.cpp threadarduinodetect.cpp threadarduinoping.cpp threadarduinosend.cpp threadcamera.cpp threadgamepad.cpp threadgamepadupdate.cpp QtLeapMotion/Leap/util/LeapScene.cpp QtLeapMotion/Leap/util/LeapUtil.cpp QtLeapMotion/Leap/util/LeapUtilGL.cpp QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp leapeventlistener.cpp steeringregistry.cpp steeringgamepad.cpp steeringinterface.cpp sendingregistry.cpp sendingarduino.cpp sendinginterface.cpp steeringleapmotion.cpp dialogradiosettings.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents buttons.h common.h database.h drone.h dronemanager.h dronemodes.h gamepad.h include.h mainwindow.h threadarduinoconnect.h threadarduinodetect.h threadarduinoping.h threadarduinosend.h threadcamera.h threadgamepad.h threadgamepadupdate.h ui_mainwindow.h QtLeapMotion/Leap/include/Leap.h QtLeapMotion/Leap/include/LeapMath.h QtLeapMotion/Leap/util/LeapScene.h QtLeapMotion/Leap/util/LeapUtil.h QtLeapMotion/Leap/util/LeapUtilGL.h QtLeapMotion/QtLeapDevice/QtLeapMotionController.h QtLeapMotion/QtLeapDevice/QtLeapMotionListener.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.h QtLeapMotion/QtLeapGestures/Handlers/QtLeapGestureHandlerInterface.h QtLeapMotion/QtLeapGestures/Listeners/QtLeapGestureListenerInterface.h QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.h QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.h QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.h QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.h QtLeapMotion/QtLeapGestures/QtLeapGesture.h QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.h QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.h QtLeapMotion/QtLeapGestures/QtLeapTapGesture.h QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapHandsHandlerInterface.h QtLeapMotion/QtLeapGlobal/Handlers/QtLeapMotionHandler.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapFingersListenerInterface.h QtLeapMotion/QtLeapGlobal/Listeners/QtLeapHandsListenerInterface.h QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.h QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.h QtLeapMotion/QtLeapGlobal/QtLeapBone.h QtLeapMotion/QtLeapGlobal/QtLeapFinger.h QtLeapMotion/QtLeapGlobal/QtLeapGlobal.h QtLeapMotion/QtLeapGlobal/QtLeapHand.h QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.h QtLeapMotion/QtLeapGlobal/QtLeapPointable.h QtLeapMotion/QtLeapGlobal/QtLeapTool.h QtLeapMotion/QtLeapGlobal/QtLeapUtils.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.h QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapMouseHandlerInterface.h QtLeapMotion/QtLeapTouch/Handlers/QtLeapTouchHandlerInterface.h QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.h leapeventlistener.h steeringregistry.h steeringgamepad.h steeringinterface.h sendingregistry.h sendinginterface.h sendingarduino.h steeringleapmotion.h json.hpp storage.h focuswatcher.h dialogradiosettings.h mousesteering.h $(DISTDIR)/
+	$(COPY_FILE) --parents common.cpp database.cpp drone.cpp gamepad.cpp main.cpp mainwindow.cpp threadarduinoconnect.cpp threadarduinodetect.cpp threadarduinoping.cpp threadarduinosend.cpp threadcamera.cpp threadgamepad.cpp threadgamepadupdate.cpp QtLeapMotion/Leap/util/LeapScene.cpp QtLeapMotion/Leap/util/LeapUtil.cpp QtLeapMotion/Leap/util/LeapUtilGL.cpp QtLeapMotion/QtLeapDevice/QtLeapMotionController.cpp QtLeapMotion/QtLeapDevice/QtLeapMotionListener.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapCircleGestureHandler.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapSwipeGestureHandler.cpp QtLeapMotion/QtLeapGestures/Handlers/DefaultQtLeapTapGestureHandler.cpp QtLeapMotion/QtLeapGestures/Qml/AbstractGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/CircleLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/KeyTapLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/ScreenTapLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/Qml/SwipeLeapGestureArea.cpp QtLeapMotion/QtLeapGestures/QtLeapCircleGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapKeyTapGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapScreenTapGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapSwipeGesture.cpp QtLeapMotion/QtLeapGestures/QtLeapTapGesture.cpp QtLeapMotion/QtLeapGlobal/Handlers/DefaultQtLeapHandsHandler.cpp QtLeapMotion/QtLeapGlobal/Qml/FingersMotionArea.cpp QtLeapMotion/QtLeapGlobal/Qml/HandsMotionArea.cpp QtLeapMotion/QtLeapGlobal/QtLeapBone.cpp QtLeapMotion/QtLeapGlobal/QtLeapFinger.cpp QtLeapMotion/QtLeapGlobal/QtLeapHand.cpp QtLeapMotion/QtLeapGlobal/QtLeapMotionQQuickView.cpp QtLeapMotion/QtLeapGlobal/QtLeapPointable.cpp QtLeapMotion/QtLeapGlobal/QtLeapTool.cpp QtLeapMotion/QtLeapGlobal/QtLeapUtils.cpp QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapMouseHandler.cpp QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.cpp QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp leapeventlistener.cpp steeringregistry.cpp steeringgamepad.cpp steeringinterface.cpp sendingregistry.cpp sendingarduino.cpp sendinginterface.cpp steeringleapmotion.cpp dialogradiosettings.cpp mousesteering.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui dialogradiosettings.ui $(DISTDIR)/
 
 
@@ -849,10 +855,12 @@ compiler_moc_predefs_clean:
 tmp/moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -std=c++11 -g -fPIC -std=gnu++1y -Wall -W -dM -E -o tmp/moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp
+compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp tmp/moc_mousesteering.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp
+	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_QtLeapMotionController.cpp tmp/moc_QtLeapMotionListener.cpp tmp/moc_DefaultQtLeapCircleGestureHandler.cpp tmp/moc_DefaultQtLeapSwipeGestureHandler.cpp tmp/moc_DefaultQtLeapTapGestureHandler.cpp tmp/moc_AbstractGestureArea.cpp tmp/moc_CircleLeapGestureArea.cpp tmp/moc_KeyTapLeapGestureArea.cpp tmp/moc_ScreenTapLeapGestureArea.cpp tmp/moc_SwipeLeapGestureArea.cpp tmp/moc_QtLeapCircleGesture.cpp tmp/moc_QtLeapKeyTapGesture.cpp tmp/moc_QtLeapScreenTapGesture.cpp tmp/moc_QtLeapSwipeGesture.cpp tmp/moc_QtLeapTapGesture.cpp tmp/moc_DefaultQtLeapHandsHandler.cpp tmp/moc_FingersMotionArea.cpp tmp/moc_HandsMotionArea.cpp tmp/moc_QtLeapBone.cpp tmp/moc_QtLeapFinger.cpp tmp/moc_QtLeapHand.cpp tmp/moc_QtLeapMotionQQuickView.cpp tmp/moc_QtLeapPointable.cpp tmp/moc_QtLeapTool.cpp tmp/moc_DefaultQtLeapMouseHandler.cpp tmp/moc_DefaultQtLeapTouchHandler.cpp tmp/moc_steeringregistry.cpp tmp/moc_steeringgamepad.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp tmp/moc_mousesteering.cpp
 tmp/moc_database.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -886,6 +894,8 @@ tmp/moc_database.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include database.h -o tmp/moc_database.cpp
 
 tmp/moc_drone.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -919,6 +929,8 @@ tmp/moc_drone.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include drone.h -o tmp/moc_drone.cpp
 
 tmp/moc_mainwindow.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -952,6 +964,8 @@ tmp/moc_mainwindow.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o tmp/moc_mainwindow.cpp
 
 tmp/moc_threadarduinoconnect.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -985,6 +999,8 @@ tmp/moc_threadarduinoconnect.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoconnect.h -o tmp/moc_threadarduinoconnect.cpp
 
 tmp/moc_threadarduinodetect.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1018,6 +1034,8 @@ tmp/moc_threadarduinodetect.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinodetect.h -o tmp/moc_threadarduinodetect.cpp
 
 tmp/moc_threadarduinoping.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1051,6 +1069,8 @@ tmp/moc_threadarduinoping.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinoping.h -o tmp/moc_threadarduinoping.cpp
 
 tmp/moc_threadarduinosend.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1084,6 +1104,8 @@ tmp/moc_threadarduinosend.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadarduinosend.h -o tmp/moc_threadarduinosend.cpp
 
 tmp/moc_threadcamera.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1117,6 +1139,8 @@ tmp/moc_threadcamera.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadcamera.h -o tmp/moc_threadcamera.cpp
 
 tmp/moc_threadgamepad.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1150,6 +1174,8 @@ tmp/moc_threadgamepad.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include threadgamepad.h -o tmp/moc_threadgamepad.cpp
 
 tmp/moc_threadgamepadupdate.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1423,6 +1449,8 @@ tmp/moc_DefaultQtLeapTouchHandler.cpp: QtLeapMotion/QtLeapTouch/QtLeapMotionTouc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include QtLeapMotion/QtLeapTouch/Handlers/DefaultQtLeapTouchHandler.h -o tmp/moc_DefaultQtLeapTouchHandler.cpp
 
 tmp/moc_steeringregistry.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1456,6 +1484,8 @@ tmp/moc_steeringregistry.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringregistry.h -o tmp/moc_steeringregistry.cpp
 
 tmp/moc_steeringgamepad.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1489,6 +1519,8 @@ tmp/moc_steeringgamepad.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steeringgamepad.h -o tmp/moc_steeringgamepad.cpp
 
 tmp/moc_sendingregistry.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1522,6 +1554,8 @@ tmp/moc_sendingregistry.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include sendingregistry.h -o tmp/moc_sendingregistry.cpp
 
 tmp/moc_sendingarduino.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1555,6 +1589,8 @@ tmp/moc_sendingarduino.cpp: include.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include sendingarduino.h -o tmp/moc_sendingarduino.cpp
 
 tmp/moc_focuswatcher.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1592,6 +1628,41 @@ tmp/moc_dialogradiosettings.cpp: dialogradiosettings.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include dialogradiosettings.h -o tmp/moc_dialogradiosettings.cpp
 
+tmp/moc_mousesteering.cpp: include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
+		json.hpp \
+		focuswatcher.h \
+		storage.h \
+		common.h \
+		buttons.h \
+		gamepad.h \
+		dronemodes.h \
+		steeringregistry.h \
+		steeringinterface.h \
+		steeringgamepad.h \
+		QtLeapMotion/Leap/include/Leap.h \
+		QtLeapMotion/Leap/include/LeapMath.h \
+		leapeventlistener.h \
+		steeringleapmotion.h \
+		sendingregistry.h \
+		sendinginterface.h \
+		sendingarduino.h \
+		database.h \
+		drone.h \
+		mainwindow.h \
+		threadgamepad.h \
+		threadarduinodetect.h \
+		threadarduinoconnect.h \
+		threadarduinoping.h \
+		threadarduinosend.h \
+		threadgamepadupdate.h \
+		threadcamera.h \
+		mousesteering.h \
+		tmp/moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mousesteering.h -o tmp/moc_mousesteering.cpp
+
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
@@ -1600,7 +1671,38 @@ compiler_uic_make_all: ui_mainwindow.h ui_dialogradiosettings.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_mainwindow.h ui_dialogradiosettings.h
 ui_mainwindow.h: mainwindow.ui \
-		/usr/lib/qt5/bin/uic
+		/usr/lib/qt5/bin/uic \
+		mousesteering.h \
+		include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
+		json.hpp \
+		focuswatcher.h \
+		storage.h \
+		common.h \
+		buttons.h \
+		gamepad.h \
+		dronemodes.h \
+		steeringregistry.h \
+		steeringinterface.h \
+		steeringgamepad.h \
+		QtLeapMotion/Leap/include/Leap.h \
+		QtLeapMotion/Leap/include/LeapMath.h \
+		leapeventlistener.h \
+		steeringleapmotion.h \
+		sendingregistry.h \
+		sendinginterface.h \
+		sendingarduino.h \
+		database.h \
+		drone.h \
+		mainwindow.h \
+		threadgamepad.h \
+		threadarduinodetect.h \
+		threadarduinoconnect.h \
+		threadarduinoping.h \
+		threadarduinosend.h \
+		threadgamepadupdate.h \
+		threadcamera.h
 	/usr/lib/qt5/bin/uic mainwindow.ui -o ui_mainwindow.h
 
 ui_dialogradiosettings.h: dialogradiosettings.ui \
@@ -1618,6 +1720,8 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 ####### Compile
 
 tmp/common.o: common.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1648,6 +1752,8 @@ tmp/common.o: common.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/common.o common.cpp
 
 tmp/database.o: database.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1678,6 +1784,8 @@ tmp/database.o: database.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/database.o database.cpp
 
 tmp/drone.o: drone.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1709,6 +1817,8 @@ tmp/drone.o: drone.cpp include.h \
 
 tmp/gamepad.o: gamepad.cpp gamepad.h \
 		include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1739,6 +1849,8 @@ tmp/gamepad.o: gamepad.cpp gamepad.h \
 
 tmp/main.o: main.cpp mainwindow.h \
 		include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1769,6 +1881,8 @@ tmp/main.o: main.cpp mainwindow.h \
 
 tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 		include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1799,6 +1913,8 @@ tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/mainwindow.o mainwindow.cpp
 
 tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1829,6 +1945,8 @@ tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinoconnect.o threadarduinoconnect.cpp
 
 tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1859,6 +1977,8 @@ tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinodetect.o threadarduinodetect.cpp
 
 tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1889,6 +2009,8 @@ tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinoping.o threadarduinoping.cpp
 
 tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1919,6 +2041,8 @@ tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadarduinosend.o threadarduinosend.cpp
 
 tmp/threadcamera.o: threadcamera.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1949,6 +2073,8 @@ tmp/threadcamera.o: threadcamera.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadcamera.o threadcamera.cpp
 
 tmp/threadgamepad.o: threadgamepad.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -1979,6 +2105,8 @@ tmp/threadgamepad.o: threadgamepad.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/threadgamepad.o threadgamepad.cpp
 
 tmp/threadgamepadupdate.o: threadgamepadupdate.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2307,6 +2435,8 @@ tmp/QtLeapMotionTouchDevice.o: QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/QtLeapMotionTouchDevice.o QtLeapMotion/QtLeapTouch/QtLeapMotionTouchDevice.cpp
 
 tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2337,6 +2467,8 @@ tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/leapeventlistener.o leapeventlistener.cpp
 
 tmp/steeringregistry.o: steeringregistry.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2367,6 +2499,8 @@ tmp/steeringregistry.o: steeringregistry.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringregistry.o steeringregistry.cpp
 
 tmp/steeringgamepad.o: steeringgamepad.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2397,6 +2531,8 @@ tmp/steeringgamepad.o: steeringgamepad.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringgamepad.o steeringgamepad.cpp
 
 tmp/steeringinterface.o: steeringinterface.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2427,6 +2563,8 @@ tmp/steeringinterface.o: steeringinterface.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringinterface.o steeringinterface.cpp
 
 tmp/sendingregistry.o: sendingregistry.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2457,6 +2595,8 @@ tmp/sendingregistry.o: sendingregistry.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/sendingregistry.o sendingregistry.cpp
 
 tmp/sendingarduino.o: sendingarduino.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2487,6 +2627,8 @@ tmp/sendingarduino.o: sendingarduino.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/sendingarduino.o sendingarduino.cpp
 
 tmp/sendinginterface.o: sendinginterface.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2517,6 +2659,8 @@ tmp/sendinginterface.o: sendinginterface.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/sendinginterface.o sendinginterface.cpp
 
 tmp/steeringleapmotion.o: steeringleapmotion.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
 		storage.h \
@@ -2547,8 +2691,69 @@ tmp/steeringleapmotion.o: steeringleapmotion.cpp include.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steeringleapmotion.o steeringleapmotion.cpp
 
 tmp/dialogradiosettings.o: dialogradiosettings.cpp dialogradiosettings.h \
-		ui_dialogradiosettings.h
+		ui_dialogradiosettings.h \
+		include.h \
+		mousesteering.h \
+		json.hpp \
+		focuswatcher.h \
+		storage.h \
+		common.h \
+		buttons.h \
+		gamepad.h \
+		dronemodes.h \
+		steeringregistry.h \
+		steeringinterface.h \
+		steeringgamepad.h \
+		QtLeapMotion/Leap/include/Leap.h \
+		QtLeapMotion/Leap/include/LeapMath.h \
+		leapeventlistener.h \
+		steeringleapmotion.h \
+		sendingregistry.h \
+		sendinginterface.h \
+		sendingarduino.h \
+		database.h \
+		drone.h \
+		mainwindow.h \
+		threadgamepad.h \
+		threadarduinodetect.h \
+		threadarduinoconnect.h \
+		threadarduinoping.h \
+		threadarduinosend.h \
+		threadgamepadupdate.h \
+		threadcamera.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/dialogradiosettings.o dialogradiosettings.cpp
+
+tmp/mousesteering.o: mousesteering.cpp include.h \
+		dialogradiosettings.h \
+		mousesteering.h \
+		json.hpp \
+		focuswatcher.h \
+		storage.h \
+		common.h \
+		buttons.h \
+		gamepad.h \
+		dronemodes.h \
+		steeringregistry.h \
+		steeringinterface.h \
+		steeringgamepad.h \
+		QtLeapMotion/Leap/include/Leap.h \
+		QtLeapMotion/Leap/include/LeapMath.h \
+		leapeventlistener.h \
+		steeringleapmotion.h \
+		sendingregistry.h \
+		sendinginterface.h \
+		sendingarduino.h \
+		database.h \
+		drone.h \
+		mainwindow.h \
+		threadgamepad.h \
+		threadarduinodetect.h \
+		threadarduinoconnect.h \
+		threadarduinoping.h \
+		threadarduinosend.h \
+		threadgamepadupdate.h \
+		threadcamera.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/mousesteering.o mousesteering.cpp
 
 tmp/moc_database.o: tmp/moc_database.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_database.o tmp/moc_database.cpp
@@ -2675,6 +2880,9 @@ tmp/moc_focuswatcher.o: tmp/moc_focuswatcher.cpp
 
 tmp/moc_dialogradiosettings.o: tmp/moc_dialogradiosettings.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_dialogradiosettings.o tmp/moc_dialogradiosettings.cpp
+
+tmp/moc_mousesteering.o: tmp/moc_mousesteering.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_mousesteering.o tmp/moc_mousesteering.cpp
 
 ####### Install
 

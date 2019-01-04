@@ -88,7 +88,8 @@ SOURCES += \
     sendingarduino.cpp \
     sendinginterface.cpp \
     steeringleapmotion.cpp \
-    dialogradiosettings.cpp
+    dialogradiosettings.cpp \
+    mousesteering.cpp
 
 HEADERS += \
     buttons.h \
@@ -162,7 +163,8 @@ HEADERS += \
     json.hpp \
     storage.h \
     focuswatcher.h \
-    dialogradiosettings.h
+    dialogradiosettings.h \
+    mousesteering.h
 
 FORMS += \
     mainwindow.ui \

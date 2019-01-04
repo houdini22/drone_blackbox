@@ -61,134 +61,161 @@ void ThreadArduinoSend::run() {
     while (1) {
         QThread::msleep(40);
 
+        Modes * modes = this->drone->getModes();
+        ButtonsPressed buttons = this->drone->getGamepad()->getData()->buttonsPressed;
+
         if (this->sendingData->mode == MODE_ARDUINO_CONNECTED) {
-            ButtonsPressed buttons = this->drone->getGamepad()->getData()->buttonsPressed;
-
-            // send
-            if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
-                if (throttleMode) {
-                    this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
-                    this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
-                } else {
-                    this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
-                    this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
-                }
-            }
-
-            if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
-                if (buttons.a) { // toggle Throttle mode
-                    sendingThrottle = 13;
-
+            if (modes->mouseSteering) {
+                if (modes->radioSending && !startMode) {
+                    sendingStart = 26; // 26 * 40 ms
+                    this->send("n"); // on
                     continue;
                 }
 
-                if (buttons.b) {
-                    sendingB = 13;
-
+                if (!modes->radioSending && startMode) {
+                    sendingStart = 26; // 26 * 40 ms
+                    this->send("f"); // off
                     continue;
                 }
 
-                if (buttons.start && !armingMode) { // toggle sending
-                    if (startMode) {
-                        sendingStart = 26; // 26 * 40 ms
+                if (!sendingStart) {
+                    this->setRadioValues(modes->leftX, modes->leftY, modes->rightX, modes->rightY);
+                    this->send(this->createAxisBuffer(modes->leftX, modes->leftY, modes->rightX, modes->rightY));
+                }
 
-                        this->send("f"); // off
-                        this->setRadioSending(false);
-                    } else {
-                        sendingStart = 26; // 26 * 40 ms
-
-                        this->send("n"); // on
-                        this->setRadioSending(true);
+                if (sendingStart > 0) {
+                    sendingStart--;
+                    if (sendingStart == 0) {
+                        startMode = !startMode;
                     }
 
                     continue;
                 }
+            } else {
+                // send
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
+                    if (throttleMode) {
+                        this->setRadioValues(buttons.leftX, MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY, buttons.rightX, buttons.rightY);
+                        this->send(this->createAxisBuffer(buttons.leftX, (int) (MIN_SEND_VALUE + (MAX_SEND_VALUE - MIN_SEND_VALUE) * leftY), buttons.rightX, buttons.rightY));
+                    } else {
+                        this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
+                        this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
+                    }
+                }
 
-                if (startMode) { // if toggled sendinf true
-                    if (buttons.arming) { // if arming
-                        if (!armingMode) {
-                            sendingArm = 28; // 28 * 40 ms
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
+                    if (buttons.a) { // toggle Throttle mode
+                        sendingThrottle = 13;
+                        continue;
+                    }
 
-                            this->setMotorsArmed(true);
+                    if (buttons.b) {
+                        sendingB = 13;
+                        continue;
+                    }
+
+                    if (buttons.start && !armingMode) { // toggle sending
+                        if (startMode) {
+                            sendingStart = 26; // 26 * 40 ms
+
+                            this->send("f"); // off
+                            this->setRadioSending(false);
                         } else {
-                            if (startMode) {
-                                sendingArm = 28; // 28 * 40 ms
+                            sendingStart = 26; // 26 * 40 ms
 
-                                this->setMotorsArmed(false);
-                            }
+                            this->send("n"); // on
+                            this->setRadioSending(true);
                         }
 
                         continue;
                     }
-                }
 
-                if (throttleMode) { // a on
-                    if (buttons.leftShoulder) {
-                        sendingLeftY = 6;
+                    if (startMode) { // if toggled sendinf true
+                        if (buttons.arming) { // if arming
+                            if (!armingMode) {
+                                sendingArm = 28; // 28 * 40 ms
 
-                        leftY -= 0.025;
-                        if (leftY < 0.0) {
-                            leftY = 0.0;
-                        }
-                    } else if (buttons.rightShoulder) {
-                        sendingLeftY = 6;
+                                this->setMotorsArmed(true);
+                            } else {
+                                if (startMode) {
+                                    sendingArm = 28; // 28 * 40 ms
 
-                        leftY += 0.025;
-                        if (leftY > 1.0) {
-                            leftY = 1.0;
+                                    this->setMotorsArmed(false);
+                                }
+                            }
+
+                            continue;
                         }
                     }
+
+                    if (throttleMode) { // a on
+                        if (buttons.leftShoulder) {
+                            sendingLeftY = 6;
+
+                            leftY -= 0.025;
+                            if (leftY < 0.0) {
+                                leftY = 0.0;
+                            }
+                        } else if (buttons.rightShoulder) {
+                            sendingLeftY = 6;
+
+                            leftY += 0.025;
+                            if (leftY > 1.0) {
+                                leftY = 1.0;
+                            }
+                        }
+                        continue;
+                    }
+                }
+
+                if (sendingStart > 0) {
+                    sendingStart--;
+                    if (sendingStart == 0) {
+                        startMode = !startMode;
+                    }
+
                     continue;
                 }
-            }
 
-            if (sendingStart > 0) {
-                sendingStart--;
-                if (sendingStart == 0) {
-                    startMode = !startMode;
-                }
-
-                continue;
-            }
-
-            if (sendingArm > 0) {
-                if (!armingMode) {
-                    this->setRadioValues(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
-                    this->send(this->createAxisBuffer(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
-                } else {
-                    this->setRadioValues(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
-                    this->send(this->createAxisBuffer(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
-
-                }
-
-                sendingArm--;
-                if (sendingArm == 0) {
+                if (sendingArm > 0) {
                     if (!armingMode) {
-                        this->setMotorsArmed(true);
+                        this->setRadioValues(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                        this->send(this->createAxisBuffer(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
                     } else {
-                        this->setMotorsArmed(false);
+                        this->setRadioValues(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
+                        this->send(this->createAxisBuffer(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
+
                     }
-                    armingMode = !armingMode;
+
+                    sendingArm--;
+                    if (sendingArm == 0) {
+                        if (!armingMode) {
+                            this->setMotorsArmed(true);
+                        } else {
+                            this->setMotorsArmed(false);
+                        }
+                        armingMode = !armingMode;
+                    }
+
+                    continue;
                 }
 
-                continue;
-            }
+                if (sendingThrottle > 0) {
+                    sendingThrottle--;
 
-            if (sendingThrottle > 0) {
-                sendingThrottle--;
+                    if (sendingThrottle == 0) {
+                        throttleMode = !throttleMode;
+                        this->setThrottleMode(throttleMode);
+                    }
 
-                if (sendingThrottle == 0) {
-                    throttleMode = !throttleMode;
-                    this->setThrottleMode(throttleMode);
+                    continue;
                 }
 
-                continue;
-            }
+                if (sendingLeftY > 0) {
+                    sendingLeftY--;
 
-            if (sendingLeftY > 0) {
-                sendingLeftY--;
-
-                continue;
+                    continue;
+                }
             }
         }
         /*

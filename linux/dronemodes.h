@@ -13,6 +13,9 @@ struct Modes {
     bool throttleModeActive = false;
     bool recordingActive = false;
     bool playingActive = false;
+    bool mouseSteering = false;
+    int leftMouseClick = 0;
+    int rightMouseClick = 0;
 };
 
 struct HandPosition {

@@ -19,12 +19,13 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget * parent = 0);
     ~MainWindow();
+    Drone * getDrone();
 private:
     Ui::MainWindow *ui;
     Drone * drone;
     bool radioSending = false;
     QListWidgetItem * currentItem;
-    DialogRadioSettings * dialogRadioSettings;
+    DialogRadioSettings * dialogRadioSettings = nullptr;
 public slots:
     void slotModesChanged(Modes * modes);
     void cameraFrameChanged(MyMat);
@@ -32,6 +33,8 @@ public slots:
     void slotSteeringDataChanged(SteeringData *);
     void slotSendingsDataChanged(QHash<QString,SendingData*>*);
     void handleRadioSettingsTriggered(bool);
+    void slotRefreshLabels();
+    void slotRadioToggled(bool);
 };
 
 #endif // MAINWINDOW_H

@@ -25,7 +25,6 @@ void SendingRegistry::start() {
     }
 }
 
-
 void SendingRegistry::slotSendingDataChanged(SendingData * data) {
     this->sendingsData->insert(data->name, data);
     emit signalSendingsDataChanged(this->sendingsData);
