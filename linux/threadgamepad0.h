@@ -3,12 +3,11 @@
 
 #include "include.h"
 
-class Drone;
-
-class ThreadGamepad0 : public ThreadGamepad, public QThread {
-    Q_OBJECT
+class ThreadGamepad0 : public ThreadGamepad {
+public:
+    ThreadGamepad0();
 protected:
-    int gamepad = 0;
+    GAMEPAD_DEVICE gamepad = GAMEPAD_0;
 };
 
 #endif // THREADGAMEPAD1_H

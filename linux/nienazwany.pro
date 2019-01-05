@@ -92,7 +92,10 @@ SOURCES += \
     mousesteering.cpp \
     steeringgamepad1.cpp \
     threadgamepadupdate0.cpp \
-    steeringgamepad0.cpp
+    steeringgamepad0.cpp \
+    threadgamepadupdate1.cpp \
+    threadgamepad0.cpp \
+    threadgamepad1.cpp
 
 HEADERS += \
     buttons.h \

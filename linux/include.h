@@ -47,6 +47,9 @@ typedef Mat MyMat;
 Q_DECLARE_METATYPE(MyMat)
 
 #include "gamepad.h"
+#include "threadgamepad.h"
+#include "threadgamepad0.h"
+#include "threadgamepad1.h"
 #include "dialogradiosettings.h"
 #include "mousesteering.h"
 #include "json.hpp"
@@ -66,9 +69,6 @@ Q_DECLARE_METATYPE(MyMat)
 #include "sendingarduino.h"
 #include "database.h"
 #include "drone.h"
-#include "threadgamepad.h"
-#include "threadgamepad0.h"
-#include "threadgamepad1.h"
 #include "threadarduinodetect.h"
 #include "threadarduinoconnect.h"
 #include "threadarduinoping.h"

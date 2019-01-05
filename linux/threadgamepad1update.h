@@ -6,6 +6,8 @@
 class Drone;
 
 class ThreadGamepad1Update : public ThreadGamepadUpdate {
+public:
+    ThreadGamepad1Update(SteeringRegistry * registry);
 protected:
     int gamepad = 1;
 };

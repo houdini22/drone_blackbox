@@ -7,12 +7,6 @@
 using namespace cv;
 
 class MainWindow;
-class ThreadGamepad;
-class ThreadArduinoDetect;
-class ThreadArduinoConnect;
-class ThreadArduinoPing;
-class ThreadArduinoSend;
-class ThreadGamepadUpdate;
 class ThreadCamera;
 class SteeringGamepad0;
 class SteeringGamepad1;

@@ -1,4 +1,3 @@
-#include "QThread"
 #include "include.h"
 
 ThreadGamepadUpdate::ThreadGamepadUpdate(SteeringRegistry * registry): QThread() {

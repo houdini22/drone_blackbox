@@ -3,18 +3,13 @@
 
 #include "include.h"
 
-class Drone;
-
-class ThreadGamepad : public QThread
-{
+class ThreadGamepad : public QThread {
     Q_OBJECT
 public:
-    explicit ThreadGamepad();
-    virtual void run();
+    ThreadGamepad();
 protected:
     GAMEPAD_DEVICE gamepad = GAMEPAD_0;
-private:
-    void setGamepadIsConnected(bool value);
+    void run() override;
 signals:
     void signalGamepadIsConnected(bool value);
 };
