@@ -155,6 +155,16 @@ void MainWindow::slotSteeringDataChanged(SteeringData * data) {
             labelGamePad->setText("connect...");
             labelGamePad->setDisabled(true);
         }
+    } else if (data->name.compare("gamepad1") == 0) {
+        QLabel * labelGamePad = this->centralWidget()->findChild<QLabel *>(QString("labelGamePadValue2"));
+
+        if (data->isConnected) {
+            labelGamePad->setText("connected");
+            labelGamePad->setDisabled(false);
+        } else {
+            labelGamePad->setText("connect...");
+            labelGamePad->setDisabled(true);
+        }
     } else {
         QLabel * labelLeapMotion = this->centralWidget()->findChild<QLabel *>(QString("labelLeapMotionValue"));
 

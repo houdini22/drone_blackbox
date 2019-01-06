@@ -14,4 +14,18 @@ signals:
     void signalGamepadIsConnected(bool value);
 };
 
+class ThreadGamepad0 : public ThreadGamepad {
+public:
+    ThreadGamepad0();
+protected:
+    GAMEPAD_DEVICE gamepad = GAMEPAD_0;
+};
+
+class ThreadGamepad1 : public ThreadGamepad {
+public:
+    explicit ThreadGamepad1();
+protected:
+    GAMEPAD_DEVICE gamepad1 = GAMEPAD_1;
+};
+
 #endif // THREADGAMEPAD_H

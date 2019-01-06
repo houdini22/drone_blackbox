@@ -48,8 +48,6 @@ Q_DECLARE_METATYPE(MyMat)
 
 #include "gamepad.h"
 #include "threadgamepad.h"
-#include "threadgamepad0.h"
-#include "threadgamepad1.h"
 #include "dialogradiosettings.h"
 #include "mousesteering.h"
 #include "json.hpp"
@@ -59,8 +57,7 @@ Q_DECLARE_METATYPE(MyMat)
 #include "buttons.h"
 #include "dronemodes.h"
 #include "steeringregistry.h"
-#include "steeringinterface.h"
-#include "steeringgamepad.h"
+#include "steering.h"
 #include "QtLeapMotion/Leap/include/Leap.h"
 #include "leapeventlistener.h"
 #include "steeringleapmotion.h"
@@ -74,11 +71,7 @@ Q_DECLARE_METATYPE(MyMat)
 #include "threadarduinoping.h"
 #include "threadarduinosend.h"
 #include "threadgamepadupdate.h"
-#include "threadgamepad0update.h"
-#include "threadgamepad1update.h"
 #include "threadcamera.h"
-#include "steeringgamepad.h"
-#include "steeringgamepad0.h"
-#include "steeringgamepad1.h"
+#include "steering.h"
 
 #endif // INCLUDE_H

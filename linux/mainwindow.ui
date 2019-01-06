@@ -284,7 +284,10 @@
       <string notr="true">color: rgb(97, 105, 114);</string>
      </property>
      <property name="text">
-      <string>disabled</string>
+      <string>enabled</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QRadioButton" name="radioGamePad2Enable">

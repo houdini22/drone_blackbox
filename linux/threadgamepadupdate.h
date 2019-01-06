@@ -23,4 +23,18 @@ signals:
     void signalButtonsChanged(ButtonsPressed buttons);
 };
 
+class ThreadGamepad0Update : public ThreadGamepadUpdate {
+public:
+    ThreadGamepad0Update(SteeringRegistry * registry);
+protected:
+    int gamepad = 0;
+};
+
+class ThreadGamepad1Update : public ThreadGamepadUpdate {
+public:
+    ThreadGamepad1Update(SteeringRegistry * registry);
+protected:
+    int gamepad = 1;
+};
+
 #endif // THREADGAMEPADUPDATE_H

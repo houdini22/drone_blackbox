@@ -179,6 +179,7 @@ public:
         radioGamePad1Enable->setFont(font1);
         radioGamePad1Enable->setLayoutDirection(Qt::RightToLeft);
         radioGamePad1Enable->setStyleSheet(QStringLiteral("color: rgb(97, 105, 114);"));
+        radioGamePad1Enable->setChecked(true);
         radioGamePad2Enable = new QRadioButton(groupBoxStatus);
         radioGamePad2Enable->setObjectName(QStringLiteral("radioGamePad2Enable"));
         radioGamePad2Enable->setGeometry(QRect(220, 120, 111, 31));
@@ -430,7 +431,7 @@ public:
         radioMouseSteeringEnable->setText(QApplication::translate("MainWindow", "disabled", nullptr));
         labelGamePad_2->setText(QApplication::translate("MainWindow", "GamePad 2", nullptr));
         labelGamePadValue2->setText(QApplication::translate("MainWindow", "connect", nullptr));
-        radioGamePad1Enable->setText(QApplication::translate("MainWindow", "disabled", nullptr));
+        radioGamePad1Enable->setText(QApplication::translate("MainWindow", "enabled", nullptr));
         radioGamePad2Enable->setText(QApplication::translate("MainWindow", "disabled", nullptr));
         groupBoxTitle->setTitle(QApplication::translate("MainWindow", "Radio", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "X", nullptr));

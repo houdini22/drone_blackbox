@@ -1,7 +1,6 @@
 #include "include.h"
 
-ThreadGamepad::ThreadGamepad() : QThread()
-{
+ThreadGamepad::ThreadGamepad() : QThread() {
 
 }
 
@@ -16,4 +15,12 @@ void ThreadGamepad::run() {
 
         QThread::msleep(1000);
     }
+}
+
+ThreadGamepad0::ThreadGamepad0() : ThreadGamepad() {
+
+}
+
+ThreadGamepad1::ThreadGamepad1() : ThreadGamepad() {
+
 }

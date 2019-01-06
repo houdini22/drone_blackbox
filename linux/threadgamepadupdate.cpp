@@ -73,3 +73,11 @@ void ThreadGamepadUpdate::slotSteeringDataChanged(SteeringData * steeringData) {
         this->steeringData = steeringData;
     }
 }
+
+ThreadGamepad0Update::ThreadGamepad0Update(SteeringRegistry * registry) : ThreadGamepadUpdate(registry) {
+
+}
+
+ThreadGamepad1Update::ThreadGamepad1Update(SteeringRegistry * registry) : ThreadGamepadUpdate(registry) {
+
+}
