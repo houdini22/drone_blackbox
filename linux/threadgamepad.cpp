@@ -1,26 +1,35 @@
 #include "include.h"
 
-ThreadGamepad::ThreadGamepad() : QThread() {
+ThreadGamepad0::ThreadGamepad0() : QThread() {
 
 }
 
-void ThreadGamepad::run() {
+void ThreadGamepad0::run() {
     while (1) {
-        if (!GamepadIsConnected(this->gamepad)) {
+        if (GamepadIsConnected(GAMEPAD_0)) {
+            emit signalGamepadIsConnected(true);
+        } else {
             emit signalGamepadIsConnected(false);
             GamepadInit();
-        } else {
-            emit signalGamepadIsConnected(true);
         }
 
         QThread::msleep(1000);
     }
 }
 
-ThreadGamepad0::ThreadGamepad0() : ThreadGamepad() {
+ThreadGamepad1::ThreadGamepad1() : QThread() {
 
 }
 
-ThreadGamepad1::ThreadGamepad1() : ThreadGamepad() {
+void ThreadGamepad1::run() {
+    while (1) {
+        if (GamepadIsConnected(GAMEPAD_1)) {
+            emit signalGamepadIsConnected(true);
+        } else {
+            emit signalGamepadIsConnected(false);
+            GamepadInit();
+        }
 
+        QThread::msleep(1000);
+    }
 }

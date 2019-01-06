@@ -3,29 +3,22 @@
 
 #include "include.h"
 
-class ThreadGamepad : public QThread {
+class ThreadGamepad0 : public QThread {
     Q_OBJECT
 public:
-    ThreadGamepad();
-protected:
-    GAMEPAD_DEVICE gamepad = GAMEPAD_0;
-    void run() override;
+    ThreadGamepad0();
+    void run();
 signals:
     void signalGamepadIsConnected(bool value);
 };
 
-class ThreadGamepad0 : public ThreadGamepad {
-public:
-    ThreadGamepad0();
-protected:
-    GAMEPAD_DEVICE gamepad = GAMEPAD_0;
-};
-
-class ThreadGamepad1 : public ThreadGamepad {
+class ThreadGamepad1 : public QThread {
+    Q_OBJECT
 public:
     explicit ThreadGamepad1();
-protected:
-    GAMEPAD_DEVICE gamepad1 = GAMEPAD_1;
+    void run();
+signals:
+    void signalGamepadIsConnected(bool value);
 };
 
 #endif // THREADGAMEPAD_H

@@ -31,6 +31,7 @@ protected:
     SteeringRegistry * registry;
     Drone * drone;
     SteeringData * data;
+    bool hasDataChanged(SteeringData * data);
 signals:
     void signalSteeringDataChanged(SteeringData *);
 };

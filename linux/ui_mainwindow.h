@@ -178,7 +178,7 @@ public:
         radioGamePad1Enable->setGeometry(QRect(220, 90, 111, 31));
         radioGamePad1Enable->setFont(font1);
         radioGamePad1Enable->setLayoutDirection(Qt::RightToLeft);
-        radioGamePad1Enable->setStyleSheet(QStringLiteral("color: rgb(97, 105, 114);"));
+        radioGamePad1Enable->setStyleSheet(QStringLiteral(""));
         radioGamePad1Enable->setChecked(true);
         radioGamePad2Enable = new QRadioButton(groupBoxStatus);
         radioGamePad2Enable->setObjectName(QStringLiteral("radioGamePad2Enable"));

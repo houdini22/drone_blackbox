@@ -12,8 +12,21 @@ SteeringData * SteeringInterface::getData() {
     return this->data;
 }
 
+bool SteeringInterface::hasDataChanged(SteeringData * data) {
+    if (data->isConnected != this->data->isConnected) {
+        return true;
+    } else if (data->isEnabled != this->data->isEnabled) {
+        return true;
+    }
+
+    return false;
+}
+
 void SteeringInterface::setData(SteeringData * data) {
-    emit signalSteeringDataChanged(this->data);
+    if (this->hasDataChanged(data)) {
+        this->data = data;
+        emit signalSteeringDataChanged(this->data);
+    }
 }
 
 //

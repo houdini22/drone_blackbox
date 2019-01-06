@@ -40,16 +40,15 @@ MainWindow::MainWindow(QWidget *parent) :
     QRadioButton * radioMouseSteeringEnabled = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
     connect(radioMouseSteeringEnabled, SIGNAL(toggled(bool)), this, SLOT(slotRadioMouseSteeringEnabledToggled(bool)));
 
-    QRadioButton * radioGamePad1Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    QRadioButton * radioGamePad1Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioGamePad1Enable"));
     connect(radioGamePad1Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad1Enable(bool)));
 
-    QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
+    QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioGamePad2Enable"));
     connect(radioGamePad2Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad2Enable(bool)));
 }
 
 void MainWindow::slotRadioGamePad1Enable(bool active) {
-    QRadioButton * radioGamePad1Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
-    connect(radioGamePad1Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad1Enable(bool)));
+    QRadioButton * radioGamePad1Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioGamePad1Enable"));
 
     SteeringData * steeringData = this->drone->getGamepad0()->getData();
     steeringData->isEnabled = active;
@@ -65,12 +64,11 @@ void MainWindow::slotRadioGamePad1Enable(bool active) {
 }
 
 void MainWindow::slotRadioGamePad2Enable(bool active) {
-    QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
-    connect(radioGamePad2Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad2Enable(bool)));
+    QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioGamePad2Enable"));
 
     SteeringData * steeringData = this->drone->getGamepad1()->getData();
     steeringData->isEnabled = active;
-    this->drone->getGamepad0()->setData(steeringData);
+    this->drone->getGamepad1()->setData(steeringData);
 
     if (active) {
         radioGamePad2Enable->setStyleSheet("color: rgb(255, 255, 255);");
@@ -80,6 +78,7 @@ void MainWindow::slotRadioGamePad2Enable(bool active) {
         radioGamePad2Enable->setText("disabled");
     }
 }
+
 void MainWindow::slotRadioMouseSendingToggled(bool active) {
     Modes * modes = this->drone->getModes();
     if (modes->mouseSteering) {
@@ -91,6 +90,7 @@ void MainWindow::slotRadioMouseSendingToggled(bool active) {
 void MainWindow::slotRadioMouseSteeringEnabledToggled(bool active) {
     Modes * modes = this->drone->getModes();
     modes->mouseSteering = active;
+    this->drone->setModes(modes);
 
     QRadioButton * radioMouseSteeringEnabled = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
 
@@ -101,8 +101,6 @@ void MainWindow::slotRadioMouseSteeringEnabledToggled(bool active) {
         radioMouseSteeringEnabled->setStyleSheet("color: rgb(97, 105, 114);");
         radioMouseSteeringEnabled->setText("disabled");
     }
-
-    this->drone->setModes(modes);
 }
 
 void MainWindow::handleRadioSettingsTriggered(bool active) {
