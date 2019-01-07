@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[19];
-    char stringdata0[348];
+    QByteArrayData data[21];
+    char stringdata0[419];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -49,7 +49,9 @@ QT_MOC_LITERAL(14, 216, 17), // "slotRefreshLabels"
 QT_MOC_LITERAL(15, 234, 28), // "slotRadioMouseSendingToggled"
 QT_MOC_LITERAL(16, 263, 36), // "slotRadioMouseSteeringEnabled..."
 QT_MOC_LITERAL(17, 300, 23), // "slotRadioGamePad1Enable"
-QT_MOC_LITERAL(18, 324, 23) // "slotRadioGamePad2Enable"
+QT_MOC_LITERAL(18, 324, 23), // "slotRadioGamePad2Enable"
+QT_MOC_LITERAL(19, 348, 33), // "handleArmingModeSettingsTrigg..."
+QT_MOC_LITERAL(20, 382, 36) // "handleDisarmingModeSettingsTr..."
 
     },
     "MainWindow\0slotModesChanged\0\0Modes*\0"
@@ -61,7 +63,9 @@ QT_MOC_LITERAL(18, 324, 23) // "slotRadioGamePad2Enable"
     "handleRadioSettingsTriggered\0"
     "slotRefreshLabels\0slotRadioMouseSendingToggled\0"
     "slotRadioMouseSteeringEnabledToggled\0"
-    "slotRadioGamePad1Enable\0slotRadioGamePad2Enable"
+    "slotRadioGamePad1Enable\0slotRadioGamePad2Enable\0"
+    "handleArmingModeSettingsTriggered\0"
+    "handleDisarmingModeSettingsTriggered"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +75,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,17 +83,19 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   69,    2, 0x0a /* Public */,
-       5,    1,   72,    2, 0x0a /* Public */,
-       7,    1,   75,    2, 0x0a /* Public */,
-       9,    1,   78,    2, 0x0a /* Public */,
-      11,    1,   81,    2, 0x0a /* Public */,
-      13,    1,   84,    2, 0x0a /* Public */,
-      14,    0,   87,    2, 0x0a /* Public */,
-      15,    1,   88,    2, 0x0a /* Public */,
-      16,    1,   91,    2, 0x0a /* Public */,
-      17,    1,   94,    2, 0x0a /* Public */,
-      18,    1,   97,    2, 0x0a /* Public */,
+       1,    1,   79,    2, 0x0a /* Public */,
+       5,    1,   82,    2, 0x0a /* Public */,
+       7,    1,   85,    2, 0x0a /* Public */,
+       9,    1,   88,    2, 0x0a /* Public */,
+      11,    1,   91,    2, 0x0a /* Public */,
+      13,    1,   94,    2, 0x0a /* Public */,
+      14,    0,   97,    2, 0x0a /* Public */,
+      15,    1,   98,    2, 0x0a /* Public */,
+      16,    1,  101,    2, 0x0a /* Public */,
+      17,    1,  104,    2, 0x0a /* Public */,
+      18,    1,  107,    2, 0x0a /* Public */,
+      19,    1,  110,    2, 0x0a /* Public */,
+      20,    1,  113,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -99,6 +105,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, 0x80000000 | 12,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    2,
+    QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::Bool,    2,
@@ -124,6 +132,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 8: _t->slotRadioMouseSteeringEnabledToggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 9: _t->slotRadioGamePad1Enable((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 10: _t->slotRadioGamePad2Enable((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 11: _t->handleArmingModeSettingsTriggered((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 12: _t->handleDisarmingModeSettingsTriggered((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -165,13 +175,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 13;
     }
     return _id;
 }

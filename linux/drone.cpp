@@ -8,21 +8,21 @@ Drone::Drone(MainWindow * window) {
     this->window = window;
     this->modes = new Modes;
 
+    this->createStorage();
+
     nlohmann::json data = Storage::getInstance().getData();
     this->modes->leftX = data["radio"]["leftX"]["middle"];
     this->modes->leftY = data["radio"]["leftY"]["min"];
     this->setModes(this->modes);
-
-    this->createStorage();
 
     this->threadCamera = new ThreadCamera(this);
     connect(this->threadCamera, SIGNAL(cameraFrameChanged(MyMat)), this, SLOT(setCameraFrame(MyMat)));
 
     this->steeringRegistry = new SteeringRegistry(this);
     this->gamepad0 = new SteeringGamepad0(this, this->steeringRegistry);
-    this->gamepad1 = new SteeringGamepad1(this, this->steeringRegistry);
+    //this->gamepad1 = new SteeringGamepad1(this, this->steeringRegistry);
     this->steeringRegistry->add(this->gamepad0);
-    this->steeringRegistry->add(this->gamepad1);
+    //this->steeringRegistry->add(this->gamepad1);
     connect(this->steeringRegistry, SIGNAL(signalSteeringDataChanged(SteeringData*)), this, SLOT(slotSteeringDataChanged(SteeringData*)));
     this->steeringRegistry->start();
 

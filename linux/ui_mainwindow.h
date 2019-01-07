@@ -32,6 +32,8 @@ class Ui_MainWindow
 public:
     QAction *actionExit;
     QAction *actionSettingsRadio;
+    QAction *actionArming_Mode;
+    QAction *actionDisarming_Mode;
     QWidget *centralWidget;
     QDialog *kdialog;
     QGroupBox *groupBoxStatus;
@@ -47,6 +49,7 @@ public:
     QLabel *labelGamePadValue2;
     QRadioButton *radioGamePad1Enable;
     QRadioButton *radioGamePad2Enable;
+    QLabel *labelLeapMouseSteering;
     QGroupBox *groupBoxTitle;
     QLabel *label_2;
     QLabel *label_3;
@@ -106,6 +109,10 @@ public:
         actionExit->setObjectName(QStringLiteral("actionExit"));
         actionSettingsRadio = new QAction(MainWindow);
         actionSettingsRadio->setObjectName(QStringLiteral("actionSettingsRadio"));
+        actionArming_Mode = new QAction(MainWindow);
+        actionArming_Mode->setObjectName(QStringLiteral("actionArming_Mode"));
+        actionDisarming_Mode = new QAction(MainWindow);
+        actionDisarming_Mode->setObjectName(QStringLiteral("actionDisarming_Mode"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         kdialog = new QDialog(centralWidget);
@@ -157,7 +164,7 @@ public:
         label_16->setFont(font1);
         radioMouseSteeringEnable = new QRadioButton(groupBoxStatus);
         radioMouseSteeringEnable->setObjectName(QStringLiteral("radioMouseSteeringEnable"));
-        radioMouseSteeringEnable->setGeometry(QRect(360, 211, 111, 31));
+        radioMouseSteeringEnable->setGeometry(QRect(220, 210, 111, 31));
         radioMouseSteeringEnable->setFont(font1);
         radioMouseSteeringEnable->setLayoutDirection(Qt::RightToLeft);
         radioMouseSteeringEnable->setStyleSheet(QStringLiteral("color: rgb(97, 105, 114);"));
@@ -186,6 +193,14 @@ public:
         radioGamePad2Enable->setFont(font1);
         radioGamePad2Enable->setLayoutDirection(Qt::RightToLeft);
         radioGamePad2Enable->setStyleSheet(QStringLiteral("color: rgb(97, 105, 114);"));
+        radioGamePad2Enable->setCheckable(false);
+        labelLeapMouseSteering = new QLabel(groupBoxStatus);
+        labelLeapMouseSteering->setObjectName(QStringLiteral("labelLeapMouseSteering"));
+        labelLeapMouseSteering->setEnabled(false);
+        labelLeapMouseSteering->setGeometry(QRect(330, 210, 141, 31));
+        labelLeapMouseSteering->setFont(font1);
+        labelLeapMouseSteering->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
+        labelLeapMouseSteering->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBoxTitle = new QGroupBox(centralWidget);
         groupBoxTitle->setObjectName(QStringLiteral("groupBoxTitle"));
         groupBoxTitle->setGeometry(QRect(520, 10, 491, 271));
@@ -387,7 +402,7 @@ public:
         line_2->setFrameShadow(QFrame::Sunken);
         radioMouseSteering = new QRadioButton(centralWidget);
         radioMouseSteering->setObjectName(QStringLiteral("radioMouseSteering"));
-        radioMouseSteering->setGeometry(QRect(1390, 740, 30, 41));
+        radioMouseSteering->setGeometry(QRect(1390, 740, 21, 41));
         radioMouseSteering->setIconSize(QSize(32, 32));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -409,6 +424,8 @@ public:
         menuBar->addAction(menuSettings->menuAction());
         menuDron->addAction(actionExit);
         menuSettings->addAction(actionSettingsRadio);
+        menuSettings->addAction(actionArming_Mode);
+        menuSettings->addAction(actionDisarming_Mode);
 
         retranslateUi(MainWindow);
 
@@ -420,6 +437,8 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         actionExit->setText(QApplication::translate("MainWindow", "&Exit", nullptr));
         actionSettingsRadio->setText(QApplication::translate("MainWindow", "&Radio", nullptr));
+        actionArming_Mode->setText(QApplication::translate("MainWindow", "&Arming Mode", nullptr));
+        actionDisarming_Mode->setText(QApplication::translate("MainWindow", "&Disarming Mode", nullptr));
         groupBoxStatus->setTitle(QApplication::translate("MainWindow", "Devices", nullptr));
         labelGamePad->setText(QApplication::translate("MainWindow", "GamePad 1", nullptr));
         labelGamePadValue->setText(QApplication::translate("MainWindow", "connect", nullptr));
@@ -433,6 +452,7 @@ public:
         labelGamePadValue2->setText(QApplication::translate("MainWindow", "connect", nullptr));
         radioGamePad1Enable->setText(QApplication::translate("MainWindow", "enabled", nullptr));
         radioGamePad2Enable->setText(QApplication::translate("MainWindow", "disabled", nullptr));
+        labelLeapMouseSteering->setText(QApplication::translate("MainWindow", "connected", nullptr));
         groupBoxTitle->setTitle(QApplication::translate("MainWindow", "Radio", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "X", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Y", nullptr));

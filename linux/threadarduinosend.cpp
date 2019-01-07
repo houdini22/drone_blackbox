@@ -63,6 +63,7 @@ void ThreadArduinoSend::run() {
 
         Modes * modes = this->drone->getModes();
         ButtonsPressed buttons = this->drone->getGamepad0()->getData()->buttonsPressed;
+        nlohmann::json data = Storage::getInstance().getData();
 
         if (this->sendingData->mode == MODE_ARDUINO_CONNECTED) {
             if (modes->mouseSteering) {
@@ -179,12 +180,11 @@ void ThreadArduinoSend::run() {
 
                 if (sendingArm > 0) {
                     if (!armingMode) {
-                        this->setRadioValues(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
-                        this->send(this->createAxisBuffer(this->axisValueFromDouble(1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
+                        this->setRadioValues(data["arming"]["leftX"].get<int>(), data["arming"]["leftY"].get<int>(), data["arming"]["rightX"].get<int>(), data["arming"]["rightY"].get<int>());
+                        this->send(this->createAxisBuffer(data["arming"]["leftX"].get<int>(), data["arming"]["leftY"].get<int>(), data["arming"]["rightX"].get<int>(), data["arming"]["rightY"].get<int>()));
                     } else {
-                        this->setRadioValues(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0));
-                        this->send(this->createAxisBuffer(this->axisValueFromDouble(-1), this->axisValueFromDouble(-1), this->axisValueFromDouble(0), this->axisValueFromDouble(0)));
-
+                        this->setRadioValues(data["disarming"]["leftX"].get<int>(), data["disarming"]["leftY"].get<int>(), data["disarming"]["rightX"].get<int>(), data["disarming"]["rightY"].get<int>());
+                        this->send(this->createAxisBuffer(data["disarming"]["leftX"].get<int>(), data["disarming"]["leftY"].get<int>(), data["disarming"]["rightX"].get<int>(), data["disarming"]["rightY"].get<int>()));
                     }
 
                     sendingArm--;

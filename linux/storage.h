@@ -13,32 +13,42 @@ class Storage
 
             if (!exists(path)) {
                 create_directory(path);
+            }
 
-                path += "config.json";
+            path += "config.json";
 
-                if (!exists(path)) {
-                    nlohmann::json result;
+            if (!exists(path)) {
+                nlohmann::json result;
 
-                    result["radio"]["leftX"]["middle"] = 1500;
-                    result["radio"]["leftX"]["min"] = 1100;
-                    result["radio"]["leftX"]["max"] = 1900;
+                result["radio"]["leftX"]["middle"] = 1500;
+                result["radio"]["leftX"]["min"] = 1100;
+                result["radio"]["leftX"]["max"] = 1900;
 
-                    result["radio"]["leftY"]["middle"] = 1500;
-                    result["radio"]["leftY"]["min"] = 1100;
-                    result["radio"]["leftY"]["max"] = 1900;
+                result["radio"]["leftY"]["middle"] = 1500;
+                result["radio"]["leftY"]["min"] = 1100;
+                result["radio"]["leftY"]["max"] = 1900;
 
-                    result["radio"]["rightX"]["middle"] = 1500;
-                    result["radio"]["rightX"]["min"] = 1100;
-                    result["radio"]["rightX"]["max"] = 1900;
+                result["radio"]["rightX"]["middle"] = 1500;
+                result["radio"]["rightX"]["min"] = 1100;
+                result["radio"]["rightX"]["max"] = 1900;
 
-                    result["radio"]["rightY"]["middle"] = 1500;
-                    result["radio"]["rightY"]["min"] = 1100;
-                    result["radio"]["rightY"]["max"] = 1900;
+                result["radio"]["rightY"]["middle"] = 1500;
+                result["radio"]["rightY"]["min"] = 1100;
+                result["radio"]["rightY"]["max"] = 1900;
 
-                    std::ofstream out(path);
-                    out << result.dump();
-                    out.close();
-                }
+                result["arming"]["leftX"] = 2000;
+                result["arming"]["leftY"] = 1000;
+                result["arming"]["rightX"] = 1500;
+                result["arming"]["rightY"] = 1500;
+
+                result["disarming"]["leftX"] = 1000;
+                result["disarming"]["leftY"] = 1000;
+                result["disarming"]["rightX"] = 1500;
+                result["disarming"]["rightY"] = 1500;
+
+                std::ofstream out(path);
+                out << result.dump();
+                out.close();
             }
         }
         Storage * open() {

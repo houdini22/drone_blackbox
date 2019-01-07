@@ -194,8 +194,8 @@
     <widget class="QRadioButton" name="radioMouseSteeringEnable">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>211</y>
+       <x>220</x>
+       <y>210</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -312,6 +312,36 @@
      </property>
      <property name="text">
       <string>disabled</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelLeapMouseSteering">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>210</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>connected</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
    </widget>
@@ -1149,7 +1179,7 @@
      <rect>
       <x>1390</x>
       <y>740</y>
-      <width>30</width>
+      <width>21</width>
       <height>41</height>
      </rect>
     </property>
@@ -1184,6 +1214,8 @@
      <string>Sett&amp;ings</string>
     </property>
     <addaction name="actionSettingsRadio"/>
+    <addaction name="actionArming_Mode"/>
+    <addaction name="actionDisarming_Mode"/>
    </widget>
    <addaction name="menuDron"/>
    <addaction name="menuSettings"/>
@@ -1205,6 +1237,16 @@
   <action name="actionSettingsRadio">
    <property name="text">
     <string>&amp;Radio</string>
+   </property>
+  </action>
+  <action name="actionArming_Mode">
+   <property name="text">
+    <string>&amp;Arming Mode</string>
+   </property>
+  </action>
+  <action name="actionDisarming_Mode">
+   <property name="text">
+    <string>&amp;Disarming Mode</string>
    </property>
   </action>
  </widget>

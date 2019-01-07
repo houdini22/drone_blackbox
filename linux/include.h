@@ -49,6 +49,8 @@ Q_DECLARE_METATYPE(MyMat)
 #include "gamepad.h"
 #include "threadgamepad.h"
 #include "dialogradiosettings.h"
+#include "dialogarmingmodesettings.h"
+#include "dialogdisarmingmodesettings.h"
 #include "mousesteering.h"
 #include "json.hpp"
 #include "focuswatcher.h"

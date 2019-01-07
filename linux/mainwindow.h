@@ -26,6 +26,8 @@ private:
     bool radioSending = false;
     QListWidgetItem * currentItem;
     DialogRadioSettings * dialogRadioSettings = nullptr;
+    DialogArmingModeSettings * dialogArmingModeSettings = nullptr;
+    DialogDisarmingModeSettings * dialogDisarmingModeSettings = nullptr;
 protected:
     void moveEvent(QMoveEvent* ev) {
         move(QPoint(0, 0));
@@ -42,6 +44,8 @@ public slots:
     void slotRadioMouseSteeringEnabledToggled(bool);
     void slotRadioGamePad1Enable(bool);
     void slotRadioGamePad2Enable(bool);
+    void handleArmingModeSettingsTriggered(bool);
+    void handleDisarmingModeSettingsTriggered(bool);
 };
 
 #endif // MAINWINDOW_H

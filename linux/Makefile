@@ -71,7 +71,9 @@ SOURCES       = common.cpp \
 		steeringleapmotion.cpp \
 		dialogradiosettings.cpp \
 		mousesteering.cpp \
-		steering.cpp tmp/moc_database.cpp \
+		steering.cpp \
+		dialogarmingmodesettings.cpp \
+		dialogdisarmingmodesettings.cpp tmp/moc_database.cpp \
 		tmp/moc_drone.cpp \
 		tmp/moc_mainwindow.cpp \
 		tmp/moc_threadarduinoconnect.cpp \
@@ -87,7 +89,9 @@ SOURCES       = common.cpp \
 		tmp/moc_focuswatcher.cpp \
 		tmp/moc_dialogradiosettings.cpp \
 		tmp/moc_mousesteering.cpp \
-		tmp/moc_steering.cpp
+		tmp/moc_steering.cpp \
+		tmp/moc_dialogarmingmodesettings.cpp \
+		tmp/moc_dialogdisarmingmodesettings.cpp
 OBJECTS       = tmp/common.o \
 		tmp/database.o \
 		tmp/drone.o \
@@ -110,6 +114,8 @@ OBJECTS       = tmp/common.o \
 		tmp/dialogradiosettings.o \
 		tmp/mousesteering.o \
 		tmp/steering.o \
+		tmp/dialogarmingmodesettings.o \
+		tmp/dialogdisarmingmodesettings.o \
 		tmp/moc_database.o \
 		tmp/moc_drone.o \
 		tmp/moc_mainwindow.o \
@@ -126,7 +132,9 @@ OBJECTS       = tmp/common.o \
 		tmp/moc_focuswatcher.o \
 		tmp/moc_dialogradiosettings.o \
 		tmp/moc_mousesteering.o \
-		tmp/moc_steering.o
+		tmp/moc_steering.o \
+		tmp/moc_dialogarmingmodesettings.o \
+		tmp/moc_dialogdisarmingmodesettings.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -294,7 +302,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		focuswatcher.h \
 		dialogradiosettings.h \
 		mousesteering.h \
-		steering.h common.cpp \
+		steering.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h common.cpp \
 		database.cpp \
 		drone.cpp \
 		gamepad.cpp \
@@ -315,7 +325,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		steeringleapmotion.cpp \
 		dialogradiosettings.cpp \
 		mousesteering.cpp \
-		steering.cpp
+		steering.cpp \
+		dialogarmingmodesettings.cpp \
+		dialogdisarmingmodesettings.cpp
 QMAKE_TARGET  = nienazwany
 DESTDIR       = 
 TARGET        = nienazwany
@@ -324,7 +336,7 @@ TARGET        = nienazwany
 first: all
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h ui_dialogradiosettings.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_dialogradiosettings.h ui_dialogarmingmodesettings.h ui_dialogdisarmingmodesettings.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: nienazwany.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -631,9 +643,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents buttons.h common.h database.h drone.h dronemanager.h dronemodes.h gamepad.h include.h mainwindow.h threadarduinoconnect.h threadarduinodetect.h threadarduinoping.h threadarduinosend.h threadcamera.h threadgamepad.h threadgamepadupdate.h ui_mainwindow.h QtLeapMotion/Leap/include/Leap.h QtLeapMotion/Leap/include/LeapMath.h leapeventlistener.h steeringregistry.h sendingregistry.h sendinginterface.h sendingarduino.h steeringleapmotion.h json.hpp storage.h focuswatcher.h dialogradiosettings.h mousesteering.h steering.h $(DISTDIR)/
-	$(COPY_FILE) --parents common.cpp database.cpp drone.cpp gamepad.cpp main.cpp mainwindow.cpp threadarduinoconnect.cpp threadarduinodetect.cpp threadarduinoping.cpp threadarduinosend.cpp threadcamera.cpp threadgamepad.cpp threadgamepadupdate.cpp leapeventlistener.cpp steeringregistry.cpp sendingregistry.cpp sendingarduino.cpp sendinginterface.cpp steeringleapmotion.cpp dialogradiosettings.cpp mousesteering.cpp steering.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.ui dialogradiosettings.ui $(DISTDIR)/
+	$(COPY_FILE) --parents buttons.h common.h database.h drone.h dronemanager.h dronemodes.h gamepad.h include.h mainwindow.h threadarduinoconnect.h threadarduinodetect.h threadarduinoping.h threadarduinosend.h threadcamera.h threadgamepad.h threadgamepadupdate.h ui_mainwindow.h QtLeapMotion/Leap/include/Leap.h QtLeapMotion/Leap/include/LeapMath.h leapeventlistener.h steeringregistry.h sendingregistry.h sendinginterface.h sendingarduino.h steeringleapmotion.h json.hpp storage.h focuswatcher.h dialogradiosettings.h mousesteering.h steering.h dialogarmingmodesettings.h dialogdisarmingmodesettings.h $(DISTDIR)/
+	$(COPY_FILE) --parents common.cpp database.cpp drone.cpp gamepad.cpp main.cpp mainwindow.cpp threadarduinoconnect.cpp threadarduinodetect.cpp threadarduinoping.cpp threadarduinosend.cpp threadcamera.cpp threadgamepad.cpp threadgamepadupdate.cpp leapeventlistener.cpp steeringregistry.cpp sendingregistry.cpp sendingarduino.cpp sendinginterface.cpp steeringleapmotion.cpp dialogradiosettings.cpp mousesteering.cpp steering.cpp dialogarmingmodesettings.cpp dialogdisarmingmodesettings.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.ui dialogradiosettings.ui dialogarmingmodesettings.ui dialogdisarmingmodesettings.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -665,13 +677,15 @@ compiler_moc_predefs_clean:
 tmp/moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -std=c++11 -g -fPIC -std=gnu++1y -Wall -W -dM -E -o tmp/moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_steeringregistry.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp tmp/moc_mousesteering.cpp tmp/moc_steering.cpp
+compiler_moc_header_make_all: tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_steeringregistry.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp tmp/moc_mousesteering.cpp tmp/moc_steering.cpp tmp/moc_dialogarmingmodesettings.cpp tmp/moc_dialogdisarmingmodesettings.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_steeringregistry.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp tmp/moc_mousesteering.cpp tmp/moc_steering.cpp
+	-$(DEL_FILE) tmp/moc_database.cpp tmp/moc_drone.cpp tmp/moc_mainwindow.cpp tmp/moc_threadarduinoconnect.cpp tmp/moc_threadarduinodetect.cpp tmp/moc_threadarduinoping.cpp tmp/moc_threadarduinosend.cpp tmp/moc_threadcamera.cpp tmp/moc_threadgamepad.cpp tmp/moc_threadgamepadupdate.cpp tmp/moc_steeringregistry.cpp tmp/moc_sendingregistry.cpp tmp/moc_sendingarduino.cpp tmp/moc_focuswatcher.cpp tmp/moc_dialogradiosettings.cpp tmp/moc_mousesteering.cpp tmp/moc_steering.cpp tmp/moc_dialogarmingmodesettings.cpp tmp/moc_dialogdisarmingmodesettings.cpp
 tmp/moc_database.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -706,6 +720,8 @@ tmp/moc_drone.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -740,6 +756,8 @@ tmp/moc_mainwindow.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -774,6 +792,8 @@ tmp/moc_threadarduinoconnect.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -808,6 +828,8 @@ tmp/moc_threadarduinodetect.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -842,6 +864,8 @@ tmp/moc_threadarduinoping.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -876,6 +900,8 @@ tmp/moc_threadarduinosend.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -910,6 +936,8 @@ tmp/moc_threadcamera.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -944,6 +972,8 @@ tmp/moc_threadgamepad.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -978,6 +1008,8 @@ tmp/moc_threadgamepadupdate.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1012,6 +1044,8 @@ tmp/moc_steeringregistry.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1046,6 +1080,8 @@ tmp/moc_sendingregistry.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1080,6 +1116,8 @@ tmp/moc_sendingarduino.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1114,6 +1152,8 @@ tmp/moc_focuswatcher.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1153,6 +1193,8 @@ tmp/moc_mousesteering.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1187,6 +1229,8 @@ tmp/moc_steering.cpp: include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1217,13 +1261,23 @@ tmp/moc_steering.cpp: include.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include steering.h -o tmp/moc_steering.cpp
 
+tmp/moc_dialogarmingmodesettings.cpp: dialogarmingmodesettings.h \
+		tmp/moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include dialogarmingmodesettings.h -o tmp/moc_dialogarmingmodesettings.cpp
+
+tmp/moc_dialogdisarmingmodesettings.cpp: dialogdisarmingmodesettings.h \
+		tmp/moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include tmp/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/anonymous/Projects/drone_blackbox/linux -I/usr/include/boost/compute/interop/opencv -I/home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include -I/usr/include/KF5/KDELibs4Support -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include dialogdisarmingmodesettings.h -o tmp/moc_dialogdisarmingmodesettings.cpp
+
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h ui_dialogradiosettings.h
+compiler_uic_make_all: ui_mainwindow.h ui_dialogradiosettings.h ui_dialogarmingmodesettings.h ui_dialogdisarmingmodesettings.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h ui_dialogradiosettings.h
+	-$(DEL_FILE) ui_mainwindow.h ui_dialogradiosettings.h ui_dialogarmingmodesettings.h ui_dialogdisarmingmodesettings.h
 ui_mainwindow.h: mainwindow.ui \
 		/usr/lib/qt5/bin/uic \
 		mousesteering.h \
@@ -1231,6 +1285,8 @@ ui_mainwindow.h: mainwindow.ui \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1262,6 +1318,14 @@ ui_dialogradiosettings.h: dialogradiosettings.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic dialogradiosettings.ui -o ui_dialogradiosettings.h
 
+ui_dialogarmingmodesettings.h: dialogarmingmodesettings.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic dialogarmingmodesettings.ui -o ui_dialogarmingmodesettings.h
+
+ui_dialogdisarmingmodesettings.h: dialogdisarmingmodesettings.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic dialogdisarmingmodesettings.ui -o ui_dialogdisarmingmodesettings.h
+
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
 compiler_yacc_impl_make_all:
@@ -1276,6 +1340,8 @@ tmp/common.o: common.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1307,6 +1373,8 @@ tmp/database.o: database.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1338,6 +1406,8 @@ tmp/drone.o: drone.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1373,6 +1443,8 @@ tmp/main.o: main.cpp mainwindow.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1404,6 +1476,8 @@ tmp/mainwindow.o: mainwindow.cpp mainwindow.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1435,6 +1509,8 @@ tmp/threadarduinoconnect.o: threadarduinoconnect.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1466,6 +1542,8 @@ tmp/threadarduinodetect.o: threadarduinodetect.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1497,6 +1575,8 @@ tmp/threadarduinoping.o: threadarduinoping.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1528,6 +1608,8 @@ tmp/threadarduinosend.o: threadarduinosend.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1559,6 +1641,8 @@ tmp/threadcamera.o: threadcamera.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1590,6 +1674,8 @@ tmp/threadgamepad.o: threadgamepad.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1621,6 +1707,8 @@ tmp/threadgamepadupdate.o: threadgamepadupdate.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1652,6 +1740,8 @@ tmp/leapeventlistener.o: leapeventlistener.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1683,6 +1773,8 @@ tmp/steeringregistry.o: steeringregistry.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1714,6 +1806,8 @@ tmp/sendingregistry.o: sendingregistry.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1745,6 +1839,8 @@ tmp/sendingarduino.o: sendingarduino.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1776,6 +1872,8 @@ tmp/sendinginterface.o: sendinginterface.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1807,6 +1905,8 @@ tmp/steeringleapmotion.o: steeringleapmotion.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1839,6 +1939,8 @@ tmp/dialogradiosettings.o: dialogradiosettings.cpp dialogradiosettings.h \
 		include.h \
 		gamepad.h \
 		threadgamepad.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1870,6 +1972,8 @@ tmp/mousesteering.o: mousesteering.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1901,6 +2005,8 @@ tmp/steering.o: steering.cpp include.h \
 		gamepad.h \
 		threadgamepad.h \
 		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		dialogdisarmingmodesettings.h \
 		mousesteering.h \
 		json.hpp \
 		focuswatcher.h \
@@ -1927,6 +2033,74 @@ tmp/steering.o: steering.cpp include.h \
 		threadgamepadupdate.h \
 		threadcamera.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/steering.o steering.cpp
+
+tmp/dialogarmingmodesettings.o: dialogarmingmodesettings.cpp dialogarmingmodesettings.h \
+		ui_dialogarmingmodesettings.h \
+		include.h \
+		gamepad.h \
+		threadgamepad.h \
+		dialogradiosettings.h \
+		dialogdisarmingmodesettings.h \
+		mousesteering.h \
+		json.hpp \
+		focuswatcher.h \
+		storage.h \
+		common.h \
+		buttons.h \
+		dronemodes.h \
+		steeringregistry.h \
+		steering.h \
+		QtLeapMotion/Leap/include/Leap.h \
+		QtLeapMotion/Leap/include/LeapMath.h \
+		leapeventlistener.h \
+		steeringleapmotion.h \
+		sendingregistry.h \
+		sendinginterface.h \
+		sendingarduino.h \
+		database.h \
+		drone.h \
+		mainwindow.h \
+		threadarduinodetect.h \
+		threadarduinoconnect.h \
+		threadarduinoping.h \
+		threadarduinosend.h \
+		threadgamepadupdate.h \
+		threadcamera.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/dialogarmingmodesettings.o dialogarmingmodesettings.cpp
+
+tmp/dialogdisarmingmodesettings.o: dialogdisarmingmodesettings.cpp dialogdisarmingmodesettings.h \
+		ui_dialogdisarmingmodesettings.h \
+		include.h \
+		gamepad.h \
+		threadgamepad.h \
+		dialogradiosettings.h \
+		dialogarmingmodesettings.h \
+		mousesteering.h \
+		json.hpp \
+		focuswatcher.h \
+		storage.h \
+		common.h \
+		buttons.h \
+		dronemodes.h \
+		steeringregistry.h \
+		steering.h \
+		QtLeapMotion/Leap/include/Leap.h \
+		QtLeapMotion/Leap/include/LeapMath.h \
+		leapeventlistener.h \
+		steeringleapmotion.h \
+		sendingregistry.h \
+		sendinginterface.h \
+		sendingarduino.h \
+		database.h \
+		drone.h \
+		mainwindow.h \
+		threadarduinodetect.h \
+		threadarduinoconnect.h \
+		threadarduinoping.h \
+		threadarduinosend.h \
+		threadgamepadupdate.h \
+		threadcamera.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/dialogdisarmingmodesettings.o dialogdisarmingmodesettings.cpp
 
 tmp/moc_database.o: tmp/moc_database.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_database.o tmp/moc_database.cpp
@@ -1978,6 +2152,12 @@ tmp/moc_mousesteering.o: tmp/moc_mousesteering.cpp
 
 tmp/moc_steering.o: tmp/moc_steering.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_steering.o tmp/moc_steering.cpp
+
+tmp/moc_dialogarmingmodesettings.o: tmp/moc_dialogarmingmodesettings.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_dialogarmingmodesettings.o tmp/moc_dialogarmingmodesettings.cpp
+
+tmp/moc_dialogdisarmingmodesettings.o: tmp/moc_dialogdisarmingmodesettings.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tmp/moc_dialogdisarmingmodesettings.o tmp/moc_dialogdisarmingmodesettings.cpp
 
 ####### Install
 

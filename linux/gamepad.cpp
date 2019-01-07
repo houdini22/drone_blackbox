@@ -1,5 +1,6 @@
 #define GAMEPAD_EXPORT 1
 #include "gamepad.h"
+#include <QDebug>
 
 /* Platform-specific includes */
 #if defined(_WIN32)
@@ -195,9 +196,9 @@ static void GamepadRemoveDevice(const char* devPath) {
 }
 
 void GamepadInit(void) {
-    struct udev_list_entry* devices;
-    struct udev_list_entry* item;
-    struct udev_enumerate* enu;
+    struct udev_list_entry* devices = NULL;
+    struct udev_list_entry* item = NULL;
+    struct udev_enumerate* enu = NULL;
     int i;
 
     /* initialize connection state */
@@ -239,6 +240,7 @@ void GamepadInit(void) {
         devPath = udev_device_get_devnode(dev);
 
         if (sysPath != NULL && devPath != NULL && strstr(sysPath, "/js") != 0) {
+            qDebug() << devPath;
             GamepadAddDevice(devPath);
         }
 

@@ -26,6 +26,7 @@ void ThreadGamepad1::run() {
         if (GamepadIsConnected(GAMEPAD_1)) {
             emit signalGamepadIsConnected(true);
         } else {
+
             emit signalGamepadIsConnected(false);
             GamepadInit();
         }

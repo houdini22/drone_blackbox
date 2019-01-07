@@ -22,7 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
     foreach (QAction *action, menu->actions()) {
         if (action->text().compare("&Radio") == 0) {
             connect(action, SIGNAL(triggered(bool)), this, SLOT(handleRadioSettingsTriggered(bool)));
-            break;
+        } else if (action->text().compare("&Arming Mode")) {
+            connect(action, SIGNAL(triggered(bool)), this, SLOT(handleArmingModeSettingsTriggered(bool)));
+        } else if (action->text().compare("&Disarming Mode")) {
+            connect(action, SIGNAL(triggered(bool)), this, SLOT(handleDisarmingModeSettingsTriggered(bool)));
         }
     }
 
@@ -34,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     MouseSteering * mouseSteering = this->centralWidget()->findChild<MouseSteering *>(QString("mouseSteering"));
     mouseSteering->setDrone(this->drone);
 
-    QRadioButton * radioMouseSteeringSending = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringSending"));
+    QRadioButton * radioMouseSteeringSending = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteering"));
     connect(radioMouseSteeringSending, SIGNAL(toggled(bool)), this, SLOT(slotRadioMouseSendingToggled(bool)));
 
     QRadioButton * radioMouseSteeringEnabled = this->centralWidget()->findChild<QRadioButton *>(QString("radioMouseSteeringEnable"));
@@ -104,7 +107,8 @@ void MainWindow::slotRadioMouseSteeringEnabledToggled(bool active) {
 }
 
 void MainWindow::handleRadioSettingsTriggered(bool active) {
-    this->dialogRadioSettings = new DialogRadioSettings(this); // Be sure to destroy your window somewhere
+    delete this->dialogRadioSettings;
+    this->dialogRadioSettings = new DialogRadioSettings(this);
     this->dialogRadioSettings->show();
     this->dialogRadioSettings->setAttribute(Qt::WA_DeleteOnClose);
     connect(this->dialogRadioSettings, SIGNAL(destroyed(QObject*)), this, SLOT(slotRefreshLabels()));
@@ -255,4 +259,16 @@ void MainWindow::setHandPosition(HandPosition handPosition) {
 
 Drone * MainWindow::getDrone() {
     return this->drone;
+}
+
+void MainWindow::handleArmingModeSettingsTriggered(bool active) {
+    this->dialogArmingModeSettings = new DialogArmingModeSettings(this);
+    this->dialogArmingModeSettings->show();
+    this->dialogArmingModeSettings->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::handleDisarmingModeSettingsTriggered(bool active) {
+    this->dialogDisarmingModeSettings = new DialogDisarmingModeSettings(this);
+    this->dialogDisarmingModeSettings->show();
+    this->dialogDisarmingModeSettings->setAttribute(Qt::WA_DeleteOnClose);
 }
