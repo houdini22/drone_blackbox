@@ -59,7 +59,8 @@ SOURCES += \
     mousesteering.cpp \
     steering.cpp \
     dialogarmingmodesettings.cpp \
-    dialogdisarmingmodesettings.cpp
+    dialogdisarmingmodesettings.cpp \
+    dialogthrottlemodesettings.cpp
 
 HEADERS += \
     buttons.h \
@@ -94,13 +95,15 @@ HEADERS += \
     mousesteering.h \
     steering.h \
     dialogarmingmodesettings.h \
-    dialogdisarmingmodesettings.h
+    dialogdisarmingmodesettings.h \
+    dialogthrottlemodesettings.h
 
 FORMS += \
     mainwindow.ui \
     dialogradiosettings.ui \
     dialogarmingmodesettings.ui \
-    dialogdisarmingmodesettings.ui
+    dialogdisarmingmodesettings.ui \
+    dialogthrottlemodesettings.ui
 
 SUBDIRS += \
     QtLeapMotion/QtLeapMotion.pro

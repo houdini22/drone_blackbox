@@ -46,6 +46,8 @@ class Storage
                 result["disarming"]["rightX"] = 1500;
                 result["disarming"]["rightY"] = 1500;
 
+                result["throttleMode"]["step"] = 25;
+
                 std::ofstream out(path);
                 out << result.dump();
                 out.close();

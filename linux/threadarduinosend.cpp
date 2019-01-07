@@ -155,14 +155,14 @@ void ThreadArduinoSend::run() {
                         if (buttons.leftShoulder) {
                             sendingLeftY = 6;
 
-                            leftY -= 50;
+                            leftY -= data["throttleMode"]["step"].get<int>();
                             if (leftY < data["radio"]["leftY"]["min"].get<int>()) {
                                 leftY = data["radio"]["leftY"]["min"].get<int>();
                             }
                         } else if (buttons.rightShoulder) {
                             sendingLeftY = 6;
 
-                            leftY += 50;
+                            leftY += data["throttleMode"]["step"].get<int>();
                             if (leftY > data["radio"]["leftY"]["max"].get<int>()) {
                                 leftY = data["radio"]["leftY"]["max"].get<int>();
                             }

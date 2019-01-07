@@ -51,6 +51,7 @@ Q_DECLARE_METATYPE(MyMat)
 #include "dialogradiosettings.h"
 #include "dialogarmingmodesettings.h"
 #include "dialogdisarmingmodesettings.h"
+#include "dialogthrottlemodesettings.h"
 #include "mousesteering.h"
 #include "json.hpp"
 #include "focuswatcher.h"

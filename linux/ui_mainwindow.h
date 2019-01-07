@@ -19,6 +19,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -73,6 +74,7 @@ public:
     QLabel *labelRightXmax;
     QLabel *labelRightYmiddle;
     QLabel *labelRightXmin;
+    QPushButton *buttonSettingsRadio;
     QGroupBox *groupBox;
     QLabel *labelArmedValue;
     QLabel *label_8;
@@ -80,6 +82,9 @@ public:
     QLabel *labelThrottleMode;
     QLabel *label_10;
     QLabel *labelSending;
+    QPushButton *buttonSettingsArming;
+    QPushButton *buttonSettingsDisarming;
+    QPushButton *buttonSettingsThrottleMode;
     QGroupBox *groupBox_2;
     QLabel *label_11;
     QLabel *label_12;
@@ -120,7 +125,7 @@ public:
         kdialog->setGeometry(QRect(942, 548, 16, 16));
         groupBoxStatus = new QGroupBox(centralWidget);
         groupBoxStatus->setObjectName(QStringLiteral("groupBoxStatus"));
-        groupBoxStatus->setGeometry(QRect(10, 10, 491, 271));
+        groupBoxStatus->setGeometry(QRect(10, 10, 531, 271));
         QFont font;
         font.setPointSize(20);
         groupBoxStatus->setFont(font);
@@ -133,7 +138,7 @@ public:
         labelGamePadValue = new QLabel(groupBoxStatus);
         labelGamePadValue->setObjectName(QStringLiteral("labelGamePadValue"));
         labelGamePadValue->setEnabled(false);
-        labelGamePadValue->setGeometry(QRect(330, 90, 141, 31));
+        labelGamePadValue->setGeometry(QRect(330, 90, 181, 31));
         labelGamePadValue->setFont(font1);
         labelGamePadValue->setStyleSheet(QStringLiteral(""));
         labelGamePadValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -145,7 +150,7 @@ public:
         labelArduinoValue = new QLabel(groupBoxStatus);
         labelArduinoValue->setObjectName(QStringLiteral("labelArduinoValue"));
         labelArduinoValue->setEnabled(false);
-        labelArduinoValue->setGeometry(QRect(330, 150, 141, 31));
+        labelArduinoValue->setGeometry(QRect(330, 150, 181, 31));
         labelArduinoValue->setFont(font1);
         labelArduinoValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_15 = new QLabel(groupBoxStatus);
@@ -155,12 +160,12 @@ public:
         labelLeapMotionValue = new QLabel(groupBoxStatus);
         labelLeapMotionValue->setObjectName(QStringLiteral("labelLeapMotionValue"));
         labelLeapMotionValue->setEnabled(false);
-        labelLeapMotionValue->setGeometry(QRect(330, 181, 141, 31));
+        labelLeapMotionValue->setGeometry(QRect(330, 181, 181, 31));
         labelLeapMotionValue->setFont(font1);
         labelLeapMotionValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_16 = new QLabel(groupBoxStatus);
         label_16->setObjectName(QStringLiteral("label_16"));
-        label_16->setGeometry(QRect(20, 211, 151, 31));
+        label_16->setGeometry(QRect(20, 211, 181, 31));
         label_16->setFont(font1);
         radioMouseSteeringEnable = new QRadioButton(groupBoxStatus);
         radioMouseSteeringEnable->setObjectName(QStringLiteral("radioMouseSteeringEnable"));
@@ -175,7 +180,7 @@ public:
         labelGamePadValue2 = new QLabel(groupBoxStatus);
         labelGamePadValue2->setObjectName(QStringLiteral("labelGamePadValue2"));
         labelGamePadValue2->setEnabled(false);
-        labelGamePadValue2->setGeometry(QRect(330, 120, 141, 31));
+        labelGamePadValue2->setGeometry(QRect(330, 120, 181, 31));
         labelGamePadValue2->setFont(font1);
         labelGamePadValue2->setStyleSheet(QStringLiteral(""));
         labelGamePadValue2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -197,13 +202,13 @@ public:
         labelLeapMouseSteering = new QLabel(groupBoxStatus);
         labelLeapMouseSteering->setObjectName(QStringLiteral("labelLeapMouseSteering"));
         labelLeapMouseSteering->setEnabled(false);
-        labelLeapMouseSteering->setGeometry(QRect(330, 210, 141, 31));
+        labelLeapMouseSteering->setGeometry(QRect(330, 210, 181, 31));
         labelLeapMouseSteering->setFont(font1);
         labelLeapMouseSteering->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         labelLeapMouseSteering->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBoxTitle = new QGroupBox(centralWidget);
         groupBoxTitle->setObjectName(QStringLiteral("groupBoxTitle"));
-        groupBoxTitle->setGeometry(QRect(520, 10, 491, 271));
+        groupBoxTitle->setGeometry(QRect(550, 10, 531, 271));
         groupBoxTitle->setFont(font);
         label_2 = new QLabel(groupBoxTitle);
         label_2->setObjectName(QStringLiteral("label_2"));
@@ -317,40 +322,60 @@ public:
         labelRightXmin->setGeometry(QRect(220, 150, 51, 16));
         labelRightXmin->setFont(font2);
         labelRightXmin->setAlignment(Qt::AlignCenter);
+        buttonSettingsRadio = new QPushButton(groupBoxTitle);
+        buttonSettingsRadio->setObjectName(QStringLiteral("buttonSettingsRadio"));
+        buttonSettingsRadio->setGeometry(QRect(310, 10, 81, 31));
+        QFont font3;
+        font3.setPointSize(10);
+        buttonSettingsRadio->setFont(font3);
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 290, 491, 311));
+        groupBox->setGeometry(QRect(10, 290, 531, 311));
         groupBox->setFont(font);
         labelArmedValue = new QLabel(groupBox);
         labelArmedValue->setObjectName(QStringLiteral("labelArmedValue"));
-        labelArmedValue->setGeometry(QRect(220, 100, 251, 31));
+        labelArmedValue->setGeometry(QRect(400, 100, 111, 31));
         labelArmedValue->setFont(font1);
         labelArmedValue->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_8 = new QLabel(groupBox);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(22, 100, 201, 31));
+        label_8->setGeometry(QRect(22, 100, 201, 41));
         label_8->setFont(font1);
         label_9 = new QLabel(groupBox);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(20, 140, 201, 31));
+        label_9->setGeometry(QRect(20, 140, 201, 41));
         label_9->setFont(font1);
         labelThrottleMode = new QLabel(groupBox);
         labelThrottleMode->setObjectName(QStringLiteral("labelThrottleMode"));
-        labelThrottleMode->setGeometry(QRect(220, 140, 251, 31));
+        labelThrottleMode->setGeometry(QRect(410, 140, 101, 31));
         labelThrottleMode->setFont(font1);
         labelThrottleMode->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         label_10 = new QLabel(groupBox);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(20, 60, 201, 31));
+        label_10->setGeometry(QRect(20, 60, 201, 41));
         label_10->setFont(font1);
         labelSending = new QLabel(groupBox);
         labelSending->setObjectName(QStringLiteral("labelSending"));
-        labelSending->setGeometry(QRect(220, 60, 251, 31));
+        labelSending->setGeometry(QRect(390, 60, 121, 31));
         labelSending->setFont(font1);
         labelSending->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        buttonSettingsArming = new QPushButton(groupBox);
+        buttonSettingsArming->setObjectName(QStringLiteral("buttonSettingsArming"));
+        buttonSettingsArming->setGeometry(QRect(170, 110, 81, 21));
+        QFont font4;
+        font4.setPointSize(6);
+        buttonSettingsArming->setFont(font4);
+        buttonSettingsDisarming = new QPushButton(groupBox);
+        buttonSettingsDisarming->setObjectName(QStringLiteral("buttonSettingsDisarming"));
+        buttonSettingsDisarming->setGeometry(QRect(260, 110, 91, 21));
+        buttonSettingsDisarming->setFont(font4);
+        buttonSettingsThrottleMode = new QPushButton(groupBox);
+        buttonSettingsThrottleMode->setObjectName(QStringLiteral("buttonSettingsThrottleMode"));
+        buttonSettingsThrottleMode->setGeometry(QRect(170, 150, 81, 21));
+        buttonSettingsThrottleMode->setFont(font4);
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(520, 290, 491, 311));
+        groupBox_2->setGeometry(QRect(550, 290, 531, 311));
         groupBox_2->setFont(font);
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
@@ -476,13 +501,17 @@ public:
         labelRightXmax->setText(QApplication::translate("MainWindow", "0", nullptr));
         labelRightYmiddle->setText(QApplication::translate("MainWindow", "0", nullptr));
         labelRightXmin->setText(QApplication::translate("MainWindow", "0", nullptr));
+        buttonSettingsRadio->setText(QApplication::translate("MainWindow", "Settings", nullptr));
         groupBox->setTitle(QApplication::translate("MainWindow", "Drone", nullptr));
         labelArmedValue->setText(QApplication::translate("MainWindow", "not armed", nullptr));
-        label_8->setText(QApplication::translate("MainWindow", "Motors", nullptr));
+        label_8->setText(QApplication::translate("MainWindow", "Motors armed", nullptr));
         label_9->setText(QApplication::translate("MainWindow", "Throttle mode", nullptr));
         labelThrottleMode->setText(QApplication::translate("MainWindow", "not active", nullptr));
         label_10->setText(QApplication::translate("MainWindow", "Sending", nullptr));
         labelSending->setText(QApplication::translate("MainWindow", "not sending", nullptr));
+        buttonSettingsArming->setText(QApplication::translate("MainWindow", "Arming Settings", nullptr));
+        buttonSettingsDisarming->setText(QApplication::translate("MainWindow", "Disarming Settings", nullptr));
+        buttonSettingsThrottleMode->setText(QApplication::translate("MainWindow", "Settings", nullptr));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Leap Motion", nullptr));
         label_11->setText(QApplication::translate("MainWindow", "Throttle", nullptr));
         label_12->setText(QApplication::translate("MainWindow", "Y", nullptr));

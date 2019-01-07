@@ -28,6 +28,11 @@ private:
     DialogRadioSettings * dialogRadioSettings = nullptr;
     DialogArmingModeSettings * dialogArmingModeSettings = nullptr;
     DialogDisarmingModeSettings * dialogDisarmingModeSettings = nullptr;
+    DialogThrottleModeSettings * dialogThrottleModeSettings = nullptr;
+    void openSettingsArmingMotors();
+    void openSettingsDisarmingMotors();
+    void openSettingsRadio();
+    void openSettingsThrottleMode();
 protected:
     void moveEvent(QMoveEvent* ev) {
         move(QPoint(0, 0));
@@ -46,6 +51,10 @@ public slots:
     void slotRadioGamePad2Enable(bool);
     void handleArmingModeSettingsTriggered(bool);
     void handleDisarmingModeSettingsTriggered(bool);
+    void slotOnClickButtonSettingsArmed();
+    void slotOnClickButtonSettingsDisarmed();
+    void slotOnClickButtonSettingsRadio();
+    void slotOnClickButtonSettingsThrottleMode();
 };
 
 #endif // MAINWINDOW_H

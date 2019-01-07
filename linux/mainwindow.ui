@@ -29,7 +29,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>491</width>
+      <width>531</width>
       <height>271</height>
      </rect>
     </property>
@@ -67,7 +67,7 @@
       <rect>
        <x>330</x>
        <y>90</y>
-       <width>141</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -115,7 +115,7 @@
       <rect>
        <x>330</x>
        <y>150</y>
-       <width>141</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -157,7 +157,7 @@
       <rect>
        <x>330</x>
        <y>181</y>
-       <width>141</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -178,7 +178,7 @@
       <rect>
        <x>20</x>
        <y>211</y>
-       <width>151</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -241,7 +241,7 @@
       <rect>
        <x>330</x>
        <y>120</y>
-       <width>141</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -325,7 +325,7 @@
       <rect>
        <x>330</x>
        <y>210</y>
-       <width>141</width>
+       <width>181</width>
        <height>31</height>
       </rect>
      </property>
@@ -348,9 +348,9 @@
    <widget class="QGroupBox" name="groupBoxTitle">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>550</x>
       <y>10</y>
-      <width>491</width>
+      <width>531</width>
       <height>271</height>
      </rect>
     </property>
@@ -824,13 +824,31 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="buttonSettingsRadio">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Settings</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>290</y>
-      <width>491</width>
+      <width>531</width>
       <height>311</height>
      </rect>
     </property>
@@ -845,9 +863,9 @@
     <widget class="QLabel" name="labelArmedValue">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>400</x>
        <y>100</y>
-       <width>251</width>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
@@ -869,7 +887,7 @@
        <x>22</x>
        <y>100</y>
        <width>201</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -878,7 +896,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Motors</string>
+      <string>Motors armed</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
@@ -887,7 +905,7 @@
        <x>20</x>
        <y>140</y>
        <width>201</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -902,9 +920,9 @@
     <widget class="QLabel" name="labelThrottleMode">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>410</x>
        <y>140</y>
-       <width>251</width>
+       <width>101</width>
        <height>31</height>
       </rect>
      </property>
@@ -926,7 +944,7 @@
        <x>20</x>
        <y>60</y>
        <width>201</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
@@ -941,9 +959,9 @@
     <widget class="QLabel" name="labelSending">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>390</x>
        <y>60</y>
-       <width>251</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -959,13 +977,67 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="buttonSettingsArming">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>110</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Arming Settings</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonSettingsDisarming">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>110</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Disarming Settings</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonSettingsThrottleMode">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>150</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Settings</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>550</x>
       <y>290</y>
-      <width>491</width>
+      <width>531</width>
       <height>311</height>
      </rect>
     </property>

@@ -48,6 +48,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QRadioButton * radioGamePad2Enable = this->centralWidget()->findChild<QRadioButton *>(QString("radioGamePad2Enable"));
     connect(radioGamePad2Enable, SIGNAL(toggled(bool)), this, SLOT(slotRadioGamePad2Enable(bool)));
+
+    QPushButton * buttonMotorsArmed = this->centralWidget()->findChild<QPushButton *>(QString("buttonSettingsArming"));
+    connect(buttonMotorsArmed, SIGNAL(released()), this, SLOT(slotOnClickButtonSettingsArmed()));
+
+    QPushButton * buttonMotorsDisarmed = this->centralWidget()->findChild<QPushButton *>(QString("buttonSettingsDisarming"));
+    connect(buttonMotorsDisarmed, SIGNAL(released()), this, SLOT(slotOnClickButtonSettingsDisarmed()));
+
+    QPushButton * buttonRadio = this->centralWidget()->findChild<QPushButton *>(QString("buttonSettingsRadio"));
+    connect(buttonRadio, SIGNAL(released()), this, SLOT(slotOnClickButtonSettingsRadio()));
+
+    QPushButton * buttonThrottleMode = this->centralWidget()->findChild<QPushButton *>(QString("buttonSettingsThrottleMode"));
+    connect(buttonThrottleMode, SIGNAL(released()), this, SLOT(slotOnClickButtonSettingsThrottleMode()));
 }
 
 void MainWindow::slotRadioGamePad1Enable(bool active) {
@@ -104,13 +116,6 @@ void MainWindow::slotRadioMouseSteeringEnabledToggled(bool active) {
         radioMouseSteeringEnabled->setStyleSheet("color: rgb(97, 105, 114);");
         radioMouseSteeringEnabled->setText("disabled");
     }
-}
-
-void MainWindow::handleRadioSettingsTriggered(bool active) {
-    this->dialogRadioSettings = new DialogRadioSettings(this);
-    this->dialogRadioSettings->show();
-    this->dialogRadioSettings->setAttribute(Qt::WA_DeleteOnClose);
-    connect(this->dialogRadioSettings, SIGNAL(destroyed(QObject*)), this, SLOT(slotRefreshLabels()));
 }
 
 void MainWindow::slotRefreshLabels() {
@@ -260,14 +265,56 @@ Drone * MainWindow::getDrone() {
     return this->drone;
 }
 
+void MainWindow::slotOnClickButtonSettingsArmed() {
+    this->openSettingsArmingMotors();
+}
+
 void MainWindow::handleArmingModeSettingsTriggered(bool active) {
+    this->openSettingsArmingMotors();
+}
+
+void MainWindow::openSettingsArmingMotors() {
     this->dialogArmingModeSettings = new DialogArmingModeSettings(this);
     this->dialogArmingModeSettings->show();
     this->dialogArmingModeSettings->setAttribute(Qt::WA_DeleteOnClose);
 }
 
 void MainWindow::handleDisarmingModeSettingsTriggered(bool active) {
+    this->openSettingsDisarmingMotors();
+}
+
+void MainWindow::slotOnClickButtonSettingsDisarmed() {
+    this->openSettingsDisarmingMotors();
+}
+
+void MainWindow::openSettingsDisarmingMotors() {
     this->dialogDisarmingModeSettings = new DialogDisarmingModeSettings(this);
     this->dialogDisarmingModeSettings->show();
     this->dialogDisarmingModeSettings->setAttribute(Qt::WA_DeleteOnClose);
+}
+
+void MainWindow::slotOnClickButtonSettingsRadio() {
+    this->openSettingsRadio();
+}
+
+void MainWindow::handleRadioSettingsTriggered(bool active) {
+    this->openSettingsRadio();
+}
+
+void MainWindow::openSettingsRadio() {
+    this->dialogRadioSettings = new DialogRadioSettings(this);
+    this->dialogRadioSettings->show();
+    this->dialogRadioSettings->setAttribute(Qt::WA_DeleteOnClose);
+    connect(this->dialogRadioSettings, SIGNAL(destroyed(QObject*)), this, SLOT(slotRefreshLabels()));
+}
+
+void MainWindow::slotOnClickButtonSettingsThrottleMode() {
+    this->openSettingsThrottleMode();
+}
+
+void MainWindow::openSettingsThrottleMode() {
+    this->dialogThrottleModeSettings = new DialogThrottleModeSettings(this);
+    this->dialogThrottleModeSettings->show();
+    this->dialogThrottleModeSettings->setAttribute(Qt::WA_DeleteOnClose);
+    connect(this->dialogThrottleModeSettings, SIGNAL(destroyed(QObject*)), this, SLOT(slotRefreshLabels()));
 }
