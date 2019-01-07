@@ -7,8 +7,6 @@ ThreadCamera::ThreadCamera(Drone * drone): QThread()
 }
 
 void ThreadCamera::run() {
-    return;
-
     VideoCapture cap;
     bool isOpened = false;
 
@@ -18,17 +16,14 @@ void ThreadCamera::run() {
     cap.set(CV_CAP_PROP_FPS, 30);
 
     while (1) {
-        if (!cap.open(0)) {
-            QThread::msleep(1000);
-        } else {
-            isOpened = true;
-            break;
-        }
-    }
-
-    while (1) {
         if (!isOpened) {
             QThread::msleep(1000);
+
+            if (!cap.open(0)) {
+                QThread::msleep(1000);
+            } else {
+                isOpened = true;
+            }
         }
 
         if (isOpened) {

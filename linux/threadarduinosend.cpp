@@ -107,14 +107,14 @@ void ThreadArduinoSend::run() {
                 }
 
                 if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
-                    if (buttons.a) { // toggle Throttle mode
-                        sendingThrottle = 13;
+                    if (buttons.dPadDown) { // toggle Throttle mode
+                        sendingThrottle = 6;
                         continue;
                     }
 
                     if (buttons.b) {
-                        sendingB = 13;
-                        continue;
+                        //sendingB = 13;
+                        //continue;
                     }
 
                     if (buttons.start && !armingMode) { // toggle sending
@@ -153,14 +153,14 @@ void ThreadArduinoSend::run() {
 
                     if (throttleMode) { // a on
                         if (buttons.leftShoulder) {
-                            sendingLeftY = 6;
+                            sendingLeftY = 2;
 
                             leftY -= data["throttleMode"]["step"].get<int>();
                             if (leftY < data["radio"]["leftY"]["min"].get<int>()) {
                                 leftY = data["radio"]["leftY"]["min"].get<int>();
                             }
                         } else if (buttons.rightShoulder) {
-                            sendingLeftY = 6;
+                            sendingLeftY = 2;
 
                             leftY += data["throttleMode"]["step"].get<int>();
                             if (leftY > data["radio"]["leftY"]["max"].get<int>()) {
