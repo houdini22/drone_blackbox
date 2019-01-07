@@ -107,7 +107,6 @@ void MainWindow::slotRadioMouseSteeringEnabledToggled(bool active) {
 }
 
 void MainWindow::handleRadioSettingsTriggered(bool active) {
-    delete this->dialogRadioSettings;
     this->dialogRadioSettings = new DialogRadioSettings(this);
     this->dialogRadioSettings->show();
     this->dialogRadioSettings->setAttribute(Qt::WA_DeleteOnClose);

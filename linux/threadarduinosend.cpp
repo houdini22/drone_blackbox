@@ -45,13 +45,15 @@ QString ThreadArduinoSend::createAxisBuffer(int leftX, int leftY, int rightX, in
 }
 
 void ThreadArduinoSend::run() {
+    nlohmann::json data = Storage::getInstance().getData();
+
     bool startMode = false;
     int sendingStart = 0;
     bool armingMode = false;
     int sendingArm = 0;
     bool throttleMode = false;
     int sendingThrottle = 0;
-    double leftY = 0.0;
+    int leftY = data["radio"]["leftY"]["min"].get<int>();
     int sendingLeftY = 0;
     int sendingRecording = 0;
     int sendingDpadDown = 0;
@@ -96,8 +98,8 @@ void ThreadArduinoSend::run() {
                 // send
                 if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
                     if (throttleMode) {
-                        this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
-                        this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
+                        this->setRadioValues(buttons.leftX, leftY, buttons.rightX, buttons.rightY);
+                        this->send(this->createAxisBuffer(buttons.leftX, leftY, buttons.rightX, buttons.rightY));
                     } else {
                         this->setRadioValues(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY);
                         this->send(this->createAxisBuffer(buttons.leftX, buttons.leftY, buttons.rightX, buttons.rightY));
@@ -153,16 +155,16 @@ void ThreadArduinoSend::run() {
                         if (buttons.leftShoulder) {
                             sendingLeftY = 6;
 
-                            leftY -= 0.025;
-                            if (leftY < 0.0) {
-                                leftY = 0.0;
+                            leftY -= 50;
+                            if (leftY < data["radio"]["leftY"]["min"].get<int>()) {
+                                leftY = data["radio"]["leftY"]["min"].get<int>();
                             }
                         } else if (buttons.rightShoulder) {
                             sendingLeftY = 6;
 
-                            leftY += 0.025;
-                            if (leftY > 1.0) {
-                                leftY = 1.0;
+                            leftY += 50;
+                            if (leftY > data["radio"]["leftY"]["max"].get<int>()) {
+                                leftY = data["radio"]["leftY"]["max"].get<int>();
                             }
                         }
                         continue;
