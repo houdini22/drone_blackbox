@@ -119,7 +119,7 @@ void ThreadArduinoSend::run() {
                 }
             } else {
                 // send
-                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0&& sendingLeftY == 0 && sendingThrust == 0) {
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingThrust == 0) {
                     if (throttleMode) {
                         this->setRadioValues(buttons.leftX, leftY, buttons.rightX, buttons.rightY);
                         this->send(this->createAxisBuffer(buttons.leftX, leftY, buttons.rightX, buttons.rightY));
