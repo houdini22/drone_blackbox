@@ -40,11 +40,13 @@ class Storage
                 result["arming"]["leftY"] = 1000;
                 result["arming"]["rightX"] = 1500;
                 result["arming"]["rightY"] = 1500;
+                result["arming"]["time"] = 1000;
 
                 result["disarming"]["leftX"] = 1000;
                 result["disarming"]["leftY"] = 1000;
                 result["disarming"]["rightX"] = 1500;
                 result["disarming"]["rightY"] = 1500;
+                result["disarming"]["time"] = 1000;
 
                 result["throttleMode"]["step"] = 25;
 

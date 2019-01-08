@@ -35,15 +35,18 @@ public:
     QGroupBox *groupBox_5;
     QLabel *label_10;
     QLineEdit *inputRightYmiddle;
+    QGroupBox *groupBox_4;
+    QLabel *label_8;
+    QLineEdit *inputTimeOfSignal;
 
     void setupUi(QDialog *DialogArmingModeSettings)
     {
         if (DialogArmingModeSettings->objectName().isEmpty())
             DialogArmingModeSettings->setObjectName(QStringLiteral("DialogArmingModeSettings"));
-        DialogArmingModeSettings->resize(906, 312);
+        DialogArmingModeSettings->resize(906, 437);
         buttonBox = new QDialogButtonBox(DialogArmingModeSettings);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(550, 270, 351, 32));
+        buttonBox->setGeometry(QRect(550, 400, 351, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         groupBox = new QGroupBox(DialogArmingModeSettings);
@@ -86,6 +89,16 @@ public:
         inputRightYmiddle = new QLineEdit(groupBox_5);
         inputRightYmiddle->setObjectName(QStringLiteral("inputRightYmiddle"));
         inputRightYmiddle->setGeometry(QRect(170, 70, 101, 32));
+        groupBox_4 = new QGroupBox(DialogArmingModeSettings);
+        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 270, 891, 121));
+        label_8 = new QLabel(groupBox_4);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setGeometry(QRect(380, 40, 121, 31));
+        label_8->setAlignment(Qt::AlignCenter);
+        inputTimeOfSignal = new QLineEdit(groupBox_4);
+        inputTimeOfSignal->setObjectName(QStringLiteral("inputTimeOfSignal"));
+        inputTimeOfSignal->setGeometry(QRect(390, 70, 101, 32));
 
         retranslateUi(DialogArmingModeSettings);
         QObject::connect(buttonBox, SIGNAL(accepted()), DialogArmingModeSettings, SLOT(accept()));
@@ -105,6 +118,9 @@ public:
         label_7->setText(QApplication::translate("DialogArmingModeSettings", "Value", nullptr));
         groupBox_5->setTitle(QApplication::translate("DialogArmingModeSettings", "Right Y", nullptr));
         label_10->setText(QApplication::translate("DialogArmingModeSettings", "Value", nullptr));
+        groupBox_4->setTitle(QApplication::translate("DialogArmingModeSettings", "Time of signal", nullptr));
+        label_8->setText(QApplication::translate("DialogArmingModeSettings", "Millisenconds", nullptr));
+        inputTimeOfSignal->setText(QString());
     } // retranslateUi
 
 };

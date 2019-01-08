@@ -24,10 +24,14 @@ DialogDisarmingModeSettings::DialogDisarmingModeSettings(QWidget *parent) :
   QLineEdit * rightYmiddle = this->findChild<QLineEdit *>(QString("inputRightYmiddle"));
   rightYmiddle->setText(QString::number((int) data["disarming"]["rightY"].get<int>()));
 
+  QLineEdit * timeOfSignal = this->findChild<QLineEdit *>(QString("inputTimeOfSignal"));
+  timeOfSignal->setText(QString::number((int) data["disarming"]["time"].get<int>()));
+
   leftXmiddle->setValidator( new QIntValidator(0, 2000, this));
   leftYmiddle->setValidator( new QIntValidator(0, 2000, this));
   rightXmiddle->setValidator( new QIntValidator(0, 2000, this));
   rightYmiddle->setValidator( new QIntValidator(0, 2000, this));
+  timeOfSignal->setValidator( new QIntValidator(0, 2000, this));
 }
 
 void DialogDisarmingModeSettings::signalAccepted() {
@@ -35,6 +39,7 @@ void DialogDisarmingModeSettings::signalAccepted() {
   QLineEdit * leftYmiddle = this->findChild<QLineEdit *>(QString("inputLeftYmiddle"));
   QLineEdit * rightXmiddle = this->findChild<QLineEdit *>(QString("inputRightXmiddle"));
   QLineEdit * rightYmiddle = this->findChild<QLineEdit *>(QString("inputRightYmiddle"));
+  QLineEdit * timeOfSignal = this->findChild<QLineEdit *>(QString("inputTimeOfSignal"));
 
   nlohmann::json data = Storage::getInstance().getData();
 
@@ -42,11 +47,13 @@ void DialogDisarmingModeSettings::signalAccepted() {
   int leftYmiddleValue = std::atoi(leftYmiddle->text().toStdString().c_str());
   int rightXmiddleValue = std::atoi(rightXmiddle->text().toStdString().c_str());
   int rightYmiddleValue = std::atoi(rightYmiddle->text().toStdString().c_str());
+  int timeOfSignalValue = std::atoi(timeOfSignal->text().toStdString().c_str());
 
   data["disarming"]["leftX"] = leftXmiddleValue;
   data["disarming"]["leftY"] = leftYmiddleValue;
   data["disarming"]["rightX"] = rightXmiddleValue;
   data["disarming"]["rightY"] = rightYmiddleValue;
+  data["disarming"]["time"] = timeOfSignalValue;
 
   Storage::getInstance().setData(data)->save();
 }

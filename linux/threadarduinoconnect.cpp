@@ -22,20 +22,29 @@ void ThreadArduinoConnect::run() {
 
             while (!arduino->IsOpen()) {}
 
-            QThread::msleep(10000);
+            QThread::msleep(2000);
+
+            qDebug() << "opened";
 
             while (true) {
                 arduino->Write("h");
+                qDebug() << "write";
 
                 SerialPort::DataBuffer buffer;
-                arduino->Read(buffer, 1, 0);
+                try {
+                    arduino->Read(buffer, 1, 500);
+                } catch (SerialPort::ReadTimeout ex) {
+                    continue;
+                }
 
                 if (buffer[0] == 'h') {
+                    emit signalArduinoConnected(true, arduino);
+
                     break;
                 }
-            }
 
-            emit signalArduinoConnected(true, arduino);
+                QThread::msleep(1000);
+            }
         }
 
         QThread::msleep(1000);

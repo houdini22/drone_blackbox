@@ -4,7 +4,6 @@
 ThreadArduinoPing::ThreadArduinoPing(SendingRegistry * registry): QThread()
 {
     this->registry = registry;
-
     connect(this->registry, SIGNAL(signalSendingDataChanged(SendingData *)), this, SLOT(slotSendingDataChanged(SendingData *)));
 }
 
@@ -20,7 +19,7 @@ void ThreadArduinoPing::run() {
             }
         }
 
-        QThread::msleep(25);
+        QThread::msleep(100);
     }
 }
 

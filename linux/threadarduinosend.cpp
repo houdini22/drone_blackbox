@@ -39,6 +39,14 @@ QString ThreadArduinoSend::createAxisBuffer(int leftX, int leftY, int rightX, in
     buffer.append(QString::number(rightX));
     buffer.append(" ");
     buffer.append(QString::number(rightY));
+    buffer.append(" ");
+    buffer.append(QString::number(1100));
+    buffer.append(" ");
+    buffer.append(QString::number(1100));
+    buffer.append(" ");
+    buffer.append(QString::number(1100));
+    buffer.append(" ");
+    buffer.append(QString::number(1100));
     buffer.append("$");
 
     return buffer;
@@ -60,8 +68,10 @@ void ThreadArduinoSend::run() {
     int sendingDpadUp = 0;
     int sendingB = 0;
 
+    int timeSleep = 80;
+
     while (1) {
-        QThread::msleep(40);
+        QThread::msleep(timeSleep);
 
         Modes * modes = this->drone->getModes();
         ButtonsPressed buttons = this->drone->getGamepad0()->getData()->buttonsPressed;
@@ -147,13 +157,11 @@ void ThreadArduinoSend::run() {
                     if (startMode) { // if toggled sendinf true
                         if (buttons.arming) { // if arming
                             if (!armingMode) {
-                                sendingArm = 28; // 28 * 40 ms
-
+                                sendingArm = (double) data["arming"]["time"].get<int>() / (double) timeSleep + 1.0;
                                 this->setMotorsArmed(true);
                             } else {
                                 if (startMode) {
-                                    sendingArm = 28; // 28 * 40 ms
-
+                                    sendingArm = (double) data["disarming"]["time"].get<int>() / (double) timeSleep + 1.0;
                                     this->setMotorsArmed(false);
                                 }
                             }

@@ -35,15 +35,18 @@ public:
     QGroupBox *groupBox_3;
     QLabel *label_7;
     QLineEdit *inputLeftYmiddle;
+    QGroupBox *groupBox_4;
+    QLabel *label_8;
+    QLineEdit *inputTimeOfSignal;
 
     void setupUi(QDialog *DialogDisarmingModeSettings)
     {
         if (DialogDisarmingModeSettings->objectName().isEmpty())
             DialogDisarmingModeSettings->setObjectName(QStringLiteral("DialogDisarmingModeSettings"));
-        DialogDisarmingModeSettings->resize(908, 313);
+        DialogDisarmingModeSettings->resize(908, 443);
         buttonBox = new QDialogButtonBox(DialogDisarmingModeSettings);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(560, 270, 341, 32));
+        buttonBox->setGeometry(QRect(560, 400, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         groupBox_5 = new QGroupBox(DialogDisarmingModeSettings);
@@ -86,6 +89,16 @@ public:
         inputLeftYmiddle = new QLineEdit(groupBox_3);
         inputLeftYmiddle->setObjectName(QStringLiteral("inputLeftYmiddle"));
         inputLeftYmiddle->setGeometry(QRect(170, 70, 101, 32));
+        groupBox_4 = new QGroupBox(DialogDisarmingModeSettings);
+        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 270, 891, 121));
+        label_8 = new QLabel(groupBox_4);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setGeometry(QRect(390, 40, 101, 31));
+        label_8->setAlignment(Qt::AlignCenter);
+        inputTimeOfSignal = new QLineEdit(groupBox_4);
+        inputTimeOfSignal->setObjectName(QStringLiteral("inputTimeOfSignal"));
+        inputTimeOfSignal->setGeometry(QRect(390, 70, 101, 32));
 
         retranslateUi(DialogDisarmingModeSettings);
         QObject::connect(buttonBox, SIGNAL(accepted()), DialogDisarmingModeSettings, SLOT(accept()));
@@ -105,6 +118,8 @@ public:
         label_4->setText(QApplication::translate("DialogDisarmingModeSettings", "Value", nullptr));
         groupBox_3->setTitle(QApplication::translate("DialogDisarmingModeSettings", "Left Y", nullptr));
         label_7->setText(QApplication::translate("DialogDisarmingModeSettings", "Value", nullptr));
+        groupBox_4->setTitle(QApplication::translate("DialogDisarmingModeSettings", "Time of Signal", nullptr));
+        label_8->setText(QApplication::translate("DialogDisarmingModeSettings", "Milliseconds", nullptr));
     } // retranslateUi
 
 };

@@ -326,7 +326,7 @@ public:
         labelRightXmin->setAlignment(Qt::AlignCenter);
         buttonSettingsRadio = new QPushButton(groupBoxTitle);
         buttonSettingsRadio->setObjectName(QStringLiteral("buttonSettingsRadio"));
-        buttonSettingsRadio->setGeometry(QRect(310, 10, 81, 31));
+        buttonSettingsRadio->setGeometry(QRect(440, 10, 81, 31));
         QFont font3;
         font3.setPointSize(10);
         buttonSettingsRadio->setFont(font3);
