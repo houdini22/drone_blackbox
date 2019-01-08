@@ -24,7 +24,9 @@ void SteeringRegistry::start() {
     }
 
     emit signalSteeringsDataChanged(this->steeringsData);
+}
 
+void SteeringRegistry::startThreads() {
     for (int i = 0; i < this->registry.size(); i += 1) {
         this->registry.at(i)->start();
     }

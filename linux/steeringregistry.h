@@ -13,6 +13,7 @@ public:
     SteeringRegistry(Drone * drone);
     void add(SteeringInterface * handler);
     void start();
+    void startThreads();
     QHash<QString, SteeringData *> * getData();
 private:
     QList<SteeringInterface *> registry;

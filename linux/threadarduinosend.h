@@ -18,6 +18,7 @@ private:
     Drone * drone;
     SendingRegistry * registry;
     SendingData * sendingData;
+    SteeringData * steeringData;
 
     void send(QString buffer);
 
@@ -37,6 +38,7 @@ private:
     int rightY;
 public slots:
     void slotSendingDataChanged(SendingData * sendingData);
+    void slotSteeringDataChanged(SteeringData * steeringsData);
 };
 
 #endif // THREADARDUINOSEND_H

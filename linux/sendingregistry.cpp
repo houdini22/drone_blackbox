@@ -19,7 +19,9 @@ void SendingRegistry::start() {
     }
 
     emit signalSendingsDataChanged(this->sendingsData);
+}
 
+void SendingRegistry::startThreads() {
     for (int i = 0; i < this->registry.size(); i += 1) {
         this->registry.at(i)->start();
     }

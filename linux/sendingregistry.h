@@ -13,6 +13,7 @@ public:
     SendingRegistry(Drone * drone);
     void add(SendingInterface * handler);
     void start();
+    void startThreads();
     Modes * getModes();
     void setModes(Modes * modes);
 private:

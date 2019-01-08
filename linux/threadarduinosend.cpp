@@ -6,6 +6,7 @@ ThreadArduinoSend::ThreadArduinoSend(Drone * drone, SendingRegistry * registry):
     this->drone = drone;
     this->registry = registry;
     connect(this->registry, SIGNAL(signalSendingDataChanged(SendingData *)), this, SLOT(slotSendingDataChanged(SendingData *)));
+    connect(this->drone, SIGNAL(signalSteeringDataChanged(SteeringData *)), this, SLOT(slotSteeringDataChanged(SteeringData *)));
 }
 
 void ThreadArduinoSend::send(QString buffer) {
@@ -78,10 +79,9 @@ void ThreadArduinoSend::run() {
     int sendingThrottle = 0;
     int leftY = data["radio"]["leftY"]["min"].get<int>();
     int sendingLeftY = 0;
-    int sendingRecording = 0;
-    int sendingDpadDown = 0;
-    int sendingDpadUp = 0;
-    int sendingB = 0;
+    int sendingThrust33 = 0;
+    int sendingThrust66 = 0;
+    int sendingThrust100 = 0;
 
     int timeSleep = 40;
 
@@ -89,7 +89,7 @@ void ThreadArduinoSend::run() {
         QThread::msleep(timeSleep);
 
         Modes * modes = this->drone->getModes();
-        ButtonsPressed buttons = this->drone->getGamepad0()->getData()->buttonsPressed;
+        ButtonsPressed buttons = this->steeringData->buttonsPressed;
         nlohmann::json data = Storage::getInstance().getData();
 
         if (this->sendingData->mode == MODE_ARDUINO_CONNECTED) {
@@ -121,7 +121,7 @@ void ThreadArduinoSend::run() {
                 }
             } else {
                 // send
-                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) {
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0&& sendingLeftY == 0 && sendingThrust33 == 0 && sendingThrust66 == 0 && sendingThrust100 == 0) {
                     if (throttleMode) {
                         this->setRadioValues(buttons.leftX, leftY, buttons.rightX, buttons.rightY);
                         this->send(this->createAxisBuffer(buttons.leftX, leftY, buttons.rightX, buttons.rightY));
@@ -131,36 +131,29 @@ void ThreadArduinoSend::run() {
                     }
                 }
 
-                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingRecording == 0 && sendingDpadDown == 0 && sendingDpadUp == 0 && sendingB == 0) { // listening buttons
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingThrust33 == 0 && sendingThrust66 == 0 && sendingThrust100 == 0) { // listening buttons
                     if (buttons.dPadDown) { // toggle Throttle mode
-                        sendingThrottle = 6;
+                        sendingThrottle = 3;
                         continue;
                     }
 
                     if (buttons.dPadLeft) {
-                        modes->thrust = MODE_THRUST_33;
-                        this->drone->setModes(modes);
-                    } else if (buttons.dPadUp) {
-                        modes->thrust = MODE_THRUST_66;
-                        this->drone->setModes(modes);
-                    } else if (buttons.dPadRight) {
-                        modes->thrust = MODE_THRUST_100;
-                        this->drone->setModes(modes);
+                        sendingThrust33 = 3;
+                        continue;
+                    }
+
+                    if (buttons.dPadUp) {
+                        sendingThrust66 = 3;
+                        continue;
+                    }
+
+                    if (buttons.dPadRight) {
+                        sendingThrust100 = 3;
+                        continue;
                     }
 
                     if (buttons.start && !armingMode) { // toggle sending
-                        if (startMode) {
-                            sendingStart = 26; // 26 * 40 ms
-
-                            this->send("f"); // off
-                            this->setRadioSending(false);
-                        } else {
-                            sendingStart = 26; // 26 * 40 ms
-
-                            this->send("n"); // on
-                            this->setRadioSending(true);
-                        }
-
+                        sendingStart = 6;
                         continue;
                     }
 
@@ -204,6 +197,13 @@ void ThreadArduinoSend::run() {
                     sendingStart--;
                     if (sendingStart == 0) {
                         startMode = !startMode;
+                        if (startMode) {
+                            this->send("n"); // on
+                            this->setRadioSending(true);
+                        } else {
+                            this->send("f"); // off
+                            this->setRadioSending(false);
+                        }
                     }
 
                     continue;
@@ -246,6 +246,33 @@ void ThreadArduinoSend::run() {
                     sendingLeftY--;
 
                     continue;
+                }
+
+                if (sendingThrust33 > 0) {
+                    sendingThrust33--;
+
+                    if (sendingThrust33 == 0) {
+                        modes->thrust = MODE_THRUST_33;
+                        this->drone->setModes(modes);
+                    }
+                }
+
+                if (sendingThrust66 > 0) {
+                    sendingThrust66--;
+
+                    if (sendingThrust66 == 0) {
+                        modes->thrust = MODE_THRUST_66;
+                        this->drone->setModes(modes);
+                    }
+                }
+
+                if (sendingThrust100 > 0) {
+                    sendingThrust100--;
+
+                    if (sendingThrust100 == 0) {
+                        modes->thrust = MODE_THRUST_100;
+                        this->drone->setModes(modes);
+                    }
                 }
             }
         }
@@ -355,5 +382,11 @@ void ThreadArduinoSend::setRadioValues(int leftX, int leftY, int rightX, int rig
 void ThreadArduinoSend::slotSendingDataChanged(SendingData * sendingData) {
     if (sendingData->name.compare("arduino0") == 0) {
         this->sendingData = sendingData;
+    }
+}
+
+void ThreadArduinoSend::slotSteeringDataChanged(SteeringData * steeringData) {
+    if (steeringData->name.compare("gamepad0") == 0) {
+        this->steeringData = steeringData;
     }
 }

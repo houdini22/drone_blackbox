@@ -20,16 +20,21 @@ Drone::Drone(MainWindow * window) {
 
     this->steeringRegistry = new SteeringRegistry(this);
     this->gamepad0 = new SteeringGamepad0(this, this->steeringRegistry);
-    //this->gamepad1 = new SteeringGamepad1(this, this->steeringRegistry);
     this->steeringRegistry->add(this->gamepad0);
-    //this->steeringRegistry->add(this->gamepad1);
     connect(this->steeringRegistry, SIGNAL(signalSteeringDataChanged(SteeringData*)), this, SLOT(slotSteeringDataChanged(SteeringData*)));
-    this->steeringRegistry->start();
+
+    //this->gamepad1 = new SteeringGamepad1(this, this->steeringRegistry);
+    //this->steeringRegistry->add(this->gamepad1);
 
     this->sendingRegistry = new SendingRegistry(this);
     this->sendingRegistry->add(new SendingArduino(this, this->sendingRegistry));
     connect(this->sendingRegistry, SIGNAL(signalSendingsDataChanged(QHash<QString,SendingData*>*)), this, SLOT(slotSendingsDataChanged(QHash<QString,SendingData*>*)));
+
     this->sendingRegistry->start();
+    this->steeringRegistry->start();
+
+    this->sendingRegistry->startThreads();
+    this->steeringRegistry->startThreads();
 }
 
 void Drone::start() {
