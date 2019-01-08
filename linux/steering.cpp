@@ -36,7 +36,7 @@ SteeringGamepad0::SteeringGamepad0(Drone * drone, SteeringRegistry * registry) :
     this->data->isEnabled = true;
 
     this->threadConnect = new ThreadGamepad0();
-    this->threadGamepadUpdate = new ThreadGamepad0Update(this->registry);
+    this->threadGamepadUpdate = new ThreadGamepad0Update(this->registry, this->drone);
 
     connect(this, SIGNAL(signalSteeringDataChanged(SteeringData*)), this->registry, SLOT(slotSteeringDataChanged(SteeringData*)));
     connect(this->threadConnect, SIGNAL(signalGamepadIsConnected(bool)), this, SLOT(slotGamepadIsConnected(bool)));
@@ -66,7 +66,7 @@ SteeringGamepad1::SteeringGamepad1(Drone * drone, SteeringRegistry * registry) :
     this->data->name = "gamepad1";
 
     this->threadConnect = new ThreadGamepad1();
-    this->threadGamepadUpdate = new ThreadGamepad1Update(this->registry);
+    this->threadGamepadUpdate = new ThreadGamepad1Update(this->registry, this->drone);
 
     connect(this, SIGNAL(signalSteeringDataChanged(SteeringData*)), this->registry, SLOT(slotSteeringDataChanged(SteeringData*)));
     connect(this->threadConnect, SIGNAL(signalGamepadIsConnected(bool)), this, SLOT(slotGamepadIsConnected(bool)));

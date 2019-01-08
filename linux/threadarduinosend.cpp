@@ -137,11 +137,6 @@ void ThreadArduinoSend::run() {
                         continue;
                     }
 
-                    if (buttons.b) {
-                        //sendingB = 13;
-                        //continue;
-                    }
-
                     if (buttons.dPadLeft) {
                         modes->thrust = MODE_THRUST_33;
                         this->drone->setModes(modes);

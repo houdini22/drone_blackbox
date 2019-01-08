@@ -34,7 +34,6 @@ Drone::Drone(MainWindow * window) {
 
 void Drone::start() {
     Storage::getInstance().create();
-
     this->threadCamera->start();
 }
 

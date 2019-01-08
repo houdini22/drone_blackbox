@@ -9,7 +9,7 @@ class ThreadGamepadUpdate : public QThread
 {
     Q_OBJECT
 public:
-    explicit ThreadGamepadUpdate(SteeringRegistry * registry);
+    explicit ThreadGamepadUpdate(SteeringRegistry * registry, Drone * drone);
     void run();
 private:
     QString name;
@@ -25,14 +25,14 @@ signals:
 
 class ThreadGamepad0Update : public ThreadGamepadUpdate {
 public:
-    ThreadGamepad0Update(SteeringRegistry * registry);
+    ThreadGamepad0Update(SteeringRegistry * registry, Drone * drone);
 protected:
     int gamepad = 0;
 };
 
 class ThreadGamepad1Update : public ThreadGamepadUpdate {
 public:
-    ThreadGamepad1Update(SteeringRegistry * registry);
+    ThreadGamepad1Update(SteeringRegistry * registry, Drone * drone);
 protected:
     int gamepad = 1;
 };

@@ -1,8 +1,8 @@
 #include "include.h"
 
-ThreadGamepadUpdate::ThreadGamepadUpdate(SteeringRegistry * registry): QThread() {
+ThreadGamepadUpdate::ThreadGamepadUpdate(SteeringRegistry * registry, Drone * drone): QThread() {
     this->registry = registry;
-
+    this->drone = drone;
     connect(this->registry, SIGNAL(signalSteeringDataChanged(SteeringData *)), this, SLOT(slotSteeringDataChanged(SteeringData *)));
 }
 
@@ -12,6 +12,7 @@ void ThreadGamepadUpdate::run() {
 
         nlohmann::json data = Storage::getInstance().getData();
         SteeringData * steeringData = this->steeringData;
+        Modes * modes = this->drone->getModes();
 
         if (steeringData->isConnected) {
             GamepadUpdate();
@@ -20,6 +21,16 @@ void ThreadGamepadUpdate::run() {
             double _leftY = GamepadStickLength(this->gamepad, STICK_LEFT) * sin(GamepadStickAngle(this->gamepad, STICK_LEFT));
             double _rightX = GamepadStickLength(this->gamepad, STICK_RIGHT) * cos(GamepadStickAngle(this->gamepad, STICK_RIGHT));
             double _rightY = GamepadStickLength(this->gamepad, STICK_RIGHT) * sin(GamepadStickAngle(this->gamepad, STICK_RIGHT));
+
+            if (modes->thrust == MODE_THRUST_33) {
+                _leftX *= 0.33;
+                _rightX *= 0.33;
+                _rightY *= 0.33;
+            } else if (modes->thrust == MODE_THRUST_66) {
+                _leftX *= 0.66;
+                _rightX *= 0.66;
+                _rightY *= 0.66;
+            }
 
             if (_leftX < 0) {
                 double area = data["radio"]["leftX"]["middle"].get<int>() - data["radio"]["leftX"]["min"].get<int>();
@@ -76,10 +87,10 @@ void ThreadGamepadUpdate::slotSteeringDataChanged(SteeringData * steeringData) {
     }
 }
 
-ThreadGamepad0Update::ThreadGamepad0Update(SteeringRegistry * registry) : ThreadGamepadUpdate(registry) {
+ThreadGamepad0Update::ThreadGamepad0Update(SteeringRegistry * registry, Drone * drone) : ThreadGamepadUpdate(registry, drone) {
 
 }
 
-ThreadGamepad1Update::ThreadGamepad1Update(SteeringRegistry * registry) : ThreadGamepadUpdate(registry) {
+ThreadGamepad1Update::ThreadGamepad1Update(SteeringRegistry * registry, Drone * drone) : ThreadGamepadUpdate(registry, drone) {
 
 }
