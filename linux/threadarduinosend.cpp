@@ -5,14 +5,15 @@ ThreadArduinoSend::ThreadArduinoSend(Drone * drone, SendingRegistry * registry):
 {
     this->drone = drone;
     this->registry = registry;
-
     connect(this->registry, SIGNAL(signalSendingDataChanged(SendingData *)), this, SLOT(slotSendingDataChanged(SendingData *)));
 }
 
 void ThreadArduinoSend::send(QString buffer) {
     try {
         this->sendingData->service->Write(buffer.toStdString());
-    } catch(std::runtime_error ex) {}
+    } catch(std::runtime_error ex) {
+
+    }
 }
 
 int ThreadArduinoSend::axisValueFromDouble(double value) {
@@ -31,23 +32,37 @@ QString ThreadArduinoSend::createAxisBuffer(double leftX, double leftY, double r
 QString ThreadArduinoSend::createAxisBuffer(int leftX, int leftY, int rightX, int rightY) {
     QString buffer = "";
 
-    buffer.append("^");
-    buffer.append(QString::number(leftX));
-    buffer.append(" ");
-    buffer.append(QString::number(leftY));
-    buffer.append(" ");
-    buffer.append(QString::number(rightX));
-    buffer.append(" ");
-    buffer.append(QString::number(rightY));
-    buffer.append(" ");
-    buffer.append(QString::number(1100));
-    buffer.append(" ");
-    buffer.append(QString::number(1100));
-    buffer.append(" ");
-    buffer.append(QString::number(1100));
-    buffer.append(" ");
-    buffer.append(QString::number(1100));
-    buffer.append("$");
+    if (leftX != this->leftX) {
+        this->leftX = leftX;
+        buffer.append("^3#");
+        buffer.append(QString::number(leftX));
+        buffer.append("$");
+    }
+
+    if (leftY != this->leftY) {
+        this->leftY = leftY;
+        buffer.append("^2#");
+        buffer.append(QString::number(leftY));
+        buffer.append("$");
+    }
+
+    if (rightX != this->rightX) {
+        this->rightX = rightX;
+        buffer.append("^0#");
+        buffer.append(QString::number(rightX));
+        buffer.append("$");
+    }
+
+    if (rightY != this->rightY) {
+        this->rightY = rightY;
+        buffer.append("^1#");
+        buffer.append(QString::number(rightY));
+        buffer.append("$");
+    }
+
+    if (buffer.length() == 0) {
+        buffer.append("z");
+    }
 
     return buffer;
 }
@@ -68,7 +83,7 @@ void ThreadArduinoSend::run() {
     int sendingDpadUp = 0;
     int sendingB = 0;
 
-    int timeSleep = 80;
+    int timeSleep = 40;
 
     while (1) {
         QThread::msleep(timeSleep);

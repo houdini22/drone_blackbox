@@ -30,6 +30,11 @@ private:
     void setMotorsArmed(bool value);
     void setThrottleMode(bool value);
     void setRadioValues(int leftX, int leftY, int rightX, int rightY);
+
+    int leftX;
+    int leftY;
+    int rightX;
+    int rightY;
 public slots:
     void slotSendingDataChanged(SendingData * sendingData);
 };
