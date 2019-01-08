@@ -123,6 +123,60 @@ nienazwany/fast:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/build
 .PHONY : nienazwany/fast
 
+QtLeapMotion/Leap/include/moc_Leap.o: QtLeapMotion/Leap/include/moc_Leap.cpp.o
+
+.PHONY : QtLeapMotion/Leap/include/moc_Leap.o
+
+# target to build an object file
+QtLeapMotion/Leap/include/moc_Leap.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o
+.PHONY : QtLeapMotion/Leap/include/moc_Leap.cpp.o
+
+QtLeapMotion/Leap/include/moc_Leap.i: QtLeapMotion/Leap/include/moc_Leap.cpp.i
+
+.PHONY : QtLeapMotion/Leap/include/moc_Leap.i
+
+# target to preprocess a source file
+QtLeapMotion/Leap/include/moc_Leap.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i
+.PHONY : QtLeapMotion/Leap/include/moc_Leap.cpp.i
+
+QtLeapMotion/Leap/include/moc_Leap.s: QtLeapMotion/Leap/include/moc_Leap.cpp.s
+
+.PHONY : QtLeapMotion/Leap/include/moc_Leap.s
+
+# target to generate assembly for a file
+QtLeapMotion/Leap/include/moc_Leap.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s
+.PHONY : QtLeapMotion/Leap/include/moc_Leap.cpp.s
+
+QtLeapMotion/Leap/include/moc_LeapMath.o: QtLeapMotion/Leap/include/moc_LeapMath.cpp.o
+
+.PHONY : QtLeapMotion/Leap/include/moc_LeapMath.o
+
+# target to build an object file
+QtLeapMotion/Leap/include/moc_LeapMath.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o
+.PHONY : QtLeapMotion/Leap/include/moc_LeapMath.cpp.o
+
+QtLeapMotion/Leap/include/moc_LeapMath.i: QtLeapMotion/Leap/include/moc_LeapMath.cpp.i
+
+.PHONY : QtLeapMotion/Leap/include/moc_LeapMath.i
+
+# target to preprocess a source file
+QtLeapMotion/Leap/include/moc_LeapMath.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i
+.PHONY : QtLeapMotion/Leap/include/moc_LeapMath.cpp.i
+
+QtLeapMotion/Leap/include/moc_LeapMath.s: QtLeapMotion/Leap/include/moc_LeapMath.cpp.s
+
+.PHONY : QtLeapMotion/Leap/include/moc_LeapMath.s
+
+# target to generate assembly for a file
+QtLeapMotion/Leap/include/moc_LeapMath.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s
+.PHONY : QtLeapMotion/Leap/include/moc_LeapMath.cpp.s
+
 common.o: common.cpp.o
 
 .PHONY : common.o
@@ -176,6 +230,114 @@ database.s: database.cpp.s
 database.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/database.cpp.s
 .PHONY : database.cpp.s
+
+dialogarmingmodesettings.o: dialogarmingmodesettings.cpp.o
+
+.PHONY : dialogarmingmodesettings.o
+
+# target to build an object file
+dialogarmingmodesettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o
+.PHONY : dialogarmingmodesettings.cpp.o
+
+dialogarmingmodesettings.i: dialogarmingmodesettings.cpp.i
+
+.PHONY : dialogarmingmodesettings.i
+
+# target to preprocess a source file
+dialogarmingmodesettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.i
+.PHONY : dialogarmingmodesettings.cpp.i
+
+dialogarmingmodesettings.s: dialogarmingmodesettings.cpp.s
+
+.PHONY : dialogarmingmodesettings.s
+
+# target to generate assembly for a file
+dialogarmingmodesettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.s
+.PHONY : dialogarmingmodesettings.cpp.s
+
+dialogdisarmingmodesettings.o: dialogdisarmingmodesettings.cpp.o
+
+.PHONY : dialogdisarmingmodesettings.o
+
+# target to build an object file
+dialogdisarmingmodesettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o
+.PHONY : dialogdisarmingmodesettings.cpp.o
+
+dialogdisarmingmodesettings.i: dialogdisarmingmodesettings.cpp.i
+
+.PHONY : dialogdisarmingmodesettings.i
+
+# target to preprocess a source file
+dialogdisarmingmodesettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.i
+.PHONY : dialogdisarmingmodesettings.cpp.i
+
+dialogdisarmingmodesettings.s: dialogdisarmingmodesettings.cpp.s
+
+.PHONY : dialogdisarmingmodesettings.s
+
+# target to generate assembly for a file
+dialogdisarmingmodesettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.s
+.PHONY : dialogdisarmingmodesettings.cpp.s
+
+dialogradiosettings.o: dialogradiosettings.cpp.o
+
+.PHONY : dialogradiosettings.o
+
+# target to build an object file
+dialogradiosettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o
+.PHONY : dialogradiosettings.cpp.o
+
+dialogradiosettings.i: dialogradiosettings.cpp.i
+
+.PHONY : dialogradiosettings.i
+
+# target to preprocess a source file
+dialogradiosettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.i
+.PHONY : dialogradiosettings.cpp.i
+
+dialogradiosettings.s: dialogradiosettings.cpp.s
+
+.PHONY : dialogradiosettings.s
+
+# target to generate assembly for a file
+dialogradiosettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.s
+.PHONY : dialogradiosettings.cpp.s
+
+dialogthrottlemodesettings.o: dialogthrottlemodesettings.cpp.o
+
+.PHONY : dialogthrottlemodesettings.o
+
+# target to build an object file
+dialogthrottlemodesettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o
+.PHONY : dialogthrottlemodesettings.cpp.o
+
+dialogthrottlemodesettings.i: dialogthrottlemodesettings.cpp.i
+
+.PHONY : dialogthrottlemodesettings.i
+
+# target to preprocess a source file
+dialogthrottlemodesettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.i
+.PHONY : dialogthrottlemodesettings.cpp.i
+
+dialogthrottlemodesettings.s: dialogthrottlemodesettings.cpp.s
+
+.PHONY : dialogthrottlemodesettings.s
+
+# target to generate assembly for a file
+dialogthrottlemodesettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.s
+.PHONY : dialogthrottlemodesettings.cpp.s
 
 drone.o: drone.cpp.o
 
@@ -393,6 +555,114 @@ moc_database.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_database.cpp.s
 .PHONY : moc_database.cpp.s
 
+moc_dialogarmingmodesettings.o: moc_dialogarmingmodesettings.cpp.o
+
+.PHONY : moc_dialogarmingmodesettings.o
+
+# target to build an object file
+moc_dialogarmingmodesettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o
+.PHONY : moc_dialogarmingmodesettings.cpp.o
+
+moc_dialogarmingmodesettings.i: moc_dialogarmingmodesettings.cpp.i
+
+.PHONY : moc_dialogarmingmodesettings.i
+
+# target to preprocess a source file
+moc_dialogarmingmodesettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.i
+.PHONY : moc_dialogarmingmodesettings.cpp.i
+
+moc_dialogarmingmodesettings.s: moc_dialogarmingmodesettings.cpp.s
+
+.PHONY : moc_dialogarmingmodesettings.s
+
+# target to generate assembly for a file
+moc_dialogarmingmodesettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.s
+.PHONY : moc_dialogarmingmodesettings.cpp.s
+
+moc_dialogdisarmingmodesettings.o: moc_dialogdisarmingmodesettings.cpp.o
+
+.PHONY : moc_dialogdisarmingmodesettings.o
+
+# target to build an object file
+moc_dialogdisarmingmodesettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o
+.PHONY : moc_dialogdisarmingmodesettings.cpp.o
+
+moc_dialogdisarmingmodesettings.i: moc_dialogdisarmingmodesettings.cpp.i
+
+.PHONY : moc_dialogdisarmingmodesettings.i
+
+# target to preprocess a source file
+moc_dialogdisarmingmodesettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.i
+.PHONY : moc_dialogdisarmingmodesettings.cpp.i
+
+moc_dialogdisarmingmodesettings.s: moc_dialogdisarmingmodesettings.cpp.s
+
+.PHONY : moc_dialogdisarmingmodesettings.s
+
+# target to generate assembly for a file
+moc_dialogdisarmingmodesettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.s
+.PHONY : moc_dialogdisarmingmodesettings.cpp.s
+
+moc_dialogradiosettings.o: moc_dialogradiosettings.cpp.o
+
+.PHONY : moc_dialogradiosettings.o
+
+# target to build an object file
+moc_dialogradiosettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o
+.PHONY : moc_dialogradiosettings.cpp.o
+
+moc_dialogradiosettings.i: moc_dialogradiosettings.cpp.i
+
+.PHONY : moc_dialogradiosettings.i
+
+# target to preprocess a source file
+moc_dialogradiosettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.i
+.PHONY : moc_dialogradiosettings.cpp.i
+
+moc_dialogradiosettings.s: moc_dialogradiosettings.cpp.s
+
+.PHONY : moc_dialogradiosettings.s
+
+# target to generate assembly for a file
+moc_dialogradiosettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.s
+.PHONY : moc_dialogradiosettings.cpp.s
+
+moc_dialogthrottlemodesettings.o: moc_dialogthrottlemodesettings.cpp.o
+
+.PHONY : moc_dialogthrottlemodesettings.o
+
+# target to build an object file
+moc_dialogthrottlemodesettings.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o
+.PHONY : moc_dialogthrottlemodesettings.cpp.o
+
+moc_dialogthrottlemodesettings.i: moc_dialogthrottlemodesettings.cpp.i
+
+.PHONY : moc_dialogthrottlemodesettings.i
+
+# target to preprocess a source file
+moc_dialogthrottlemodesettings.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.i
+.PHONY : moc_dialogthrottlemodesettings.cpp.i
+
+moc_dialogthrottlemodesettings.s: moc_dialogthrottlemodesettings.cpp.s
+
+.PHONY : moc_dialogthrottlemodesettings.s
+
+# target to generate assembly for a file
+moc_dialogthrottlemodesettings.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.s
+.PHONY : moc_dialogthrottlemodesettings.cpp.s
+
 moc_drone.o: moc_drone.cpp.o
 
 .PHONY : moc_drone.o
@@ -473,6 +743,33 @@ moc_dronemodes.s: moc_dronemodes.cpp.s
 moc_dronemodes.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.s
 .PHONY : moc_dronemodes.cpp.s
+
+moc_focuswatcher.o: moc_focuswatcher.cpp.o
+
+.PHONY : moc_focuswatcher.o
+
+# target to build an object file
+moc_focuswatcher.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o
+.PHONY : moc_focuswatcher.cpp.o
+
+moc_focuswatcher.i: moc_focuswatcher.cpp.i
+
+.PHONY : moc_focuswatcher.i
+
+# target to preprocess a source file
+moc_focuswatcher.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.i
+.PHONY : moc_focuswatcher.cpp.i
+
+moc_focuswatcher.s: moc_focuswatcher.cpp.s
+
+.PHONY : moc_focuswatcher.s
+
+# target to generate assembly for a file
+moc_focuswatcher.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.s
+.PHONY : moc_focuswatcher.cpp.s
 
 moc_gamepad.o: moc_gamepad.cpp.o
 
@@ -609,6 +906,33 @@ moc_mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.s
 .PHONY : moc_mainwindow.cpp.s
 
+moc_mousesteering.o: moc_mousesteering.cpp.o
+
+.PHONY : moc_mousesteering.o
+
+# target to build an object file
+moc_mousesteering.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o
+.PHONY : moc_mousesteering.cpp.o
+
+moc_mousesteering.i: moc_mousesteering.cpp.i
+
+.PHONY : moc_mousesteering.i
+
+# target to preprocess a source file
+moc_mousesteering.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.i
+.PHONY : moc_mousesteering.cpp.i
+
+moc_mousesteering.s: moc_mousesteering.cpp.s
+
+.PHONY : moc_mousesteering.s
+
+# target to generate assembly for a file
+moc_mousesteering.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.s
+.PHONY : moc_mousesteering.cpp.s
+
 moc_sendingarduino.o: moc_sendingarduino.cpp.o
 
 .PHONY : moc_sendingarduino.o
@@ -690,59 +1014,32 @@ moc_sendingregistry.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.s
 .PHONY : moc_sendingregistry.cpp.s
 
-moc_steeringgamepad.o: moc_steeringgamepad.cpp.o
+moc_steering.o: moc_steering.cpp.o
 
-.PHONY : moc_steeringgamepad.o
-
-# target to build an object file
-moc_steeringgamepad.cpp.o:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o
-.PHONY : moc_steeringgamepad.cpp.o
-
-moc_steeringgamepad.i: moc_steeringgamepad.cpp.i
-
-.PHONY : moc_steeringgamepad.i
-
-# target to preprocess a source file
-moc_steeringgamepad.cpp.i:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.i
-.PHONY : moc_steeringgamepad.cpp.i
-
-moc_steeringgamepad.s: moc_steeringgamepad.cpp.s
-
-.PHONY : moc_steeringgamepad.s
-
-# target to generate assembly for a file
-moc_steeringgamepad.cpp.s:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.s
-.PHONY : moc_steeringgamepad.cpp.s
-
-moc_steeringinterface.o: moc_steeringinterface.cpp.o
-
-.PHONY : moc_steeringinterface.o
+.PHONY : moc_steering.o
 
 # target to build an object file
-moc_steeringinterface.cpp.o:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o
-.PHONY : moc_steeringinterface.cpp.o
+moc_steering.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steering.cpp.o
+.PHONY : moc_steering.cpp.o
 
-moc_steeringinterface.i: moc_steeringinterface.cpp.i
+moc_steering.i: moc_steering.cpp.i
 
-.PHONY : moc_steeringinterface.i
+.PHONY : moc_steering.i
 
 # target to preprocess a source file
-moc_steeringinterface.cpp.i:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.i
-.PHONY : moc_steeringinterface.cpp.i
+moc_steering.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steering.cpp.i
+.PHONY : moc_steering.cpp.i
 
-moc_steeringinterface.s: moc_steeringinterface.cpp.s
+moc_steering.s: moc_steering.cpp.s
 
-.PHONY : moc_steeringinterface.s
+.PHONY : moc_steering.s
 
 # target to generate assembly for a file
-moc_steeringinterface.cpp.s:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.s
-.PHONY : moc_steeringinterface.cpp.s
+moc_steering.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_steering.cpp.s
+.PHONY : moc_steering.cpp.s
 
 moc_steeringleapmotion.o: moc_steeringleapmotion.cpp.o
 
@@ -1041,6 +1338,33 @@ moc_ui_mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s
 .PHONY : moc_ui_mainwindow.cpp.s
 
+mousesteering.o: mousesteering.cpp.o
+
+.PHONY : mousesteering.o
+
+# target to build an object file
+mousesteering.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/mousesteering.cpp.o
+.PHONY : mousesteering.cpp.o
+
+mousesteering.i: mousesteering.cpp.i
+
+.PHONY : mousesteering.i
+
+# target to preprocess a source file
+mousesteering.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/mousesteering.cpp.i
+.PHONY : mousesteering.cpp.i
+
+mousesteering.s: mousesteering.cpp.s
+
+.PHONY : mousesteering.s
+
+# target to generate assembly for a file
+mousesteering.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/mousesteering.cpp.s
+.PHONY : mousesteering.cpp.s
+
 sendingarduino.o: sendingarduino.cpp.o
 
 .PHONY : sendingarduino.o
@@ -1122,59 +1446,32 @@ sendingregistry.cpp.s:
 	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/sendingregistry.cpp.s
 .PHONY : sendingregistry.cpp.s
 
-steeringgamepad.o: steeringgamepad.cpp.o
+steering.o: steering.cpp.o
 
-.PHONY : steeringgamepad.o
-
-# target to build an object file
-steeringgamepad.cpp.o:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o
-.PHONY : steeringgamepad.cpp.o
-
-steeringgamepad.i: steeringgamepad.cpp.i
-
-.PHONY : steeringgamepad.i
-
-# target to preprocess a source file
-steeringgamepad.cpp.i:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steeringgamepad.cpp.i
-.PHONY : steeringgamepad.cpp.i
-
-steeringgamepad.s: steeringgamepad.cpp.s
-
-.PHONY : steeringgamepad.s
-
-# target to generate assembly for a file
-steeringgamepad.cpp.s:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steeringgamepad.cpp.s
-.PHONY : steeringgamepad.cpp.s
-
-steeringinterface.o: steeringinterface.cpp.o
-
-.PHONY : steeringinterface.o
+.PHONY : steering.o
 
 # target to build an object file
-steeringinterface.cpp.o:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steeringinterface.cpp.o
-.PHONY : steeringinterface.cpp.o
+steering.cpp.o:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steering.cpp.o
+.PHONY : steering.cpp.o
 
-steeringinterface.i: steeringinterface.cpp.i
+steering.i: steering.cpp.i
 
-.PHONY : steeringinterface.i
+.PHONY : steering.i
 
 # target to preprocess a source file
-steeringinterface.cpp.i:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steeringinterface.cpp.i
-.PHONY : steeringinterface.cpp.i
+steering.cpp.i:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steering.cpp.i
+.PHONY : steering.cpp.i
 
-steeringinterface.s: steeringinterface.cpp.s
+steering.s: steering.cpp.s
 
-.PHONY : steeringinterface.s
+.PHONY : steering.s
 
 # target to generate assembly for a file
-steeringinterface.cpp.s:
-	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steeringinterface.cpp.s
-.PHONY : steeringinterface.cpp.s
+steering.cpp.s:
+	$(MAKE) -f CMakeFiles/nienazwany.dir/build.make CMakeFiles/nienazwany.dir/steering.cpp.s
+.PHONY : steering.cpp.s
 
 steeringleapmotion.o: steeringleapmotion.cpp.o
 
@@ -1428,12 +1725,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... nienazwany"
 	@echo "... edit_cache"
+	@echo "... QtLeapMotion/Leap/include/moc_Leap.o"
+	@echo "... QtLeapMotion/Leap/include/moc_Leap.i"
+	@echo "... QtLeapMotion/Leap/include/moc_Leap.s"
+	@echo "... QtLeapMotion/Leap/include/moc_LeapMath.o"
+	@echo "... QtLeapMotion/Leap/include/moc_LeapMath.i"
+	@echo "... QtLeapMotion/Leap/include/moc_LeapMath.s"
 	@echo "... common.o"
 	@echo "... common.i"
 	@echo "... common.s"
 	@echo "... database.o"
 	@echo "... database.i"
 	@echo "... database.s"
+	@echo "... dialogarmingmodesettings.o"
+	@echo "... dialogarmingmodesettings.i"
+	@echo "... dialogarmingmodesettings.s"
+	@echo "... dialogdisarmingmodesettings.o"
+	@echo "... dialogdisarmingmodesettings.i"
+	@echo "... dialogdisarmingmodesettings.s"
+	@echo "... dialogradiosettings.o"
+	@echo "... dialogradiosettings.i"
+	@echo "... dialogradiosettings.s"
+	@echo "... dialogthrottlemodesettings.o"
+	@echo "... dialogthrottlemodesettings.i"
+	@echo "... dialogthrottlemodesettings.s"
 	@echo "... drone.o"
 	@echo "... drone.i"
 	@echo "... drone.s"
@@ -1458,6 +1773,18 @@ help:
 	@echo "... moc_database.o"
 	@echo "... moc_database.i"
 	@echo "... moc_database.s"
+	@echo "... moc_dialogarmingmodesettings.o"
+	@echo "... moc_dialogarmingmodesettings.i"
+	@echo "... moc_dialogarmingmodesettings.s"
+	@echo "... moc_dialogdisarmingmodesettings.o"
+	@echo "... moc_dialogdisarmingmodesettings.i"
+	@echo "... moc_dialogdisarmingmodesettings.s"
+	@echo "... moc_dialogradiosettings.o"
+	@echo "... moc_dialogradiosettings.i"
+	@echo "... moc_dialogradiosettings.s"
+	@echo "... moc_dialogthrottlemodesettings.o"
+	@echo "... moc_dialogthrottlemodesettings.i"
+	@echo "... moc_dialogthrottlemodesettings.s"
 	@echo "... moc_drone.o"
 	@echo "... moc_drone.i"
 	@echo "... moc_drone.s"
@@ -1467,6 +1794,9 @@ help:
 	@echo "... moc_dronemodes.o"
 	@echo "... moc_dronemodes.i"
 	@echo "... moc_dronemodes.s"
+	@echo "... moc_focuswatcher.o"
+	@echo "... moc_focuswatcher.i"
+	@echo "... moc_focuswatcher.s"
 	@echo "... moc_gamepad.o"
 	@echo "... moc_gamepad.i"
 	@echo "... moc_gamepad.s"
@@ -1482,6 +1812,9 @@ help:
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"
+	@echo "... moc_mousesteering.o"
+	@echo "... moc_mousesteering.i"
+	@echo "... moc_mousesteering.s"
 	@echo "... moc_sendingarduino.o"
 	@echo "... moc_sendingarduino.i"
 	@echo "... moc_sendingarduino.s"
@@ -1491,12 +1824,9 @@ help:
 	@echo "... moc_sendingregistry.o"
 	@echo "... moc_sendingregistry.i"
 	@echo "... moc_sendingregistry.s"
-	@echo "... moc_steeringgamepad.o"
-	@echo "... moc_steeringgamepad.i"
-	@echo "... moc_steeringgamepad.s"
-	@echo "... moc_steeringinterface.o"
-	@echo "... moc_steeringinterface.i"
-	@echo "... moc_steeringinterface.s"
+	@echo "... moc_steering.o"
+	@echo "... moc_steering.i"
+	@echo "... moc_steering.s"
 	@echo "... moc_steeringleapmotion.o"
 	@echo "... moc_steeringleapmotion.i"
 	@echo "... moc_steeringleapmotion.s"
@@ -1530,6 +1860,9 @@ help:
 	@echo "... moc_ui_mainwindow.o"
 	@echo "... moc_ui_mainwindow.i"
 	@echo "... moc_ui_mainwindow.s"
+	@echo "... mousesteering.o"
+	@echo "... mousesteering.i"
+	@echo "... mousesteering.s"
 	@echo "... sendingarduino.o"
 	@echo "... sendingarduino.i"
 	@echo "... sendingarduino.s"
@@ -1539,12 +1872,9 @@ help:
 	@echo "... sendingregistry.o"
 	@echo "... sendingregistry.i"
 	@echo "... sendingregistry.s"
-	@echo "... steeringgamepad.o"
-	@echo "... steeringgamepad.i"
-	@echo "... steeringgamepad.s"
-	@echo "... steeringinterface.o"
-	@echo "... steeringinterface.i"
-	@echo "... steeringinterface.s"
+	@echo "... steering.o"
+	@echo "... steering.i"
+	@echo "... steering.s"
 	@echo "... steeringleapmotion.o"
 	@echo "... steeringleapmotion.i"
 	@echo "... steeringleapmotion.s"

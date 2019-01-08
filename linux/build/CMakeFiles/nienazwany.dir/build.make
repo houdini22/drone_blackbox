@@ -125,21 +125,21 @@ moc_ui_mainwindow.cpp: ../ui_mainwindow.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating moc_ui_mainwindow.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_ui_mainwindow.cpp_parameters
 
+QtLeapMotion/Leap/include/moc_Leap.cpp: ../QtLeapMotion/Leap/include/Leap.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating QtLeapMotion/Leap/include/moc_Leap.cpp"
+	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp_parameters
+
+QtLeapMotion/Leap/include/moc_LeapMath.cpp: ../QtLeapMotion/Leap/include/LeapMath.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating QtLeapMotion/Leap/include/moc_LeapMath.cpp"
+	cd /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include && /usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp_parameters
+
 moc_leapeventlistener.cpp: ../leapeventlistener.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating moc_leapeventlistener.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating moc_leapeventlistener.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_leapeventlistener.cpp_parameters
 
 moc_steeringregistry.cpp: ../steeringregistry.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating moc_steeringregistry.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating moc_steeringregistry.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringregistry.cpp_parameters
-
-moc_steeringgamepad.cpp: ../steeringgamepad.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating moc_steeringgamepad.cpp"
-	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp_parameters
-
-moc_steeringinterface.cpp: ../steeringinterface.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating moc_steeringinterface.cpp"
-	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp_parameters
 
 moc_sendingregistry.cpp: ../sendingregistry.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating moc_sendingregistry.cpp"
@@ -165,13 +165,41 @@ moc_storage.cpp: ../storage.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating moc_storage.cpp"
 	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_storage.cpp_parameters
 
+moc_focuswatcher.cpp: ../focuswatcher.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating moc_focuswatcher.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_focuswatcher.cpp_parameters
+
+moc_dialogradiosettings.cpp: ../dialogradiosettings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating moc_dialogradiosettings.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogradiosettings.cpp_parameters
+
+moc_mousesteering.cpp: ../mousesteering.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating moc_mousesteering.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_mousesteering.cpp_parameters
+
+moc_steering.cpp: ../steering.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating moc_steering.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_steering.cpp_parameters
+
+moc_dialogarmingmodesettings.cpp: ../dialogarmingmodesettings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating moc_dialogarmingmodesettings.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogarmingmodesettings.cpp_parameters
+
+moc_dialogdisarmingmodesettings.cpp: ../dialogdisarmingmodesettings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating moc_dialogdisarmingmodesettings.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogdisarmingmodesettings.cpp_parameters
+
+moc_dialogthrottlemodesettings.cpp: ../dialogthrottlemodesettings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating moc_dialogthrottlemodesettings.cpp"
+	/usr/lib/qt5/bin/moc @/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogthrottlemodesettings.cpp_parameters
+
 ui_mainwindow.h: ../mainwindow.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating ui_mainwindow.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating ui_mainwindow.h"
 	/usr/lib/qt5/bin/uic -o /home/anonymous/Projects/drone_blackbox/linux/build/ui_mainwindow.h /home/anonymous/Projects/drone_blackbox/linux/mainwindow.ui
 
 CMakeFiles/nienazwany.dir/common.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/common.cpp.o: ../common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/nienazwany.dir/common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/nienazwany.dir/common.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/common.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/common.cpp
 
 CMakeFiles/nienazwany.dir/common.cpp.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/nienazwany.dir/common.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/database.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/database.cpp.o: ../database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/nienazwany.dir/database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/nienazwany.dir/database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/database.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/database.cpp
 
 CMakeFiles/nienazwany.dir/database.cpp.i: cmake_force
@@ -197,7 +225,7 @@ CMakeFiles/nienazwany.dir/database.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/drone.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/drone.cpp.o: ../drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/nienazwany.dir/drone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/nienazwany.dir/drone.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/drone.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/drone.cpp
 
 CMakeFiles/nienazwany.dir/drone.cpp.i: cmake_force
@@ -210,7 +238,7 @@ CMakeFiles/nienazwany.dir/drone.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/gamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/gamepad.cpp.o: ../gamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/nienazwany.dir/gamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/nienazwany.dir/gamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/gamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/gamepad.cpp
 
 CMakeFiles/nienazwany.dir/gamepad.cpp.i: cmake_force
@@ -223,7 +251,7 @@ CMakeFiles/nienazwany.dir/gamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/main.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/nienazwany.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/nienazwany.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/main.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/main.cpp
 
 CMakeFiles/nienazwany.dir/main.cpp.i: cmake_force
@@ -236,7 +264,7 @@ CMakeFiles/nienazwany.dir/main.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/mainwindow.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/mainwindow.cpp.o: ../mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/nienazwany.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/nienazwany.dir/mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/mainwindow.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/mainwindow.cpp
 
 CMakeFiles/nienazwany.dir/mainwindow.cpp.i: cmake_force
@@ -249,7 +277,7 @@ CMakeFiles/nienazwany.dir/mainwindow.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o: ../threadarduinoconnect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinoconnect.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.i: cmake_force
@@ -262,7 +290,7 @@ CMakeFiles/nienazwany.dir/threadarduinoconnect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o: ../threadarduinodetect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinodetect.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.i: cmake_force
@@ -275,7 +303,7 @@ CMakeFiles/nienazwany.dir/threadarduinodetect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o: ../threadarduinoping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinoping.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinoping.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinoping.cpp.i: cmake_force
@@ -288,7 +316,7 @@ CMakeFiles/nienazwany.dir/threadarduinoping.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o: ../threadarduinosend.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadarduinosend.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadarduinosend.cpp
 
 CMakeFiles/nienazwany.dir/threadarduinosend.cpp.i: cmake_force
@@ -301,7 +329,7 @@ CMakeFiles/nienazwany.dir/threadarduinosend.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadcamera.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadcamera.cpp.o: ../threadcamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/nienazwany.dir/threadcamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/nienazwany.dir/threadcamera.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadcamera.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadcamera.cpp
 
 CMakeFiles/nienazwany.dir/threadcamera.cpp.i: cmake_force
@@ -314,7 +342,7 @@ CMakeFiles/nienazwany.dir/threadcamera.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadgamepad.cpp.o: ../threadgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadgamepad.cpp
 
 CMakeFiles/nienazwany.dir/threadgamepad.cpp.i: cmake_force
@@ -327,7 +355,7 @@ CMakeFiles/nienazwany.dir/threadgamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o: ../threadgamepadupdate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/threadgamepadupdate.cpp
 
 CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.i: cmake_force
@@ -340,7 +368,7 @@ CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o: ../leapeventlistener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/leapeventlistener.cpp
 
 CMakeFiles/nienazwany.dir/leapeventlistener.cpp.i: cmake_force
@@ -353,7 +381,7 @@ CMakeFiles/nienazwany.dir/leapeventlistener.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/steeringregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/steeringregistry.cpp.o: ../steeringregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/nienazwany.dir/steeringregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/nienazwany.dir/steeringregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringregistry.cpp
 
 CMakeFiles/nienazwany.dir/steeringregistry.cpp.i: cmake_force
@@ -364,35 +392,9 @@ CMakeFiles/nienazwany.dir/steeringregistry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/steeringregistry.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/steeringregistry.cpp -o CMakeFiles/nienazwany.dir/steeringregistry.cpp.s
 
-CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o: ../steeringgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.cpp
-
-CMakeFiles/nienazwany.dir/steeringgamepad.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/steeringgamepad.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.cpp > CMakeFiles/nienazwany.dir/steeringgamepad.cpp.i
-
-CMakeFiles/nienazwany.dir/steeringgamepad.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/steeringgamepad.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.cpp -o CMakeFiles/nienazwany.dir/steeringgamepad.cpp.s
-
-CMakeFiles/nienazwany.dir/steeringinterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/steeringinterface.cpp.o: ../steeringinterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/nienazwany.dir/steeringinterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringinterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringinterface.cpp
-
-CMakeFiles/nienazwany.dir/steeringinterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/steeringinterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/steeringinterface.cpp > CMakeFiles/nienazwany.dir/steeringinterface.cpp.i
-
-CMakeFiles/nienazwany.dir/steeringinterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/steeringinterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/steeringinterface.cpp -o CMakeFiles/nienazwany.dir/steeringinterface.cpp.s
-
 CMakeFiles/nienazwany.dir/sendingregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/sendingregistry.cpp.o: ../sendingregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/nienazwany.dir/sendingregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/nienazwany.dir/sendingregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/sendingregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/sendingregistry.cpp
 
 CMakeFiles/nienazwany.dir/sendingregistry.cpp.i: cmake_force
@@ -405,7 +407,7 @@ CMakeFiles/nienazwany.dir/sendingregistry.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/sendingarduino.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/sendingarduino.cpp.o: ../sendingarduino.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/nienazwany.dir/sendingarduino.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/nienazwany.dir/sendingarduino.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/sendingarduino.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/sendingarduino.cpp
 
 CMakeFiles/nienazwany.dir/sendingarduino.cpp.i: cmake_force
@@ -418,7 +420,7 @@ CMakeFiles/nienazwany.dir/sendingarduino.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/sendinginterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/sendinginterface.cpp.o: ../sendinginterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/nienazwany.dir/sendinginterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/nienazwany.dir/sendinginterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/sendinginterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/sendinginterface.cpp
 
 CMakeFiles/nienazwany.dir/sendinginterface.cpp.i: cmake_force
@@ -431,7 +433,7 @@ CMakeFiles/nienazwany.dir/sendinginterface.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o: ../steeringleapmotion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steeringleapmotion.cpp
 
 CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.i: cmake_force
@@ -442,9 +444,87 @@ CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/steeringleapmotion.cpp -o CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.s
 
+CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o: ../dialogradiosettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.cpp
+
+CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.cpp > CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.i
+
+CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.cpp -o CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.s
+
+CMakeFiles/nienazwany.dir/mousesteering.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/mousesteering.cpp.o: ../mousesteering.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/nienazwany.dir/mousesteering.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/mousesteering.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/mousesteering.cpp
+
+CMakeFiles/nienazwany.dir/mousesteering.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/mousesteering.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/mousesteering.cpp > CMakeFiles/nienazwany.dir/mousesteering.cpp.i
+
+CMakeFiles/nienazwany.dir/mousesteering.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/mousesteering.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/mousesteering.cpp -o CMakeFiles/nienazwany.dir/mousesteering.cpp.s
+
+CMakeFiles/nienazwany.dir/steering.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/steering.cpp.o: ../steering.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/nienazwany.dir/steering.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/steering.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/steering.cpp
+
+CMakeFiles/nienazwany.dir/steering.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/steering.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/steering.cpp > CMakeFiles/nienazwany.dir/steering.cpp.i
+
+CMakeFiles/nienazwany.dir/steering.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/steering.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/steering.cpp -o CMakeFiles/nienazwany.dir/steering.cpp.s
+
+CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o: ../dialogarmingmodesettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.cpp
+
+CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.cpp > CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.i
+
+CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.cpp -o CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.s
+
+CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o: ../dialogdisarmingmodesettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.cpp
+
+CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.cpp > CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.i
+
+CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.cpp -o CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.s
+
+CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o: ../dialogthrottlemodesettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.cpp
+
+CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.cpp > CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.i
+
+CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.cpp -o CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.s
+
 CMakeFiles/nienazwany.dir/moc_buttons.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_buttons.cpp.o: moc_buttons.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/nienazwany.dir/moc_buttons.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/nienazwany.dir/moc_buttons.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_buttons.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_buttons.cpp
 
 CMakeFiles/nienazwany.dir/moc_buttons.cpp.i: cmake_force
@@ -457,7 +537,7 @@ CMakeFiles/nienazwany.dir/moc_buttons.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_common.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_common.cpp.o: moc_common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/nienazwany.dir/moc_common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/nienazwany.dir/moc_common.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_common.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_common.cpp
 
 CMakeFiles/nienazwany.dir/moc_common.cpp.i: cmake_force
@@ -470,7 +550,7 @@ CMakeFiles/nienazwany.dir/moc_common.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_database.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_database.cpp.o: moc_database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/nienazwany.dir/moc_database.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/nienazwany.dir/moc_database.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_database.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_database.cpp
 
 CMakeFiles/nienazwany.dir/moc_database.cpp.i: cmake_force
@@ -483,7 +563,7 @@ CMakeFiles/nienazwany.dir/moc_database.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_drone.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_drone.cpp.o: moc_drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/nienazwany.dir/moc_drone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/nienazwany.dir/moc_drone.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_drone.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_drone.cpp
 
 CMakeFiles/nienazwany.dir/moc_drone.cpp.i: cmake_force
@@ -496,7 +576,7 @@ CMakeFiles/nienazwany.dir/moc_drone.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o: moc_dronemanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dronemanager.cpp
 
 CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.i: cmake_force
@@ -509,7 +589,7 @@ CMakeFiles/nienazwany.dir/moc_dronemanager.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o: moc_dronemodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dronemodes.cpp
 
 CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.i: cmake_force
@@ -522,7 +602,7 @@ CMakeFiles/nienazwany.dir/moc_dronemodes.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o: moc_gamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_gamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_gamepad.cpp
 
 CMakeFiles/nienazwany.dir/moc_gamepad.cpp.i: cmake_force
@@ -535,7 +615,7 @@ CMakeFiles/nienazwany.dir/moc_gamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_include.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_include.cpp.o: moc_include.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/nienazwany.dir/moc_include.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/nienazwany.dir/moc_include.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_include.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_include.cpp
 
 CMakeFiles/nienazwany.dir/moc_include.cpp.i: cmake_force
@@ -548,7 +628,7 @@ CMakeFiles/nienazwany.dir/moc_include.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o: moc_mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_mainwindow.cpp
 
 CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.i: cmake_force
@@ -561,7 +641,7 @@ CMakeFiles/nienazwany.dir/moc_mainwindow.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o: moc_threadarduinoconnect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinoconnect.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.i: cmake_force
@@ -574,7 +654,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinoconnect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o: moc_threadarduinodetect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinodetect.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.i: cmake_force
@@ -587,7 +667,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinodetect.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o: moc_threadarduinoping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinoping.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.i: cmake_force
@@ -600,7 +680,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinoping.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o: moc_threadarduinosend.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadarduinosend.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.i: cmake_force
@@ -613,7 +693,7 @@ CMakeFiles/nienazwany.dir/moc_threadarduinosend.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o: moc_threadcamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadcamera.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.i: cmake_force
@@ -626,7 +706,7 @@ CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o: moc_threadgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadgamepad.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.i: cmake_force
@@ -639,7 +719,7 @@ CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o: moc_threadgamepadupdate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_threadgamepadupdate.cpp
 
 CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.i: cmake_force
@@ -652,7 +732,7 @@ CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o: moc_ui_mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_ui_mainwindow.cpp
 
 CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.i: cmake_force
@@ -663,9 +743,35 @@ CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_ui_mainwindow.cpp -o CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.s
 
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o: QtLeapMotion/Leap/include/moc_Leap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp
+
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.i
+
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.s
+
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o: QtLeapMotion/Leap/include/moc_LeapMath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp
+
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp > CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.i
+
+CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp -o CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.s
+
 CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o: moc_leapeventlistener.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_leapeventlistener.cpp
 
 CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.i: cmake_force
@@ -678,7 +784,7 @@ CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o: moc_steeringregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringregistry.cpp
 
 CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.i: cmake_force
@@ -689,35 +795,9 @@ CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringregistry.cpp -o CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.s
 
-CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o: moc_steeringgamepad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp
-
-CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp > CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.i
-
-CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp -o CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.s
-
-CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
-CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o: moc_steeringinterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp
-
-CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp > CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.i
-
-CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp -o CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.s
-
 CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o: moc_sendingregistry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_sendingregistry.cpp
 
 CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.i: cmake_force
@@ -730,7 +810,7 @@ CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o: moc_sendinginterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_sendinginterface.cpp
 
 CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.i: cmake_force
@@ -743,7 +823,7 @@ CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o: moc_sendingarduino.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_sendingarduino.cpp
 
 CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.i: cmake_force
@@ -756,7 +836,7 @@ CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o: moc_steeringleapmotion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringleapmotion.cpp
 
 CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.i: cmake_force
@@ -769,7 +849,7 @@ CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_json.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_json.cpp.o: moc_json.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/nienazwany.dir/moc_json.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CMakeFiles/nienazwany.dir/moc_json.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_json.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_json.cpp
 
 CMakeFiles/nienazwany.dir/moc_json.cpp.i: cmake_force
@@ -782,7 +862,7 @@ CMakeFiles/nienazwany.dir/moc_json.cpp.s: cmake_force
 
 CMakeFiles/nienazwany.dir/moc_storage.cpp.o: CMakeFiles/nienazwany.dir/flags.make
 CMakeFiles/nienazwany.dir/moc_storage.cpp.o: moc_storage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/nienazwany.dir/moc_storage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object CMakeFiles/nienazwany.dir/moc_storage.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_storage.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_storage.cpp
 
 CMakeFiles/nienazwany.dir/moc_storage.cpp.i: cmake_force
@@ -792,6 +872,97 @@ CMakeFiles/nienazwany.dir/moc_storage.cpp.i: cmake_force
 CMakeFiles/nienazwany.dir/moc_storage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_storage.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_storage.cpp -o CMakeFiles/nienazwany.dir/moc_storage.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o: moc_focuswatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_focuswatcher.cpp
+
+CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_focuswatcher.cpp > CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_focuswatcher.cpp -o CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o: moc_dialogradiosettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogradiosettings.cpp
+
+CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogradiosettings.cpp > CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogradiosettings.cpp -o CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o: moc_mousesteering.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_mousesteering.cpp
+
+CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_mousesteering.cpp > CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_mousesteering.cpp -o CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_steering.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_steering.cpp.o: moc_steering.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object CMakeFiles/nienazwany.dir/moc_steering.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_steering.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_steering.cpp
+
+CMakeFiles/nienazwany.dir/moc_steering.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_steering.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_steering.cpp > CMakeFiles/nienazwany.dir/moc_steering.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_steering.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_steering.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_steering.cpp -o CMakeFiles/nienazwany.dir/moc_steering.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o: moc_dialogarmingmodesettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogarmingmodesettings.cpp
+
+CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogarmingmodesettings.cpp > CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogarmingmodesettings.cpp -o CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o: moc_dialogdisarmingmodesettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogdisarmingmodesettings.cpp
+
+CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogdisarmingmodesettings.cpp > CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogdisarmingmodesettings.cpp -o CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.s
+
+CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o: CMakeFiles/nienazwany.dir/flags.make
+CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o: moc_dialogthrottlemodesettings.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o -c /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogthrottlemodesettings.cpp
+
+CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogthrottlemodesettings.cpp > CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.i
+
+CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogthrottlemodesettings.cpp -o CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.s
 
 # Object files for target nienazwany
 nienazwany_OBJECTS = \
@@ -810,12 +981,16 @@ nienazwany_OBJECTS = \
 "CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o" \
 "CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o" \
 "CMakeFiles/nienazwany.dir/steeringregistry.cpp.o" \
-"CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o" \
-"CMakeFiles/nienazwany.dir/steeringinterface.cpp.o" \
 "CMakeFiles/nienazwany.dir/sendingregistry.cpp.o" \
 "CMakeFiles/nienazwany.dir/sendingarduino.cpp.o" \
 "CMakeFiles/nienazwany.dir/sendinginterface.cpp.o" \
 "CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o" \
+"CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o" \
+"CMakeFiles/nienazwany.dir/mousesteering.cpp.o" \
+"CMakeFiles/nienazwany.dir/steering.cpp.o" \
+"CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o" \
+"CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o" \
+"CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_buttons.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_common.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_database.cpp.o" \
@@ -833,16 +1008,23 @@ nienazwany_OBJECTS = \
 "CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o" \
+"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o" \
+"CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o" \
-"CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o" \
-"CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o" \
 "CMakeFiles/nienazwany.dir/moc_json.cpp.o" \
-"CMakeFiles/nienazwany.dir/moc_storage.cpp.o"
+"CMakeFiles/nienazwany.dir/moc_storage.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_steering.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o" \
+"CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o"
 
 # External object files for target nienazwany
 nienazwany_EXTERNAL_OBJECTS =
@@ -862,12 +1044,16 @@ nienazwany: CMakeFiles/nienazwany.dir/threadgamepad.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/threadgamepadupdate.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/leapeventlistener.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/steeringregistry.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/steeringgamepad.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/steeringinterface.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/sendingregistry.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/sendingarduino.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/sendinginterface.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/steeringleapmotion.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/dialogradiosettings.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/mousesteering.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/steering.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/dialogarmingmodesettings.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/dialogdisarmingmodesettings.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/dialogthrottlemodesettings.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_buttons.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_common.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_database.cpp.o
@@ -885,16 +1071,23 @@ nienazwany: CMakeFiles/nienazwany.dir/moc_threadcamera.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_threadgamepad.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_threadgamepadupdate.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_ui_mainwindow.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_Leap.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/QtLeapMotion/Leap/include/moc_LeapMath.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_leapeventlistener.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_steeringregistry.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/moc_steeringgamepad.cpp.o
-nienazwany: CMakeFiles/nienazwany.dir/moc_steeringinterface.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_sendingregistry.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_sendinginterface.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_sendingarduino.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_steeringleapmotion.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_json.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/moc_storage.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_focuswatcher.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_dialogradiosettings.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_mousesteering.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_steering.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_dialogarmingmodesettings.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_dialogdisarmingmodesettings.cpp.o
+nienazwany: CMakeFiles/nienazwany.dir/moc_dialogthrottlemodesettings.cpp.o
 nienazwany: CMakeFiles/nienazwany.dir/build.make
 nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.11.1
 nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.11.1
@@ -903,7 +1096,7 @@ nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.11.1
 nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.11.1
 nienazwany: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.11.1
 nienazwany: CMakeFiles/nienazwany.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Linking CXX executable nienazwany"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Linking CXX executable nienazwany"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nienazwany.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -932,16 +1125,23 @@ CMakeFiles/nienazwany.dir/depend: moc_threadcamera.cpp
 CMakeFiles/nienazwany.dir/depend: moc_threadgamepad.cpp
 CMakeFiles/nienazwany.dir/depend: moc_threadgamepadupdate.cpp
 CMakeFiles/nienazwany.dir/depend: moc_ui_mainwindow.cpp
+CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/include/moc_Leap.cpp
+CMakeFiles/nienazwany.dir/depend: QtLeapMotion/Leap/include/moc_LeapMath.cpp
 CMakeFiles/nienazwany.dir/depend: moc_leapeventlistener.cpp
 CMakeFiles/nienazwany.dir/depend: moc_steeringregistry.cpp
-CMakeFiles/nienazwany.dir/depend: moc_steeringgamepad.cpp
-CMakeFiles/nienazwany.dir/depend: moc_steeringinterface.cpp
 CMakeFiles/nienazwany.dir/depend: moc_sendingregistry.cpp
 CMakeFiles/nienazwany.dir/depend: moc_sendinginterface.cpp
 CMakeFiles/nienazwany.dir/depend: moc_sendingarduino.cpp
 CMakeFiles/nienazwany.dir/depend: moc_steeringleapmotion.cpp
 CMakeFiles/nienazwany.dir/depend: moc_json.cpp
 CMakeFiles/nienazwany.dir/depend: moc_storage.cpp
+CMakeFiles/nienazwany.dir/depend: moc_focuswatcher.cpp
+CMakeFiles/nienazwany.dir/depend: moc_dialogradiosettings.cpp
+CMakeFiles/nienazwany.dir/depend: moc_mousesteering.cpp
+CMakeFiles/nienazwany.dir/depend: moc_steering.cpp
+CMakeFiles/nienazwany.dir/depend: moc_dialogarmingmodesettings.cpp
+CMakeFiles/nienazwany.dir/depend: moc_dialogdisarmingmodesettings.cpp
+CMakeFiles/nienazwany.dir/depend: moc_dialogthrottlemodesettings.cpp
 CMakeFiles/nienazwany.dir/depend: ui_mainwindow.h
 	cd /home/anonymous/Projects/drone_blackbox/linux/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anonymous/Projects/drone_blackbox/linux /home/anonymous/Projects/drone_blackbox/linux /home/anonymous/Projects/drone_blackbox/linux/build /home/anonymous/Projects/drone_blackbox/linux/build /home/anonymous/Projects/drone_blackbox/linux/build/CMakeFiles/nienazwany.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nienazwany.dir/depend

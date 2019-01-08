@@ -210,6 +210,7 @@ void MainWindow::slotModesChanged(Modes * modes) {
     QLabel * labelArmedValue = this->centralWidget()->findChild<QLabel *>(QString("labelArmedValue"));
     QLabel * labelThrottleMode = this->centralWidget()->findChild<QLabel *>(QString("labelThrottleMode"));
     QLabel * labelSending = this->centralWidget()->findChild<QLabel *>(QString("labelSending"));
+    QLabel * labelThrust = this->centralWidget()->findChild<QLabel *>(QString("labelThrust"));
 
     if (!modes->radioSending) {
         labelLeftX->setText("-");
@@ -235,6 +236,14 @@ void MainWindow::slotModesChanged(Modes * modes) {
         labelSending->setText("sending");
     } else {
         labelSending->setText("not sending");
+    }
+
+    if (modes->thrust == MODE_THRUST_33) {
+        labelThrust->setText("33%");
+    } else if (modes->thrust == MODE_THRUST_66) {
+        labelThrust->setText("66%");
+    } else if (modes->thrust == MODE_THRUST_100) {
+        labelThrust->setText("100%");
     }
 }
 

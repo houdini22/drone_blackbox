@@ -117,6 +117,17 @@ void ThreadArduinoSend::run() {
                         //continue;
                     }
 
+                    if (buttons.dPadLeft) {
+                        modes->thrust = MODE_THRUST_33;
+                        this->drone->setModes(modes);
+                    } else if (buttons.dPadUp) {
+                        modes->thrust = MODE_THRUST_66;
+                        this->drone->setModes(modes);
+                    } else if (buttons.dPadRight) {
+                        modes->thrust = MODE_THRUST_100;
+                        this->drone->setModes(modes);
+                    }
+
                     if (buttons.start && !armingMode) { // toggle sending
                         if (startMode) {
                             sendingStart = 26; // 26 * 40 ms

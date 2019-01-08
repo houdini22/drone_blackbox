@@ -60,6 +60,8 @@ void ThreadGamepadUpdate::run() {
             buttons.y = (GamepadButtonDown(this->gamepad, BUTTON_Y) ? true : false);
             buttons.leftShoulder = (GamepadButtonDown(this->gamepad, BUTTON_LEFT_SHOULDER) ? true : false);
             buttons.rightShoulder = (GamepadButtonDown(this->gamepad, BUTTON_RIGHT_SHOULDER) ? true : false);
+            buttons.dPadLeft = (GamepadButtonDown(this->gamepad, BUTTON_DPAD_LEFT) ? true : false);
+            buttons.dPadRight = (GamepadButtonDown(this->gamepad, BUTTON_DPAD_RIGHT) ? true : false);
             buttons.dPadUp = (GamepadButtonDown(this->gamepad, BUTTON_DPAD_UP) ? true : false);
             buttons.dPadDown = (GamepadButtonDown(this->gamepad, BUTTON_DPAD_DOWN) ? true : false);
 

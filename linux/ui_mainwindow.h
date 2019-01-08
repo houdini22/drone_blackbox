@@ -85,6 +85,8 @@ public:
     QPushButton *buttonSettingsArming;
     QPushButton *buttonSettingsDisarming;
     QPushButton *buttonSettingsThrottleMode;
+    QLabel *label_17;
+    QLabel *labelThrust;
     QGroupBox *groupBox_2;
     QLabel *label_11;
     QLabel *label_12;
@@ -373,6 +375,15 @@ public:
         buttonSettingsThrottleMode->setObjectName(QStringLiteral("buttonSettingsThrottleMode"));
         buttonSettingsThrottleMode->setGeometry(QRect(170, 150, 81, 21));
         buttonSettingsThrottleMode->setFont(font4);
+        label_17 = new QLabel(groupBox);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setGeometry(QRect(20, 180, 201, 41));
+        label_17->setFont(font1);
+        labelThrust = new QLabel(groupBox);
+        labelThrust->setObjectName(QStringLiteral("labelThrust"));
+        labelThrust->setGeometry(QRect(410, 180, 101, 31));
+        labelThrust->setFont(font1);
+        labelThrust->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupBox_2 = new QGroupBox(centralWidget);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
         groupBox_2->setGeometry(QRect(550, 290, 531, 311));
@@ -512,6 +523,8 @@ public:
         buttonSettingsArming->setText(QApplication::translate("MainWindow", "Arming Settings", nullptr));
         buttonSettingsDisarming->setText(QApplication::translate("MainWindow", "Disarming Settings", nullptr));
         buttonSettingsThrottleMode->setText(QApplication::translate("MainWindow", "Settings", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "Thrust", nullptr));
+        labelThrust->setText(QApplication::translate("MainWindow", "100%", nullptr));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Leap Motion", nullptr));
         label_11->setText(QApplication::translate("MainWindow", "Throttle", nullptr));
         label_12->setText(QApplication::translate("MainWindow", "Y", nullptr));

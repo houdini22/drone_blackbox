@@ -15,6 +15,8 @@ struct ButtonsPressed {
     bool y = false;
     bool leftShoulder = false;
     bool rightShoulder = false;
+    bool dPadLeft = false;
+    bool dPadRight = false;
     bool dPadUp = false;
     bool dPadDown = false;
 };

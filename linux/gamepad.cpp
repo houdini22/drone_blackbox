@@ -240,7 +240,6 @@ void GamepadInit(void) {
         devPath = udev_device_get_devnode(dev);
 
         if (sysPath != NULL && devPath != NULL && strstr(sysPath, "/js") != 0) {
-            qDebug() << devPath;
             GamepadAddDevice(devPath);
         }
 

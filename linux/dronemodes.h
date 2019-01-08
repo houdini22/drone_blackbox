@@ -3,6 +3,14 @@
 
 #include "include.h"
 
+const int MODE_ARDUINO_DISCONNECTED = 0;
+const int MODE_ARDUINO_DETECTED = 1;
+const int MODE_ARDUINO_CONNECTED = 2;
+
+const int MODE_THRUST_33 = 0;
+const int MODE_THRUST_66 = 1;
+const int MODE_THRUST_100 = 2;
+
 struct Modes {
     int leftX = 0;
     int leftY = 0;
@@ -16,6 +24,7 @@ struct Modes {
     bool mouseSteering = false;
     int leftMouseClick = 0;
     int rightMouseClick = 0;
+    int thrust = MODE_THRUST_100;
 };
 
 struct HandPosition {
@@ -28,9 +37,5 @@ struct HandPosition {
     bool isAvailable = false;
     bool fist = false;
 };
-
-const int MODE_ARDUINO_DISCONNECTED = 0;
-const int MODE_ARDUINO_DETECTED = 1;
-const int MODE_ARDUINO_CONNECTED = 2;
 
 #endif // DRONEMODES_H

@@ -12,9 +12,13 @@ void ThreadArduinoConnect::run() {
         if (this->sendingData->mode == MODE_ARDUINO_DETECTED) {
             SerialPort * arduino = new SerialPort(this->sendingData->deviceString.toStdString());
 
-            arduino->Open(SerialPort::BAUD_115200, SerialPort::CHAR_SIZE_8,
-                          SerialPort::PARITY_NONE, SerialPort::STOP_BITS_1,
-                          SerialPort::FLOW_CONTROL_NONE);
+            try {
+                arduino->Open(SerialPort::BAUD_115200, SerialPort::CHAR_SIZE_8,
+                              SerialPort::PARITY_NONE, SerialPort::STOP_BITS_1,
+                              SerialPort::FLOW_CONTROL_NONE);
+            } catch (SerialPort::OpenFailed ex) {
+                continue;
+            }
 
             while (!arduino->IsOpen()) {}
 

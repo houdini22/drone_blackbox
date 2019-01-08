@@ -30,6 +30,10 @@ float.h
 algorithm
 -
 
+/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_Leap.cpp
+
+/home/anonymous/Projects/drone_blackbox/linux/build/QtLeapMotion/Leap/include/moc_LeapMath.cpp
+
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_buttons.cpp
 
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_common.cpp
@@ -37,6 +41,38 @@ algorithm
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_database.cpp
 ../database.h
 /home/anonymous/Projects/drone_blackbox/linux/database.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogarmingmodesettings.cpp
+../dialogarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogdisarmingmodesettings.cpp
+../dialogdisarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogradiosettings.cpp
+../dialogradiosettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_dialogthrottlemodesettings.cpp
+../dialogthrottlemodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -54,6 +90,14 @@ QtCore/qmetatype.h
 
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_dronemodes.cpp
 
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_focuswatcher.cpp
+../focuswatcher.h
+/home/anonymous/Projects/drone_blackbox/linux/focuswatcher.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_gamepad.cpp
 
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_include.cpp
@@ -65,6 +109,14 @@ QtCore/qmetatype.h
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_mainwindow.cpp
 ../mainwindow.h
 /home/anonymous/Projects/drone_blackbox/linux/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_mousesteering.cpp
+../mousesteering.h
+/home/anonymous/Projects/drone_blackbox/linux/mousesteering.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -88,15 +140,13 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
-/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringgamepad.cpp
-../steeringgamepad.h
-/home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.h
+/home/anonymous/Projects/drone_blackbox/linux/build/moc_steering.cpp
+../steering.h
+/home/anonymous/Projects/drone_blackbox/linux/steering.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
-
-/home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringinterface.cpp
 
 /home/anonymous/Projects/drone_blackbox/linux/build/moc_steeringleapmotion.cpp
 
@@ -188,6 +238,54 @@ include.h
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
+/home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.cpp
+dialogarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.h
+ui_dialogarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogarmingmodesettings.h
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.h
+QDialog
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.cpp
+dialogdisarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.h
+ui_dialogdisarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogdisarmingmodesettings.h
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.h
+QDialog
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.cpp
+dialogradiosettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.h
+ui_dialogradiosettings.h
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogradiosettings.h
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.h
+QDialog
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.cpp
+dialogthrottlemodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.h
+ui_dialogthrottlemodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogthrottlemodesettings.h
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
+/home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.h
+QDialog
+-
+
 /home/anonymous/Projects/drone_blackbox/linux/drone.cpp
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
@@ -204,9 +302,15 @@ mainwindow.h
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
+/home/anonymous/Projects/drone_blackbox/linux/focuswatcher.h
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
 /home/anonymous/Projects/drone_blackbox/linux/gamepad.cpp
 gamepad.h
 /home/anonymous/Projects/drone_blackbox/linux/gamepad.h
+QDebug
+-
 windows.h
 /home/anonymous/Projects/drone_blackbox/linux/windows.h
 xinput.h
@@ -251,6 +355,20 @@ QHash
 -
 QLineEdit
 -
+QEvent
+-
+QAbstractButton
+-
+QDesktopWidget
+-
+QRect
+-
+QGroupBox
+-
+QMouseEvent
+-
+QRadioButton
+-
 vector
 -
 list
@@ -289,24 +407,36 @@ dirent.h
 -
 opencv2/opencv.hpp
 /home/anonymous/Projects/drone_blackbox/linux/opencv2/opencv.hpp
+gamepad.h
+/home/anonymous/Projects/drone_blackbox/linux/gamepad.h
+threadgamepad.h
+/home/anonymous/Projects/drone_blackbox/linux/threadgamepad.h
+dialogradiosettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogradiosettings.h
+dialogarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogarmingmodesettings.h
+dialogdisarmingmodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogdisarmingmodesettings.h
+dialogthrottlemodesettings.h
+/home/anonymous/Projects/drone_blackbox/linux/dialogthrottlemodesettings.h
+mousesteering.h
+/home/anonymous/Projects/drone_blackbox/linux/mousesteering.h
 json.hpp
 /home/anonymous/Projects/drone_blackbox/linux/json.hpp
+focuswatcher.h
+/home/anonymous/Projects/drone_blackbox/linux/focuswatcher.h
 storage.h
 /home/anonymous/Projects/drone_blackbox/linux/storage.h
 common.h
 /home/anonymous/Projects/drone_blackbox/linux/common.h
 buttons.h
 /home/anonymous/Projects/drone_blackbox/linux/buttons.h
-gamepad.h
-/home/anonymous/Projects/drone_blackbox/linux/gamepad.h
 dronemodes.h
 /home/anonymous/Projects/drone_blackbox/linux/dronemodes.h
 steeringregistry.h
 /home/anonymous/Projects/drone_blackbox/linux/steeringregistry.h
-steeringinterface.h
-/home/anonymous/Projects/drone_blackbox/linux/steeringinterface.h
-steeringgamepad.h
-/home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.h
+steering.h
+/home/anonymous/Projects/drone_blackbox/linux/steering.h
 QtLeapMotion/Leap/include/Leap.h
 /home/anonymous/Projects/drone_blackbox/linux/QtLeapMotion/Leap/include/Leap.h
 leapeventlistener.h
@@ -323,8 +453,6 @@ database.h
 /home/anonymous/Projects/drone_blackbox/linux/database.h
 drone.h
 /home/anonymous/Projects/drone_blackbox/linux/drone.h
-threadgamepad.h
-/home/anonymous/Projects/drone_blackbox/linux/threadgamepad.h
 threadarduinodetect.h
 /home/anonymous/Projects/drone_blackbox/linux/threadarduinodetect.h
 threadarduinoconnect.h
@@ -337,6 +465,8 @@ threadgamepadupdate.h
 /home/anonymous/Projects/drone_blackbox/linux/threadgamepadupdate.h
 threadcamera.h
 /home/anonymous/Projects/drone_blackbox/linux/threadcamera.h
+steering.h
+/home/anonymous/Projects/drone_blackbox/linux/steering.h
 
 /home/anonymous/Projects/drone_blackbox/linux/json.hpp
 algorithm
@@ -422,6 +552,14 @@ QMainWindow
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
+/home/anonymous/Projects/drone_blackbox/linux/mousesteering.cpp
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
+/home/anonymous/Projects/drone_blackbox/linux/mousesteering.h
+include.h
+/home/anonymous/Projects/drone_blackbox/linux/include.h
+
 /home/anonymous/Projects/drone_blackbox/linux/sendingarduino.cpp
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
@@ -446,19 +584,11 @@ include.h
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
-/home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.cpp
+/home/anonymous/Projects/drone_blackbox/linux/steering.cpp
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
-/home/anonymous/Projects/drone_blackbox/linux/steeringgamepad.h
-include.h
-/home/anonymous/Projects/drone_blackbox/linux/include.h
-
-/home/anonymous/Projects/drone_blackbox/linux/steeringinterface.cpp
-include.h
-/home/anonymous/Projects/drone_blackbox/linux/include.h
-
-/home/anonymous/Projects/drone_blackbox/linux/steeringinterface.h
+/home/anonymous/Projects/drone_blackbox/linux/steering.h
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
@@ -531,8 +661,6 @@ include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
 /home/anonymous/Projects/drone_blackbox/linux/threadgamepad.cpp
-QThread
-/home/anonymous/Projects/drone_blackbox/linux/QThread
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
@@ -541,14 +669,74 @@ include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
 /home/anonymous/Projects/drone_blackbox/linux/threadgamepadupdate.cpp
-QThread
-/home/anonymous/Projects/drone_blackbox/linux/QThread
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
 
 /home/anonymous/Projects/drone_blackbox/linux/threadgamepadupdate.h
 include.h
 /home/anonymous/Projects/drone_blackbox/linux/include.h
+
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogarmingmodesettings.h
+QtCore/QVariant
+-
+QtWidgets/QApplication
+-
+QtWidgets/QDialog
+-
+QtWidgets/QDialogButtonBox
+-
+QtWidgets/QGroupBox
+-
+QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogdisarmingmodesettings.h
+QtCore/QVariant
+-
+QtWidgets/QApplication
+-
+QtWidgets/QDialog
+-
+QtWidgets/QDialogButtonBox
+-
+QtWidgets/QGroupBox
+-
+QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogradiosettings.h
+QtCore/QVariant
+-
+QtWidgets/QApplication
+-
+QtWidgets/QDialog
+-
+QtWidgets/QDialogButtonBox
+-
+QtWidgets/QGroupBox
+-
+QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
+-
+
+/home/anonymous/Projects/drone_blackbox/linux/ui_dialogthrottlemodesettings.h
+QtCore/QVariant
+-
+QtWidgets/QApplication
+-
+QtWidgets/QDialog
+-
+QtWidgets/QDialogButtonBox
+-
+QtWidgets/QGroupBox
+-
+QtWidgets/QLineEdit
+-
 
 /home/anonymous/Projects/drone_blackbox/linux/ui_mainwindow.h
 QtCore/QVariant
@@ -559,11 +747,11 @@ QtWidgets/QApplication
 -
 QtWidgets/QDialog
 -
+QtWidgets/QFrame
+-
 QtWidgets/QGroupBox
 -
 QtWidgets/QLabel
--
-QtWidgets/QLineEdit
 -
 QtWidgets/QMainWindow
 -
@@ -571,16 +759,26 @@ QtWidgets/QMenu
 -
 QtWidgets/QMenuBar
 -
+QtWidgets/QPushButton
+-
+QtWidgets/QRadioButton
+-
 QtWidgets/QStatusBar
 -
 QtWidgets/QToolBar
 -
 QtWidgets/QWidget
 -
+mousesteering.h
+/home/anonymous/Projects/drone_blackbox/linux/mousesteering.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 qdebug.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
+qcoreevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash
 qhash.h
@@ -593,6 +791,10 @@ qmap.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
 qobject.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QRect
+qrect.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
@@ -1374,6 +1576,10 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent
+qevent.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 QtGui/qtguiglobal.h
 -
@@ -1762,6 +1968,10 @@ QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAbstractButton
+qabstractbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction
 qaction.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
@@ -1770,9 +1980,21 @@ qaction.h
 qapplication.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDesktopWidget
+qdesktopwidget.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
 qdialog.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
+qdialogbuttonbox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
+qframe.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGroupBox
 qgroupbox.h
@@ -1806,6 +2028,14 @@ qmenu.h
 qmenubar.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
+qpushbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
+qradiobutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
 qstatusbar.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
@@ -1817,6 +2047,16 @@ qtoolbar.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtGui/qicon.h
+-
+QtGui/qkeysequence.h
+-
+QtWidgets/qwidget.h
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
 QtWidgets/qtwidgetsglobal.h
@@ -1910,6 +2150,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1982,6 +2228,18 @@ QtWidgets/qaction.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qmenu.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractbutton.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractbutton.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
