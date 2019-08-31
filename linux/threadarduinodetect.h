@@ -19,7 +19,7 @@ private:
 public slots:
     void slotSendingDataChanged(SendingData *);
 signals:
-    void signalArduinoStatusChanged(int value, QString deviceString);
+    void signalSendingDataChanged(SendingData *);
 };
 
 #endif // THREADARDUINODETECT_H

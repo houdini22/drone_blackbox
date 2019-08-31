@@ -99,6 +99,7 @@ void processIncomingByte(const byte inByte) {
 
     case 'h':
       lastReceivedPing = millis();
+      delay(50);
       Serial.write("h");
       connected = true;
       break;

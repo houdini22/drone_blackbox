@@ -17,7 +17,7 @@ private:
 public slots:
     void slotSendingDataChanged(SendingData *);
 signals:
-    void signalArduinoReset();
+    void signalSendingDataChanged(SendingData *);
 };
 
 #endif // THREADARDUINOPING_H

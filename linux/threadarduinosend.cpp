@@ -79,7 +79,8 @@ void ThreadArduinoSend::run() {
     int sendingThrottle = 0;
     int leftY = data["radio"]["leftY"]["min"].get<int>();
     int sendingLeftY = 0;
-    int sendingThrust = 0;
+    int sendingThrustUp = 0;
+    int sendingThrustDown = 0;
 
     int timeSleep = 40;
 
@@ -119,7 +120,7 @@ void ThreadArduinoSend::run() {
                 }
             } else {
                 // send
-                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingThrust == 0) {
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingThrustUp == 0) {
                     if (throttleMode) {
                         this->setRadioValues(buttons.leftX, leftY, buttons.rightX, buttons.rightY);
                         this->send(this->createAxisBuffer(buttons.leftX, leftY, buttons.rightX, buttons.rightY));
@@ -129,19 +130,23 @@ void ThreadArduinoSend::run() {
                     }
                 }
 
-                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingThrust == 0) { // listening buttons
+                if (sendingArm == 0 && sendingThrottle == 0 && sendingStart == 0 && sendingLeftY == 0 && sendingThrustUp == 0) { // listening buttons
                     if (buttons.dPadDown) { // toggle Throttle mode
-                        sendingThrottle = 6;
+                        sendingThrottle = 4;
                         continue;
                     }
 
                     if (buttons.dPadLeft) {
-                        sendingThrust = 6;
+                        sendingThrustDown = 4;
                         continue;
                     }
 
+                    if (buttons.dPadRight) {
+                        sendingThrustUp = 4;
+                    }
+
                     if (buttons.start && !armingMode) { // toggle sending
-                        sendingStart = 6;
+                        sendingStart = 4;
                         continue;
                     }
 
@@ -227,20 +232,27 @@ void ThreadArduinoSend::run() {
                     continue;
                 }
 
-                if (sendingThrust > 0) {
-                    sendingThrust--;
+                if (sendingThrustUp > 0) {
+                    sendingThrustUp--;
 
-                    if (sendingThrust == 0) {
-                        if (modes->thrust == MODE_THRUST_100) {
-                            modes->thrust = MODE_THRUST_33;
-                            this->drone->setModes(modes);
-                        } else if (modes->thrust == MODE_THRUST_33) {
-                            modes->thrust = MODE_THRUST_66;
-                            this->drone->setModes(modes);
-                        } else if (modes->thrust == MODE_THRUST_66) {
-                            modes->thrust = MODE_THRUST_100;
-                            this->drone->setModes(modes);
+                    if (sendingThrustUp == 0) {
+                        modes->thrust += 0.1;
+                        if (modes->thrust > 1.0) {
+                            modes->thrust = 0.1;
                         }
+                        this->drone->setModes(modes);
+                    }
+                }
+
+                if (sendingThrustDown > 0) {
+                    sendingThrustDown--;
+
+                    if (sendingThrustDown == 0) {
+                        modes->thrust -= 0.1;
+                        if (modes->thrust == 0.0) {
+                            modes->thrust = 0.1;
+                        }
+                        this->drone->setModes(modes);
                     }
                 }
             }

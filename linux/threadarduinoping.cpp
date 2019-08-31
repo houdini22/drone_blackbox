@@ -15,7 +15,13 @@ void ThreadArduinoPing::run() {
             try {
                 arduino->Write("p");
             } catch (std::runtime_error) {
-                emit signalArduinoReset();
+                this->sendingData->mode = MODE_ARDUINO_DISCONNECTED;
+                this->sendingData->deviceString = "";
+                this->sendingData->service->Close();
+                delete this->sendingData->service;
+                this->sendingData->service = NULL;
+
+                emit signalSendingDataChanged(this->sendingData);
             }
         }
 

@@ -23,7 +23,6 @@ QString detectDevice()  {
 
 ThreadArduinoDetect::ThreadArduinoDetect(SendingRegistry * registry): QThread() {
     this->registry = registry;
-
     connect(this->registry, SIGNAL(signalSendingDataChanged(SendingData *)), this, SLOT(slotSendingDataChanged(SendingData *)));
 }
 
@@ -33,9 +32,15 @@ void ThreadArduinoDetect::run() {
             QString arduinoDeviceStr = detectDevice();
 
             if (arduinoDeviceStr.length() > 0) {
-                emit signalArduinoStatusChanged(MODE_ARDUINO_DETECTED, arduinoDeviceStr);
+                this->sendingData->mode = MODE_ARDUINO_DETECTED;
+                this->sendingData->deviceString = arduinoDeviceStr;
+
+                emit signalSendingDataChanged(this->sendingData);
             } else {
-                emit signalArduinoStatusChanged(MODE_ARDUINO_DISCONNECTED, "");
+                this->sendingData->mode = MODE_ARDUINO_DISCONNECTED;
+                this->sendingData->deviceString = "";
+
+                emit signalSendingDataChanged(this->sendingData);
             }
         }
 

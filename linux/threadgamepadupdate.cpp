@@ -22,15 +22,22 @@ void ThreadGamepadUpdate::run() {
             double _rightX = GamepadStickLength(this->gamepad, STICK_RIGHT) * cos(GamepadStickAngle(this->gamepad, STICK_RIGHT));
             double _rightY = GamepadStickLength(this->gamepad, STICK_RIGHT) * sin(GamepadStickAngle(this->gamepad, STICK_RIGHT));
 
-            if (modes->thrust == MODE_THRUST_33) {
-                _leftX *= 0.33;
-                _rightX *= 0.33;
-                _rightY *= 0.33;
-            } else if (modes->thrust == MODE_THRUST_66) {
-                _leftX *= 0.66;
-                _rightX *= 0.66;
-                _rightY *= 0.66;
+            if (GamepadButtonDown(this->gamepad, BUTTON_A)) {
+                _rightY = -1.0;
             }
+            if (GamepadButtonDown(this->gamepad, BUTTON_B)) {
+                _rightX = 1.0;
+            }
+            if (GamepadButtonDown(this->gamepad, BUTTON_X)) {
+                _rightX = -1.0;
+            }
+            if (GamepadButtonDown(this->gamepad, BUTTON_Y)) {
+                _rightY = 1.0;
+            }
+
+            _leftX *= modes->thrust;
+            _rightX *= modes->thrust;
+            _rightY *= modes->thrust;
 
             if (_leftX < 0) {
                 double area = data["radio"]["leftX"]["middle"].get<int>() - data["radio"]["leftX"]["min"].get<int>();
@@ -68,6 +75,7 @@ void ThreadGamepadUpdate::run() {
             buttons.arming = ((GamepadTriggerDown(this->gamepad, TRIGGER_LEFT) && GamepadTriggerDown(this->gamepad, TRIGGER_RIGHT)) ? true : false);
             buttons.a = (GamepadButtonDown(this->gamepad, BUTTON_A) ? true : false);
             buttons.b = (GamepadButtonDown(this->gamepad, BUTTON_B) ? true : false);
+            buttons.x = (GamepadButtonDown(this->gamepad, BUTTON_X) ? true : false);
             buttons.y = (GamepadButtonDown(this->gamepad, BUTTON_Y) ? true : false);
             buttons.leftShoulder = (GamepadButtonDown(this->gamepad, BUTTON_LEFT_SHOULDER) ? true : false);
             buttons.rightShoulder = (GamepadButtonDown(this->gamepad, BUTTON_RIGHT_SHOULDER) ? true : false);

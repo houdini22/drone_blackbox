@@ -105,7 +105,7 @@
 //In this section you can configure the telemetry.
 
 //If you do not plan using the telemetry comment this global setting using "//" and skip to the next section.
-//#define TELEMETRY
+#define TELEMETRY
 
 //Uncomment to invert the polarity of the telemetry serial signal.
 //For ER9X and ERSKY9X it must be commented. For OpenTX it must be uncommented.
@@ -114,7 +114,7 @@
 //Comment a line to disable a protocol telemetry
 //#define DSM_TELEMETRY				// Forward received telemetry packet directly to TX to be decoded
 //#define SPORT_TELEMETRY				// Use FrSkyX SPORT format to send telemetry to TX
-//#define AFHDS2A_FW_TELEMETRY		// Forward received telemetry packet directly to TX to be decoded
+#define AFHDS2A_FW_TELEMETRY		// Forward received telemetry packet directly to TX to be decoded
 //#define HUB_TELEMETRY				// Use FrSkyD Hub format to send telemetry to TX
 //#define AFHDS2A_HUB_TELEMETRY		// Use FrSkyD Hub format to send telemetry to TX
 //#define BAYANG_HUB_TELEMETRY		// Use FrSkyD Hub format to send telemetry to TX

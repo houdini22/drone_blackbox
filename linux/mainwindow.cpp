@@ -238,13 +238,7 @@ void MainWindow::slotModesChanged(Modes * modes) {
         labelSending->setText("not sending");
     }
 
-    if (modes->thrust == MODE_THRUST_33) {
-        labelThrust->setText("33%");
-    } else if (modes->thrust == MODE_THRUST_66) {
-        labelThrust->setText("66%");
-    } else if (modes->thrust == MODE_THRUST_100) {
-        labelThrust->setText("100%");
-    }
+    labelThrust->setText(QString::number(modes->thrust * 100) + "%");
 }
 
 MainWindow::~MainWindow() {

@@ -17,7 +17,7 @@ private:
 public slots:
     void slotSendingDataChanged(SendingData * sendingData);
 signals:
-    void signalArduinoConnected(bool value, SerialPort * arduino);
+    void signalSendingDataChanged(SendingData *);
 };
 
 #endif // THREADARDUINOCONNECT_H

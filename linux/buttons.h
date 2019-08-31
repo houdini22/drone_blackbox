@@ -12,6 +12,7 @@ struct ButtonsPressed {
     bool arming = false;
     bool a = false;
     bool b = false;
+    bool x = false;
     bool y = false;
     bool leftShoulder = false;
     bool rightShoulder = false;

@@ -24,7 +24,7 @@ struct Modes {
     bool mouseSteering = false;
     int leftMouseClick = 0;
     int rightMouseClick = 0;
-    int thrust = MODE_THRUST_100;
+    double thrust = 1.0;
 };
 
 struct HandPosition {

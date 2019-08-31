@@ -19,9 +19,7 @@ private:
     ThreadArduinoPing * threadArduinoPing;
     ThreadArduinoSend * threadArduinoSend;
 public slots:
-    void slotArduinoStatusChanged(int, QString);
-    void slotArduinoConnected(bool, SerialPort *);
-    void slotArduinoReset();
+    void slotSendingDataChanged(SendingData*);
 signals:
     void signalSendingDataChanged(SendingData *);
 };
